@@ -1,4 +1,36 @@
 // @ts-check
+let jmdates = [
+  "2025-08-22", 
+  "2025-08-26", 
+  "2025-09-02", 
+  "2025-09-09",
+  "2025-09-16",
+  "2025-09-19",
+  "2025-09-23",
+  "2025-09-24",
+  "2025-09-26",
+  "2025-10-03",
+  "2025-10-07",
+  "2025-10-10",
+  "2025-10-21",
+  "2025-10-24",
+  "2025-10-01",
+  "2025-10-28",
+  "2025-10-31",
+  "2025-11-04",
+  "2025-11-07",
+  "2025-11-11",
+  "2025-11-14",
+  "2025-11-18",
+  "2025-11-21",
+  "2025-11-25",
+  "2025-11-28",
+  "2025-12-02",
+  "2025-12-05",
+  "2025-12-09",
+  "2025-12-16",
+  "2025-12-19",
+]
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -10,7 +42,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-08-25" }],
-          "Jean-Michel": [{ "1010": "2025-08-22" }, { "1020": "2025-08-22" },]
+          "Jean-Michel": [{ "1010": jmdates[0] }, { "1020": jmdates[0] },]
         },
       },
     },
@@ -21,7 +53,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-08-28" }],
-          "Jean-Michel": [{ "1010": "2025-08-26" }, { "1020": "2025-08-26" },]
+          "Jean-Michel": [{ "1010": jmdates[1] }, { "1020": jmdates[1] },]
         },
       },
     },
@@ -34,7 +66,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-08-29" }],
-          "Jean-Michel": [{ "1010": "2025-09-02" }, { "1020": "2025-09-02" },]
+          "Jean-Michel": [{ "1010": jmdates[2] }, { "1020": jmdates[2] },]
         },
       },
     },
@@ -47,7 +79,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-04" }],
-          "Jean-Michel": [{ "1010": "2025-09-09" }, { "1020": "2025-09-09" },]
+          "Jean-Michel": [{ "1010": jmdates[3] }, { "1020": jmdates[3] },]
         },
       },
     },
@@ -60,7 +92,7 @@ const sidebars = {
         avancement: 0.25,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-08" }],
-          "Jean-Michel": [{ "1010": "2025-09-16" }, { "1020": "2025-09-16" },]
+          "Jean-Michel": [{ "1010": jmdates[4] }, { "1020": jmdates[4] },]
         },
       },
     },
@@ -73,7 +105,7 @@ const sidebars = {
         avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-11" }],
-          "Jean-Michel": [{ "1010": "2025-09-19" }, { "1020": "2025-09-19" },]
+          "Jean-Michel": [{ "1010": jmdates[5] }, { "1020": jmdates[5] },]
         },
       },
     },
@@ -86,7 +118,7 @@ const sidebars = {
         avancement: 0.75,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-15" }],
-          "Jean-Michel": [{ "1010": "2025-09-23" }, { "1020": "2025-09-23" },]
+          "Jean-Michel": [{ "1010": jmdates[6] }, { "1020": jmdates[6] },]
         },
       },
     },
@@ -100,7 +132,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-18" }],
-          "Jean-Michel": [{ "1010": "2025-09-24" }, { "1020": "2025-09-24" },]
+          "Jean-Michel": [{ "1010": jmdates[7] }, { "1020": jmdates[7] },]
         },
       },
     },
@@ -113,7 +145,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-22" }],
-          "Jean-Michel": [{ "1010": "2025-09-26" }, { "1020": "2025-09-26" },]
+          "Jean-Michel": [{ "1010": jmdates[8] }, { "1020": jmdates[8] },]
         },
       },
     },
@@ -126,7 +158,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-25" }],
-          "Jean-Michel": [{ "1010": "2025-09-30" }, { "1020": "2025-09-30" },]
+          "Jean-Michel": [{ "1010": jmdates[9] }, { "1020": jmdates[9] },]
         },
       },
     },
@@ -139,7 +171,7 @@ const sidebars = {
         avancement: 0.3,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-09-29" }],
-          "Jean-Michel": [{ "1010": "2025-10-03" }, { "1020": "2025-10-03" },]
+          "Jean-Michel": [{ "1010": jmdates[10] }, { "1020": jmdates[10] },]
         },
       },
     },
@@ -152,7 +184,7 @@ const sidebars = {
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-02" }],
-          "Jean-Michel": [{ "1010": "2025-10-21" }, { "1020": "2025-10-21" },]
+          "Jean-Michel": [{ "1010": jmdates[11] }, { "1020": jmdates[11] },]
         },
       },
     },
@@ -165,7 +197,7 @@ const sidebars = {
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-06" }],
-          "Jean-Michel": [{ "1010": "2025-10-07" }, { "1020": "2025-10-07" },]
+          "Jean-Michel": [{ "1010": jmdates[12] }, { "1020": jmdates[12] },]
         },
       },
     },
@@ -177,7 +209,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-09" }],
-          "Jean-Michel": [{ "1010": "2025-10-10" }, { "1020": "2025-10-10" },]
+          "Jean-Michel": [{ "1010": jmdates[13] }, { "1020": jmdates[13] },]
         },
       },
     },
@@ -190,7 +222,7 @@ const sidebars = {
         avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-20" }],
-          "Jean-Michel": [{ "1010": "2025-10-24" }, { "1020": "2025-10-24" },]
+          "Jean-Michel": [{ "1010": jmdates[14] }, { "1020": jmdates[14] },]
         },
       },
     },
@@ -203,7 +235,7 @@ const sidebars = {
         avancement: 0.7,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-23" }],
-          "Jean-Michel": [{ "1010": "2025-10-01" }, { "1020": "2025-10-01" },]
+          "Jean-Michel": [{ "1010": jmdates[15] }, { "1020": jmdates[15] },]
         },
       },
     },
@@ -216,7 +248,7 @@ const sidebars = {
         avancement: 0.9,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-27" }],
-          "Jean-Michel": [{ "1010": "2025-10-28" }, { "1020": "2025-10-28" },]
+          "Jean-Michel": [{ "1010": jmdates[16] }, { "1020": jmdates[16] },]
         },
       },
     },
@@ -229,7 +261,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-10-30" }],
-          "Jean-Michel": [{ "1010": "2025-10-31" }, { "1020": "2025-10-31" },]
+          "Jean-Michel": [{ "1010": jmdates[17] }, { "1020": jmdates[17] },]
         },
       },
     },
@@ -243,7 +275,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-03" }],
-          "Jean-Michel": [{ "1010": "2025-11-04" }, { "1020": "2025-11-04" },]
+          "Jean-Michel": [{ "1010": jmdates[18] }, { "1020": jmdates[18] },]
         },
       },
     },
@@ -256,7 +288,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-06" }],
-          "Jean-Michel": [{ "1010": "2025-11-07" }, { "1020": "2025-11-07" },]
+          "Jean-Michel": [{ "1010": jmdates[19] }, { "1020": jmdates[19] },]
         },
       },
     },
@@ -269,7 +301,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-13" }],
-          "Jean-Michel": [{ "1010": "2025-11-11" }, { "1020": "2025-11-11" },]
+          "Jean-Michel": [{ "1010": jmdates[20] }, { "1020": jmdates[20] },]
         },
       },
     },
@@ -282,7 +314,7 @@ const sidebars = {
         avancement: 0.2,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-17" }],
-          "Jean-Michel": [{ "1010": "2025-11-14" }, { "1020": "2025-11-14" },]
+          "Jean-Michel": [{ "1010": jmdates[21] }, { "1020": jmdates[21] },]
         },
       },
     },
@@ -295,7 +327,7 @@ const sidebars = {
         avancement: 0.3,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-20" }],
-          "Jean-Michel": [{ "1010": "2025-11-18" }, { "1020": "2025-11-18" },]
+          "Jean-Michel": [{ "1010": jmdates[22] }, { "1020": jmdates[22] },]
         },
       },
     },
@@ -308,7 +340,7 @@ const sidebars = {
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-24" }],
-          "Jean-Michel": [{ "1010": "2025-11-21" }, { "1020": "2025-11-21" },]
+          "Jean-Michel": [{ "1010": jmdates[23] }, { "1020": jmdates[23] },]
         },
       },
     },
@@ -321,7 +353,7 @@ const sidebars = {
         avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-11-27" }],
-          "Jean-Michel": [{ "1010": "2025-11-25" }, { "1020": "2025-11-25" },]
+          "Jean-Michel": [{ "1010": jmdates[24] }, { "1020": jmdates[24] },]
         },
       },
     },
@@ -334,7 +366,7 @@ const sidebars = {
         avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-12-01" }],
-          "Jean-Michel": [{ "1010": "2025-11-28" }, { "1020": "2025-11-28" },]
+          "Jean-Michel": [{ "1010": jmdates[25] }, { "1020": jmdates[25] },]
         },
       },
     },
@@ -347,7 +379,7 @@ const sidebars = {
         avancement: 0.8,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-12-04" }],
-          "Jean-Michel": [{ "1010": "2025-12-02" }, { "1020": "2025-12-02" },]
+          "Jean-Michel": [{ "1010": jmdates[26] }, { "1020": jmdates[26] },]
         },
       },
     },
@@ -361,7 +393,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-12-08" }],
-          "Jean-Michel": [{ "1010": "2025-12-05" }, { "1020": "2025-12-05" },]
+          "Jean-Michel": [{ "1010": jmdates[27] }, { "1020": jmdates[27] },]
         },
       },
     },
@@ -372,7 +404,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-12-11" }],
-          "Jean-Michel": [{ "1010": "2025-12-16" }, { "1020": "2025-12-16" },]
+          "Jean-Michel": [{ "1010": jmdates[28] }, { "1020": jmdates[28] },]
         },
       },
     },
@@ -384,7 +416,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ "1030": "2025-12-22" }],
-          "Jean-Michel": [{ "1010": "2025-12-19" }, { "1020": "2025-12-19" },]
+          "Jean-Michel": [{ "1010": jmdates[29] }, { "1020": jmdates[29] },]
         },
       },
     },
