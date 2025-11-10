@@ -150,7 +150,7 @@ Future<UserCredential> signInWithGoogle() async {
 ```dart
 MaterialButton(
   onPressed: () async {
-    await GoogleSignIn().signOut();
+    await GoogleSignIn.instance.signOut();
     await FirebaseAuth.instance.signOut();
     setState(() {});
   },
