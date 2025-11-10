@@ -61,20 +61,23 @@ void initState() {
 
 ```dart
 Future<UserCredential> signInWithGoogle() async {
-  // Trigger the authentication flow
-  final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    // Déclencher le flow d'authentification
+    final GoogleSignInAccount googleUser = await GoogleSignIn.instance
+        .authenticate();
 
-  // Obtain the auth details from the request
-  final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+    // Obtenir les détails d'authorisation de la requête
+    final GoogleSignInAuthentication googleAuth = googleUser.authentication;
+    final GoogleSignInClientAuthorization? authorizationClient =
+        await googleUser.authorizationClient.authorizationForScopes([]);
 
-  // Create a new credential
-  final credential = GoogleAuthProvider.credential(
-    accessToken: googleAuth?.accessToken,
-    idToken: googleAuth?.idToken,
-  );
+    // Créer de nouvelles informations de connexion
+    final credential = GoogleAuthProvider.credential(
+      accessToken: authorizationClient!.accessToken,
+      idToken: googleAuth.idToken,
+    );
 
-  // Once signed in, return the UserCredential
-  return await FirebaseAuth.instance.signInWithCredential(credential);
+    // Une fois connecté, retourner UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
 }
 ```
 
