@@ -68,7 +68,7 @@ Future<UserCredential> signInWithGoogle() async {
     // Obtenir les détails d'authorisation de la requête
     final GoogleSignInAuthentication googleAuth = googleUser.authentication;
     final GoogleSignInClientAuthorization? authorizationClient =
-        await googleUser.authorizationClient.authorizationForScopes([]);
+        await googleUser.authorizationClient.authorizationForScopes(['email']);
 
     // Créer de nouvelles informations de connexion
     final credential = GoogleAuthProvider.credential(
