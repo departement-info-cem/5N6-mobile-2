@@ -1,8 +1,8 @@
 // @ts-check
 let jmdates = [
-  "2025-08-22", 
-  "2025-08-26", 
-  "2025-09-02", 
+  "2025-08-22",
+  "2025-08-26",
+  "2025-09-02",
   "2025-09-09",
   "2025-09-16",
   "2025-09-19",
@@ -29,8 +29,8 @@ let jmdates = [
   "2025-12-05",
   "2025-12-09",
   "2025-12-16",
-  "2025-12-19",
-]
+  "2025-12-12",
+];
 
 // Ajout du tableau pour Pierre-Olivier
 let podates = [
@@ -57,14 +57,13 @@ let podates = [
   "2025-11-13",
   "2025-11-17",
   "2025-11-20",
-  "2025-11-24",
   "2025-11-27",
   "2025-12-01",
   "2025-12-04",
   "2025-12-08",
   "2025-12-11",
-  "2025-12-22",
-]
+  "2025-12-12",
+];
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -75,8 +74,8 @@ const sidebars = {
       id: "cours/intro",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[0] }],
-          "Jean-Michel": [{ "1010": jmdates[0] }, { "1020": jmdates[0] },]
+          "Pierre-Olivier": [{ 1030: podates[0] }],
+          "Jean-Michel": [{ 1010: jmdates[0] }, { 1020: jmdates[0] }],
         },
       },
     },
@@ -86,8 +85,8 @@ const sidebars = {
       id: "cours/mise-en-page",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[1] }],
-          "Jean-Michel": [{ "1010": jmdates[1] }, { "1020": jmdates[1] },]
+          "Pierre-Olivier": [{ 1030: podates[1] }],
+          "Jean-Michel": [{ 1010: jmdates[1] }, { 1020: jmdates[1] }],
         },
       },
     },
@@ -99,8 +98,8 @@ const sidebars = {
         avancementLabel: "TP1 - Créé",
         avancement: 0.0,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[2] }],
-          "Jean-Michel": [{ "1010": jmdates[2] }, { "1020": jmdates[2] },]
+          "Pierre-Olivier": [{ 1030: podates[2] }],
+          "Jean-Michel": [{ 1010: jmdates[2] }, { 1020: jmdates[2] }],
         },
       },
     },
@@ -112,8 +111,8 @@ const sidebars = {
         avancementLabel: "TP1",
         avancement: 0.1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[3] }],
-          "Jean-Michel": [{ "1010": jmdates[3] }, { "1020": jmdates[3] },]
+          "Pierre-Olivier": [{ 1030: podates[3] }],
+          "Jean-Michel": [{ 1010: jmdates[3] }, { 1020: jmdates[3] }],
         },
       },
     },
@@ -125,8 +124,8 @@ const sidebars = {
         avancementLabel: "TP1",
         avancement: 0.25,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[4] }],
-          "Jean-Michel": [{ "1010": jmdates[4] }, { "1020": jmdates[4] },]
+          "Pierre-Olivier": [{ 1030: podates[4] }],
+          "Jean-Michel": [{ 1010: jmdates[4] }, { 1020: jmdates[4] }],
         },
       },
     },
@@ -138,8 +137,8 @@ const sidebars = {
         avancementLabel: "TP1",
         avancement: 0.5,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[5] }],
-          "Jean-Michel": [{ "1010": jmdates[5] }, { "1020": jmdates[5] },]
+          "Pierre-Olivier": [{ 1030: podates[5] }],
+          "Jean-Michel": [{ 1010: jmdates[5] }, { 1020: jmdates[5] }],
         },
       },
     },
@@ -151,8 +150,8 @@ const sidebars = {
         avancementLabel: "TP1",
         avancement: 0.75,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[6] }],
-          "Jean-Michel": [{ "1010": jmdates[6] }, { "1020": jmdates[6] },]
+          "Pierre-Olivier": [{ 1030: podates[6] }],
+          "Jean-Michel": [{ 1010: jmdates[6] }, { 1020: jmdates[6] }],
         },
       },
     },
@@ -165,8 +164,8 @@ const sidebars = {
         avancementLabel: "TP1",
         avancement: 1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[7] }],
-          "Jean-Michel": [{ "1010": jmdates[7] }, { "1020": jmdates[7] },]
+          "Pierre-Olivier": [{ 1030: podates[7] }],
+          "Jean-Michel": [{ 1010: jmdates[7] }, { 1020: jmdates[7] }],
         },
       },
     },
@@ -178,8 +177,8 @@ const sidebars = {
         avancementLabel: "TP2 - Créé",
         avancement: 0.0,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[8] }],
-          "Jean-Michel": [{ "1010": jmdates[8] }, { "1020": jmdates[8] },]
+          "Pierre-Olivier": [{ 1030: podates[8] }],
+          "Jean-Michel": [{ 1010: jmdates[8] }, { 1020: jmdates[8] }],
         },
       },
     },
@@ -191,8 +190,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[9] }],
-          "Jean-Michel": [{ "1010": jmdates[9] }, { "1020": jmdates[9] },]
+          "Pierre-Olivier": [{ 1030: podates[9] }],
+          "Jean-Michel": [{ 1010: jmdates[9] }, { 1020: jmdates[9] }],
         },
       },
     },
@@ -204,8 +203,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.3,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[10] }],
-          "Jean-Michel": [{ "1010": jmdates[10] }, { "1020": jmdates[10] },]
+          "Pierre-Olivier": [{ 1030: podates[10] }],
+          "Jean-Michel": [{ 1010: jmdates[10] }, { 1020: jmdates[10] }],
         },
       },
     },
@@ -217,8 +216,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.4,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[11] }],
-          "Jean-Michel": [{ "1010": jmdates[11] }, { "1020": jmdates[11] },]
+          "Pierre-Olivier": [{ 1030: podates[11] }],
+          "Jean-Michel": [{ 1010: jmdates[11] }, { 1020: jmdates[11] }],
         },
       },
     },
@@ -230,8 +229,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.4,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[12] }],
-          "Jean-Michel": [{ "1010": jmdates[12] }, { "1020": jmdates[12] },]
+          "Pierre-Olivier": [{ 1030: podates[12] }],
+          "Jean-Michel": [{ 1010: jmdates[12] }, { 1020: jmdates[12] }],
         },
       },
     },
@@ -242,8 +241,8 @@ const sidebars = {
       className: "examen",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[13] }],
-          "Jean-Michel": [{ "1010": jmdates[13] }, { "1020": jmdates[13] },]
+          "Pierre-Olivier": [{ 1030: podates[13] }],
+          "Jean-Michel": [{ 1010: jmdates[13] }, { 1020: jmdates[13] }],
         },
       },
     },
@@ -255,8 +254,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.6,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[14] }],
-          "Jean-Michel": [{ "1010": jmdates[14] }, { "1020": jmdates[14] },]
+          "Pierre-Olivier": [{ 1030: podates[14] }],
+          "Jean-Michel": [{ 1010: jmdates[14] }, { 1020: jmdates[14] }],
         },
       },
     },
@@ -268,8 +267,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.7,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[15] }],
-          "Jean-Michel": [{ "1010": jmdates[15] }, { "1020": jmdates[15] },]
+          "Pierre-Olivier": [{ 1030: podates[15] }],
+          "Jean-Michel": [{ 1010: jmdates[15] }, { 1020: jmdates[15] }],
         },
       },
     },
@@ -281,8 +280,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.9,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[16] }],
-          "Jean-Michel": [{ "1010": jmdates[16] }, { "1020": jmdates[16] },]
+          "Pierre-Olivier": [{ 1030: podates[16] }],
+          "Jean-Michel": [{ 1010: jmdates[16] }, { 1020: jmdates[16] }],
         },
       },
     },
@@ -294,8 +293,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[17] }],
-          "Jean-Michel": [{ "1010": jmdates[17] }, { "1020": jmdates[17] },]
+          "Pierre-Olivier": [{ 1030: podates[17] }],
+          "Jean-Michel": [{ 1010: jmdates[17] }, { 1020: jmdates[17] }],
         },
       },
     },
@@ -308,8 +307,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[18] }],
-          "Jean-Michel": [{ "1010": jmdates[18] }, { "1020": jmdates[18] },]
+          "Pierre-Olivier": [{ 1030: podates[18] }],
+          "Jean-Michel": [{ 1010: jmdates[18] }, { 1020: jmdates[18] }],
         },
       },
     },
@@ -321,8 +320,8 @@ const sidebars = {
         avancementLabel: "TP3 - Créé",
         avancement: 0.0,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[19] }],
-          "Jean-Michel": [{ "1010": jmdates[19] }, { "1020": jmdates[19] },]
+          "Pierre-Olivier": [{ 1030: podates[19] }],
+          "Jean-Michel": [{ 1010: jmdates[19] }, { 1020: jmdates[19] }],
         },
       },
     },
@@ -334,8 +333,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[20] }],
-          "Jean-Michel": [{ "1010": jmdates[20] }, { "1020": jmdates[20] },]
+          "Pierre-Olivier": [{ 1030: podates[20] }],
+          "Jean-Michel": [{ 1010: jmdates[20] }, { 1020: jmdates[20] }],
         },
       },
     },
@@ -347,8 +346,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.2,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[21] }],
-          "Jean-Michel": [{ "1010": jmdates[21] }, { "1020": jmdates[21] },]
+          "Pierre-Olivier": [{ 1030: podates[21] }],
+          "Jean-Michel": [{ 1010: jmdates[21] }, { 1020: jmdates[21] }],
         },
       },
     },
@@ -360,8 +359,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.3,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[22] }],
-          "Jean-Michel": [{ "1010": jmdates[22] }, { "1020": jmdates[22] },]
+          "Pierre-Olivier": [{ 1030: podates[22] }],
+          "Jean-Michel": [{ 1010: jmdates[22] }, { 1020: jmdates[22] }],
         },
       },
     },
@@ -373,8 +372,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.4,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[23] }],
-          "Jean-Michel": [{ "1010": jmdates[23] }, { "1020": jmdates[23] },]
+          "Pierre-Olivier": [{ 1030: podates[23] }],
+          "Jean-Michel": [{ 1010: jmdates[23] }, { 1020: jmdates[23] }],
         },
       },
     },
@@ -386,8 +385,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.5,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[24] }],
-          "Jean-Michel": [{ "1010": jmdates[24] }, { "1020": jmdates[24] },]
+          "Pierre-Olivier": [{ 1030: podates[24] }],
+          "Jean-Michel": [{ 1010: jmdates[24] }, { 1020: jmdates[24] }],
         },
       },
     },
@@ -399,8 +398,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.6,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[25] }],
-          "Jean-Michel": [{ "1010": jmdates[25] }, { "1020": jmdates[25] },]
+          "Pierre-Olivier": [{ 1030: podates[25] }],
+          "Jean-Michel": [{ 1010: jmdates[25] }, { 1020: jmdates[25] }],
         },
       },
     },
@@ -412,8 +411,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 0.8,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[26] }],
-          "Jean-Michel": [{ "1010": jmdates[26] }, { "1020": jmdates[26] },]
+          "Pierre-Olivier": [{ 1030: podates[26] }],
+          "Jean-Michel": [{ 1010: jmdates[26] }, { 1020: jmdates[26] }],
         },
       },
     },
@@ -426,8 +425,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 1,
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[27] }],
-          "Jean-Michel": [{ "1010": jmdates[27] }, { "1020": jmdates[27] },]
+          "Pierre-Olivier": [{ 1030: podates[26] }],
+          "Jean-Michel": [{ 1010: jmdates[27] }, { 1020: jmdates[27] }],
         },
       },
     },
@@ -437,8 +436,8 @@ const sidebars = {
       id: "cours/formatif-final",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[28] }],
-          "Jean-Michel": [{ "1010": jmdates[28] }, { "1020": jmdates[28] },]
+          "Pierre-Olivier": [{ 1030: podates[27] }],
+          "Jean-Michel": [{ 1010: jmdates[28] }, { 1020: jmdates[28] }],
         },
       },
     },
@@ -449,8 +448,8 @@ const sidebars = {
       className: "examen",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ "1030": podates[29] }],
-          "Jean-Michel": [{ "1010": jmdates[29] }, { "1020": jmdates[29] },]
+          "Pierre-Olivier": [{ 1030: podates[28] }],
+          "Jean-Michel": [{ 1010: jmdates[29] }, { 1020: jmdates[29] }],
         },
       },
     },
