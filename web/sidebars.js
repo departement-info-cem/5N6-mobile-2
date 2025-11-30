@@ -32,7 +32,6 @@ let jmdates = [
   "2025-12-12",
 ];
 
-// Ajout du tableau pour Pierre-Olivier
 let podates = [
   "2025-08-25",
   "2025-08-28",
@@ -62,7 +61,7 @@ let podates = [
   "2025-12-04",
   "2025-12-08",
   "2025-12-11",
-  "2025-12-12",
+  "2025-12-15",
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
