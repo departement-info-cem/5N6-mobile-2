@@ -147,7 +147,6 @@ export default function MainDocsCalendar({
 
     // Premier jour du mois
     const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
 
     // Premier lundi à afficher (peut être du mois précédent)
     const startDate = new Date(firstDay);
