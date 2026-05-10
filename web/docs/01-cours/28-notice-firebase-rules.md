@@ -15,7 +15,7 @@ service cloud.firestore {
     }
   }
 
-}​​​​​​​​
+}
 ```
 
 ### Structure des règles
@@ -23,17 +23,17 @@ service cloud.firestore {
 ```js title="Stucture de base"
 rules_version = '2';
 
-service cloud.firestore {​​​​​​​​
-  match /databases/{​​​​​​​​database}​​​​​​​​/documents {​​​​​​​​
+service cloud.firestore {
+  match /databases/{database}/documents {
 
     //TODO l'instruction match sert à ajouter une règle d'accès
-    match /<some_path>/ {​​​​​​​​
+    match /<some_path>/ {
       //TODO on choisi ensuite le niveau de droit qu'on permet basé sur une condition
-      allow read, write: if <some_condition>;
-    }​​​​​​​​
+      allow read, write: if <some_condition>;
+    }
 
-  }​​​​​​​​
-}​​​​​​​​
+  }
+}
 ```
 
 ```js title="Exemple d'utilisation"
@@ -102,18 +102,18 @@ Les informations de connexions de l'utilisateur se trouve dans l'objet request.a
 ```js title="Permettre la lecture à tous mais l'écriture seulement aux utilisateurs connectés"
 rules_version = '2';
 
-service cloud.firestore {​​​​​​​​
-  match /databases/{​​​​​​​​database}​​​​​​​​/documents {​​​​​​​​
+service cloud.firestore {
+  match /databases/{database}/documents {
 
-    match /{document=**} {
+    match /{document=**} {
       // Tout le monde peut lire
       allow read: if true;
       // On doit être connecté pour écrire (CREATE, UPDATE, DELETE)
       allow write: if request.auth !=null
     }
 
-  }​​​​​​​​
-}​​​​​​​​
+  }
+}
 ```
 
 
@@ -137,18 +137,18 @@ service cloud.firestore {​​​​​​​​
 ```js title="Utiliser un paramètre dans la route"
 rules_version = '2';
 
-service cloud.firestore {​​​​​​​​
-  match /databases/{​​​​​​​​database}​​​​​​​​/documents {​​​​​​​​
+service cloud.firestore {
+  match /databases/{database}/documents {
 
     // {userid} crée un paramètre pour notre règle
     // Ça fonctionne un peu comme une route en ASP.Net
-    match /users/{userid} {
+    match /users/{userid} {
       // Seulement l'utilisateur lui-même peut avoir accès à ses données
       allow read, write: if request.auth !=null && request.auth.uid == userid
     }
 
-  }​​​​​​​​
-}​​​​​​​​
+  }
+}
 ```
 
 #### Match avec un document par valeur d'un champ
@@ -159,27 +159,27 @@ service cloud.firestore {​​​​​​​​
 ```js title="Récupérer un document"
 rules_version = '2';
 
-service cloud.firestore {​​​​​​​​
-  match /databases/{​​​​​​​​database}​​​​​​​​/documents {​​​​​​​​
+service cloud.firestore {
+  match /databases/{database}/documents {
 
-    match /users/{user} {
+    match /users/{user} {
       // Seulement un utilisateur avec le rôle admin peut avoir accès aux utilisateurs
       allow read, write: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";
     }
 
-  }​​​​​​​​
-}​​​​​​​​
+  }
+}
 ```
 
 - Comme que ça peut faire de longues conditions, on peut faire des fonctions
 ```js title="Faire des fonctions"
 rules_version = '2';
 
-service cloud.firestore {​​​​​​​​
-  match /databases/{​​​​​​​​database}​​​​​​​​/documents {​​​​​​​​
+service cloud.firestore {
+  match /databases/{database}/documents {
 
     // On crée une fonction pour valider que l'utilisateur connecté est un admin
-    function isAdmin() {
+    function isAdmin() {
     	return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";
     }
 
@@ -188,6 +188,6 @@ service cloud.firestore {​​​​​​​​
       allow read, write: if isAdmin();
     }
 
-  }​​​​​​​​
-}​​​​​​​​
+  }
+}
 ```
