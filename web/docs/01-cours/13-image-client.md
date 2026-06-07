@@ -11,7 +11,7 @@ hide_table_of_contents: true
 
 :::tip Avant la séance : doc officielle et exemple
 
-Vous pouvez lire la doc officielle [sur la classe MediaQuery](https://api.flutter.dev/flutter/widgets/MediaQuery-class.html). La petite vidéo est intéressante pour avoir un apperçu des fonctionnalités.
+Vous pouvez lire la doc officielle [sur la classe MediaQuery](https://api.flutter.dev/flutter/widgets/MediaQuery-class.html). La petite vidéo est intéressante pour avoir un aperçu des fonctionnalités.
 
 Vous devez également regarder le code de démo dans le repo ici: [démo de l'affichage client](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/image_client). Vous devez chercher les TODOs pour chercher les explications dans le code.
 

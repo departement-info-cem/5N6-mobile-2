@@ -3,7 +3,7 @@
 Ceci est l'explication détaillée de la configuration à faire pour
 obtenir une application Flutter fonctionnant avec Supabase.
 
-Mis à jour en nomvembre 2024
+Mis à jour en novembre 2024
 
 ## Supabase, création de compte
 

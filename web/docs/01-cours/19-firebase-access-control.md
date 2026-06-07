@@ -51,7 +51,7 @@ Nous regarderons la démo [FireStore typé](https://github.com/departement-info-
 
 ### Exercice save_user
 
-À partir votre projet de test
+À partir de votre projet de test
 
 Faire une application qui vous permet de se connecter à Firebase
 
@@ -59,11 +59,11 @@ Une fois connecté, sauvegarder l'utilisateur et ses informations dans le Firest
 
 ### Exercice type_jeux
 
-À partir votre projet de test
+À partir de votre projet de test
 
 Créer une application qui vous permettra de créer des jeux (nom, type, plateforme, évaluation, date de sortie)
 
-Les jeux devront être ratachés à un utilisateur.
+Les jeux devront être rattachés à un utilisateur.
 
 Vous devrez créer une classe Jeu et faire le nécessaire pour utiliser la méthode withConverter.
 

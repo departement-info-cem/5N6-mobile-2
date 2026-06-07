@@ -1,6 +1,6 @@
 # Prérequis
 
-Avoir fait le premier fichier de configuration. S'assurer d'avoir réinstaller firebase-cli et flutterfire-cli.
+Avoir fait le premier fichier de configuration. S'assurer d'avoir réinstallé firebase-cli et flutterfire-cli.
 
 ## Installation de la librairie
 
@@ -159,7 +159,7 @@ MaterialButton(
 ```
 
 - relancer l'application
-- On devrait pouoir se connecter et se déconnecter et l'état se lit dans la console
+- On devrait pouvoir se connecter et se déconnecter et l'état se lit dans la console
 - COMMIT PUSH
 
 ## Accéder directement a l'utilisateur connecté

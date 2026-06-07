@@ -53,7 +53,7 @@ Vous travaillerez sur les exercices.
 
 :::info Séance 2
 
-On expliquera à quoi servent les différentes classes de transfert et comment fonctionne la generation de code pour JSON.
+On expliquera à quoi servent les différentes classes de transfert et comment fonctionne la génération de code pour JSON.
 
 On fera une démo sur la personnalisation de la sérialisation d'une propriété qui nous sera utile pour sérialiser les dates.
 
@@ -78,7 +78,7 @@ flutter pub run build_runner build
 Nous utiliserons plusieurs web service hébergés sur Render au courant de la session.
 Notez que les webservices hébergés sur Render se ferment après un certain délais où il n'y a pas eu de requêtes.
 Une requête envoyée au serveur va le "réveiller", mais ça peut prendre quelques minutes.
-Donc si vous faites les exercices chez vous ou que vous êtes un des permiers dans un cours à travailler sur des exercices qui utilisent render, c'est normal que les premières requêtes échouent, le temps que le serveur se "réchauffe".
+Donc si vous faites les exercices chez vous ou que vous êtes un des premiers dans un cours à travailler sur des exercices qui utilisent render, c'est normal que les premières requêtes échouent, le temps que le serveur se "réchauffe".
 :::
 
 ### Exercice http_simple

@@ -45,7 +45,7 @@ Vous compléterez les exercices pour vous pratiquer.
 
 ### Exercice image_background
 
-Vous faire un formulaire simple (2 champs comme nom et prénom ou utilisateur et mot de passe).
+Vous devez faire un formulaire simple (2 champs comme nom et prénom ou utilisateur et mot de passe).
 
 Mettre une image en arrière plan de votre page.
 
@@ -57,7 +57,7 @@ Ajouter un bouton pour ouvrir la galerie et changer l'image d'arrière plan.
 
 Regarder la doc du image picker de flutter **[ici](https://pub.dev/packages/image_picker)**.
 
-Faire un bouton qui ouvre la gallerie et qui sélectionne plusieurs photos.
+Faire un bouton qui ouvre la galerie et qui sélectionne plusieurs photos.
 
 Envoyer toutes les photos sélectionnées unes à unes au serveur et les afficher à l'aide des URL dans un ListView une fois que l'envoi est terminé.
 

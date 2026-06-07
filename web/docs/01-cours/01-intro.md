@@ -53,7 +53,7 @@ On verra l'utilisation du gestionnaire de dépendance pour Flutter et Dart.
 
 ### Exercice tape_le_lapin
 
-Prenez l'habitude de nommer vos projet en minuscules et soulignés. Refaire le Tape le lapin en Flutter
+Prenez l'habitude de nommer vos projets en minuscules et soulignés. Refaire le Tape le lapin en Flutter
 
 Déployer sur un appareil Android puis sur IOS pour tester.
 

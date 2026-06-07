@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 ### Version "payante" (nécessite une carte de crédit)
 
-Si vous désirez utiliser utiliser Firebase Storage, assurer vous de bien **fixer un maximum de facturation** sur votre carte de crédit.
+Si vous désirez utiliser Firebase Storage, assurer vous de bien **fixer un maximum de facturation** sur votre carte de crédit.
 
 Videos à regarder:
 

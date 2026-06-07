@@ -1,6 +1,6 @@
 # Notice de configuration pour Firebase Messaging
 
-Le serveur KickMyB supporte déjà l'envoie de notifications. Par contre, il faut le configurer pour utiliser des clés sercrètes fournies par votre projet Firebase.
+Le serveur KickMyB supporte déjà l'envoi de notifications. Par contre, il faut le configurer pour utiliser des clés secrètes fournies par votre projet Firebase.
 
 ## Générer la clé privée
 

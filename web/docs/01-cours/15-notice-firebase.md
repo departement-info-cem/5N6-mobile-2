@@ -1,4 +1,4 @@
-# Configuration de Firebase dans FLutter
+# Configuration de Firebase dans Flutter
 
 Ceci est l'explication détaillée de la configuration à faire pour
 obtenir une application Flutter fonctionnant avec Firebase.
@@ -127,6 +127,6 @@ void _incrementCounter() {
 - ouvrir la console de firebase sur le projet et dans le volet Firestore
 - lancer l'application sur un appareil avec une connexion Internet fonctionnelle
 - en appuyant sur le bouton +, on demande l'ajout d'un objet dans firestore
-- dans le navigateur sur le projet dans le volet firestore, vous devriez voir les données appraitre
+- dans le navigateur sur le projet dans le volet firestore, vous devriez voir les données apparaître
 - FAIRE UN COMMIT
 - FAIRE UN PUSH

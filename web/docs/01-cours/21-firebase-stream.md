@@ -41,6 +41,6 @@ On regardera également comment faire une requête sur une collection.
 
 Créer une collection de chats.
 
-Afficher les chats en order alphabétique à l'aide du StreamBuilder.
+Afficher les chats en ordre alphabétique à l'aide du StreamBuilder.
 
 :::

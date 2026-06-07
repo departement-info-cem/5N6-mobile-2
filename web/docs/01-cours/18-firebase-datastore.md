@@ -45,7 +45,7 @@ Nous apprendrons les principes de base pour utiliser Firestore dans une applicat
 
 À partir de la console de Firestore
 
-Créer l'achitecture suivante
+Créer l'architecture suivante
 
 - Une maison
   - qui contient des pièces
@@ -57,14 +57,14 @@ Créer l'achitecture suivante
 
 ### Exercice intro_datastore
 
-À partir votre projet de test
+À partir de votre projet de test
 
-Créer une collection de jeux dans le Firestore (un jeux doit contenir au moins 2 champs)
+Créer une collection de jeux dans le Firestore (un jeu doit contenir au moins 2 champs)
 
 Faire 2 pages
 
-Une première qui nous permettera d'afficher tous les jeux (afficher seulement le nom du jeu dans la liste) et qui contiendra un bouton pour ajouter un jeux "hardcodé"
+Une première qui nous permettra d'afficher tous les jeux (afficher seulement le nom du jeu dans la liste) et qui contiendra un bouton pour ajouter un jeu "hardcodé"
 
-Une deuxième qui nous permettera d'afficher le détail d'un jeu
+Une deuxième qui nous permettra d'afficher le détail d'un jeu
 
 :::
