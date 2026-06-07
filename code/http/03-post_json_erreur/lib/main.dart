@@ -86,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
           } on DioException catch (e) {
             print(e);
             String message = e.response!.data;
+            print(message);
             if (message == "BadCredentialsException") {
               print('login deja utilise');
             } else {
