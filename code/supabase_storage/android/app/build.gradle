@@ -1,6 +1,5 @@
 plugins {
     id "com.android.application"
-    id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
 
@@ -25,7 +24,7 @@ if (flutterVersionName == null) {
 android {
     namespace "org.depinfo.image_envoi"
     compileSdkVersion flutter.compileSdkVersion
-    ndkVersion "25.1.8937393"
+    ndkVersion "28.2.13676358"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
