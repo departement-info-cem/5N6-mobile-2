@@ -13,7 +13,7 @@ Mis à jour en novembre 2024
 
 ## Exemple de code
 
-Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/supabase_storage)**.
+Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-supabase_storage.zip)**.
 
 ## Supabase, création du projet
 
@@ -143,4 +143,4 @@ string url = supabase
 
 ## Exemple de code
 
-Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/supabase_storage)**.
+Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-supabase_storage.zip)**.

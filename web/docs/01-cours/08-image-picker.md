@@ -11,7 +11,7 @@ hide_table_of_contents: true
 
 :::tip Avant la séance :
 
-Vous devrez étudier l'exemple de code suivant sur la [sélection et l'envoi d'image](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/image_envoi). Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
+Vous devrez étudier l'exemple de code suivant sur la [sélection et l'envoi d'image](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-image_envoi.zip). Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
 
 Vous devez regarder les videos suivantes:
 

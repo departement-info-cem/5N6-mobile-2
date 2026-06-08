@@ -19,7 +19,7 @@ Cependant, vous pouvez regarder la doc de Flutter en ligne sur l'internationaliz
 
 ### Portrait / Paysage
 
-Vous devrez étudier l'exemple de code suivant sur le [les changements d'orientations](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/portrait_paysage). Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
+Vous devrez étudier l'exemple de code suivant sur le [les changements d'orientations](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-portrait_paysage.zip). Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
 
 :::
 

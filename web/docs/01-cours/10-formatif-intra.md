@@ -4,15 +4,13 @@ hide_table_of_contents: true
 
 # Formatif Intra
 
-## Intra Automne 2024
+Disponibles [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-examens.zip) (à partir de 2023).
 
-Disponible ici [Intra 2024](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/examens/intra2024)
+## Intra Automne 2024
 
 Vous devez exécuter le serveur fourni en local sur votre poste.
 
 ## Intra Automne 2023
-
-Disponible ici [Intra 2023](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/examens/intra2023)
 
 Vous devez exécuter le serveur fourni en local sur votre poste.
 

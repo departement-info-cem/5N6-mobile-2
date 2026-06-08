@@ -11,7 +11,7 @@ hide_table_of_contents: true
 
 :::tip Avant la séance : théorie (2h)
 
-Regardez les exemples de code sur la [gestion d'état](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/pause_resume) et le [stockage en local](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/stockage_local).
+Regardez les exemples de code sur la [gestion d'état](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-pause_resume.zip) et le [stockage en local](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-stockage_local.zip).
 
 :::
 

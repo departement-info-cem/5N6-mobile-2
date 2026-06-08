@@ -17,23 +17,25 @@ Vous devez regarder les videos suivantes:
 
 <Video url="https://youtu.be/ZPbeMhcKITE" />
 
-**[code accès simple](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/http/01-acces_simple)**
+Répertoire **01-acces_simple** dans le code source
 
 <Video url="https://youtu.be/23q3vKf7lpA" />
 
-**[objet JSON et liste](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/http/02-json_list)**
+Répertoire **02-json_list** dans le code source
 
 <Video url="https://youtu.be/cukpZ2ORbsI" />
 
-**[Envoi POST et gestion des erreurs](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/http/03-post_json_erreur)**
+Répertoire **03-post_json_erreur** dans le code source
 
 <Video url="https://youtu.be/DRhf5rFLvgI" />
 
-**[Gestion des cookies](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/http/04-cookie_devtools)**
+Répertoire **04-cookie_devtools** dans le code source
 
 Pour avoir un exemple de sérialisation des dates en JSON vous pouvez regarder les **TODO** dans l'exemple suivant:
 
-**[Gestion des dates](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/http/05-date_json)**
+Répertoire **05-date_json**
+
+**[code](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-http.zip)**
 
 :::
 

@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 Lisez la doc Flutter sur le widget [Hero](https://docs.flutter.dev/ui/animations/hero-animations) et la page sur les [animations implicites](https://docs.flutter.dev/ui/animations/implicit-animations) pour comprendre comment Flutter gère les animations sans `AnimationController`.
 
-Clonez et ouvrez le code de demo dans [`code/hero`](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/hero). Cherchez les `TODO` dans le code pour voir ou placer les `Hero` et comment choisir les `tag`.
+Clonez et ouvrez le code [`suivant`](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-hero.zip). Cherchez les `TODO` dans le code pour voir ou placer les `Hero` et comment choisir les `tag`.
 
 :::
 

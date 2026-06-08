@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 Vous pouvez lire la doc officielle [sur la classe MediaQuery](https://api.flutter.dev/flutter/widgets/MediaQuery-class.html). La petite vidéo est intéressante pour avoir un aperçu des fonctionnalités.
 
-Vous devez également regarder le code de démo dans le repo ici: [démo de l'affichage client](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/image_client). Vous devez chercher les TODOs pour chercher les explications dans le code.
+Vous devez également regarder le code de démo dans le repo ici: [démo de l'affichage client](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-image_client.zip). Vous devez chercher les TODOs pour chercher les explications dans le code.
 
 Pour l'affichage des images, on recommande cette librairie [cached_network_image](https://pub.dev/packages/cached_network_image)
 

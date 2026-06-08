@@ -11,7 +11,7 @@ hide_table_of_contents: true
 
 :::tip Avant la séance :
 
-Vous devrez étudier l'exemple de code suivant sur : **[image et cookie](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/image_cookies)**. Cherchez les TODOs pour les explications. Dans IntelliJ View > Tool Windows > TODO.
+Vous devrez étudier l'exemple de code suivant sur : **[image et cookie](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-image_cookies.zip)**. Cherchez les TODOs pour les explications. Dans IntelliJ View > Tool Windows > TODO.
 (Oups désolé, je n'ai pas mis de TODO, mais il y a une vidéo pour aller avec l'exemple de code!)
 
 Vous devez regarder la video suivante:

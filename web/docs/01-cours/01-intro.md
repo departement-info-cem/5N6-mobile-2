@@ -17,7 +17,7 @@ Vous pouvez regarder la doc de Flutter en ligne.
 
 <Video url="https://youtu.be/Xf5DL_il-ck" />
 
-**[code](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/tape_le_lapin_flutter)**
+**[code](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-tape_le_lapin_flutter.zip)**
 
 :::
 

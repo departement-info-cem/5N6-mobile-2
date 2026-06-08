@@ -35,7 +35,7 @@ Nous allons discuter de comment rattacher les données à l'utilisateur :
 - Créer un compte dans le firestore qui utilise l'identifiant de l'utilisateur authentifié
 - Inclure l'identifiant de l'utilisateur dans les objets stockés (comme un champ)
 
-Nous regarderons la démo [FireStore typé](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/firestore_typed):
+Nous regarderons la démo [FireStore typé](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-firestore_typed.zip):
 
 - Accès typés au firestore
 - Récupération du server time à la création d'un objet

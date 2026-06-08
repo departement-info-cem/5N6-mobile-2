@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 Vous pouvez lire la doc officielle [sur navigation et routing](https://flutter.dev/docs/development/ui/navigation). Flutter a récemment introduit une version 2.0 de la navigation **mais nous vous conseillons d'utiliser la version 1** pour l'instant car vous trouverez moins de soutien (prof, Google et stackoverflow) pour la nouvelle approche.
 
-Vous devez également regarder le code de démo dans le repo ici: [démo de navigation](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/navigation). Vous devez chercher les TODOs pour chercher les explications dans le code.
+Vous devez également regarder le code de démo dans le repo ici: [démo de navigation](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-navigation.zip). Vous devez chercher les TODOs pour chercher les explications dans le code.
 
 :::
 
