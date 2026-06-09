@@ -425,8 +425,8 @@ const sidebars = {
         avancementLabel: "TP3",
         avancement: 1,
         calendrier: {
-          "Pierre-Olivier": [{ 1010: podates[27] }],
-          "Joris": [{ 1020: jddates[27] }],
+          "Pierre-Olivier": [{ 1010: podates[28] }],
+          "Joris": [{ 1020: jddates[28] }],
         },
       },
     },
@@ -436,8 +436,8 @@ const sidebars = {
       id: "cours/formatif-final",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ 1010: podates[28] }],
-          "Joris": [{ 1020: jddates[28] }],
+          "Pierre-Olivier": [{ 1010: podates[27] }],
+          "Joris": [{ 1020: jddates[27] }],
         },
       },
     },
