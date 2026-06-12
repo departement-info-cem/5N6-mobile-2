@@ -53,7 +53,7 @@ On discutera des variables publiques et privées en Dart.
 
 ### Exercice organisation
 
-Prendre le projet suivant: **[Code à organiser](_24-organisation/organisation.zip)**
+Prendre le projet suivant: **[Code à organiser](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-organisation.zip)**
 
 Extraire des widgets de la méthode build pour la rendre plus lisible.
 
