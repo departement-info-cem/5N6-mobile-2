@@ -1,2 +1,4 @@
 bin/
 obj/
+.idea/
+NotificationAPI/firebase-admin.json

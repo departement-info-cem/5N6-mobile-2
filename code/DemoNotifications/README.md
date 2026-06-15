@@ -34,7 +34,7 @@ générer une clé privée pour l'API Firebase.
 2. En bas de la page, cliquez sur "Générer une nouvelle clé privée" pour téléchargez le fichier JSON
    généré.
 3. Renommez le fichier en `firebase-admin.json`
-4. Copier le fichier JSON dans le dossier du projet de l'API
+4. Copier le fichier JSON dans le dossier du projet de l'API (Vis à vis du fichier .csproj)
 
 ## Suite
 
