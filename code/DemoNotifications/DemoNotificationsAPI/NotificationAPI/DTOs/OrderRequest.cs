@@ -2,6 +2,6 @@
 
 public class OrderRequest
 {
-    public string OrderContent { get; set; }
-    public string DeviceToken { get; set; }
+    public required string OrderContent { get; set; }
+    public required string DeviceToken { get; set; }
 }
