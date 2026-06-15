@@ -11,7 +11,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 Future<void> setupFirebaseMessaging() async {
   // TODO #11 : Initialiser le gestionnaire de notifications
   await flutterLocalNotificationsPlugin.initialize(
-    const InitializationSettings(
+    settings: const InitializationSettings(
         android: AndroidInitializationSettings('@mipmap/ic_launcher')),
     // TODO #15.1 : Réaction au clic sur une notification lorsque l'application est ouverte
     //              Il s'agit de la notification qui a été envoyée au T0D0 #14
@@ -42,10 +42,10 @@ Future<void> _showNotification(RemoteMessage message) async {
   // TODO #14 : Par défaut, quand l'application est ouverte, les notifications
   //            ne sont pas affichées. Il faut donc les afficher manuellement.
   await flutterLocalNotificationsPlugin.show(
-    message.notification.hashCode,
-    message.notification?.title ?? 'Notification',
-    message.notification?.body ?? 'Vous avez reçu une notification.',
-    NotificationDetails(
+    id: message.notification.hashCode,
+    title: message.notification?.title ?? 'Notification',
+    body: message.notification?.body ?? 'Vous avez reçu une notification.',
+    notificationDetails: NotificationDetails(
         android: AndroidNotificationDetails(
       'id_du_type_de_notifications',
       message.notification?.title ?? 'Notification',
