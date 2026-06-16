@@ -1,0 +1,79 @@
+name: Test Flutter Android Compilation
+
+on:
+  workflow_dispatch:
+    inputs:
+      flutter_version:
+        description: 'Version du SDK Flutter (ex: 3.24.0, stable, beta)'
+        required: true
+        default: 'stable'
+        type: string
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Configuration de Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17' # Recommandé pour les versions récentes de Flutter/Android
+
+      - name: Configuration de Flutter (${{ inputs.flutter_version }})
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ inputs.flutter_version }}
+          cache: true # Accélère les exécutions futures
+
+      - name: Trouver et compiler les projets Flutter
+        run: |
+          echo "Recherche de projets Flutter dans : code"
+
+          # Trouve tous les dossiers contenant un pubspec.yaml
+          PROJECTS=$(find code -name "pubspec.yaml" -exec dirname {} \;)
+
+          if [ -z "$PROJECTS" ]; then
+            echo "⚠️ Aucun projet Flutter trouvé dans code"
+            exit 0
+          fi
+
+          # Itération sur chaque projet trouvé
+          for DIR in $PROJECTS; do
+            echo "==================================================="
+            echo "🚀 Vérification du projet : $DIR"
+            echo "==================================================="
+
+            cd "$DIR"
+
+            # Vérification de la présence du dossier 'android'
+            if [ ! -d "android" ]; then
+              echo "⏭️ Le dossier 'android' est introuvable. Ce projet est soit un package Dart pur, soit il ne supporte pas Android. Ignoré."
+              cd "$GITHUB_WORKSPACE"
+              continue
+            fi
+
+            # Récupération des dépendances
+            echo "📦 Récupération des dépendances (pub get)..."
+            flutter pub get
+
+            # Compilation pour Android
+            # On utilise --debug car c'est beaucoup plus rapide que --release et 
+            # suffisant pour valider que le code compile.
+            echo "⚙️ Compilation de l'APK Android..."
+            flutter build apk --debug
+
+            # Vérification du code de retour de la compilation
+            if [ $? -ne 0 ]; then
+              echo "❌ Échec de la compilation pour $DIR"
+              exit 1
+            fi
+
+            echo "✅ Compilation réussie pour $DIR"
+
+            # Retour à la racine du workspace pour la prochaine itération
+            cd "$GITHUB_WORKSPACE"
+          done
