@@ -60,42 +60,42 @@ jobs:
             if [ ! -f "lib/firebase_options.dart" ] && grep -q "firebase_options" lib/main.dart 2>/dev/null; then
               echo "⚠️ firebase_options.dart manquant - création d'un stub pour CI..."
               cat > lib/firebase_options.dart << 'FIREBASE_STUB'
-// Stub auto-généré pour CI - ne pas utiliser en production
-// ignore_for_file: lines_longer_than_80_chars
-import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
-import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
-
-class DefaultFirebaseOptions {
-  static FirebaseOptions get currentPlatform {
-    switch (defaultTargetPlatform) {
-      case TargetPlatform.android:
-        return android;
-      case TargetPlatform.iOS:
-        return ios;
-      default:
-        throw UnsupportedError('Plateforme non supportée.');
-    }
-  }
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'stub-api-key',
-    appId: '1:000000000000:android:0000000000000000000000',
-    messagingSenderId: '000000000000',
-    projectId: 'stub-project',
-    storageBucket: 'stub-project.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'stub-api-key',
-    appId: '1:000000000000:ios:0000000000000000000000',
-    messagingSenderId: '000000000000',
-    projectId: 'stub-project',
-    storageBucket: 'stub-project.appspot.com',
-    iosBundleId: 'com.example.stub',
-  );
-}
-FIREBASE_STUB
+          // Stub auto-généré pour CI - ne pas utiliser en production
+          // ignore_for_file: lines_longer_than_80_chars
+          import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
+          import 'package:flutter/foundation.dart'
+              show defaultTargetPlatform, kIsWeb, TargetPlatform;
+          
+          class DefaultFirebaseOptions {
+            static FirebaseOptions get currentPlatform {
+              switch (defaultTargetPlatform) {
+                case TargetPlatform.android:
+                  return android;
+                case TargetPlatform.iOS:
+                  return ios;
+                default:
+                  throw UnsupportedError('Plateforme non supportée.');
+              }
+            }
+          
+            static const FirebaseOptions android = FirebaseOptions(
+              apiKey: 'stub-api-key',
+              appId: '1:000000000000:android:0000000000000000000000',
+              messagingSenderId: '000000000000',
+              projectId: 'stub-project',
+              storageBucket: 'stub-project.appspot.com',
+            );
+          
+            static const FirebaseOptions ios = FirebaseOptions(
+              apiKey: 'stub-api-key',
+              appId: '1:000000000000:ios:0000000000000000000000',
+              messagingSenderId: '000000000000',
+              projectId: 'stub-project',
+              storageBucket: 'stub-project.appspot.com',
+              iosBundleId: 'com.example.stub',
+            );
+          }
+          FIREBASE_STUB
             fi
 
             if [ ! -f "android/app/google-services.json" ] && [ -f "android/app/build.gradle" ]; then
@@ -103,28 +103,28 @@ FIREBASE_STUB
               if [ -n "$APP_PKG" ]; then
                 echo "⚠️ google-services.json manquant - création d'un stub pour CI (package: $APP_PKG)..."
                 cat > android/app/google-services.json << GSERVICES_STUB
-{
-  "project_info": {
-    "project_number": "000000000000",
-    "project_id": "stub-project",
-    "storage_bucket": "stub-project.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
-        "android_client_info": {
-          "package_name": "$APP_PKG"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [{"current_key": "stub-api-key"}],
-      "services": {"appinvite_service": {"other_platform_oauth_client": []}}
-    }
-  ],
-  "configuration_version": "1"
-}
-GSERVICES_STUB
+          {
+            "project_info": {
+              "project_number": "000000000000",
+              "project_id": "stub-project",
+              "storage_bucket": "stub-project.appspot.com"
+            },
+            "client": [
+              {
+                "client_info": {
+                  "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+                  "android_client_info": {
+                    "package_name": "$APP_PKG"
+                  }
+                },
+                "oauth_client": [],
+                "api_key": [{"current_key": "stub-api-key"}],
+                "services": {"appinvite_service": {"other_platform_oauth_client": []}}
+              }
+            ],
+            "configuration_version": "1"
+          }
+          GSERVICES_STUB
               fi
             fi
 
