@@ -13,7 +13,7 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        // TODO 11.2 Activer le desugaring
+        // TODO 11.2 Activer le desugaring. Si ça ne fonctionne pas avec coreLibraryDesugaringEnabled, utiliser plutôt isCoreLibraryDesugaringEnabled = true
         coreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
