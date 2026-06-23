@@ -34,7 +34,7 @@ Le serveur KickMyB supporte déjà l'envoi de notifications. Par contre, il faut
 
 Maintenant que le serveur KickMyB est configuré pour envoyer des notifications, vous devez être capable de les recevoir sur votre projet Flutter.
 
-Suivez les todos dans le [code suivant](https://github.com/departement-info-cem/projet-prog/tree/main/code/DemoNotifications/demo_notification_flutter)
+Suivez les todos dans le [code suivant](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-DemoNotifications.zip)
 
 Vous pouvez aussi vous référer à cette vidéo :
 
