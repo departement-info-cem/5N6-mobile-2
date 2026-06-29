@@ -57,7 +57,20 @@ void initState() {
 - dans un navigateur aller à https://pub.dev/packages/google_sign_in
 - copier la dépendance google_sign_in avec la bonne version dans votre pubspec.yaml
 - taper : `flutterfire configure`
-- copier la fonction suivante dans votre écran Flutter de départ
+- Assurez vous que le début de votre fonction `main` ressemble à ça :
+
+```dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  GoogleSignIn.instance.initialize(serverClientId: DefaultFirebaseOptions.currentPlatform.projectId);
+
+  // Reste de la fonction main 
+}
+```
+
+- Copiez la fonction suivante dans votre écran Flutter de départ, elle vous permettra de déclencher le flot d'authentification avec un compte Google.
 
 ```dart
 Future<UserCredential> signInWithGoogle() async {
@@ -102,8 +115,6 @@ Future<UserCredential> signInWithGoogle() async {
 - re-ouvrir le projet Flutter
 - relancer l'application et tenter une connexion, tout devrait fonctionner.
 - COMMIT PUSH
-
-
 
 ### Configuration google_sign_in pour ios (Un mac est nécessaire)
 
