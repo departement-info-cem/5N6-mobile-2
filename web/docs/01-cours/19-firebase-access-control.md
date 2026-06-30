@@ -11,6 +11,8 @@ hide_table_of_contents: true
 
 :::tip Avant la séance :
 
+Documentation des règles de firestore [ici](https://firebase.google.com/docs/firestore/security/get-started?utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-Firebase-FY26-global-gsem-1713590&utm_content=text-ad&utm_term=KW_&gclsrc=aw.ds&gad_source=1&gad_campaignid=23417478209&gbraid=0AAAAADpUDOjDu6sndNX2bq7-7KPWmunCF&gclid=CjwKCAjw0o3SBhBVEiwAh28-jcqbBhKhTQlbVg0t5XuVj_fulW0s69GtgUZEAj2E9aErVSrlCscNEBoCPKYQAvD_BwE&hl=fr)
+
 Videos à regarder:
 
 <Video url="https://youtu.be/bXVjxu5IRZY" />
