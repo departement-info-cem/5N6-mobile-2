@@ -99,17 +99,6 @@ const config = {
             position: "right",
             label: "Problèmes courants",
           },
-          {
-            type: "doc",
-            docId: `mac`,
-            position: "right",
-            label: "Installation Mac",
-          },
-          {
-            label: "Installator",
-            href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
-            position: "right",
-          },
         ],
       },
       footer: {
