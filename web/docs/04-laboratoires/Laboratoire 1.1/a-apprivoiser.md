@@ -26,7 +26,7 @@ Trouve les informations suivantes sur le langage Dart et le framework Flutter et
 
 ## Paradigme et concepts clés
 
-Prends le temps de lire ce que ton LLM favori te répond à la question suggérée [ici](../../03-recettes/nouveau_language.md#paradigme-et-concepts-clés).
+Prends le temps de lire ce que ton LLM favori te répond à la question suggérée [ici](../../03-recettes/nouveau-langage.md#paradigme-et-concepts-clés).
 
 ## Outillage (CLI et Débogage)
 
