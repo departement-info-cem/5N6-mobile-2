@@ -21,7 +21,7 @@ hide_table_of_contents: true
 
 ## Commencer avec Flutter
 
-Consultez les recettes [Apprivoiser un nouveau framework 💬](../03-recettes/nouveau-framework.md) et [Tour d'horizon d'un projet Flutter 🌅](../03-recettes/tour-dhorizon.md).
+Consultez les recettes [Apprivoiser un nouveau framework 💬](../03-recettes/nouveau-framework.md), [Tour d'horizon d'un projet Flutter 🌅](../03-recettes/tour-dhorizon.md) et [Outils de débogage 🪲](../03-recettes/outils-debogage.md).
 
 <Video url="https://youtu.be/TCeb8En8J90" />
 

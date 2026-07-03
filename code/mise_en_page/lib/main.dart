@@ -43,17 +43,20 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Row(
             children: [
-              Expanded(
-                flex: 2,
-                child: Container(
-                  margin: const EdgeInsets.all(5),
-                  // Ca prend un container pour les bordures et les marges
-                  width: double.infinity,
-                  color: Colors.blue,
-                  child: const Padding(
-                    // Le padding se fait en encapsulant dans le widget Padding
-                    padding: EdgeInsets.all(8.0),
-                    child: Text("Je prends 2/3"),
+              SizedBox(
+                height: 10000,
+                child: Expanded(
+                  flex: 2,
+                  child: Container(
+                    margin: const EdgeInsets.all(5),
+                    // Ca prend un container pour les bordures et les marges
+                    width: double.infinity,
+                    color: Colors.blue,
+                    child: const Padding(
+                      // Le padding se fait en encapsulant dans le widget Padding
+                      padding: EdgeInsets.all(8.0),
+                      child: Text("Je prends 2/3"),
+                    ),
                   ),
                 ),
               ),
