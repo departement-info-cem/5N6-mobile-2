@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "296577994900",
+    "project_id": "examen-final-a24",
+    "storage_bucket": "examen-final-a24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296577994900:android:57c1f418967a3d6524a481",
+        "android_client_info": {
+          "package_name": "org.depinfo.solution"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJc9cAOuVJid0b8l_s5sTyl7by2gHR7D0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

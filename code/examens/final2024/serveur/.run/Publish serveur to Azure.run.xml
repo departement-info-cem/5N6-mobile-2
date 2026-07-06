@@ -1,0 +1,17 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Publish serveur to Azure" type="AzureWebAppDeploy">
+    <option name="appServicePlanName" value="asp-app-241203112308" />
+    <option name="appServicePlanResourceGroupName" value="5N6" />
+    <option name="operatingSystem" value="Linux" />
+    <option name="pricingSize" value="F1" />
+    <option name="pricingTier" value="Free" />
+    <option name="projectConfiguration" value="Release" />
+    <option name="projectPlatform" value="Any CPU" />
+    <option name="publishableProjectPath" value="$PROJECT_DIR$/serveur/serveur.csproj" />
+    <option name="region" value="centralus" />
+    <option name="resourceGroupName" value="5N6" />
+    <option name="subscriptionId" value="cbcce736-777c-4958-b908-e8977eee2b79" />
+    <option name="webAppName" value="examen-final-A24" />
+    <method v="2" />
+  </configuration>
+</component>

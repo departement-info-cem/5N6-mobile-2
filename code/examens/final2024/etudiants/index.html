@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="page du cours programmation mobile">
+    <meta name="author" content="Département informatique, collège Édouard Montpetit">
+    <title>Mobile Avancé : Final A24</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="#"><strong>Mobile Avancé</strong> Examen Final A24</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                <p>
+                    <strong>Documentation autorisée</strong>:
+                    Tout ce que vous avez produit pendant le cours, ainsi que les repository utilisés et présentés
+                    pendant le cours.
+                    <br />
+                    <strong>Non autorisée</strong>:
+                    Clé USB, Internet (à l'exception du site du cours et de la documentation Flutter), Intelligences
+                    Artificielles.
+                </p>
+                <p>
+                    <strong>Durée</strong>:
+                    Vous avez <span class="label label-primary">2</span> heures pour compléter l'examen. Plus si vous
+                    avez le droit
+                    à du temps supplémentaire.
+                </p>
+            </div>
+
+            <div class="col-xs-6 ">
+                <h3>Firestore</h3>
+                <p>
+                    Faire une copie du projet
+                    <a href="firebase_start_final.zip" class="badge badge-primary">firebase_start_final</a>
+                    et renomme le dossier <strong>exo_firestore_<em>nomdefamille</em></strong>. Le projet est connecté à
+                    un projet firebase.
+                </p>
+                <p>
+                    On veut deux boutons au milieu de l'application nommés "Obtenir" et "Mettre à jour".
+                </p>
+                <p>
+                    Il y a deux éléments de texte sous le bouton qui permettent d'afficher les informations
+                    reccueillies.
+                </p>
+                <p>
+                    Le datastore Firebase contient une collection <strong>"etudiants"</strong>, dont les ID sont les
+                    matricules de tout les étudiants du cours.
+                </p>
+                <p>
+                    Chaque entrée contient 3 champs : "nom", "prenom" et "complete"
+                </p>
+                <p>
+                    <span class="label label-danger">2 points</span>
+                    À l'appui sur le bouton "Obtenir", vous devez obtenir le document lié à votre matricule Ex:
+                    1525462</strong>
+                    Vous devez afficher les champs "nom" et "prenom" dans les 2 champs texte sous les boutons.
+                </p>
+                <p>
+                    <span class="label label-danger">1 point</span>
+                    À l'appui sur le bouton "Mettre à jour", le document ayant pour Id votre matricule doit être mise à
+                    jour pour que la propriété "complete" passe de false à true.
+                </p>
+            </div>
+            <div class="col-xs-6 ">
+                <h3>HTTP JSON et erreurs</h3>
+                <p>
+                    Dans un dossier séparé <strong>exo_erreurs</strong>, vous devez programmer une interface avec 2
+                    champs de saisie et un bouton.
+                </p>
+                <p>
+                    Le serveur déployé :
+                <pre>https://examen-final-a24.azurewebsites.net/Exam2024/Division/{dividende}/{diviseur}</pre>
+                Exemple d'usage :
+                <pre>https://examen-final-a24.azurewebsites.net/Exam2024/Division/100/5</pre>
+
+                Le webservice vous permet d'effectuer des divisions.
+                <ul>
+                    <li>Si le diviseur est 0, vous recevrez un message d'erreur (code 400).</li>
+                    <li>Si la division réussie, vous recevez un objet json qui va comme suit
+                        <code>{"resultat" : ResultatCommeNombreEntier}</code>. Ex : <code>{"resultat" : 20}</code> (code
+                        200).
+                    </li>
+                </ul>
+                </p>
+
+                <ul>
+                    <li><span class="label label-danger">1 point</span>
+                        L'appui sur le bouton envoi une requête GET à l'URL du serveur déployé.
+                        Remplacez {dividende} et {diviseur} par le contenu des champs texte.
+                    </li>
+                    </li>
+                    <li><span class="label label-danger">1 point</span>
+                        Si tout se passe bien (aucune erreur) affichez un SnackBar indiquant le message renvoyé (le
+                        contenu du champ <code>resultat</code>).
+                    </li>
+                    <li><span class="label label-danger">1 point</span>
+                        Si l'application n'arrive pas à communiquer avec le serveur, affichez un SnackBar avec un
+                        message clair et en français.
+                    </li>
+                    <li><span class="label label-danger">1 point</span>
+                        Vous affichez le message d'erreur retourné par le serveur dans un Snackbar.
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Question à développement</h3>
+                <p>
+                    <span class="label label-danger">2 points</span> <span class="label label-info">Entre 2 et 4
+                        lignes</span>
+                    <br />
+                    <br />
+                    <b>Qu'est-ce que le contrôle d'accès, et comment est-il mis en place dans le TP3 du cours
+                        d'applications mobiles avancées?</b>
+                    <br />
+                    <br />
+                    ____________________________________________________________________________________________
+                    <br />
+                    <br />
+                    ____________________________________________________________________________________________
+                    <br />
+                    <br />
+                    ____________________________________________________________________________________________
+                    <br />
+                    <br />
+                    ____________________________________________________________________________________________
+                    <br />
+                    <br />
+                </p>
+
+                <!--                <p>-->
+                <!--                    <span class="label label-danger">1 point</span> <span class="label label-info">Entre 2 et 4 lignes</span>-->
+                <!--                    <br/>-->
+                <!--                    <br/>-->
+                <!--                    <b>Qu'est ce que sont les en-têtes http? Donne 2 exemples d’en-têtes HTTP.</b>-->
+                <!--                    <br/>-->
+                <!--                    <br/>-->
+                <!--                    ___________________________________________________________________________-->
+                <!--                    <br/>-->
+                <!--                    <br/>-->
+                <!--                    ___________________________________________________________________________-->
+                <!--                    <br/>-->
+                <!--                    <br/>-->
+                <!--                    ___________________________________________________________________________-->
+                <!--                    <br/>-->
+                <!--                    <br/>-->
+                <!--                    ___________________________________________________________________________-->
+                <!--                    <br/>-->
+                <!--                    <br/>-->
+                <!--                </p>-->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

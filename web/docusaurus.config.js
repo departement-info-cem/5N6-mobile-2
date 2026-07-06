@@ -71,7 +71,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "cours/rencontre1.1",
+            docId: "cours/intro",
             position: "left",
             label: "Cours",
           },
@@ -80,6 +80,23 @@ const config = {
             position: "left",
             sidebarId: "tp",
             label: "Travaux Pratiques",
+          },
+          {
+            type: "doc",
+            docId: "solution",
+            position: "right",
+            label: "Problèmes courants",
+          },
+          {
+            type: "doc",
+            docId: `mac`,
+            position: "right",
+            label: "Installation Mac",
+          },
+          {
+            label: "Installator",
+            href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
+            position: "right",
           },
         ],
       },
