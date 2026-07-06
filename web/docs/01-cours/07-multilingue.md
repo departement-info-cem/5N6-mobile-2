@@ -13,13 +13,13 @@ hide_table_of_contents: true
 
 ### Multilingue
 
-Nous vous recommendons d'utiliser le plugin Jetbrains [Flutter Intl](https://plugins.jetbrains.com/plugin/13666-flutter-intl), qui automatise une partie non négligeable du travail de traduction.
+Nous vous recommandons d'utiliser le plugin Jetbrains [Flutter Intl](https://plugins.jetbrains.com/plugin/13666-flutter-intl), qui automatise une partie non négligeable du travail de traduction.
 
 Cependant, vous pouvez regarder la doc de Flutter en ligne sur l'internationalization [ici](https://flutter.dev/docs/development/accessibility-and-localization/internationalization), si vous n'utilisez pas le plugin de Jetbrains.
 
 ### Portrait / Paysage
 
-Vous devrez étudier l'exemple de code suivant sur le [les changements d'orientations](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/portrait_paysage). Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
+Vous devrez étudier l'exemple de code suivant sur le [les changements d'orientations](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-portrait_paysage.zip). Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
 
 :::
 
@@ -45,7 +45,7 @@ Nous regarderons comment utiliser l'OrientationBuilder pour contrôler les chang
 
 Vous devez reproduire la mise en page de l'image suivante dans une appli Flutter appelée multilingue_bizarre. Rendre l'application disponible dans les langues suivantes:
 
-- Francais
+- Français
 - Norvégien
 - Japonais
 
@@ -77,7 +77,7 @@ Reproduire les mises en page suivantes dans une appli Flutter appelée plein_de_
 
 Vous aurez probablement besoin d'utiliser le [OrientationBuilder](https://flutter.dev/docs/cookbook/design/orientation).
 
-Tester votre application avec les appreils suivants:
+Tester votre application avec les appareils suivants:
 
 - Nexus One
 - Pixel 4 XL

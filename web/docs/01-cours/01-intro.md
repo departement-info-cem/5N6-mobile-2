@@ -27,7 +27,7 @@ Consultez les recettes [Apprivoiser un nouveau framework 💬](../03-recettes/no
 
 <Video url="https://youtu.be/Xf5DL_il-ck" />
 
-**[code](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/tape_le_lapin_flutter)**
+**[code](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-tape_le_lapin_flutter.zip)**
 
 :::
 
@@ -63,7 +63,7 @@ On verra l'utilisation du gestionnaire de dépendance pour Flutter et Dart.
 
 ### Exercice tape_le_lapin
 
-Prenez l'habitude de nommer vos projet en minuscules et soulignés. Refaire le Tape le lapin en Flutter
+Prenez l'habitude de nommer vos projets en minuscules et soulignés. Refaire le Tape le lapin en Flutter
 
 Déployer sur un appareil Android puis sur IOS pour tester.
 

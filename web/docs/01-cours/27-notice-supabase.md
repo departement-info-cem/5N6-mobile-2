@@ -3,7 +3,7 @@
 Ceci est l'explication détaillée de la configuration à faire pour
 obtenir une application Flutter fonctionnant avec Supabase.
 
-Mis à jour en nomvembre 2024
+Mis à jour en novembre 2024
 
 ## Supabase, création de compte
 
@@ -13,7 +13,7 @@ Mis à jour en nomvembre 2024
 
 ## Exemple de code
 
-Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/supabase_storage)**.
+Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-supabase_storage.zip)**.
 
 ## Supabase, création du projet
 
@@ -143,4 +143,4 @@ string url = supabase
 
 ## Exemple de code
 
-Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/supabase_storage)**.
+Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-supabase_storage.zip)**.

@@ -1,5 +1,5 @@
 ---
-description: Transitions animees entre ecrans
+description: Transitions animées entre écrans
 hide_table_of_contents: true
 ---
 
@@ -9,11 +9,11 @@ hide_table_of_contents: true
 
 <Column>
 
-:::tip Avant la seance
+:::tip Avant la séance
 
-Lisez la doc Flutter sur le widget [Hero](https://docs.flutter.dev/ui/animations/hero-animations) et la page sur les [animations implicites](https://docs.flutter.dev/ui/animations/implicit-animations) pour comprendre comment Flutter gere les animations sans `AnimationController`.
+Lisez la doc Flutter sur le widget [Hero](https://docs.flutter.dev/ui/animations/hero-animations) et la page sur les [animations implicites](https://docs.flutter.dev/ui/animations/implicit-animations) pour comprendre comment Flutter gère les animations sans `AnimationController`.
 
-Clonez et ouvrez le code de demo dans [`code/hero`](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/hero). Cherchez les `TODO` dans le code pour voir ou placer les `Hero` et comment choisir les `tag`.
+Clonez et ouvrez le code [`suivant`](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-hero.zip). Cherchez les `TODO` dans le code pour voir ou placer les `Hero` et comment choisir les `tag`.
 
 :::
 
@@ -21,11 +21,11 @@ Clonez et ouvrez le code de demo dans [`code/hero`](https://github.com/departeme
 
 <Column>
 
-:::info Seance
+:::info Séance
 
-- Rappel: une transition Hero fait voler un widget entre deux routes partageant le meme `tag`.
+- Rappel: une transition Hero fait voler un widget entre deux routes partageant le même `tag`.
 - Comment entourer une image ou un widget avec `Hero` et naviguer avec `Navigator.push` / `pop`.
-- Comment gerer plusieurs Hero dans une liste (utiliser des `tag` uniques) et eviter les clignotements avec `placeholderBuilder`.
+- Comment gérer plusieurs Hero dans une liste (utiliser des `tag` uniques) et éviter les clignotements avec `placeholderBuilder`.
 - Personnaliser l'animation avec `flightShuttleBuilder` ou des `Tween` sur la cible.
 
 :::

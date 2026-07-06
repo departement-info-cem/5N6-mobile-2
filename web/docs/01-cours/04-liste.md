@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 Vous regarderez la doc officielle **[ici](https://flutter.dev/docs/cookbook/lists/basic-list)**
 
-Vous regardez l'exemple de code **[demo de liste](https://github.com/departement-info-cem/5N6-mobile-2-Nouveau/tree/main/code/liste)**
+Vous regardez l'exemple de code **[demo de liste](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-liste.zip)**
 
 :::
 

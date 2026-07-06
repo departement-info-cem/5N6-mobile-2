@@ -18,7 +18,7 @@ VOUS DEVEZ FAIRE LE TOUT PENDANT LES 6 HEURES DE COURS EN CLASSE.
 UTILISER LE TEMPS DE TRAVAIL A LA MAISON POUR COMPLETER VOTRE TP2
 :::
 
-## Etape 0 : Discussion sur "soft delete" et "hard delete"
+## Étape 0 : Discussion sur "soft delete" et "hard delete"
 
 Chaque équipe doit décider entre les 2 approches:
 
@@ -31,13 +31,13 @@ Quelques questions pour partir la conversation:
 2. Selon vous est-ce que c'est légal?
 3. Techniquement, qu'est-ce qui vous semble le plus simple? Niveau BD, service, DTO et client?
 
-## Etape 1 : Fork du projet et ajout du ou des coéquipiers
+## Étape 1 : Fork du projet et ajout du ou des coéquipiers
 
 1. Aller sur le repo du serveur : [https://github.com/departement-info-cem/KickMyB-Server](https://github.com/departement-info-cem/KickMyB-Server)
 2. Un des équipiers forke le projet dans son compte : [https://docs.github.com/fr/get-started/quickstart/fork-a-repo](https://docs.github.com/fr/get-started/quickstart/fork-a-repo)
 3. Il ajoute son co-équipier comme contributor au repo : [https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-your-project/managing-access-to-your-projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-your-project/managing-access-to-your-projects)
 
-## Etape 2 : planification du sprint / découpage en tâches
+## Étape 2 : planification du sprint / découpage en tâches
 
 L'ajout de la suppression va demander de faire des modifications aux niveaux suivants:
 
@@ -64,7 +64,7 @@ Vous ne pouvez pas partager le code de votre TP entre vous.
 
 :::
 
-## Etape 3 : le sprint / coder sans se marcher sur les pieds
+## Étape 3 : le sprint / coder sans se marcher sur les pieds
 
 Vous devez essayer de maximiser votre capacité à travailler en parallèle pour ne pas perdre de temps. Voici quelques stratégies:
 
@@ -81,7 +81,7 @@ Pour chaque tâche, faites un code review à 2 pour valider quand c'est complét
 
 Ne négligez pas le test de votre code. Quand vous nous dites que c'est fini, ça signifie que vous pensez que ça part en production.
 
-## Etape 4 : revue / validation
+## Étape 4 : revue / validation
 
 Appelez le prof pour votre revue:
 

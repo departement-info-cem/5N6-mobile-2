@@ -15,7 +15,7 @@ Vous pouvez regarder la doc de Flutter en ligne sur la mise en page [ici](https:
 
 Vous devrez étudier l'exemple de code suivant sur la **[mise en page en taille fixe](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/mise_en_page)**. Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
 
-Vous regarderez l'exemple suivant de mise en **[page en scroll](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/double_scroll)**
+Vous regarderez l'exemple suivant de mise en **[page en scroll](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-double_scroll.zip)**
 
 :::
 

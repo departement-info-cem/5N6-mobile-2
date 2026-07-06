@@ -20,7 +20,7 @@ service cloud.firestore {
 
 ### Structure des règles
 
-```js title="Stucture de base"
+```js title="Structure de base"
 rules_version = '2';
 
 service cloud.firestore {
@@ -42,7 +42,7 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // La règles s'appliquent pour toutes les villes de la collection
+    // Les règles s'appliquent pour toutes les villes de la collection
     match /cities/{city} {
     	// Tout le monde peut lire les villes
       allow read: if true;
@@ -50,7 +50,7 @@ service cloud.firestore {
       allow write: if request.auth.uid == "MX0zbHawfhWThfVO8J1oOFtgkfH2"
     }
     
-    // La règles s'appliquent pour toutes les routes de la collection ou de toutes les sous-collections
+    // Les règles s'appliquent pour toutes les routes de la collection ou de toutes les sous-collections
     // {document=**} est un wildchar qui permet d'appliquer la règle à tous les documents de façon récursive
     match /cities/{city}/roads/{document=**} {
     	// Tout le monde peut lire et écrire
@@ -119,7 +119,7 @@ service cloud.firestore {
 
 ### Plusieurs règles sur un même document
 
-- Il est possible que plusieurs règles s'applique sur un même document
+- Il est possible que plusieurs règles s'appliquent sur un même document
 - Dès qu'une règle a la valeur **true**, l'accès est accordé
 <Column size="12">
   ![Tester les règles](_28-rules/rules8.png)

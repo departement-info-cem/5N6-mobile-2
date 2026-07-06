@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 ### Version "payante" (nécessite une carte de crédit)
 
-Si vous désirez utiliser utiliser Firebase Storage, assurer vous de bien **fixer un maximum de facturation** sur votre carte de crédit.
+Si vous désirez utiliser Firebase Storage, assurer vous de bien **fixer un maximum de facturation** sur votre carte de crédit.
 
 Videos à regarder:
 
@@ -25,7 +25,7 @@ Supabase est une alternative open source à Firebase.
 
 Pour la mise en place, vous devez suivre les étapes décrites **[ici](notice-supabase).**
 
-Vous regarderez l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/supabase_storage)**
+Vous regarderez l'exemple de code **[supabase_storage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-supabase_storage.zip)**
 
 :::
 

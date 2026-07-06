@@ -1,5 +1,5 @@
 ---
-description: Extraires des widgets
+description: Extraire des widgets
 hide_table_of_contents: true
 ---
 
@@ -18,7 +18,7 @@ Nous vous suggérons cette organisation de fichiers et de dossiers
 
 ### Extraire des widgets
 
-En général, on dit comme règle qu'un méthode ne devrait pas faire plus d'un écran.
+En général, on dit comme règle qu'une méthode ne devrait pas faire plus d'un écran.
 Ainsi, si vous avez un widget qui a une méthode build() qui est plus grande qu'un écran, mieux vaut en extraire quelques widgets pour mieux organiser notre code.
 
 ![Extraire un widget](_24-organisation/extract.png)
@@ -53,7 +53,7 @@ On discutera des variables publiques et privées en Dart.
 
 ### Exercice organisation
 
-Prendre le projet suivant: **[Code à organiser](_24-organisation/organisation.zip)**
+Prendre le projet suivant: **[Code à organiser](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-organisation.zip)**
 
 Extraire des widgets de la méthode build pour la rendre plus lisible.
 

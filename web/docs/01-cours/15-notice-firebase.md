@@ -1,4 +1,4 @@
-# Configuration de Firebase dans FLutter
+# Configuration de Firebase dans Flutter
 
 Ceci est l'explication détaillée de la configuration à faire pour
 obtenir une application Flutter fonctionnant avec Firebase.
@@ -65,7 +65,7 @@ Vous allez maintenant ajouter plusieurs composantes de Firebase:
 - dans un terminal
 - depuis le dossier du projet flutter
 - taper : `flutter pub add cloud_firestore`, il s'agit de la "base de données" de firebase
-- taper : `flutter pub add firebase_auth` pour gérer l'authentification
+- taper : `flutter pub add firebase_auth` et `flutter pub add google_sign_in` pour gérer l'authentification
 - taper : `flutter pub add firebase_storage` pour stocker des fichiers, pour nous les images
 - taper : `flutter pub add firebase_messaging` pour recevoir des notifications
 - FINALEMENT, taper `flutterfire configure` pour s'assurer que tout est configuré correctement.
@@ -127,6 +127,6 @@ void _incrementCounter() {
 - ouvrir la console de firebase sur le projet et dans le volet Firestore
 - lancer l'application sur un appareil avec une connexion Internet fonctionnelle
 - en appuyant sur le bouton +, on demande l'ajout d'un objet dans firestore
-- dans le navigateur sur le projet dans le volet firestore, vous devriez voir les données appraitre
+- dans le navigateur sur le projet dans le volet firestore, vous devriez voir les données apparaître
 - FAIRE UN COMMIT
 - FAIRE UN PUSH

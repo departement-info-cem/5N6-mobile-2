@@ -28,13 +28,13 @@ Pour la mise en place de Firebase, vous devez suivre les étapes décrites **[ic
 
 ### Étape 2 - Configurer le serveur pour l'envoie de notifications
 
-Le serveur KickMyB supporte déjà l'envoie de notifications. Par contre, il faut le configurer pour utiliser des clés sercrètes fournies par votre projet Firebase. Voyez comment faire **[ici](notice-firebase-messaging)**.
+Le serveur KickMyB supporte déjà l'envoi de notifications. Par contre, il faut le configurer pour utiliser des clés secrètes fournies par votre projet Firebase. Voyez comment faire **[ici](notice-firebase-messaging)**.
 
 ### Étape 3 - Recevoir les notifications sur Flutter
 
 Maintenant que le serveur KickMyB est configuré pour envoyer des notifications, vous devez être capable de les recevoir sur votre projet Flutter.
 
-Suivez les todos dans le [code suivant](https://github.com/departement-info-cem/projet-prog/tree/main/code/DemoNotifications/demo_notification_flutter)
+Suivez les todos dans le [code suivant](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-DemoNotifications.zip)
 
 Vous pouvez aussi vous référer à cette vidéo :
 

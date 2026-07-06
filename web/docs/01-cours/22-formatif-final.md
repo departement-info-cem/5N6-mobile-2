@@ -4,11 +4,11 @@ hide_table_of_contents: true
 
 # Formatif Final
 
+Disponibles [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-examens.zip) (à partir de 2024).
+
 ## Final Automne 2024
 
 ATTENTION : le projet firebase du premier exercice pourrait ne plus être fonctionnel
-
-Lien ici [Intra 2024](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/examens/final2024)
 
 ## Final Automne 2023
 

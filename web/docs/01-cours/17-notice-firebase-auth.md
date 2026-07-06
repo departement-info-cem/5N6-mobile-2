@@ -1,6 +1,6 @@
 # Prérequis
 
-Avoir fait le premier fichier de configuration. S'assurer d'avoir réinstaller firebase-cli et flutterfire-cli.
+Avoir fait le premier fichier de configuration. S'assurer d'avoir réinstallé firebase-cli et flutterfire-cli.
 
 ## Installation de la librairie
 
@@ -57,7 +57,27 @@ void initState() {
 - dans un navigateur aller à https://pub.dev/packages/google_sign_in
 - copier la dépendance google_sign_in avec la bonne version dans votre pubspec.yaml
 - taper : `flutterfire configure`
-- copier la fonction suivante dans votre écran Flutter de départ
+- Sur la console Firebase de votre projet :
+  - Paramètres > Général
+  - Paramètres généraux > Afficher dans Google Cloud
+  - Cliquer sur "Accéder" si un popup s'affiche
+  - API et service
+  - Dans le panneau à gauche, Identifiants
+  - Sous "ID clients OAuth 2.0", pour l'entrée "Web client (auto created by Google Service)" (non, pas l'entrée où il est indiqué Android), copier "ID Client", et l'utiliser pour l'étape suivante pour remplacer "VOTRE_STRING_TROUVÉE_À_LETAPE_PRECEDENTE_ICI"
+- Assurez vous que le début de votre fonction `main` ressemble à ça :
+
+```dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  GoogleSignIn.instance.initialize(serverClientId: "VOTRE_STRING_TROUVÉE_À_LETAPE_PRECEDENTE_ICI");
+
+  // Reste de la fonction main 
+}
+```
+
+- Copiez la fonction suivante dans votre écran Flutter de départ, elle vous permettra de déclencher le flot d'authentification avec un compte Google.
 
 ```dart
 Future<UserCredential> signInWithGoogle() async {
@@ -102,8 +122,6 @@ Future<UserCredential> signInWithGoogle() async {
 - re-ouvrir le projet Flutter
 - relancer l'application et tenter une connexion, tout devrait fonctionner.
 - COMMIT PUSH
-
-
 
 ### Configuration google_sign_in pour ios (Un mac est nécessaire)
 
@@ -159,7 +177,7 @@ MaterialButton(
 ```
 
 - relancer l'application
-- On devrait pouoir se connecter et se déconnecter et l'état se lit dans la console
+- On devrait pouvoir se connecter et se déconnecter et l'état se lit dans la console
 - COMMIT PUSH
 
 ## Accéder directement a l'utilisateur connecté

@@ -24,7 +24,7 @@ Essaie **File** > **Invalidate Cache / Restart** puis **Invalidate Cache / Resta
 
 ### Je roule flutter pub run build_runner build mais ça ne marche pas
 
-Les vidéos date un peu, nous te recommandons de prendre les dernières versions de :
+Les vidéos datent un peu, nous te recommandons de prendre les dernières versions de :
 - [json_serializable](https://pub.dev/packages/json_serializable)
 - [build_runner](https://pub.dev/packages/build_runner)
 - [json_annotation](https://pub.dev/packages/json_annotation)
@@ -59,7 +59,7 @@ Faire la commande "`flutter config --android-studio-dir`" suivi du dossier d'Ins
 
 ### *Do you want to uninstall the existing application?*
 
-Vérifie que l'application n'est pas déjà sur le périphérique. Si c'est le cas supprime la.
+Vérifie que l'application n'est pas déjà sur le périphérique. Si c'est le cas supprime-la.
 
 Dans le dossier du projet, entre dans le dossier app, ensuite supprime le dossier **build**. Cela supprime tous les fichiers compilés et force à recompiler l'ensemble de l'application.
 
@@ -75,7 +75,7 @@ Redémarrer la tablette
 
 Redémarrer votre environnement de dév
 
-Dans de Gestionnaire des tâches (CTRL + SHIFT + ESCAPE), dans l’onglet Détails, arrêter tous les processus adb.exe
+Dans le Gestionnaire des tâches (CTRL + SHIFT + ESCAPE), dans l’onglet Détails, arrêter tous les processus adb.exe
 
 Redémarrer la machine de développement
 
@@ -99,12 +99,12 @@ MinimumOSVersion
 
 ### "Error output from CocoaPods"
 
-Il faut sans doute mettre à jours cocoapods pour la machine. Tape la commande "sudo gem install cocoapods"
+Il faut sans doute mettre à jour cocoapods pour la machine. Tape la commande "sudo gem install cocoapods"
 
 ### "failed to write" le fichier **.last_build_id**
 1.  Ouvrir le projet IOS dans Xcode.
 2.	Clic sur le nom du projet dans l'explorateur à gauche pour accéder aux réglages du projet.
-3.	Sélectionne la bon target dans la section "Targets".
+3.	Sélectionne le bon target dans la section "Targets".
 4.	Choisir l'onglet "Build Settings"
 5.	Dans le champ de recherche tape "ENABLE_USER_SCRIPT_SANDBOXING".
 6.	S'assurer que ENABLE_USER_SCRIPT_SANDBOXING est à "No".
@@ -112,4 +112,4 @@ Il faut sans doute mettre à jours cocoapods pour la machine. Tape la commande "
 
 ### "Automatically assigning platform `iOS` with version `9.0` on target `Runner` because no platform was specified"
 
-Verifie le fichier ios/Podfile. La 2ème ligne devrait être décommentée et dire `platform :ios, '11.0'`
+Vérifie le fichier ios/Podfile. La 2ème ligne devrait être décommentée et dire `platform :ios, '11.0'`
