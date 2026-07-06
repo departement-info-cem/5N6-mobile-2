@@ -319,7 +319,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[8] }],
-          "Joris": [{ 1010: jodates[8] }, { 1020: jodates[8] }],
+          "Joris": [{ 1010: jddates[8] }, { 1020: jddates[8] }],
         },
       },
     },
@@ -331,7 +331,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[9] }],
-          "Joris": [{ 1010: jodates[9] }, { 1020: jodates[9] }],
+          "Joris": [{ 1010: jddates[9] }, { 1020: jddates[9] }],
         },
       },
     },
@@ -408,7 +408,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[13] }],
-          "Joris": [{ 1010: jodates[13] }, { 1020: jodates[13] }],
+          "Joris": [{ 1010: jddates[13] }, { 1020: jddates[13] }],
         },
       },
     },
@@ -474,7 +474,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[18] }],
-          "Joris": [{ 1010: jodates[18] }, { 1020: jodates[18] }],
+          "Joris": [{ 1010: jddates[18] }, { 1020: jddates[18] }],
         },
       },
     },
@@ -487,7 +487,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[19] }],
-          "Joris": [{ 1010: jodates[19] }, { 1020: jodates[19] }],
+          "Joris": [{ 1010: jddates[19] }, { 1020: jddates[19] }],
         },
       },
     },
@@ -500,7 +500,7 @@ const sidebars = {
         avancement: 0.2,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[20] }],
-          "Joris": [{ 1010: jodates[20] }, { 1020: jodates[20] }],
+          "Joris": [{ 1010: jddates[20] }, { 1020: jddates[20] }],
         },
       },
     },
@@ -513,7 +513,7 @@ const sidebars = {
         avancement: 0.3,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[21] }],
-          "Joris": [{ 1010: jodates[21] }, { 1020: jodates[21] }],
+          "Joris": [{ 1010: jddates[21] }, { 1020: jddates[21] }],
         },
       },
     },
@@ -526,7 +526,7 @@ const sidebars = {
         avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[22] }],
-          "Joris": [{ 1010: jodates[22] }, { 1020: jodates[22] }],
+          "Joris": [{ 1010: jddates[22] }, { 1020: jddates[22] }],
         },
       },
     },
@@ -539,7 +539,7 @@ const sidebars = {
         avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[23] }],
-          "Joris": [{ 1010: jodates[23] }, { 1020: jodates[23] }],
+          "Joris": [{ 1010: jddates[23] }, { 1020: jddates[23] }],
         },
       },
     },
@@ -552,7 +552,7 @@ const sidebars = {
         avancement: 0.7,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[24] }],
-          "Joris": [{ 1010: jodates[24] }, { 1020: jodates[24] }],
+          "Joris": [{ 1010: jddates[24] }, { 1020: jddates[24] }],
         },
       },
     },
@@ -565,7 +565,7 @@ const sidebars = {
         avancement: 0.8,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[25] }],
-          "Joris": [{ 1010: jodates[25] }, { 1020: jodates[25] }],
+          "Joris": [{ 1010: jddates[25] }, { 1020: jddates[25] }],
         },
       },
     },
@@ -578,7 +578,7 @@ const sidebars = {
         avancement: 0.9,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[26] }],
-          "Joris": [{ 1010: jodates[26] }, { 1020: jodates[26] }],
+          "Joris": [{ 1010: jddates[26] }, { 1020: jddates[26] }],
         },
       },
     },
@@ -592,7 +592,7 @@ const sidebars = {
         avancement: 1.0,
         calendrier: {
           "Pierre-Olivier": [{ 1030: podates[26] }],
-          "Joris": [{ 1010: jodates[27] }, { 1020: jodates[27] }],
+          "Joris": [{ 1010: jddates[27] }, { 1020: jddates[27] }],
         },
       },
     },
