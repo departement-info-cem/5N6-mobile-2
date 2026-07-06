@@ -70,7 +70,7 @@ const sidebars = {
   docs: [
     {
       type: "doc",
-      label: "1.1 - Intro ",
+      label: "1.1 - Intro Dart et Flutter",
       id: "cours/intro",
       customProps: {
         calendrier: {
