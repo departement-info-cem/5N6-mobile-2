@@ -75,7 +75,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[0] }],
-          "Joris": [{ 1020: jddates[0] }],
+          Joris: [{ 1020: jddates[0] }],
         },
       },
     },
@@ -86,7 +86,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[1] }],
-          "Joris": [{ 1020: jddates[1] }],
+          Joris: [{ 1020: jddates[1] }],
         },
       },
     },
@@ -99,7 +99,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[2] }],
-          "Joris": [{ 1020: jddates[2] }],
+          Joris: [{ 1020: jddates[2] }],
         },
       },
     },
@@ -112,7 +112,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[3] }],
-          "Joris": [{ 1020: jddates[3] }],
+          Joris: [{ 1020: jddates[3] }],
         },
       },
     },
@@ -125,7 +125,7 @@ const sidebars = {
         avancement: 0.25,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[4] }],
-          "Joris": [{ 1020: jddates[4] }],
+          Joris: [{ 1020: jddates[4] }],
         },
       },
     },
@@ -138,7 +138,7 @@ const sidebars = {
         avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[5] }],
-          "Joris": [{ 1020: jddates[5] }],
+          Joris: [{ 1020: jddates[5] }],
         },
       },
     },
@@ -151,7 +151,7 @@ const sidebars = {
         avancement: 0.75,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[6] }],
-          "Joris": [{ 1020: jddates[6] }],
+          Joris: [{ 1020: jddates[6] }],
         },
       },
     },
@@ -165,7 +165,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[7] }],
-          "Joris": [{ 1020: jddates[7] }],
+          Joris: [{ 1020: jddates[7] }],
         },
       },
     },
@@ -178,7 +178,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[8] }],
-          "Joris": [{ 1020: jddates[8] }],
+          Joris: [{ 1020: jddates[8] }],
         },
       },
     },
@@ -191,7 +191,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[9] }],
-          "Joris": [{ 1020: jddates[9] }],
+          Joris: [{ 1020: jddates[9] }],
         },
       },
     },
@@ -204,7 +204,7 @@ const sidebars = {
         avancement: 0.3,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[10] }],
-          "Joris": [{ 1020: jddates[10] }],
+          Joris: [{ 1020: jddates[10] }],
         },
       },
     },
@@ -217,7 +217,7 @@ const sidebars = {
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[11] }],
-          "Joris": [{ 1020: jddates[11] }],
+          Joris: [{ 1020: jddates[11] }],
         },
       },
     },
@@ -230,7 +230,7 @@ const sidebars = {
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[12] }],
-          "Joris": [{ 1020: jddates[12] }],
+          Joris: [{ 1020: jddates[12] }],
         },
       },
     },
@@ -242,7 +242,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[13] }],
-          "Joris": [{ 1020: jddates[13] }],
+          Joris: [{ 1020: jddates[13] }],
         },
       },
     },
@@ -255,7 +255,7 @@ const sidebars = {
         avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[14] }],
-          "Joris": [{ 1020: jddates[14] }],
+          Joris: [{ 1020: jddates[14] }],
         },
       },
     },
@@ -268,7 +268,7 @@ const sidebars = {
         avancement: 0.7,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[15] }],
-          "Joris": [{ 1020: jddates[15] }],
+          Joris: [{ 1020: jddates[15] }],
         },
       },
     },
@@ -281,7 +281,7 @@ const sidebars = {
         avancement: 0.9,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[16] }],
-          "Joris": [{ 1020: jddates[16] }],
+          Joris: [{ 1020: jddates[16] }],
         },
       },
     },
@@ -294,7 +294,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[17] }],
-          "Joris": [{ 1020: jddates[17] }],
+          Joris: [{ 1020: jddates[17] }],
         },
       },
     },
@@ -308,7 +308,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[18] }],
-          "Joris": [{ 1020: jddates[18] }],
+          Joris: [{ 1020: jddates[18] }],
         },
       },
     },
@@ -321,7 +321,7 @@ const sidebars = {
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[19] }],
-          "Joris": [{ 1020: jddates[19] }],
+          Joris: [{ 1020: jddates[19] }],
         },
       },
     },
@@ -334,7 +334,7 @@ const sidebars = {
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[20] }],
-          "Joris": [{ 1020: jddates[20] }],
+          Joris: [{ 1020: jddates[20] }],
         },
       },
     },
@@ -347,7 +347,7 @@ const sidebars = {
         avancement: 0.2,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[21] }],
-          "Joris": [{ 1020: jddates[21] }],
+          Joris: [{ 1020: jddates[21] }],
         },
       },
     },
@@ -360,7 +360,7 @@ const sidebars = {
         avancement: 0.3,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[22] }],
-          "Joris": [{ 1020: jddates[22] }],
+          Joris: [{ 1020: jddates[22] }],
         },
       },
     },
@@ -373,7 +373,7 @@ const sidebars = {
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[23] }],
-          "Joris": [{ 1020: jddates[23] }],
+          Joris: [{ 1020: jddates[23] }],
         },
       },
     },
@@ -386,7 +386,7 @@ const sidebars = {
         avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[24] }],
-          "Joris": [{ 1020: jddates[24] }],
+          Joris: [{ 1020: jddates[24] }],
         },
       },
     },
@@ -399,7 +399,7 @@ const sidebars = {
         avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[25] }],
-          "Joris": [{ 1020: jddates[25] }],
+          Joris: [{ 1020: jddates[25] }],
         },
       },
     },
@@ -412,7 +412,7 @@ const sidebars = {
         avancement: 0.8,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[26] }],
-          "Joris": [{ 1020: jddates[26] }],
+          Joris: [{ 1020: jddates[26] }],
         },
       },
     },
@@ -426,7 +426,7 @@ const sidebars = {
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[28] }],
-          "Joris": [{ 1020: jddates[28] }],
+          Joris: [{ 1020: jddates[28] }],
         },
       },
     },
@@ -437,7 +437,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[27] }],
-          "Joris": [{ 1020: jddates[27] }],
+          Joris: [{ 1020: jddates[27] }],
         },
       },
     },
@@ -449,7 +449,7 @@ const sidebars = {
       customProps: {
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[29] }],
-          "Joris": [{ 1020: jddates[29] }],
+          Joris: [{ 1020: jddates[29] }],
         },
       },
     },
@@ -458,6 +458,18 @@ const sidebars = {
     { type: "doc", label: "TP1 - Flutter 🐤", id: "tp/tp1" },
     { type: "doc", label: "TP2 - Gestion des images 🖼️", id: "tp/tp2" },
     { type: "doc", label: "TP3 - Sans serveur 🙅", id: "tp/tp3" },
+  ],
+  recettes: [
+    {
+      type: "autogenerated",
+      dirName: "03-recettes",
+    },
+  ],
+  laboratoires: [
+    {
+      type: "autogenerated",
+      dirName: "04-laboratoires",
+    },
   ],
 };
 
