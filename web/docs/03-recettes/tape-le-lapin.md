@@ -18,8 +18,8 @@ Vous avez peut-être déjà entendu parler de ["Wack a mole" ou "Tape-Taupe"](ht
 Quelques règles : 
 
 - 4 boutons affichent 3x 🐹 et 1x 🐇, placés aléatoirement
-- Quand on appuie sur 🐇, un compteur vert "Pafs" est augmenté de 1
-- Quand on appuie sur 🐹, un compteur rouge "Flops" est augmenté de 1
+- Quand on appuie sur 🐇, un compteur vert "Bonk" est augmenté de 1
+- Quand on appuie sur 🐹, un compteur rouge "Zloop" est augmenté de 1
 - À chaque fois qu'on appuie sur un bouton, l'emplacement des 3 🐹 et du 🐇 est mélangé parmis les boutons
 
 ## Créer le projet
@@ -32,6 +32,7 @@ Quelques règles :
 - Cochez seulement **android**.
 - Une nouvelle fenêtre va s'ouvrir. Vous pouvez resélectionner le profil **Mobile** au besoin.
 - La création des fichiers et dossiers de départ peut prendre quelques secondes.
+- Lancez le projet pour vous assurez que tout fonctionne.
 - Commit + push
 
 :::tip
@@ -52,8 +53,10 @@ Nous allons placer les éléments graphiques avant de leur donner un comportemen
 ### Préparation
 
 Le fichier `main.dart` qui est dans `lib/` est celui que nous allons modifier. Beaucoup de code a été généré, mais nous allons complètement l'enlever pour le moment. Nous vous recommendons tout de même d'y jeter un coup d'oeil à un autre moment.
-cd 
-Tout ce que nous voulons garder est cette fonction d'entrée `main`, et la classe `MyApp`. On peut supprimer le reste qui est en dessous. Vous pouvez aussi enlever tous les commentaires. Voici ce qui devrait vous rester
+
+Tout ce que nous voulons garder est cette fonction d'entrée `main`, et la classe `MyApp`. On peut supprimer le reste qui est en dessous. Vous pouvez aussi enlever tous les commentaires, et retirer `title: 'Flutter Demo Home Page'` à la ligne TODO. 
+
+Voici ce qui devrait vous rester :
 
 ```dart
 void main() {
@@ -68,13 +71,58 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 ```
 
-### Pafs et Flops
+À ce point, `MyHomePage` devrait être souligné en rouge. C'est normal puisque nous venons d'enlever la classe à laquelle il faisait référence. Nous allons rajouter la classe manquante. 
+
+Créez un nouveau dossier nommé `pages` dans le dossier lib. Dans ce dossier, créez un fichier nommé `lapin.dart`.
+
+Dans le fichier créé commencez à taper **stfu**, puis ouvrez l'intellisense en appuyant sur **Ctrl+Espace**. Vous devriez pouvoir sélectionner une entrée nommée **Flutter Stateful Widget**. Nommez votre nouveau Widget `MyHomePage`.
+
+![Raccourci template pour Statefull Widget](./_tape-le-lapin/stfu.png)
+
+On remplace `const Placeholder()` par Scaffold comme suit : 
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: const Center(child: Text('Tape le lapin')));
+  }
+}
+```
+
+<Row>
+<Column>
+De retour dans `main.dart`, positionnez vous sur `MyHomePage`, qui devrait être encore rouge. Appuyez sur **Ctrl+.** (point). Vous aurez l'option d'importer le Widget que nous venons de créer :
+</Column>
+<Column>![Menu pour importer](./_tape-le-lapin/import.png)</Column>
+</Row>
+
+<Row>
+<Column size="9">
+Relancez l'application. Vous devriez maintenant voir **"Tape le lapin"** centré.
+
+Si tout fonctionne bien, COMMIT + PUSH.
+</Column>
+<Column size="3">![Tape le lapin centré dans l'écran](./_tape-le-lapin/tape-le-lapin-1.png)</Column>
+</Row>
+
+
+### Bonk et Zloop
 
 ### Titre
 
@@ -83,3 +131,7 @@ class MyApp extends StatelessWidget {
 ## Comportement
 
 Maintenant que nous avons l'interface graphique, nous allons implémenter le comportement.
+
+### Réagir aux clics
+
+### Mélanger
