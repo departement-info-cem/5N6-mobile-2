@@ -39,7 +39,7 @@ service cloud.firestore {
     }
   }
 
-}​​​​​​​​
+}
 ```
 
 On regardera comment sécuriser l'accès aux données en modifiant ces règles d'accès.

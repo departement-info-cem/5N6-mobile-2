@@ -82,21 +82,22 @@ const config = {
             label: "Travaux Pratiques",
           },
           {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "recettes",
+            label: "Recettes",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "laboratoires",
+            label: "Laboratoires",
+          },
+          {
             type: "doc",
             docId: "solution",
             position: "right",
             label: "Problèmes courants",
-          },
-          {
-            type: "doc",
-            docId: `mac`,
-            position: "right",
-            label: "Installation Mac",
-          },
-          {
-            label: "Installator",
-            href: `https://github.com/departement-info-cem/scripts-mobile/releases/download/Script/ScriptSharp.exe`,
-            position: "right",
           },
         ],
       },
@@ -113,9 +114,8 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}. ${
-          siteConfig.nom
-        }. CÉGEP Édouard-Montpetit.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. ${siteConfig.nom
+          }. CÉGEP Édouard-Montpetit.`,
       },
       // Décommenter et remplir pour activer l'indexation des pages par le moteur de recherche local
       // algolia: {

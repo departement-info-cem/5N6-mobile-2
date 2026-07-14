@@ -107,7 +107,7 @@ Il faut sans doute mettre à jour cocoapods pour la machine. Tape la commande "s
 3.	Sélectionne le bon target dans la section "Targets".
 4.	Choisir l'onglet "Build Settings"
 5.	Dans le champ de recherche tape "ENABLE_USER_SCRIPT_SANDBOXING".
-6.	S'assurer que ﻿ENABLE_USER_SCRIPT_SANDBOXING est à "No".
+6.	S'assurer que ENABLE_USER_SCRIPT_SANDBOXING est à "No".
 
 
 ### "Automatically assigning platform `iOS` with version `9.0` on target `Runner` because no platform was specified"
