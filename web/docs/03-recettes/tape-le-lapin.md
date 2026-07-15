@@ -1,4 +1,4 @@
-# Tape le lapin 🐇
+# Tape le 🐇
 
 ## Objectifs 🎯
 
@@ -24,7 +24,7 @@ Quelques règles :
 
 ## Créer le projet
 
-- Dans Visual Studio Code, assurez vous d'avoir sélectionné le profil **Mobile** pour Visual Studio Code, dans ![Ctrl+Shift+P](./_tape-le-lapin/profil.png) > Profile > Mobile
+- Dans Visual Studio Code, assurez vous d'avoir sélectionné le profil **Mobile** pour Visual Studio Code dans ![Ctrl+Shift+P](./_tape-le-lapin/profil.png) > Profile > Mobile
 - Taper le raccourci `Ctrl+Shift+P`, taper **Flutter** et sélectionner **Flutter : New Project**.
 - Sélectionner **Application**.
 - Dans l'explorateur, sélectionner le dossier où vous stockez vous exercices.
@@ -81,7 +81,7 @@ class MyApp extends StatelessWidget {
 
 Créez un nouveau dossier nommé `pages` dans le dossier lib. Dans ce dossier, créez un fichier nommé `lapin.dart`.
 
-Dans le fichier créé commencez à taper **stfu**, puis ouvrez l'intellisense en appuyant sur **Ctrl+Espace**. Vous devriez pouvoir sélectionner une entrée nommée **Flutter Stateful Widget**. Nommez votre nouveau Widget `MyHomePage`.
+Dans le fichier créé, commencez à taper **stfu**, puis ouvrez l'intellisense en appuyant sur **Ctrl+Espace**. Vous devriez pouvoir sélectionner une entrée nommée **Flutter Stateful Widget**. Nommez votre nouveau Widget `MyHomePage`.
 
 ![Raccourci template pour Statefull Widget](./_tape-le-lapin/stfu.png)
 
@@ -100,33 +100,218 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: const Center(child: Text('Tape le lapin')));
+    return Scaffold(body: const Center(child: Text('Tape le 🐇')));
   }
 }
 ```
 
 <Row>
-<Column>
-De retour dans `main.dart`, positionnez vous sur `MyHomePage`, qui devrait être encore rouge. Appuyez sur **Ctrl+.** (point). Vous aurez l'option d'importer le Widget que nous venons de créer :
+<Column vCenter={true}>
+De retour dans `main.dart`, positionnez vous sur `MyHomePage`, qui devrait être encore rouge. Appuyez sur **Ctrl+.** (point). Vous aurez l'option d'importer le Widget que nous venons de créer.
 </Column>
 <Column>![Menu pour importer](./_tape-le-lapin/import.png)</Column>
 </Row>
 
-<Row>
-<Column size="9">
 Relancez l'application. Vous devriez maintenant voir **"Tape le lapin"** centré.
 
-Si tout fonctionne bien, COMMIT + PUSH.
-</Column>
-<Column size="3">![Tape le lapin centré dans l'écran](./_tape-le-lapin/tape-le-lapin-1.png)</Column>
-</Row>
-
-
-### Bonk et Zloop
+Si tout fonctionne comme prévu, COMMIT + PUSH.
 
 ### Titre
 
+Le titre est bien, mais rendons le un peu plus gros :
+
+```dart
+Text('Tape le 🐇')
+```
+
+devient 
+
+```dart
+Text('Tape le 🐇', style: TextStyle(fontSize: 40))
+```
+
+### Découpage
+
+Pour arriver à placer les prochains éléments, il va falloir séparer l'interface en 3 sections empilées les unes sur les autres :
+
+- Titre (Déjà fait)
+- Résultats (nombre de Bonk et de Zloop)
+- Boutons pour jouer
+
+<Row>
+<Column vCenter={true}>
+Nous allons enrober le Widget **Text** par un autre Widget **Column**.
+
+Positionnez votre curseur sur le Widget **Text**, et appuyez sur **Ctrl+.** (point).
+
+Cela fera apparaître une menu contextuel. Sélectionnez l'option pour enrober avec une **Column**.
+</Column>
+<Column>
+![Menu Wrap with, option Column sélectionné](./_tape-le-lapin/wrap.png)
+</Column>
+</Row>
+
+On se retrouve avec le résultat suivant :
+
+```dart
+Center(
+  // highlight-start
+  child: Column(
+    children: [
+        Text('Tape le 🐇', style: TextStyle(fontSize: 40))
+      ],
+  ),
+  // highlight-end
+),
+```
+
+Le Widget **Text** est maintenant le premier élément dans une liste de Widgets qui va du haut vers le bas.
+
+:::tip child 👶 vs children 👶👶👶
+Vous remarquerez que la plupart des Widgets ont un attribut :
+
+- **child** : qui accepte un seul Widget enfant, ou
+- **children** : qui accepte un tableau d'enfants  
+:::
+
+### Bonk et Zloop
+
+Maintenant les résultats pour compter combien de fois nous avons réussi à taper le 🐇 (Bonk), et combien de fois on s'est trompé en appuyant sur le 🐹 (Zloop). On veut afficher **Bonk : x** et **Zloop : y** côté à côte, sous le titre créé précédement.
+
+On ajoute donc une **Row** sous le **Text**.
+
+```dart
+Column(
+  children: [
+    Text('Tape le 🐇', style: TextStyle(fontSize: 40)), // <- Ne pas oublier la virgule ici
+    // highlight-start
+    Row(
+      children: [
+        Text("Bonk : x"),
+        Text("Zloop : y")
+      ]
+    ),
+    // highlight-end
+  ],
+),
+```
+
+Nos Widget sont bien alignés de gauche à droite, mais ils pourraient être mieux positionnés.
+
+```dart
+Row(
+  // highlight-next-line
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    Text("Bonk : x"),
+    Text("Zloop : y")
+  ],
+),
+```
+
+Et un peu de style :
+
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    Text(
+      "Bonk : x",
+      // highlight-next-line
+      style: TextStyle(color: Colors.green, fontSize: 30),
+    ),
+    Text(
+      "Zloop : y",
+      // highlight-next-line
+      style: TextStyle(color: Colors.red, fontSize: 30),
+    ),
+  ],
+),
+```
+
 ### Boutons
+
+Pour les boutons, nous allons afficher une grille de 2x2 boutons, qui vont tous afficher 🐹 pour le moment.
+
+Pour former la grille, nous allons ajouter une colonne qui contiendra 2 rangées, qui contiendront 2 boutons chacuns.
+
+```dart
+Column(
+  children: [
+    const Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
+    const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          "Bonk : x",
+          style: TextStyle(color: Colors.green, fontSize: 30),
+        ),
+        Text(
+          "Zloop : y",
+          style: TextStyle(color: Colors.red, fontSize: 30),
+        ),
+      ],
+    ), // <- Ne pas oublier la virgule ici
+    // highlight-start
+    Column(
+      children: [
+        Row(children: []),
+        Row(children: []),
+      ],
+    ),
+    // highlight-end
+  ],
+),
+```
+
+Ajoutons maintenant les boutons :
+
+```dart
+Column(
+  children: [
+    Row(
+      children: [
+        // highlight-start
+        ElevatedButton(onPressed: null, child: Text("🐹")),
+        ElevatedButton(onPressed: null, child: Text("🐹")),
+        // highlight-end
+      ],
+    ),
+    Row(
+      children: [
+        // highlight-start
+        ElevatedButton(onPressed: null, child: Text("🐹")),
+        ElevatedButton(onPressed: null, child: Text("🐹")),
+        // highlight-end
+      ],
+    ),
+  ],
+),
+```
+
+On verra dans l'étape suivante ce que `onPressed` fait. C'est d'ailleurs parce-que `onPressed` est nul que les boutons semblent grisés.
+
+On peut aussi grossir les en leur assignant une taille un peu plus élevée, tel que vu précédement :
+
+```dart
+Text("🐹", style: TextStyle(fontSize: 70))
+```
+
+On peut aussi ajouter cet attribut sur les 2 **Row** créés pour aérer les boutons :
+
+```dart
+mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+```
+
+### Fignoler l'interface
+
+Tout est à peu près beau. Il ne nous reste qu'à aérer les 3 sections qui sont dans la **Column**. On peut ajouter l'attribut `mainAxisAlignment: MainAxisAlignment.spaceEvenly` dans la première **Column** que nous avons créée.
+
+Avant de continuer, validez que votre interface ressemble à ça :
+
+<center>
+<Image img={require('./_tape-le-lapin/interface-fini.png')} height="400" />
+</center>
 
 ## Comportement
 
