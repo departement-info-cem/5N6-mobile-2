@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final _random = Random();
+  Timer? _minuterie;
 
   int _positionLapin = 0;
   int _scoreBonk = 0;
@@ -19,8 +21,30 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // Choisir un entier entre 0 et 4
-    _positionLapin = _random.nextInt(4);
+    _nouvellePosition();
+  }
+
+  @override
+  void dispose() {
+    _minuterie?.cancel();
+    super.dispose();
+  }
+
+  void _nouvellePosition() {
+    // Arrêter la minuterie si elle est déjà démarrée
+    // highlight-next-line
+    _minuterie?.cancel();
+
+    setState(() {
+      _positionLapin = _random.nextInt(4);
+    });
+
+    // La fonction anonyme est appelée à toutes les secondes
+    // highlight-start
+    _minuterie = Timer(const Duration(seconds: 1), () {
+      _nouvellePosition();
+    });
+    // highlight-end
   }
 
   @override
@@ -61,9 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       } else {
                         _scoreZloop++;
                       }
-
-                      _positionLapin = _random.nextInt(4);
                     });
+                    _nouvellePosition();
                   },
                   child: Text(emoji, style: TextStyle(fontSize: 100)),
                 );

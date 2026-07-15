@@ -480,4 +480,96 @@ ElevatedButton(
 Le `setState` indique à Flutter qu'on souhaite mettre à jour l'interface graphique. Flutter va donc cibler quelles zones de l'application il doit redessiner. Vous remarquerez que tout comme `onPressed`, `setState` utilise aussi une [fonction anonyme 🥸](../03-recettes/rappel-lambda.md).
 :::
 
-Bravo 🎉! Tu as réussi à compléter ta première application en Flutter 🐦! 
+Bravo 🎉! Tu as réussi à compléter ta première application en Flutter 🐦! Nous avons vu tout ce qui devait être fait pour le cours d'aujourd'hui. Si ça t'intéresses, tu peux consulter la suite pour voir commment ajouter une fonctionnalité plus avancée, qui nous donnera un vrai de vrai Tape-taupe!
+
+## Temps limité
+
+Afin de stresser un peu notre joueur, ajoutons cette règle : **Le jeu est mélangé à toutes les secondes.**
+
+### Minuterie
+
+Nous allons ajouter une minuterie responsable de gérer le temps.
+
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  Timer? _minuterie;
+}
+```
+
+Pour éviter des problèmes pendant le développement, faisons en sorte que le minuteur soit annulé lorsque la page se ferme.
+
+```dart
+// À mettre sous le initState
+@override
+void dispose() {
+  _minuterie?.cancel();
+  super.dispose();
+}
+```
+
+### Mélanger et gérer le temps
+
+Trouver une nouvelle position pour le 🐇 va être un peu plus complexe qu'avant. Nous allons donc créer une fonction pour faire cette gestion.
+
+```dart
+// Au dessus de la fonction build
+void _nouvellePosition() {
+  setState(() {
+    _positionLapin = _random.nextInt(4);
+  });
+}
+```
+
+On peut appeler la fonction où on faisait `_positionLapin = _random.nextInt(4);` avant, soit dans la fonction `initState` et dans la fonction anonyme de l'attribut `onPressed`.
+
+<Row>
+<Column vCenter={true}>
+```dart
+@override
+void initState() {
+  super.initState();
+  // highlight-next-line
+  _nouvellePosition();
+}
+```
+</Column>
+<Column>
+```dart
+ElevatedButton(
+  onPressed: () {
+    setState(() {
+      if (index == _positionLapin) {
+        _scoreBonk++;
+      } else {
+        _scoreZloop++;
+      }
+    });
+    // highlight-next-line
+    _nouvellePosition(); // On sort aussi l'appel de fonction du setState, pour qu'il soit juste en dessous
+  },
+  child: Text(emoji, style: TextStyle(fontSize: 100)),
+);
+```
+</Column>
+</Row>
+
+Premièrement, dans notre nouvelle fonction, on veut re-mélanger le 🐇 à toutes les secondes :
+
+```dart
+void _nouvellePosition() {
+  // Arrêter la minuterie si elle est déjà démarrée
+  // highlight-next-line
+  _minuterie?.cancel();
+
+  setState(() {
+    _positionLapin = _random.nextInt(4);
+  });
+
+  // La fonction anonyme est appelée à toutes les secondes
+  // highlight-start
+  _minuterie = Timer(const Duration(seconds: 1), () {
+    _nouvellePosition(); 
+  });
+  // highlight-end
+}
+```
