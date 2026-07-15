@@ -112,7 +112,7 @@ De retour dans `main.dart`, positionnez vous sur `MyHomePage`, qui devrait être
 <Column>![Menu pour importer](./_tape-le-lapin/import.png)</Column>
 </Row>
 
-Relancez l'application. Vous devriez maintenant voir **"Tape le lapin"** centré.
+Relancez l'application. Vous devriez maintenant voir **"Tape le 🐇"** centré.
 
 Si tout fonctionne comme prévu, COMMIT + PUSH.
 
@@ -233,10 +233,9 @@ Row(
 
 Pour les boutons, nous allons afficher une grille de 2x2 boutons, qui vont tous afficher 🐹 pour le moment.
 
-Pour former la grille, nous allons ajouter une colonne qui contiendra 2 rangées, qui contiendront 2 boutons chacuns.
-
 ```dart
 Column(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
     const Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
     const Row(
@@ -251,12 +250,14 @@ Column(
           style: TextStyle(color: Colors.red, fontSize: 30),
         ),
       ],
-    ), // <- Ne pas oublier la virgule ici
+    ),
     // highlight-start
-    Column(
+    GridView.count(
+      shrinkWrap: true,  // Dimensionner selon le contenu 
+      physics: NeverScrollableScrollPhysics(), // Empêcher de scroller4
+      crossAxisCount: 2, // Nombre de colonnes
       children: [
-        Row(children: []),
-        Row(children: []),
+        
       ],
     ),
     // highlight-end
@@ -267,40 +268,79 @@ Column(
 Ajoutons maintenant les boutons :
 
 ```dart
-Column(
+GridView.count(
+  shrinkWrap: true,  // Dimensionner selon le contenu 
+  physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
+  crossAxisCount: 2, // Nombre de colonnes
   children: [
-    Row(
-      children: [
-        // highlight-start
-        ElevatedButton(onPressed: null, child: Text("🐹")),
-        ElevatedButton(onPressed: null, child: Text("🐹")),
-        // highlight-end
-      ],
+    // highlight-start
+    ElevatedButton(onPressed: null, child: Text("🐹")),
+    ElevatedButton(onPressed: null, child: Text("🐹")),
+    ElevatedButton(onPressed: null, child: Text("🐹")),
+    ElevatedButton(onPressed: null, child: Text("🐹")),
+    // highlight-end
+  ],
+),
+```
+
+On verra dans l'étape suivante ce que la propriété `onPressed` fait. C'est d'ailleurs parce-qu'elle est à `null` que les boutons semblent grisés.
+
+On peut aussi grossir les boutons en leur assignant une taille un peu plus élevée, tel que vu précédement :
+
+```dart
+Text("🐹", style: TextStyle(fontSize: 100))
+```
+
+On peut aussi ajouter ajouter un peu d'espacement entre et autour des boutons :
+
+```dart
+GridView.count(
+  shrinkWrap: true, // Dimensionner selon le contenu
+  physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
+  crossAxisCount: 2, // Nombre de colonnes
+  // highlight-start
+  mainAxisSpacing: 20, // Espacement vertical
+  crossAxisSpacing: 20, // Espacement horizontal
+  padding: EdgeInsets.all(20), // Espacement autour
+  // highlight-end
+  children: [
+    ElevatedButton(
+      onPressed: null,
+      child: Text("🐹", style: TextStyle(fontSize: 100)),
     ),
-    Row(
-      children: [
-        // highlight-start
-        ElevatedButton(onPressed: null, child: Text("🐹")),
-        ElevatedButton(onPressed: null, child: Text("🐹")),
-        // highlight-end
-      ],
+    ElevatedButton(
+      onPressed: null,
+      child: Text("🐹", style: TextStyle(fontSize: 100)),
+    ),
+    ElevatedButton(
+      onPressed: null,
+      child: Text("🐹", style: TextStyle(fontSize: 100)),
+    ),
+    ElevatedButton(
+      onPressed: null,
+      child: Text("🐹", style: TextStyle(fontSize: 100)),
     ),
   ],
 ),
 ```
 
-On verra dans l'étape suivante ce que `onPressed` fait. C'est d'ailleurs parce-que `onPressed` est nul que les boutons semblent grisés.
-
-On peut aussi grossir les en leur assignant une taille un peu plus élevée, tel que vu précédement :
+Si vous êtes habile, vous avez remarqué que les boutons commencent à se répéter, et que chaque modification devra être appliquée 4x. Imaginez si c'était 10 boutons, il faudrait modifier le code 10x. Nous allons donc tenter une autre approche pour mieux gérer nos boutons :
 
 ```dart
-Text("🐹", style: TextStyle(fontSize: 70))
-```
-
-On peut aussi ajouter cet attribut sur les 2 **Row** créés pour aérer les boutons :
-
-```dart
-mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+GridView.count(
+  shrinkWrap: true, // Dimensionner selon le contenu
+  physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
+  crossAxisCount: 2, // Nombre de colonnes
+  mainAxisSpacing: 20, // Espacement vertical
+  crossAxisSpacing: 20, // Espacement horizontal
+  padding: EdgeInsets.all(20), // Espacement autour
+  children: List.generate(4, (index) {
+    return ElevatedButton(
+      onPressed: null,
+      child: Text("🐹", style: TextStyle(fontSize: 100)),
+    );
+  }),
+),
 ```
 
 ### Fignoler l'interface
@@ -317,6 +357,127 @@ Avant de continuer, validez que votre interface ressemble à ça :
 
 Maintenant que nous avons l'interface graphique, nous allons implémenter le comportement.
 
+### Score
+
+Le score des Bonk et des Zloop est appelé à changer. Pour garder le compte, il faut déclarer des variables :
+
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  int _scoreBonk = 0;
+
+  // Reste du code
+}
+```
+
+Pour afficher la valeur de ces variables dans le texte affiché, remplacer les x et y qui avaient été ajoutés :
+
+```dart
+Text(
+  "Bonk : $_scoreBonk",
+  style: TextStyle(color: Colors.green, fontSize: 30),
+),
+```
+
+Faites pareil pour le score de Zloop.
+
+### Position du 🐇
+
+À chaque fois qu'on appuie sur un bouton, il faut déterminer la nouvelle position du 🐇. On veut tout de même le faire une première fois au lancement de l'application.
+
+Pour y arriver, on doit garder en mémoire l'index de la position du 🐇 dans une variable, et utiliser l'objet **Random** pour déterminer au hasard cette position.
+
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+  final Random _random = Random();
+
+  int _positionLapin = 0;
+  // Autres varibles
+
+  // Reste du code
+}
+```
+
+Au démarrage, on veut trouver la première position du 🐇.
+
+```dart
+class _MyHomePageState extends State<MyHomePage> {
+
+  // Variables
+
+  @override
+  void initState() {
+    super.initState();
+    // Choisir un entier entre 0 et 4
+    _positionLapin = _random.nextInt(4);
+  }
+
+  // Rest du code
+}
+```
+
+Pour afficher le 🐇, il faut modifier le code du générateur de liste de la grille.
+
+```dart
+GridView.count(
+  shrinkWrap: true, // Dimensionner selon le contenu
+  physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
+  crossAxisCount: 2, // Nombre de colonnes
+  mainAxisSpacing: 20, // Espacement vertical
+  crossAxisSpacing: 20, // Espacement horizontal
+  padding: EdgeInsets.all(20), // Espacement autour
+  children: List.generate(4, (index) {
+    // highlight-next-line
+    String emoji = _positionLapin == index ? "🐇" : "🐹";
+    return ElevatedButton(
+      onPressed: null,
+      // highlight-next-line
+      child: Text(emoji, style: TextStyle(fontSize: 100)),
+    );
+  }),
+),
+```
+
+On devrait maintenant voir 1x🐇 et 3x🐹. La position du 🐇 devrait changer à chaque redémarrage.
+
 ### Réagir aux clics
 
-### Mélanger
+Commençons par ajouter une fonction anonyme vide. Vous pouvez vous rafraîchir la mémoire sur les [fonctions anonymes (lambda) 🥸](../03-recettes/rappel-lambda.md).
+
+```dart
+ElevatedButton(
+  // highlight-start
+  onPressed: () {},
+  // highlight-end
+  child: Text(emoji, style: TextStyle(fontSize: 100)),
+);
+```
+
+Lorsqu'on tape sur un bouton, on veut :
+
+1. Vérifier si on a tapé sur le bon bouton, et mettre à jour le compteur qui correspond à ce qui a été tappé.
+2. Trouver un nouvel emplacement pour le 🐇.
+
+```dart
+ElevatedButton(
+  // highlight-start
+  onPressed: () {
+    setState(() {
+      if (index == _positionLapin) {
+        _scoreBonk++;
+      } else {
+        _scoreZloop++;
+      }
+
+      _positionLapin = _random.nextInt(4);
+    });
+  },
+  // highlight-end
+  child: Text(emoji, style: TextStyle(fontSize: 100)),
+);
+```
+
+:::info setState?
+Le `setState` indique à Flutter qu'on souhaite mettre à jour l'interface graphique. Flutter va donc cibler quelles zones de l'application il doit redessiner. Vous remarquerez que tout comme `onPressed`, `setState` utilise aussi une [fonction anonyme 🥸](../03-recettes/rappel-lambda.md).
+:::
+
+Bravo 🎉! Tu as réussi à compléter ta première application en Flutter 🐦! 

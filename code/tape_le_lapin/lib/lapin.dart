@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -8,6 +10,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final _random = Random();
+
+  int _positionLapin = 0;
+  int _scoreBonk = 0;
+  int _scoreZloop = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    // Choisir un entier entre 0 et 4
+    _positionLapin = _random.nextInt(4);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,49 +30,44 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
-            const Row(
+            Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Bonk : x",
+                  "Bonk : $_scoreBonk",
                   style: TextStyle(color: Colors.green, fontSize: 30),
                 ),
                 Text(
-                  "Zloop : y",
+                  "Zloop : $_scoreZloop",
                   style: TextStyle(color: Colors.red, fontSize: 30),
                 ),
               ],
             ),
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(
-                      onPressed: null,
-                      child: Text("🐹", style: TextStyle(fontSize: 70)),
-                    ),
-                    ElevatedButton(
-                      onPressed: null,
-                      child: Text("🐹", style: TextStyle(fontSize: 70)),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(
-                      onPressed: null,
-                      child: Text("🐹", style: TextStyle(fontSize: 70)),
-                    ),
-                    ElevatedButton(
-                      onPressed: null,
-                      child: Text("🐹", style: TextStyle(fontSize: 70)),
-                    ),
-                  ],
-                ),
-              ],
+            GridView.count(
+              shrinkWrap: true, // Dimensionner selon le contenu
+              physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
+              crossAxisCount: 2, // Nombre de colonnes
+              mainAxisSpacing: 20, // Espacement vertical
+              crossAxisSpacing: 20, // Espacement horizontal
+              padding: EdgeInsets.all(20), // Espacement autour
+              children: List.generate(4, (index) {
+                String emoji = _positionLapin == index ? "🐇" : "🐹";
+                return ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      if (index == _positionLapin) {
+                        _scoreBonk++;
+                      } else {
+                        _scoreZloop++;
+                      }
+
+                      _positionLapin = _random.nextInt(4);
+                    });
+                  },
+                  child: Text(emoji, style: TextStyle(fontSize: 100)),
+                );
+              }),
             ),
           ],
         ),
