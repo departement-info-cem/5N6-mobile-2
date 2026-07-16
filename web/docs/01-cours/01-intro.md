@@ -29,12 +29,6 @@ Consultez les recettes suivantes.
 
 Jette un coup d'oeil rapide à la recette pour [Tape le lapin 🐇](../03-recettes/tape-le-lapin.md).
 
-<Video url="https://youtu.be/TCeb8En8J90" />
-
-<Video url="https://youtu.be/Xf5DL_il-ck" />
-
-**[code](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-tape_le_lapin_flutter.zip)**
-
 :::
 
 </Column>

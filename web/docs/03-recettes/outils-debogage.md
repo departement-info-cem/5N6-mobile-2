@@ -42,7 +42,7 @@ L'option ![Selection Widget Mode](https://docs.flutter.dev/assets/images/docs/to
 
 ### Network
 
-C'est un peu comme l'onglet Network de votre inspecteur Chrome.
+C'est un peu comme l'onglet **Network** de votre inspecteur Chrome.
 
 Network vous permet de voir les appels HTTP et leur réponse, et le détail de ce qui se retrouve dans le corps de l'envoie et de la réponse. 
 

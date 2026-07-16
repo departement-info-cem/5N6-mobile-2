@@ -1,16 +1,5 @@
 # Tape le 🐇
 
-## Objectifs 🎯
-
-- Se familiariser avec les outils de développement
-- Se familiariser avec les concepts de Flutter et de Dart
-- Produire une première application fonctionnelle
-- **PAS BESOIN** de tout comprendre
-
-:::danger
-Même si c'est tentant, nous vous recommendons exceptionnellement de ne pas copier-coller le code fournis dans votre projet. C'est mieux de le faire "à bras" 💪.
-:::
-
 ## Règles du jeu 📐
 
 Vous avez peut-être déjà entendu parler de ["Wack a mole" ou "Tape-Taupe"](https://www.youtube.com/watch?v=TZdPNt1_nbE&t=6s). C'est essentiellement ce que nous tenterons de réaliser aujourd'hui.

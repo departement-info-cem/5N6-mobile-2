@@ -1,10 +1,10 @@
 # 🦊 1.1A – Apprivoiser
 
 :::info
-Nous recommandons de limiter votre usage de LLM pour cet exercice, à moins d'indication contraire. Les informations que vous aurez à trouver sont :
+Nous vous recommandons de limiter votre usage de LLM pour cet exercice, à moins d'indication contraire. Les informations que vous aurez à trouver sont :
 
 1. Faciles à trouver
-2. Souvent plus à jour sur le site des développeurs du framework que sur les modèles, où l'information tend à dater si la recherche web n'est pas activée
+2. Souvent plus à jour sur le site du framework que sur les LLM, où l'information tend à dater si la recherche web n'est pas activée
 :::
 
 Trouve les informations suivantes sur le langage Dart et le framework Flutter et note-les quelque part :
