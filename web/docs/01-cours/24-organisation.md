@@ -14,14 +14,14 @@ hide_table_of_contents: true
 ### Organisation du code
 
 Nous vous suggérons cette organisation de fichiers et de dossiers
-![Organisation du code](_24-organisation/organisation.png)
+![Capture illustrant une proposition d'organisation des fichiers et dossiers d'un projet Flutter](_24-organisation/organisation.png)
 
 ### Extraire des widgets
 
 En général, on dit comme règle qu'une méthode ne devrait pas faire plus d'un écran.
 Ainsi, si vous avez un widget qui a une méthode build() qui est plus grande qu'un écran, mieux vaut en extraire quelques widgets pour mieux organiser notre code.
 
-![Extraire un widget](_24-organisation/extract.png)
+![Capture montrant l'extraction d'un widget à partir d'une méthode build trop longue](_24-organisation/extract.png)
 
 ### Public et privé
 

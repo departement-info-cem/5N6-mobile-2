@@ -112,7 +112,7 @@ Future<UserCredential> signInWithGoogle() async {
 - SHA1 : pour le sign in Google, il faut ajouter la signature SHA1 de l'application dans notre application Android
 - SHA1 : avec Android Studio, fermer votre projet Flutter, ouvrir comme un projet le dossier android DANS le projet flutter, en sélectionnant le dossier "android" dans le dialogue d'ouverture de projet
 - SHA1 : ouvrir le menu suivant : view -> tool windows -> gradle
-- SHA1 : dans la vue gradle, cliquer sur le bouton suivant ![boutongradle](https://github.com/departement-info-cem/5N6-mobile-2/assets/372085/2ef2b0bb-647e-4641-a0cc-4f586c56d30b)
+- SHA1 : dans la vue gradle, cliquer sur le bouton suivant ![Bouton Gradle dans la vue Gradle d'Android Studio](https://github.com/departement-info-cem/5N6-mobile-2/assets/372085/2ef2b0bb-647e-4641-a0cc-4f586c56d30b)
 - SHA1 : taper : gradle signinReport dans le dialogue qui apparait
 - copier la valeur du SHA1 de la tache google_sign_in_android
 - dans un navigateur

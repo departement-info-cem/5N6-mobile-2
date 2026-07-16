@@ -13,7 +13,7 @@ Quelques règles :
 
 ## Créer le projet
 
-- Dans Visual Studio Code, assurez-vous d'avoir sélectionné le profil **Mobile** dans ![Ctrl+Shift+P](./_tape-le-lapin/profil.png) > Profile > Mobile
+- Dans Visual Studio Code, assurez-vous d'avoir sélectionné le profil **Mobile** dans ![Capture de la sélection du profil Mobile dans Visual Studio Code](./_tape-le-lapin/profil.png) > Profile > Mobile
 - Tapez le raccourci `Ctrl+Shift+P`, tapez **Flutter** et sélectionnez **Flutter : New Project**.
 - Sélectionnez **Application**.
 - Dans l'explorateur, sélectionnez le dossier où vous stockez vos exercices.
@@ -72,7 +72,7 @@ Créez un nouveau dossier nommé `pages` dans le dossier lib. Dans ce dossier, c
 
 Dans le fichier créé, commencez à taper **stfu**, puis ouvrez l'IntelliSense en appuyant sur **Ctrl+Espace**. Vous devriez pouvoir sélectionner une entrée nommée **Flutter Stateful Widget**. Nommez votre nouveau widget `MyHomePage`.
 
-![Raccourci template pour Stateful Widget](./_tape-le-lapin/stfu.png)
+![Capture de l'IntelliSense montrant le modèle Flutter Stateful Widget](./_tape-le-lapin/stfu.png)
 
 On remplace `const Placeholder()` par Scaffold comme suit : 
 
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
 <Column vCenter={true}>
 De retour dans `main.dart`, positionnez-vous sur `MyHomePage`, qui devrait être encore rouge. Appuyez sur **Ctrl+.** (point). Vous aurez l'option d'importer le widget que nous venons de créer.
 </Column>
-<Column>![Menu pour importer](./_tape-le-lapin/import.png)</Column>
+<Column>![Capture du menu de correction rapide pour importer le widget créé](./_tape-le-lapin/import.png)</Column>
 </Row>
 
 Relancez l'application. Vous devriez maintenant voir **"Tape le 🐇"** centré.
@@ -136,7 +136,7 @@ Positionnez votre curseur sur le widget **Text**, et appuyez sur **Ctrl+.** (poi
 Cela fera apparaître un menu contextuel. Sélectionnez l'option pour enrober avec une **Column**.
 </Column>
 <Column>
-![Menu Wrap with, option Column sélectionné](./_tape-le-lapin/wrap.png)
+![Capture du menu Wrap with avec l'option Column sélectionnée](./_tape-le-lapin/wrap.png)
 </Column>
 </Row>
 
@@ -339,7 +339,7 @@ Tout est à peu près beau. Il ne nous reste qu'à aérer les 3 sections qui son
 Avant de continuer, validez que votre interface ressemble à ça :
 
 <center>
-<Image img={require('./_tape-le-lapin/interface-fini.png')} height="400" />
+![Capture de l'interface finale: titre, scores Bonk et Zloop, et grille 2x2 de boutons](./_tape-le-lapin/interface-fini.png)
 </center>
 
 ## Comportement

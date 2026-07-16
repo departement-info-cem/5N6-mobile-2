@@ -10,6 +10,8 @@ L'avantage de Flutter, qui permet d'utiliser une seule base de code pour cibler 
 
 C'est encore possible d'écrire du code natif, mais nous ne le ferons pas vraiment dans ce cours. Flutter compile son code source vers des projets sur les différentes plateformes choisies, qui sont ensuite compilés vers des exécutables.
 
+<NonVoyant>Résumé textuel du schéma ci-dessous: le code situé dans lib est compilé vers des projets Android, iOS, Web, Linux, macOS et Windows, puis chaque plateforme produit son propre type d'exécutable.</NonVoyant>
+
 ```mermaid
 flowchart TD
     lib --> android[Projet Android]

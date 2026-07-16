@@ -26,6 +26,7 @@ Produire et maintenir du contenu pédagogique clair, exact et cohérent pour le 
 - Garder une terminologie Flutter précise et cohérente.
 - Éviter les ambiguïtés sur la plateforme cible (Android par défaut, mention explicite si autre cible).
 - En cas de doute technique sur une syntaxe Flutter/Dart, vérifier avant de corriger.
+- Concevoir les contenus pour rester utilisables avec un lecteur d'écran: donner à chaque image, capture ou schéma une alternative textuelle ou un court résumé adjacent, et ne pas dépendre uniquement de la couleur, de la disposition visuelle ou des emoji pour transmettre une consigne.
 
 ## Règles d'architecture des consignes LLM
 

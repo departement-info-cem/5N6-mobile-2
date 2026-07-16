@@ -53,19 +53,19 @@ Vous devez reproduire la mise en page de l'image suivante dans une appli Flutter
 
 <Column>
 
-![bizzare 1](_07-deploiement/biz1.png)
+![Capture d'un exemple d'interface multilingue en français](_07-deploiement/biz1.png)
 
 </Column>
 
 <Column>
 
-![bizzare 2](_07-deploiement/biz2.png)
+![Capture d'un exemple d'interface multilingue en norvégien](_07-deploiement/biz2.png)
 
 </Column>
 
 <Column>
 
-![bizzare 3](_07-deploiement/biz3.png)
+![Capture d'un exemple d'interface multilingue en japonais](_07-deploiement/biz3.png)
 
 </Column>
 
@@ -88,13 +88,13 @@ Tester votre application avec les appareils suivants:
 
 <Column size="3">
 
-![taille 1](_07-deploiement/taille1.png)
+![Capture d'une mise en page adaptée à une petite taille d'écran](_07-deploiement/taille1.png)
 
 </Column>
 
 <Column size="9">
 
-![taille 2](_07-deploiement/taille2.png)
+![Capture d'une mise en page adaptée à une grande taille d'écran](_07-deploiement/taille2.png)
 
 </Column>
 

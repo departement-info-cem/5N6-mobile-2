@@ -65,32 +65,32 @@ service cloud.firestore {
 <Row>
   - On peut également utiliser l'espace de test pour valider nos nouvelles règles
   <Column size="12">
-    ![Tester les règles](_28-rules/rules1.png)
+    ![Capture de l'espace de test des règles Firebase](_28-rules/rules1.png)
   </Column>
   - On peut choisir le type d'opération à tester, le chemin vers le document qu'on voudrait accéder et l'authentification de l'utilisateur
   <Column size="12">
-    ![Tester les règles](_28-rules/rules2.png)
+    ![Capture montrant le choix de l'opération, du chemin et de l'authentification pour tester des règles Firebase](_28-rules/rules2.png)
   </Column>
   - Ici, on valide l'accès en lecture au document "Longueuil" dans la collection de villes pour tous les utilisateurs
   <Column size="12">
-    ![Tester les règles](_28-rules/rules3.png)
+    ![Capture montrant une validation de lecture sur un document Firebase](_28-rules/rules3.png)
   </Column>
   - On valide maintenant l'accès mais cette fois si en écriture
   - On remarque une erreur dans les règles, l'objet request.auth est null, donc request.auth.uid donne "Null value error"
   <Column size="12">
-    ![Tester les règles](_28-rules/rules4.png)
+    ![Capture montrant un échec de validation en écriture à cause d'une authentification absente](_28-rules/rules4.png)
   </Column>
   - On corrige le tout pour relancer la validation
   <Column size="12">
-    ![Tester les règles](_28-rules/rules5.png)
+    ![Capture montrant la correction des règles Firebase avant une nouvelle validation](_28-rules/rules5.png)
   </Column>
   - On ajoute un utilisateur pour valider les droits "admin"
   <Column size="12">
-    ![Tester les règles](_28-rules/rules6.png)
+    ![Capture montrant l'ajout d'un utilisateur pour tester des droits administrateur](_28-rules/rules6.png)
   </Column>
   - Finalement, on test l'accès à toutes les sous-collections
   <Column size="12">
-    ![Tester les règles](_28-rules/rules7.png)
+    ![Capture montrant le test d'accès aux sous-collections Firebase](_28-rules/rules7.png)
   </Column>
   
 </Row>
@@ -122,11 +122,11 @@ service cloud.firestore {
 - Il est possible que plusieurs règles s'appliquent sur un même document
 - Dès qu'une règle a la valeur **true**, l'accès est accordé
 <Column size="12">
-  ![Tester les règles](_28-rules/rules8.png)
+  ![Capture montrant plusieurs règles applicables sur un même document Firebase](_28-rules/rules8.png)
 </Column>
 - Ici, si l'on veut vraiment interdire la suppression, il faudra être plus précis
 <Column size="12">
-  ![Tester les règles](_28-rules/rules9.png)
+  ![Capture montrant un cas où la suppression doit être explicitement interdite dans les règles Firebase](_28-rules/rules9.png)
 </Column>
 
 

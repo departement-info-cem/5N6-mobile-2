@@ -21,19 +21,19 @@ Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/d
 
 <Row>
   <Column size="8">
-    ![Creer le projet](_27-supabase/create2.png)
+    ![Capture de l'étape de création du projet Supabase](_27-supabase/create2.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/create3.png)
+    ![Capture de l'étape de création du projet Supabase](_27-supabase/create3.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/create4.png)
+    ![Capture de l'étape de création du projet Supabase](_27-supabase/create4.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/create5.png)
+    ![Capture de l'étape de création du projet Supabase](_27-supabase/create5.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/create6.png)
+    ![Capture de l'étape de création du projet Supabase](_27-supabase/create6.png)
   </Column>
 </Row>
 
@@ -46,22 +46,22 @@ Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/d
 <Row>
 
   <Column size="8">
-    ![Creer le projet](_27-supabase/storage1.png)
+    ![Capture montrant le réglage des droits d'accès des buckets dans Supabase](_27-supabase/storage1.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/storage2.png)
+    ![Capture montrant le réglage des droits d'accès des buckets dans Supabase](_27-supabase/storage2.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/storage3.png)
+    ![Capture montrant le réglage des droits d'accès des buckets dans Supabase](_27-supabase/storage3.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/storage4.png)
+    ![Capture montrant le réglage des droits d'accès des buckets dans Supabase](_27-supabase/storage4.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/storage5.png)
+    ![Capture montrant le réglage des droits d'accès des buckets dans Supabase](_27-supabase/storage5.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/storage6.png)
+    ![Capture montrant le réglage des droits d'accès des buckets dans Supabase](_27-supabase/storage6.png)
   </Column>
   
 </Row>
@@ -71,13 +71,13 @@ Vous pouvez regarder l'exemple de code **[supabase_storage](https://github.com/d
 <Row>
 
   <Column size="8">
-    ![Creer le projet](_27-supabase/objects1.png)
+    ![Capture montrant le réglage des droits d'accès aux objets dans les buckets Supabase](_27-supabase/objects1.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/objects2.png)
+    ![Capture montrant le réglage des droits d'accès aux objets dans les buckets Supabase](_27-supabase/objects2.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/objects3.png)
+    ![Capture montrant le réglage des droits d'accès aux objets dans les buckets Supabase](_27-supabase/objects3.png)
   </Column>
   
 </Row>
@@ -103,10 +103,10 @@ await supabase
 <Row>
 
   <Column size="8">
-    ![Creer le projet](_27-supabase/bucket1.png)
+    ![Capture montrant la création d'un bucket public Supabase depuis l'interface](_27-supabase/bucket1.png)
   </Column>
   <Column size="8">
-    ![Creer le projet](_27-supabase/bucket2.png)
+    ![Capture montrant la création d'un bucket public Supabase depuis l'interface](_27-supabase/bucket2.png)
   </Column>
   
 </Row>

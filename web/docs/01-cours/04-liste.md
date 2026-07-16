@@ -63,7 +63,7 @@ La liste doit être construite à l'aide d'une expression lambda.
 
 <Column size="3">
 
-![jolie liste lambda](_04-liste/jolie-liste-lambda.png)
+![Capture d'une liste Fibonacci stylisée construite avec une expression lambda](_04-liste/jolie-liste-lambda.png)
 
 </Column>
 
