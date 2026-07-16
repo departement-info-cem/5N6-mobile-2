@@ -107,6 +107,8 @@ Si tout fonctionne comme prévu, COMMIT + PUSH.
 
 ### Titre
 
+Retour dans `lapin.dart`.
+
 Le titre est bien, mais rendons-le un peu plus gros :
 
 ```dart
@@ -224,7 +226,6 @@ Pour les boutons, nous allons afficher une grille de 2x2 boutons, qui vont tous 
 
 ```dart
 Column(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
     const Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
     const Row(
@@ -253,6 +254,15 @@ Column(
   ],
 ),
 ```
+
+Une erreur surgit! Essayez de corriger l'erreur par vous-même. Pour y arriver, au besoin :
+
+- Lis le message d'erreur surligné en rouge dans Visual Studio Code
+- Lis le message d'erreur dans la console d'exécution Flutter
+- Fais une recherche sur internet
+- Regarde ce que l'IntelliSense de Visual Studio Code te propose
+
+Si tu bloque pendant 5 minutes, appelle ton enseignant.
 
 Ajoutons maintenant les boutons :
 
@@ -323,12 +333,15 @@ GridView.count(
   mainAxisSpacing: 20, // Espacement vertical
   crossAxisSpacing: 20, // Espacement horizontal
   padding: EdgeInsets.all(20), // Espacement autour
+  // highlight-start
   children: List.generate(4, (index) {
     return ElevatedButton(
       onPressed: null,
       child: Text("🐹", style: TextStyle(fontSize: 100)),
     );
   }),
+  // highlight-end
+
 ),
 ```
 
@@ -396,7 +409,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // Choisir un entier entre 0 et 4
+    // Choisit un entier entre 0 et 4
     _positionLapin = _random.nextInt(4);
   }
 
