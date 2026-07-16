@@ -121,13 +121,14 @@ const config = {
           }. CÉGEP Édouard-Montpetit.`,
       },
       // Décommenter et remplir pour activer l'indexation des pages par le moteur de recherche local
-      // algolia: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: '',
-      //   contextualSearch: true,
-      //   searchPagePath: 'search',
-      // },
+      algolia: {
+        container: '#docsearch',
+        appId: 'JXEBS5YLBJ',
+        apiKey: '9092f1b80fb1857cb63daf95e1b402ec',
+        indexName: '5M6',
+        contextualSearch: true,
+        searchPagePath: 'search',
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
