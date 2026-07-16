@@ -1,13 +1,8 @@
 ---
-description: Tape le lapin 🐇
-hide_table_of_contents: true
+description: Intro Dart et Flutter
 ---
 
 # Intro Dart et Flutter
-
-<Row>
-
-<Column>
 
 :::tip Avant la séance ou pendant le cours
 
@@ -26,14 +21,9 @@ Consultez les recettes suivantes.
 - [Apprivoiser un nouveau framework 💬](../03-recettes/nouveau-framework.md)
 - [Tour d'horizon d'un projet Flutter 🌅](../03-recettes/tour-dhorizon.md) 
 - [Outils de débogage 🪲](../03-recettes/outils-debogage.md)
-
-Jette un coup d'oeil rapide à la recette pour [Tape le lapin 🐇](../03-recettes/tape-le-lapin.md).
+- [Tape le lapin 🐇](../03-recettes/tape-le-lapin.md).
 
 :::
-
-</Column>
-
-<Column>
 
 :::info Séance
 
@@ -42,30 +32,9 @@ Jette un coup d'oeil rapide à la recette pour [Tape le lapin 🐇](../03-recett
 - Petit mot d'introduction au cours
 - Plan de cours
 
-## Initiation à Flutter
-
-- On regardera comment faire un helloworld, comment mettre un point d'arrêt et démarrer une application.
-- On fera quelques comparaisons de syntaxe entre Java et Dart.
-
-## Widgets de base
-
-On passera à travers les objets graphiques de base et la gestion de l'état d'un écran.
-
-- Text
-- Button
-- Column et Row pour la mise en page
-
-## pub.dev
-
-On verra l'utilisation du gestionnaire de dépendance pour Flutter et Dart.
-
 ## Exercices
 
 - [🦊 1.1A – Apprivoiser](../04-laboratoires/Laboratoire%201.1/a-apprivoiser.md)
 - [🐇 1.1B Tape le lapin](../04-laboratoires/Laboratoire%201.1/b-tape-lapin.md)
 
 :::
-
-</Column>
-
-</Row>

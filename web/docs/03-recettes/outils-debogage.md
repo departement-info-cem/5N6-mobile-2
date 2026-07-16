@@ -30,7 +30,7 @@ Vous devriez automatiquement vous y référer lorsque :
 
 - Vous voyez des barres jaune et noire dans votre application
 - Un widget ne s'affiche pas alors qu'il est bel et bien créé
-- Dans la console d'exécution, vous voyez des erreurs rouges qui ressemble à ça : 
+- Dans la console d'exécution, vous voyez des erreurs rouges qui ressemblent à ça : 
 
 ```
 ════════ Exception caught by widgets library ═══════════════════════════════════
@@ -44,8 +44,8 @@ L'option ![Selection Widget Mode](https://docs.flutter.dev/assets/images/docs/to
 
 C'est un peu comme l'onglet **Network** de votre inspecteur Chrome.
 
-Network vous permet de voir les appels HTTP et leur réponse, et le détail de ce qui se retrouve dans le corps de l'envoie et de la réponse. 
+Network vous permet de voir les appels HTTP et leur réponse, et le détail de ce qui se retrouve dans le corps de l'envoi et de la réponse. 
 
 ![Network](https://docs.flutter.dev/assets/images/docs/tools/devtools/network_screenshot.png)
 
-Vous pouvez habituellement ignorer les méthode `SOCKET`.
+Vous pouvez habituellement ignorer les méthodes `SOCKET`.

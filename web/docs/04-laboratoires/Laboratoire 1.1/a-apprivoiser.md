@@ -7,7 +7,7 @@ Nous vous recommandons de limiter votre usage de LLM pour cet exercice, à moins
 2. Souvent plus à jour sur le site du framework que sur les LLM, où l'information tend à dater si la recherche web n'est pas activée
 :::
 
-Trouve les informations suivantes sur le langage Dart et le framework Flutter et note-les quelque part :
+Trouvez les informations suivantes sur le langage Dart et le framework Flutter et notez-les quelque part :
 
 ## Conventions de nommage
 
@@ -26,7 +26,7 @@ Trouve les informations suivantes sur le langage Dart et le framework Flutter et
 
 ## Paradigme et concepts clés
 
-Prends le temps de lire ce que ton LLM favori te répond à la question suggérée [ici](../../03-recettes/nouveau-framework.md#paradigme-et-concepts-clés).
+Prenez le temps de lire ce que votre LLM favori vous répond à la question suggérée [ici](../../03-recettes/nouveau-framework.md#paradigme-et-concepts-clés).
 
 ## Outillage (CLI et Débogage)
 
