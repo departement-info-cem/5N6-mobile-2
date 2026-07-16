@@ -12,14 +12,14 @@ description: Intro Dart et Flutter
 2. Consultez la documentation de l'extension Flutter pour Visual Studio Code, plus particulièrement les sections suivantes :
    - [Créer un projet Flutter](https://docs.flutter.dev/tools/vs-code#creating-a-new-project)
    - [Exécuter et déboguer](https://docs.flutter.dev/tools/vs-code#running-and-debugging)
-3. Sur Visual Studio Code, vous pourrez lancer et créer un émulateur à partir de la zone en bas à droite de l'écran
+3. Dans Visual Studio Code, vous pourrez lancer et créer un émulateur à partir de la zone en bas à droite de l'écran.
 
 ## Commencer avec Flutter
 
-Consultez les recettes suivantes. 
+Consultez les recettes suivantes.
 
 - [Apprivoiser un nouveau framework 💬](../03-recettes/nouveau-framework.md)
-- [Tour d'horizon d'un projet Flutter 🌅](../03-recettes/tour-dhorizon.md) 
+- [Tour d'horizon d'un projet Flutter 🌅](../03-recettes/tour-dhorizon.md)
 - [Outils de débogage 🪲](../03-recettes/outils-debogage.md)
 - [Tape le lapin 🐇](../03-recettes/tape-le-lapin.md).
 

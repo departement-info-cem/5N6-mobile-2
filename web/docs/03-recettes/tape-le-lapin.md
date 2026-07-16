@@ -15,7 +15,7 @@ Quelques règles :
 
 - Dans Visual Studio Code, assurez-vous d'avoir sélectionné le profil **Mobile** dans ![Ctrl+Shift+P](./_tape-le-lapin/profil.png) > Profile > Mobile
 - Tapez le raccourci `Ctrl+Shift+P`, tapez **Flutter** et sélectionnez **Flutter : New Project**.
-- Sélectionner **Application**.
+- Sélectionnez **Application**.
 - Dans l'explorateur, sélectionnez le dossier où vous stockez vos exercices.
 - Tapez **tape_le_lapin** comme nom du projet.
 - Cochez seulement **android**.
@@ -129,9 +129,9 @@ Pour arriver à placer les prochains éléments, il va falloir séparer l'interf
 
 <Row>
 <Column vCenter={true}>
-Nous allons enrober le Widget **Text** par un autre Widget **Column**.
+Nous allons enrober le widget **Text** par un autre widget **Column**.
 
-Positionnez votre curseur sur le Widget **Text**, et appuyez sur **Ctrl+.** (point).
+Positionnez votre curseur sur le widget **Text**, et appuyez sur **Ctrl+.** (point).
 
 Cela fera apparaître un menu contextuel. Sélectionnez l'option pour enrober avec une **Column**.
 </Column>
@@ -154,7 +154,7 @@ Center(
 ),
 ```
 
-Le Widget **Text** est maintenant le premier élément dans une liste de Widgets qui va du haut vers le bas.
+Le widget **Text** est maintenant le premier élément dans une liste de widgets qui va du haut vers le bas.
 
 :::tip child 👶 vs children 👶👶👶
 Vous remarquerez que la plupart des Widgets ont un attribut :
@@ -274,7 +274,7 @@ GridView.count(
 
 On verra dans l'étape suivante ce que la propriété `onPressed` fait. C'est d'ailleurs parce qu'elle est à `null` que les boutons semblent grisés.
 
-On peut aussi grossir les boutons en leur assignant une taille un peu plus élevée, tel que vu précédement :
+On peut aussi grossir les boutons en leur assignant une taille un peu plus élevée, tel que vu précédemment :
 
 ```dart
 Text("🐹", style: TextStyle(fontSize: 100))
@@ -313,7 +313,7 @@ GridView.count(
 ),
 ```
 
-Si vous êtes habile, vous avez remarqué que les boutons commencent à se répéter, et que chaque modification devra être appliquée 4x. Imaginez si c'était 10 boutons, il faudrait modifier le code 10x. Nous allons donc tenter une autre approche pour mieux gérer nos boutons :
+Si vous êtes habiles, vous avez remarqué que les boutons commencent à se répéter, et que chaque modification devra être appliquée 4 fois. Imaginez si c'était 10 boutons, il faudrait modifier le code 10 fois. Nous allons donc tenter une autre approche pour mieux gérer nos boutons :
 
 ```dart
 GridView.count(
@@ -501,7 +501,7 @@ void dispose() {
 Trouver une nouvelle position pour le 🐇 va être un peu plus complexe qu'avant. Nous allons donc créer une fonction pour faire cette gestion.
 
 ```dart
-// Au dessus de la fonction build
+// Au-dessus de la fonction build
 void _nouvellePosition() {
   setState(() {
     _positionLapin = _random.nextInt(4);

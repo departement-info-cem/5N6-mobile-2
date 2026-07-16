@@ -1,6 +1,6 @@
 # Apprivoiser un nouveau framework 💬
 
-Si on compte C#, SQL, Bash, Batch, HTML, CSS, Javascript, Kotlin, Java et Typescript, Dart va être le 11e langage que vous allez apprendre, et Flutter est votre énième framework (.NET Core, React, Jetpack Compose). Vous commencez à avoir l'habitude de vous approprier de nouveaux langages. Il serait d'ailleurs surprenant que vous n'en appreniez pas d'autres à l'université ou dans votre vie professionnelle.
+Si on compte C#, SQL, Bash, Batch, HTML, CSS, JavaScript, Kotlin, Java et TypeScript, Dart va être le 11e langage que vous allez apprendre, et Flutter est votre énième framework (.NET Core, React, Jetpack Compose). Vous commencez à avoir l'habitude de vous approprier de nouveaux langages. Il serait d'ailleurs surprenant que vous n'en appreniez pas d'autres à l'université ou dans votre vie professionnelle.
 
 Voici quelques pense-bêtes à garder non loin de vous lorsque vous apprenez un nouveau langage ou framework.
 
@@ -15,7 +15,7 @@ Chaque langage possède ses propres standards pour les identifiants suivants :
 - Dossier ou package
 
 :::info
-Parfois, les frameworks supplantent les standards de nommage du langage dans lequel ils sont écrits. Par exemple, en Typescript, les noms des fichiers sont en **kebab-case** (ex : `mon-fichier.ts`), alors qu'en React, les fichiers de composants sont en **PascalCase** (ex : `MonFichier.tsx`).
+Parfois, les frameworks supplantent les standards de nommage du langage dans lequel ils sont écrits. Par exemple, en TypeScript, les noms des fichiers sont en **kebab-case** (ex : `mon-fichier.ts`), alors qu'en React, les fichiers de composants sont en **PascalCase** (ex : `MonFichier.tsx`).
 :::
 
 Il vous appartient de vous informer sur les conventions de nommage de chaque nouveau langage.
@@ -35,7 +35,7 @@ C'est aussi important de connaître le point d'entrée du code, là où les prem
 Chaque langage possède habituellement un gestionnaire de dépendances qui permet d'obtenir des bibliothèques et des packages développés par la communauté ou par des entreprises. Voici ceux que vous avez vus jusqu'à présent :
 
 - **C#** : NuGet, qui stocke les dépendances à installer dans un fichier `.csproj`.
-- **Javascript** (et Typescript) : NPM, qui stocke les dépendances à installer dans un fichier `package.json`.
+- **JavaScript** (et TypeScript) : NPM, qui stocke les dépendances à installer dans un fichier `package.json`.
 
 ## Paradigme et concepts clés
 

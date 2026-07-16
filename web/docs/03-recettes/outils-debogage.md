@@ -2,7 +2,7 @@
 
 Comme développeur, c'est toujours votre responsabilité de comprendre le code que vous produisez. Les outils ci-dessous vous permettront de vous approprier votre code et vous aideront à déboger vos applications Flutter.
 
-## Le bon vieux point de debug
+## Le bon vieux point d'arrêt
 
 Dart supporte très bien les points de debug. Si vous demandez de l'aide à votre enseignant, que le problème est au niveau de l'exécution de l'application, c'est toujours attendu de commencer par regarder ce qui se retrouve dans les variables, ce qui permet souvent de comprendre pourquoi le fil d'exécution a emprunté un chemin plutôt qu'un autre.
 
@@ -38,11 +38,11 @@ The following assertion was thrown while applying parent data.:
 Incorrect use of ParentDataWidget.
 ```
 
-L'option ![Selection Widget Mode](https://docs.flutter.dev/assets/images/docs/tools/devtools/select-widget-mode-button.png) vous permet soit de sélectionner le widget à visualiser dans l'inspector directement depuis votre émulateur, ou le contraire, sélectionner le widget dans l'inspector pour qu'il soit surligné dans l'émulateur.
+L'option ![Selection Widget Mode](https://docs.flutter.dev/assets/images/docs/tools/devtools/select-widget-mode-button.png) vous permet soit de sélectionner le widget à visualiser dans l'inspector directement depuis votre émulateur, soit de faire l'inverse: sélectionner le widget dans l'inspector pour qu'il soit surligné dans l'émulateur.
 
 ### Network
 
-C'est un peu comme l'onglet **Network** de votre inspecteur Chrome.
+C'est un peu comme l'onglet **Network** des outils de développement de Chrome.
 
 Network vous permet de voir les appels HTTP et leur réponse, et le détail de ce qui se retrouve dans le corps de l'envoi et de la réponse. 
 

@@ -10,7 +10,7 @@ Obtenir un environnement de développement fonctionnel chez soi
 - Suivez les instructions d'installation pour votre distribution
 
 :::tip
-Nous recommandons l'installation via Visual Studio Code, mais si vous considérez tester Flutter avec Android Studio, vous pouvez procéder à l'installation manuelle.
+Nous recommandons l'installation via Visual Studio Code, mais si vous souhaitez aussi tester Flutter avec Android Studio, vous pouvez procéder à l'installation manuelle.
 :::
 
 ## Validations après installation
@@ -25,5 +25,5 @@ Prenez l'habitude d'exécuter cette commande lorsque vous arrivez dans un nouvel
 ### Problèmes fréquents
 
 :::danger [TODO Message d'erreur Windows ici]
-La commande `flutter` n'a pas été ajoutée à votre PATH, il faut l'ajouter vous-même. Remémorez-vous vos cours de Système d'exploitation, ou demandez à votre enseignant de vous rafraîchir la mémoire!
+La commande `flutter` n'a pas été ajoutée à votre PATH. Il faut l'ajouter vous-même. Remémorez-vous vos cours de système d'exploitation, ou demandez à votre enseignant de vous rafraîchir la mémoire.
 :::
