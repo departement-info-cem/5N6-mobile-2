@@ -3,6 +3,15 @@ name: Générer les zips de code
 on:
   push:
     branches: [main]
+    paths:
+      - 'code/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zip-release-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   zip:
