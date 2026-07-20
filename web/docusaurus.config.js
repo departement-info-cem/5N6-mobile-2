@@ -126,7 +126,7 @@ const config = {
         appId: 'JXEBS5YLBJ',
         apiKey: '9092f1b80fb1857cb63daf95e1b402ec',
         indexName: '5M6',
-        contextualSearch: true,
+        contextualSearch: false,
         searchPagePath: 'search',
       },
       prism: {
