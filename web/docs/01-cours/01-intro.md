@@ -31,6 +31,7 @@ Consultez les recettes suivantes.
 
 - Petit mot d'introduction au cours
 - Plan de cours
+- Présentation du [TP1](../02-tp/01-tp1.md)
 
 ## Exercices
 
