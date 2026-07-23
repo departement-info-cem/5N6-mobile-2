@@ -13,7 +13,7 @@ Quelques règles :
 
 ## Créer le projet
 
-- Dans Visual Studio Code, assurez-vous d'avoir sélectionné le profil **Mobile** dans ![Capture de la sélection du profil Mobile dans Visual Studio Code](./_tape-le-lapin/profil.png) > Profile > Mobile
+- Dans Visual Studio Code, assurez-vous d'avoir sélectionné le profil **Mobile** dans ![Icône engrenage dans Visual Studio Code](./_tape-le-lapin/profil.png) > Profile > Mobile. <NonVoyant>Pour étudiant non voyant, assurez vous d'avoir installé les plugins Visual Studio Code Flutter et Dart</NonVoyant>
 - Tapez le raccourci `Ctrl+Shift+P`, tapez **Flutter** et sélectionnez **Flutter : New Project**.
 - Sélectionnez **Application**.
 - Dans l'explorateur, sélectionnez le dossier où vous stockez vos exercices.
@@ -72,7 +72,7 @@ Créez un nouveau dossier nommé `pages` dans le dossier lib. Dans ce dossier, c
 
 Dans le fichier créé, commencez à taper **stfu**, puis ouvrez l'IntelliSense en appuyant sur **Ctrl+Espace**. Vous devriez pouvoir sélectionner une entrée nommée **Flutter Stateful Widget**. Nommez votre nouveau widget `MyHomePage`.
 
-![Capture de l'IntelliSense montrant le modèle Flutter Stateful Widget](./_tape-le-lapin/stfu.png)
+![Menu IntelliSense. L'option Flutter Stateful Widget est sélectionnée](./_tape-le-lapin/stfu.png)
 
 On remplace `const Placeholder()` par Scaffold comme suit : 
 
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
 <Column vCenter={true}>
 De retour dans `main.dart`, positionnez-vous sur `MyHomePage`, qui devrait être encore rouge. Appuyez sur **Ctrl+.** (point). Vous aurez l'option d'importer le widget que nous venons de créer.
 </Column>
-<Column>![Capture du menu de correction rapide pour importer le widget créé](./_tape-le-lapin/import.png)</Column>
+<Column>![Menu Correctif Rapide pour importer le widget créé. L'option Import library 'package:tape_le_lapin/lapin.dart' est sélectionnée](./_tape-le-lapin/import.png)</Column>
 </Row>
 
 Relancez l'application. Vous devriez maintenant voir **"Tape le 🐇"** centré.
@@ -138,7 +138,7 @@ Positionnez votre curseur sur le widget **Text**, et appuyez sur **Ctrl+.** (poi
 Cela fera apparaître un menu contextuel. Sélectionnez l'option pour enrober avec une **Column**.
 </Column>
 <Column>
-![Capture du menu Wrap with avec l'option Column sélectionnée](./_tape-le-lapin/wrap.png)
+![Menu Contextuel avec l'option Wrap with Column sélectionnée](./_tape-le-lapin/wrap.png)
 </Column>
 </Row>
 
@@ -352,7 +352,7 @@ Tout est à peu près beau. Il ne nous reste qu'à aérer les 3 sections qui son
 Avant de continuer, validez que votre interface ressemble à ça :
 
 <center>
-![Capture de l'interface finale: titre, scores Bonk et Zloop, et grille 2x2 de boutons](./_tape-le-lapin/interface-fini.png)
+<Image alt="Interface graphique complétée. De haut en bas, 3 groupes : Le titre (qui affiche Tape le et un emoji de lapin), les compteurs Bonk : x (en vert) et Zloop : y (en rouge) qui sont alignés sur une rangée, séparés, et les 4 boutons pour jouer, qui sont légèrement grisés, et affichent un emoji de hamster. Les boutons s'affichent comme une grille 2 par 2, et sont également séparés." img={require('./_tape-le-lapin/interface-fini.png')} width="400" />
 </center>
 
 ## Comportement

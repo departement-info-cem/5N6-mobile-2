@@ -9,3 +9,14 @@
 ## Recommandations
 
 - À l'arrivée sur une nouvelle page, consulte l'ensemble des titres pour avoir une idée globale de ce qui sera vue sur la page. 
+
+## À valider avec l'étudiant
+
+- Les caractères suivants sont lus par la synthèse vocale :
+
+- plus petit que
+- plus grand que 
+- accolade ouvrante
+- accolade fermante
+- bracket ouvrante
+- bracket fermante
