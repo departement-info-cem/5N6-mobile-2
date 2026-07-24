@@ -53,48 +53,54 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  "Bonk : $_scoreBonk",
-                  style: TextStyle(color: Colors.green, fontSize: 30),
-                ),
-                Text(
-                  "Zloop : $_scoreZloop",
-                  style: TextStyle(color: Colors.red, fontSize: 30),
-                ),
-              ],
-            ),
-            GridView.count(
-              shrinkWrap: true, // Dimensionner selon le contenu
-              physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
-              crossAxisCount: 2, // Nombre de colonnes
-              mainAxisSpacing: 20, // Espacement vertical
-              crossAxisSpacing: 20, // Espacement horizontal
-              padding: EdgeInsets.all(20), // Espacement autour
-              children: List.generate(4, (index) {
-                String emoji = _positionLapin == index ? "🐇" : "🐹";
-                return ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      if (index == _positionLapin) {
-                        _scoreBonk++;
-                      } else {
-                        _scoreZloop++;
-                      }
-                    });
-                    _nouvellePosition();
-                  },
-                  child: Text(emoji, style: TextStyle(fontSize: 100)),
-                );
-              }),
-            ),
-          ],
+          children: [_titre(), _score(), _boutons()],
         ),
       ),
     );
   }
+
+  GridView _boutons() {
+    return GridView.count(
+      shrinkWrap: true, // Dimensionner selon le contenu
+      physics: NeverScrollableScrollPhysics(), // Empêcher de scroller
+      crossAxisCount: 2, // Nombre de colonnes
+      mainAxisSpacing: 20, // Espacement vertical
+      crossAxisSpacing: 20, // Espacement horizontal
+      padding: EdgeInsets.all(20), // Espacement autour
+      children: List.generate(4, (index) {
+        String emoji = _positionLapin == index ? "🐇" : "🐹";
+        return ElevatedButton(
+          onPressed: () {
+            setState(() {
+              if (index == _positionLapin) {
+                _scoreBonk++;
+              } else {
+                _scoreZloop++;
+              }
+            });
+            _nouvellePosition();
+          },
+          child: Text(emoji, style: TextStyle(fontSize: 100)),
+        );
+      }),
+    );
+  }
+
+  Row _score() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          "Bonk : $_scoreBonk",
+          style: TextStyle(color: Colors.green, fontSize: 30),
+        ),
+        Text(
+          "Zloop : $_scoreZloop",
+          style: TextStyle(color: Colors.red, fontSize: 30),
+        ),
+      ],
+    );
+  }
+
+  Text _titre() => Text('Tape le 🐇', style: TextStyle(fontSize: 40));
 }

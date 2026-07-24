@@ -1,4 +1,4 @@
-# 🐇 1.1B Tape le lapin
+# 🐇 1.1B tape_le_lapin
 
 ## Objectifs 🎯
 

@@ -1,4 +1,4 @@
-# 🦊 1.1A – Apprivoiser
+# 🦊 1.1A – apprivoiser
 
 :::info
 Nous vous recommandons de limiter votre usage de LLM pour cet exercice, à moins d'indication contraire. Les informations que vous aurez à trouver sont :

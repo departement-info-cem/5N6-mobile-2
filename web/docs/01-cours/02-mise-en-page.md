@@ -39,12 +39,6 @@ Vous compléterez les exercices pour vous pratiquer.
 
 :::note Exercices
 
-### Exercice drapeau_italien
-
-Drapeau italien. Vous devez faire une mise en page qui correspond au drapeau italien qui prend toute la hauteur de l'écran et où chaque couleur utilise un tiers de la largeur de l'écran.
-
-![Capture d'un drapeau italien reproduit en Flutter avec trois bandes verticales verte, blanche et rouge](_02-mise-en-page/italie.png)
-
 ### Exercice plein_de_containers
 
 Faites un écran composé de:
