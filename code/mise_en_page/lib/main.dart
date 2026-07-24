@@ -38,31 +38,26 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         // La plupart des layout pour telephones commencent avec une column
-        // TODO jouer entre les differents valeurs de MainAxisAlignment
+        // TODO #1 jouez entre les differents valeurs de MainAxisAlignment
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Row(
             children: [
-              SizedBox(
-                height: 10000,
-                child: Expanded(
-                  flex: 2,
-                  child: Container(
-                    margin: const EdgeInsets.all(5),
-                    // Ca prend un container pour les bordures et les marges
-                    width: double.infinity,
-                    color: Colors.blue,
-                    child: const Padding(
-                      // Le padding se fait en encapsulant dans le widget Padding
-                      padding: EdgeInsets.all(8.0),
-                      child: Text("Je prends 2/3"),
-                    ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  margin: const EdgeInsets.all(5),
+                  color: Colors.blue,
+                  child: const Padding(
+                    // Le padding se fait en encapsulant dans le widget Padding
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("Je prends 2/3"),
                   ),
                 ),
               ),
               Expanded(
+                // TODO #2 pas forcement necessaire parce que 1 c'est la valeur par defaut
                 flex: 1,
-                // pas forcement necessaire parce que 1 c'est la valeur par defaut
                 child: MaterialButton(
                   color: Colors.green,
                   onPressed: () {},
@@ -81,10 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   const Expanded(
                     flex: 3,
-                    child:
-                        // Pour avoir un container qui prend toute la hauteur du Row
-                        // https://stackoverflow.com/questions/51155208/make-container-widget-fill-parent-vertically
-                        Column(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -102,12 +94,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                     flex: 7,
-                    // pas forcement necessaire parce que 1 c'est la valeur par defaut
                     child: Container(
                       margin: const EdgeInsets.all(4),
                       color: Colors.amberAccent,
                       child: const Column(
-                        // TODO changer la valeur ici
+                        // TODO #3 changer la valeur ici
                         // conclusion, des qu'un spacer ou un widget avec un flex qui prend tous les pixels
                         // restants le mainAxisalignement ne change plus rien
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -118,10 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           Icon(
                             Icons.star,
                           ),
+                          // TODO #4 va prendre 4 fois plus des pixels restants qu'un Spacer avec flex de 1
                           Spacer(
                             flex: 4,
                           ),
-                          // va prendre 4 fois plus des pixels restants qu'un Spacer avec flex de 1
                           Text('l\'espace'),
                         ],
                       ),
@@ -135,8 +126,8 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(7),
             child: TextFormField(
               decoration: InputDecoration(
-                fillColor: Colors.blue[1],
-                // chaque couleur vient avec des nuances accessibles par un index
+                // TODO #5 chaque couleur vient avec des nuances accessibles par un index
+                fillColor: Colors.blue[50],
                 filled: true,
                 labelText: 'Indice pour utilisateur',
                 contentPadding: const EdgeInsets.all(10),
@@ -158,10 +149,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        // TODO #6 fonction anonyme qui ne fait rien
         onPressed: () {},
-        // fonction anonyme qui ne fait rien
+        // TODO #7 c'est pour les non-voyants qu'ils sachent ce que fait le bouton
         tooltip: 'Increment',
-        // c'est pour les non voyants qu'ils sachent ce que fait le bouton
         child: const Icon(Icons.add),
       ),
     );
