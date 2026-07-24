@@ -1,4 +1,4 @@
-# 🍱 2.1B – plein_de_containers
+# 🍱 1.2B – plein_de_containers
 
 ## Objectif 🎯
 
@@ -32,10 +32,10 @@ Colors.green[300] // Plus foncé
 
 <Row>
 <Column>
-![Résultat attendu au haut de l'application. Sur un fond blanc, on perçoit le début d'une liste verticale. Le premier bloc est vert très pâle et occupe toute la largeur de l'écran, illustrant un espacement (padding) de 0. Le deuxième bloc, juste en dessous, est d'un vert légèrement plus foncé et est entouré d'une petite marge blanche de tous les côtés. Le troisième bloc est encore plus foncé avec une marge blanche plus grande. Cette augmentation progressive de la marge donne l'impression que la largeur des blocs verts rétrécit au fur et à mesure de la descente.](_plein-de-containers-1.png)
+![Résultat attendu au haut de l'application. Sur un fond blanc, on perçoit le début d'une liste verticale. Le premier bloc est vert très pâle et occupe toute la largeur de l'écran, illustrant un espacement (padding) de 0. Le deuxième bloc, juste en dessous, est d'un vert légèrement plus foncé et est entouré d'une petite marge blanche de tous les côtés. Le troisième bloc est encore plus foncé avec une marge blanche plus grande. Cette augmentation progressive de la marge donne l'impression que la largeur des blocs verts rétrécit au fur et à mesure de la descente.](_b-plein-de-containers-1.png)
 </Column>
 <Column>
-![Résultat attendu plus bas dans la liste, illustrant la progression de l'interface après un défilement. Les trois blocs visibles sont maintenant d'un vert nettement plus foncé. La marge blanche (padding) qui les entoure est devenue très importante, ce qui comprime considérablement les blocs verts au centre de l'écran. Cela confirme la logique mathématique de l'exercice : l'espacement continue de s'agrandir à chaque nouveau bloc, créant un effet visuel d'entonnoir.](_plein-de-containers-2.png)
+![Résultat attendu plus bas dans la liste, illustrant la progression de l'interface après un défilement. Les trois blocs visibles sont maintenant d'un vert nettement plus foncé. La marge blanche (padding) qui les entoure est devenue très importante, ce qui comprime considérablement les blocs verts au centre de l'écran. Cela confirme la logique mathématique de l'exercice : l'espacement continue de s'agrandir à chaque nouveau bloc, créant un effet visuel d'entonnoir.](_b-plein-de-containers-2.png)
 </Column>
 </Row>
 

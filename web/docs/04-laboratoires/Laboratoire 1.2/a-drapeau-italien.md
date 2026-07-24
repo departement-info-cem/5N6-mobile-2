@@ -1,4 +1,4 @@
-# 🤌 2.1A – drapeau_italien
+# 🤌 1.2A – drapeau_italien
 
 ## Objectif 🎯
 
@@ -18,7 +18,7 @@ Votre mise en page doit respecter les règles suivantes :
 - **Disposition** : Les trois bandes de couleur doivent être disposées côte à côte (horizontalement).
 - **Proportions** : Chaque bande de couleur doit occuper **exactement un tiers (1/3)** de la largeur totale de l'écran, peu importe la taille de l'appareil utilisé.
 
-![Application mobile affichant le drapeau de l'Italie. L'écran au format paysage est divisé en trois bandes horizontales de largeur parfaitement égale : verte à gauche, blanche au centre, et rouge à droite. Les couleurs s'étendent de tout en haut jusqu'à tout en bas de l'écran, sans aucune marge.](./_drapeau_italien.png)
+![Application mobile affichant le drapeau de l'Italie. L'écran au format paysage est divisé en trois bandes horizontales de largeur parfaitement égale : verte à gauche, blanche au centre, et rouge à droite. Les couleurs s'étendent de tout en haut jusqu'à tout en bas de l'écran, sans aucune marge.](./_a-drapeau_italien.png)
 
 ## Étape 2 : Configuration de l'application (Bonus)
 
