@@ -39,17 +39,6 @@ Vous compléterez les exercices pour vous pratiquer.
 
 :::note Exercices
 
-### Exercice plein_de_containers
-
-Faites un écran composé de:
-
-- 10 containers
-- prenant toute la largeur de l'écran
-- d'une hauteur de 200
-- qui se suivent verticalement dans un scroll
-- chaque container a sa propre couleur
-- vous devez avoir au moins 3 padding différents
-
 ### Exercice pas_si_simple
 
 <Row>
