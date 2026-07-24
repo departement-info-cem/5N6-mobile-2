@@ -131,11 +131,11 @@ Pour arriver à placer les prochains éléments, il va falloir séparer l'interf
 
 <Row>
 <Column vCenter={true}>
-Nous allons enrober le widget **Text** par un autre widget **Column**.
+Nous allons enrober le widget `Text` par un autre widget `Column`.
 
-Positionnez votre curseur sur le widget **Text**, et appuyez sur **Ctrl+.** (point).
+Positionnez votre curseur sur le widget `Text`, et appuyez sur **Ctrl+.** (point).
 
-Cela fera apparaître un menu contextuel. Sélectionnez l'option pour enrober avec une **Column**.
+Cela fera apparaître un menu contextuel. Sélectionnez l'option pour enrober avec une `Column`.
 </Column>
 <Column>
 ![Menu Contextuel avec l'option Wrap with Column sélectionnée](./_tape-le-lapin/wrap.png)
@@ -156,7 +156,7 @@ Center(
 ),
 ```
 
-Le widget **Text** est maintenant le premier élément dans une liste de widgets qui va du haut vers le bas.
+Le widget `Text` est maintenant le premier élément dans une liste de widgets qui va du haut vers le bas.
 
 :::tip child 👶 vs children 👶👶👶
 Vous remarquerez que la plupart des Widgets ont un attribut :
@@ -169,7 +169,7 @@ Vous remarquerez que la plupart des Widgets ont un attribut :
 
 Maintenant les résultats pour compter combien de fois nous avons réussi à taper le 🐇 (Bonk), et combien de fois on s'est trompé en appuyant sur le 🐹 (Zloop). On veut afficher **Bonk : x** et **Zloop : y** côte à côte, sous le titre créé précédemment.
 
-On ajoute donc une **Row** sous le **Text**.
+On ajoute donc une `Row` sous le `Text`.
 
 ```dart
 Column(
@@ -347,7 +347,7 @@ GridView.count(
 
 ### Fignoler l'interface
 
-Tout est à peu près beau. Il ne nous reste qu'à aérer les 3 sections qui sont dans la **Column**. On peut ajouter l'attribut `mainAxisAlignment: MainAxisAlignment.spaceEvenly` dans la première **Column** que nous avons créée.
+Tout est à peu près beau. Il ne nous reste qu'à aérer les 3 sections qui sont dans la `Column`. On peut ajouter l'attribut `mainAxisAlignment: MainAxisAlignment.spaceEvenly` dans la première `Column` que nous avons créée.
 
 Avant de continuer, validez que votre interface ressemble à ça :
 
@@ -386,7 +386,7 @@ Faites pareil pour le score de Zloop.
 
 À chaque fois qu'on appuie sur un bouton, il faut déterminer la nouvelle position du 🐇. On veut tout de même le faire une première fois au lancement de l'application.
 
-Pour y arriver, on doit garder en mémoire l'index de la position du 🐇 dans une variable, et utiliser l'objet **Random** pour déterminer au hasard cette position.
+Pour y arriver, on doit garder en mémoire l'index de la position du 🐇 dans une variable, et utiliser l'objet `Random` pour déterminer au hasard cette position.
 
 ```dart
 class _MyHomePageState extends State<MyHomePage> {
