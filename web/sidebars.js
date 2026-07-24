@@ -70,7 +70,6 @@ const sidebars = {
   docs: [
     {
       type: "doc",
-      label: "1.1 - Intro 🏁",
       id: "cours/intro",
       customProps: {
         calendrier: {
@@ -81,7 +80,6 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "1.2 - Mise en page 📄",
       id: "cours/mise-en-page",
       customProps: {
         calendrier: {

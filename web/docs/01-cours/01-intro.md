@@ -2,7 +2,7 @@
 description: Intro Dart et Flutter
 ---
 
-# Intro Dart et Flutter
+# 1.1 Intro à Dart et Flutter 🏁
 
 :::tip Avant la séance ou pendant le cours
 

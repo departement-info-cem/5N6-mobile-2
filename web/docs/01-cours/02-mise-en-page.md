@@ -3,36 +3,28 @@ description: Row, Column, Expanded
 hide_table_of_contents: true
 ---
 
-# Mise en page en Flutter
-
-<Row>
-
-<Column>
+# 1.2 - Mise en page 📄
 
 :::tip Avant la séance :
 
-Vous pouvez regarder la doc de Flutter en ligne sur la mise en page [ici](https://flutter.dev/docs/development/ui/layout)
+Lisez la documentation de Flutter en ligne sur la mise en page pendant **2h**, disponible **[ici](https://docs.flutter.dev/ui/layout)**. N'hésitez pas explorer les pages qui sont sous la section **Layout** sur le site web de la documentation de Flutter.
 
-Vous devrez étudier l'exemple de code suivant sur la **[mise en page en taille fixe](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/mise_en_page)**. Cherchez les TODOs pour les explications. Dans IntelliJ **View** > **Tool Windows** > **TODO**.
+Étudiez les exemples suivants : 
 
-Vous regarderez l'exemple suivant de mise en **[page en scroll](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-double_scroll.zip)**
+- **[mise_en_page](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-mise_en_page.zip)**
+- **[page en scroll](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-double_scroll.zip)**
 
+Voyez ici comment [Lancer un projet fourni 🤐](../03-recettes/lancer-projet-fourni.md).
 :::
 
-</Column>
+:::info Séance
 
-<Column>
+Complétez les exercices suivants :
 
-:::info Séance 1 : listes
+- [🤌 1.2A – drapeau_italien](../04-laboratoires/Laboratoire%201.2/a-drapeau-italien.md)
+- [🍱 1.2B – plein_de_containers](../04-laboratoires/Laboratoire%201.2/b-plein-de-containers.md)
+- [🤔 1.2C – pas_si_simple](../04-laboratoires/Laboratoire%201.2/c-pas-si-simple.md)
 
-On regardera comment combiner des Row et Column pour obtenir la mise en page de l'exercice 1.
-
-Nous parlerons du choix à faire entre une mise en page fixe qui utilise la taille de l'écran pour afficher tous les éléments nécessaires et une mise en page qui se base sur un défilement.
-
-Vous compléterez les exercices pour vous pratiquer.
+À la fin de la séance, nous regarderons comment combiner des `Row` et `Column` pour obtenir la mise en page de l'exercice [🤔 1.2C – pas_si_simple](../04-laboratoires/Laboratoire%201.2/c-pas-si-simple.md).
 
 :::
-
-</Column>
-
-</Row>
