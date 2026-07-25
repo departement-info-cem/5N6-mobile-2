@@ -24,6 +24,7 @@ Complétez les exercices suivants :
 - [🤌 1.2A – drapeau_italien](../04-laboratoires/Laboratoire%201.2/a-drapeau-italien.md)
 - [🍱 1.2B – plein_de_containers](../04-laboratoires/Laboratoire%201.2/b-plein-de-containers.md)
 - [🤔 1.2C – pas_si_simple](../04-laboratoires/Laboratoire%201.2/c-pas-si-simple.md)
+- [🐌 1.2D – fibonacci](../04-laboratoires/Laboratoire%201.2/d-fibonacci.md) s'il vous reste du temps
 
 À la fin de la séance, nous regarderons comment combiner des `Row` et `Column` pour obtenir la mise en page de l'exercice [🤔 1.2C – pas_si_simple](../04-laboratoires/Laboratoire%201.2/c-pas-si-simple.md).
 

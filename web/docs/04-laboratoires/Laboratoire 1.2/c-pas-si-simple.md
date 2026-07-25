@@ -7,7 +7,7 @@ Pratiquer l'imbrication complexe de widgets (`Row` et `Column`), la gestion des 
 <Row>
 
 <Column size="8">
-## Étape 1 : Le défi de mise en page
+## Mise en page
 
 Créez une application dont l'interface doit respecter les contraintes structurelles suivantes :
 
