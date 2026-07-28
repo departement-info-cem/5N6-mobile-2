@@ -111,8 +111,12 @@ const config = {
             title: "Sources",
             items: [
               {
-                label: "GitHub",
+                label: `Cours`,
                 href: `https://github.com/departement-info-cem/${siteConfig.nomUrl}`,
+              },
+              {
+                label: `Prof`,
+                href: `https://github.com/departement-info-cem/5N6-mobile-2-prof`,
               },
             ],
           },

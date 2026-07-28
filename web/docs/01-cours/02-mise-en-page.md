@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 # 1.2 - Mise en page 📄
 
-:::tip Avant la séance :
+:::tip Avant la séance
 
 Lisez la documentation de Flutter en ligne sur la mise en page pendant **2h**, disponible **[ici](https://docs.flutter.dev/ui/layout)**. N'hésitez pas explorer les pages qui sont sous la section **Layout** sur le site web de la documentation de Flutter.
 

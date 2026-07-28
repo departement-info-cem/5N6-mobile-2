@@ -26,6 +26,6 @@ Votre mise en page doit respecter les règles suivantes :
 Par défaut, Flutter affiche une petite bannière rouge "DEBUG" dans le coin supérieur droit. Trouvez comment la masquer.
 :::
 
-:::tip Bonus 2 : Mode plein écran (Immersif)
+:::tip Bonus 2 : Plein écran
 Habituellement, on voit la barre d'état du téléphone en haut de l'écran (heure, batterie, réseau, etc.). Trouvez un moyen de rendre votre application véritablement plein écran en masquant cette barre d'état.
 :::

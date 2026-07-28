@@ -90,7 +90,6 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "2.1 - Navigation 🧭",
       id: "cours/navigation",
       customProps: {
         avancementLabel: "TP1 - Créé",

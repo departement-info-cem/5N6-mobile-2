@@ -1,5 +1,6 @@
 ---
 description: Intro Dart et Flutter
+hide_table_of_contents: true
 ---
 
 # 1.1 Intro à Dart et Flutter 🏁
