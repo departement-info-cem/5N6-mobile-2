@@ -36,20 +36,9 @@ Regardez le code du projet [navigation](https://github.com/departement-info-cem/
 - On discutera des avantages et des inconvénients de passer des objets complexes ou uniquement des identifiants entre les écrans de notre application.
 - On regardera le comportement du Scaffold quand on ajouter un drawer.
 
-:::
+Complétez les exercices suivants :
 
-:::note Exercices
-
-### Exercice simple_nav
-
-Faites un premier écran qui contient un champ texte et un bouton. Quand on appuie sur le bouton, un deuxième écran part et on lui passe la valeur du champ texte.
-
-Le deuxième écran affiche le contenu de la valeur qu'on vient de lui passer.
-
-### Exercice liste_nav
-
-Faites un premier écran qui contient 5 objets de type Truc contenant un **nom** et un **id**.
-
-Faites que l'appui sur un des éléments déclenche la navigation vers un deuxième écran qui affiche le truc.
+- [🛣️ 2.1A – simple_nav](../04-laboratoires/Laboratoire%202.1/a-simple_nav.md)
+- [📋 2.1B – liste_nav](../04-laboratoires/Laboratoire%202.1/b-liste_nav.md)
 
 :::
