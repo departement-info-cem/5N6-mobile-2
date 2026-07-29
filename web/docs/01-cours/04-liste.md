@@ -3,41 +3,23 @@ description: Lister des éléments
 hide_table_of_contents: true
 ---
 
-# Listes et ListView
-
-<Row>
-
-<Column>
+# 2.2 - Liste 📋
 
 :::tip Avant la séance
 
-Vous regarderez la doc officielle **[ici](https://flutter.dev/docs/cookbook/lists/basic-list)**
+Regardez la documentation de Flutter sur les **[listes simples](https://flutter.dev/docs/cookbook/lists/basic-list)** et sur les **[listes longues](https://docs.flutter.dev/cookbook/lists/long-lists)**.
 
-Vous regardez l'exemple de code **[demo de liste](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-liste.zip)**
+Révisez et exécutez le code de la recette du [Rappel sur les fonctions anonymes (Lambda) 🥸](../03-recettes/rappel-lambda.md)
 
-:::
-
-</Column>
-
-<Column>
-
-:::info Séance 1 : listes
-
-On regardera comment construire une liste d'objets simple puis un peu plus complexe.
-
-On expliquera le concept d'expression lambda qui est souvent utilisé pour décrire comment produire l'objet graphique correspondant à l'objet de données.
+Nous vous recommandons d'utiliser des listes simples lorsque le contenu de la liste ne change pas (ex : un menu), et des listes longues lorsque le contenu est dynamique (ex : provient d'une source externe).
 
 :::
 
-:::info Séance 2 : listes intégration
+:::info Séance
 
-Compléter les exercices
+Nous expliquerons le concept d'expression lambda qui est souvent utilisé pour décrire comment produire l'objet graphique correspondant à l'objet de données.
 
 :::
-
-</Column>
-
-</Row>
 
 :::note Exercices
 

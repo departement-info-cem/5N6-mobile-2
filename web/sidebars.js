@@ -102,7 +102,6 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "2.2 - Liste 📋",
       id: "cours/liste",
       customProps: {
         avancementLabel: "TP1",
