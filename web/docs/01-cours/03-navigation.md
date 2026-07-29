@@ -39,6 +39,6 @@ Regardez le code du projet [navigation](https://github.com/departement-info-cem/
 Complétez les exercices suivants :
 
 - [🛣️ 2.1A – simple_nav](../04-laboratoires/Laboratoire%202.1/a-simple_nav.md)
-- [📋 2.1B – liste_nav](../04-laboratoires/Laboratoire%202.1/b-liste_nav.md)
+- [📋 2.1B – liste_nav_drawer](../04-laboratoires/Laboratoire%202.1/b-liste_nav_drawer.md)
 
 :::
