@@ -49,17 +49,7 @@ Dans Visual Studio Code, à chaque sauvegarde sur un fichier, le code Dart est a
 
 Pour assurer que le formattage soit le plus lisible que possible il est recommandé de prendre les habitudes suivantes.
 
-### Dans une liste
-
-Toujours ajouter une virgule à la fin du dernier élément.
-
-Voici ce qui se passe lorsqu'on omet la virgule à la fin :
-
-```dart
-
-```
-
-### Dans un objet avec plusieurs propriétés
+### Les virgules
 
 Voici ce qui se passe lorsqu'on omet la virgule à la fin :
 
