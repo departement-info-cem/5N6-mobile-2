@@ -43,6 +43,48 @@ Les émulateurs sont à proscrire pour un étudiant non-voyant. Les lecteurs d'�
   - Rebrancher le téléphone.
   - Réinitialiser l'autorisation USB sur le téléphone et réaccepter.
 
+## Flutter + Visual Studio Code
+
+Dans Visual Studio Code, à chaque sauvegarde sur un fichier, le code Dart est automatiquement formaté. Parfois, le formattage rend la lecture plus ardue.
+
+Pour assurer que le formattage soit le plus lisible que possible il est recommandé de prendre les habitudes suivantes.
+
+### Dans une liste
+
+Toujours ajouter une virgule à la fin du dernier élément.
+
+Voici ce qui se passe lorsqu'on omet la virgule à la fin :
+
+```dart
+
+```
+
+### Dans un objet avec plusieurs propriétés
+
+Voici ce qui se passe lorsqu'on omet la virgule à la fin :
+
+```dart
+ListeElement element = ListeElement(
+          "element #${i.toRadixString(16)}", (i + 5) * 10 + 3, (i % 5 == 0));
+```
+
+On a un comportement bizzare où l'élément est coupé sur 2 lignes.
+
+Maintenant avec la virgule après le dernier paramètre
+
+```dart
+ListeElement element = ListeElement(
+  "element #${i.toRadixString(16)}",
+  (i + 5) * 10 + 3,
+  (i % 5 == 0),
+);
+```
+
+Maintenant chaque paramètre de l'objet possède son propre paramètre.
+
+Le même comportement est observable avec la hiérarchie de widgets, et dans les tableau. 
+Donc, grosso modo, prendre l'habitude de mettre une virgule après chaque instruction qui ne nécessite pas de point virgule.
+
 ## Débogueur
 
 ### Raccourcis
