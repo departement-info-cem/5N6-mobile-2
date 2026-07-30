@@ -72,6 +72,8 @@ const sidebars = {
       type: "doc",
       id: "cours/intro",
       customProps: {
+        avancementLabel: "TP1 - Créé",
+        avancement: 0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[0] }],
           Joris: [{ 1020: jddates[0] }],
@@ -81,7 +83,10 @@ const sidebars = {
     {
       type: "doc",
       id: "cours/mise-en-page",
+      className: "remise-tp1",
       customProps: {
+        avancementLabel: "TP1",
+        avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[1] }],
           Joris: [{ 1020: jddates[1] }],
@@ -92,8 +97,8 @@ const sidebars = {
       type: "doc",
       id: "cours/navigation",
       customProps: {
-        avancementLabel: "TP1 - Créé",
-        avancement: 0.0,
+        avancementLabel: "TP1 - Complété",
+        avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[2] }],
           Joris: [{ 1020: jddates[2] }],
@@ -104,8 +109,8 @@ const sidebars = {
       type: "doc",
       id: "cours/liste",
       customProps: {
-        avancementLabel: "TP1",
-        avancement: 0.1,
+        avancementLabel: "TP2 - Créé",
+        avancement: 0.05,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[3] }],
           Joris: [{ 1020: jddates[3] }],
@@ -114,50 +119,36 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "3.1 - Liste 📋",
-      id: "cours/liste",
+      id: "cours/multilingue-reactivite",
       customProps: {
-        avancementLabel: "TP1",
-        avancement: 0.25,
+        avancementLabel: "TP2",
+        avancement: 0.33,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[4] }],
           Joris: [{ 1020: jddates[4] }],
         },
       },
     },
-    {
-      type: "doc",
-      label: "3.2 - DIO 🙏",
-      id: "cours/dio",
-      customProps: {
-        avancementLabel: "TP1",
-        avancement: 0.5,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates[5] }],
-          Joris: [{ 1020: jddates[5] }],
-        },
-      },
-    },
-    {
-      type: "doc",
-      label: "4.1 - DIO 🙏",
-      id: "cours/dio",
-      customProps: {
-        avancementLabel: "TP1",
-        avancement: 0.75,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates[6] }],
-          Joris: [{ 1020: jddates[6] }],
-        },
-      },
-    },
+    // {
+    //   type: "doc",
+    //   label: "3.2 - DIO 🙏",
+    //   id: "cours/dio",
+    //   customProps: {
+    //     avancementLabel: "TP2",
+    //     avancement: 0.66,
+    //     calendrier: {
+    //       "Pierre-Olivier": [{ 1010: podates[6] }],
+    //       Joris: [{ 1020: jddates[6] }],
+    //     },
+    //   },
+    // },
     {
       type: "doc",
       label: "4.2 - Intégration 🔨",
+      className: "remise-tp2",
       id: "cours/integration",
-      className: "remise-tp1",
       customProps: {
-        avancementLabel: "TP1",
+        avancementLabel: "TP2 - Complété",
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[7] }],
@@ -170,8 +161,8 @@ const sidebars = {
       label: "5.1 - Organisation du code 🧹",
       id: "cours/organisation",
       customProps: {
-        avancementLabel: "TP2 - Créé",
-        avancement: 0.0,
+        avancementLabel: "TP3 - Créé",
+        avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[8] }],
           Joris: [{ 1020: jddates[8] }],
@@ -183,7 +174,7 @@ const sidebars = {
       label: "5.2 - Image Picker 🤏",
       id: "cours/image-picker",
       customProps: {
-        avancementLabel: "TP2",
+        avancementLabel: "TP3",
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[9] }],
@@ -242,19 +233,19 @@ const sidebars = {
         },
       },
     },
-    {
-      type: "doc",
-      label: "8.1 - Multilingue 🌐",
-      id: "cours/multilingue",
-      customProps: {
-        avancementLabel: "TP2",
-        avancement: 0.6,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates[14] }],
-          Joris: [{ 1020: jddates[14] }],
-        },
-      },
-    },
+    // {
+    //   type: "doc",
+    //   label: "8.1 - Multilingue 🌐",
+    //   id: "cours/multilingue",
+    //   customProps: {
+    //     avancementLabel: "TP2",
+    //     avancement: 0.6,
+    //     calendrier: {
+    //       "Pierre-Olivier": [{ 1010: podates[14] }],
+    //       Joris: [{ 1020: jddates[14] }],
+    //     },
+    //   },
+    // },
     {
       type: "doc",
       label: "8.2 - Déploiement 🤖",
@@ -284,9 +275,10 @@ const sidebars = {
     {
       type: "doc",
       label: "9.2 - Notifications 🚨",
+      className: "remise-tp3",
       id: "cours/notification",
       customProps: {
-        avancementLabel: "TP2",
+        avancementLabel: "TP3 - Complété",
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates[17] }],
@@ -298,7 +290,6 @@ const sidebars = {
       type: "doc",
       label: "10.1 - Intégration 🔨",
       id: "cours/integration",
-      className: "remise-tp2",
       customProps: {
         avancementLabel: "TP2",
         avancement: 1,
@@ -415,8 +406,8 @@ const sidebars = {
     {
       type: "doc",
       label: "14.2 - Intégration 🔨",
+      className: "remise-tp4",
       id: "cours/integration",
-      className: "remise-tp3",
       customProps: {
         avancementLabel: "TP3",
         avancement: 1,
