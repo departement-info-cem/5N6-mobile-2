@@ -8,7 +8,7 @@ hide_table_of_contents: true
 :::tip Avant la séance
 Regardez la documentation de Flutter sur les **[listes simples](https://flutter.dev/docs/cookbook/lists/basic-list)** et sur les **[listes longues](https://docs.flutter.dev/cookbook/lists/long-lists)**.
 
-Révisez et exécutez le code de la recette du [Rappel sur les fonctions anonymes (Lambda) 🥸](../03-recettes/rappel-lambda.md)
+Révisez et exécutez le code de la recette du [Fonctions Lambda 🥸](../03-recettes/rappel-lambda.md)
 
 Nous vous recommandons d'utiliser des listes simples lorsque le contenu de la liste ne change pas (ex : un menu), et des listes longues lorsque le contenu est dynamique (ex : provient d'une source externe).
 :::

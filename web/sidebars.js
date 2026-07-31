@@ -129,6 +129,18 @@ const sidebars = {
         },
       },
     },
+    {
+      type: "doc",
+      id: "cours/image-client",
+      customProps: {
+        avancementLabel: "TP2",
+        avancement: 0.66,
+        calendrier: {
+          "Pierre-Olivier": [{ 1010: podates[11] }],
+          Joris: [{ 1020: jddates[11] }],
+        },
+      },
+    },
     // {
     //   type: "doc",
     //   label: "3.2 - DIO 🙏",
@@ -195,19 +207,7 @@ const sidebars = {
         },
       },
     },
-    {
-      type: "doc",
-      label: "6.2 - Image Client 🖼️",
-      id: "cours/image-client",
-      customProps: {
-        avancementLabel: "TP2",
-        avancement: 0.4,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates[11] }],
-          Joris: [{ 1020: jddates[11] }],
-        },
-      },
-    },
+
     {
       type: "doc",
       label: "7.1 - Formatif ✍️",

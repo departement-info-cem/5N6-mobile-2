@@ -1,4 +1,4 @@
-# Tour d'horizon d'un projet Flutter 🌅
+# Tour d'horizon de Flutter 🌅
 
 ## Objectif
 

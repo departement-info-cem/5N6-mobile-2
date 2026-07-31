@@ -1,4 +1,4 @@
-# Apprivoiser un nouveau framework 💬
+# Nouveau framework 💬
 
 Si on compte C#, SQL, Bash, Batch, HTML, CSS, JavaScript, Kotlin, Java et TypeScript, Dart va être le 11e langage que vous allez apprendre, et Flutter est votre énième framework (.NET Core, React, Jetpack Compose). Vous commencez à avoir l'habitude de vous approprier de nouveaux langages. Il serait d'ailleurs surprenant que vous n'en appreniez pas d'autres à l'université ou dans votre vie professionnelle.
 

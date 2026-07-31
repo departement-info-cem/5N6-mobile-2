@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'fixe.dart';
+import 'package:image_client/page/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Image client',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const FixePage(),
+      home: const HomePage(),
     );
   }
 }

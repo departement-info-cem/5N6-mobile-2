@@ -1,4 +1,4 @@
-# Rappel sur les fonctions anonymes (Lambda) 🥸
+# Fonctions Lambda 🥸
 
 ## Fonctions classique
 

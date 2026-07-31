@@ -19,8 +19,8 @@ hide_table_of_contents: true
 
 Consultez les recettes suivantes.
 
-- [Apprivoiser un nouveau framework 💬](../03-recettes/nouveau-framework.md)
-- [Tour d'horizon d'un projet Flutter 🌅](../03-recettes/tour-dhorizon.md)
+- [Nouveau framework 💬](../03-recettes/nouveau-framework.md)
+- [Tour d'horizon de Flutter 🌅](../03-recettes/tour-dhorizon.md)
 - [Outils de débogage 🪲](../03-recettes/outils-debogage.md)
 - [Tape le lapin 🐇](../03-recettes/tape-le-lapin.md).
 

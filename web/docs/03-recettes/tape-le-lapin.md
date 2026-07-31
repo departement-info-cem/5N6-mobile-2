@@ -443,7 +443,7 @@ On devrait maintenant voir 1x🐇 et 3x🐹. La position du 🐇 devrait changer
 
 ### Réagir aux clics
 
-Commençons par ajouter une fonction anonyme vide. Vous pouvez vous rafraîchir la mémoire sur les [fonctions anonymes (lambda) 🥸](../03-recettes/rappel-lambda.md).
+Commençons par ajouter une fonction anonyme vide. Vous pouvez vous rafraîchir la mémoire sur les [Fonctions Lambda 🥸](../03-recettes/rappel-lambda.md).
 
 ```dart
 ElevatedButton(
@@ -479,7 +479,7 @@ ElevatedButton(
 ```
 
 :::info setState?
-Le `setState` indique à Flutter qu'on souhaite mettre à jour l'interface graphique. Flutter va donc cibler quelles zones de l'application il doit redessiner. Vous remarquerez que tout comme `onPressed`, `setState` utilise aussi une [fonction anonyme 🥸](../03-recettes/rappel-lambda.md).
+Le `setState` indique à Flutter qu'on souhaite mettre à jour l'interface graphique. Flutter va donc cibler quelles zones de l'application il doit redessiner. Vous remarquerez que tout comme `onPressed`, `setState` utilise aussi une [Fonction Lambda 🥸](../03-recettes/rappel-lambda.md).
 :::
 
 Bravo 🎉! Vous avez réussi à compléter votre première application en Flutter 🐦! Nous avons vu tout ce qui devait être fait pour le cours d'aujourd'hui. Si cela vous intéresse, vous pouvez consulter la suite pour voir comment ajouter une fonctionnalité plus avancée, qui nous donnera un vrai Tape-taupe!
