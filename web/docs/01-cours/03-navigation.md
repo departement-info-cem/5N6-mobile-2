@@ -23,9 +23,9 @@ Pour les exercices et pour votre TP, vous aurez à choisir l'une de ces 2 option
 
 Regardez le code du projet [navigation](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-navigation.zip) qui compare la navigation avec Navigator et celle avec Router. 
 
-1. Exécutez l'application et regardez la suite de TODO **a**.
+1. Exécutez l'application et regardez la suite de [TODO](../03-recettes/lancer-projet-fourni.md) **a**.
 2. Changez la propriété `useNavigator` à `true` dans le fichier `app_config.dart` .
-3. Réexécutez l'application et regardez la suite de TODO **b** en comparant avec les TODO **a**.
+3. Réexécutez l'application et regardez la suite de [TODO](../03-recettes/lancer-projet-fourni.md) **b** en comparant avec les [TODO](../03-recettes/lancer-projet-fourni.md) **a**.
 
 :::
 
