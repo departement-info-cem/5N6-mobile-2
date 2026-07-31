@@ -1,4 +1,4 @@
-package org.depinfo.portrait_paysage
+package com.example.portrait_paysage
 
 import io.flutter.embedding.android.FlutterActivity
 

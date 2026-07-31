@@ -15,7 +15,7 @@ Cependant, vous pouvez regarder la doc de Flutter en ligne sur l'internationaliz
 
 ### Portrait / Paysage
 
-Étudiez l'exemple de code [portrait_paysage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-portrait_paysage.zip) qui porte sur les changements d'orientation. Cherchez les TODO pour les explications.
+Étudiez l'exemple de code [portrait_paysage](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-portrait_paysage.zip) qui démontre comment réagir dynamiquement aux changements de taille d'un écran, en démontrant le pattern [master / detail](https://en.wikipedia.org/wiki/Master%E2%80%93detail_interface), qui permet de séparer l'interface en 2 colonnes, dépendement de la largeur de l'écran. Cherchez les TODO pour les explications.
 
 Complétez les exercices suivants :
 
