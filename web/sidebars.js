@@ -141,19 +141,19 @@ const sidebars = {
         },
       },
     },
-    // {
-    //   type: "doc",
-    //   label: "3.2 - DIO 🙏",
-    //   id: "cours/dio",
-    //   customProps: {
-    //     avancementLabel: "TP2",
-    //     avancement: 0.66,
-    //     calendrier: {
-    //       "Pierre-Olivier": [{ 1010: podates["4.1"] }],
-    //       Joris: [{ 1020: jddates["4.1"] }],
-    //     },
-    //   },
-    // },
+    {
+      type: "doc",
+      label: "4.1 - Intégration 🔨",
+      id: "cours/integration",
+      customProps: {
+        avancementLabel: "TP2",
+        avancement: 0.80,
+        calendrier: {
+          "Pierre-Olivier": [{ 1010: podates["4.1"] }],
+          Joris: [{ 1020: jddates["4.1"] }],
+        },
+      },
+    },
     {
       type: "doc",
       label: "4.2 - Intégration 🔨",
