@@ -14,7 +14,7 @@ Si ce n'est pas déjà fait (il faut regarder dans le pubspec pour voir s'il y a
 ## Activation de l'authentification dans la console de firebase + signin par Google
 
 - Dans la console firebase dans un navigateur https://console.firebase.google.com/
-- Sélectionne ton projet
+- Sélectionnez votre projet
 - Dans le panneau de nav à gauche, choisis Créer puis Authentication
 - Si ce n'est pas déjà fait, active l'authentication
 - Dans l'onglet "sign-in methods", active Google (on devrait de demander un courriel pour confirmer)
@@ -152,11 +152,11 @@ Future<UserCredential> signInWithGoogle() async {
 
   - Ouvrez votre application avec Xcode (comme lorsqu'on déployait sur iPhone) :
     - Dans Android Studio,
-    - Clique droit sur le dossier `ios`, Flutter > Open iOS/macOS module ix Xcode
-  - Clique droit sur `Runner (icône du AppStore)/Runner (icône de dossier)`, "Add file to Runner"
+  - Clic droit sur le dossier `ios`, Flutter > Open iOS/macOS module ix Xcode
+  - Clic droit sur `Runner (icône du AppStore)/Runner (icône de dossier)`, "Add file to Runner"
   - Sélectionnez le fichier `ios/Runner/GoogleService-Info.plist` que vous avez copié plus tôt, et cocher "Copy items if needed"
   - Lancez votre application sur un simulateur IOS ou un appareil IOS sur un mac
-  - Si vous arrivez à vous connectez
+  - Si vous arrivez à vous connecter
   - COMMIT PUSH
 </details>
 

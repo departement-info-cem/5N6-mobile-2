@@ -53,7 +53,7 @@ pour chaque étape et également de revenir à un point fonctionnel si une étap
 - FAIRE UN COMMIT et au passage regarder quels fichiers ont été configurés
 - FAIRE UN PUSH
 
-Ces étapes permettent de connecter l'application que tu développes (localement) avec le projet Firebase (dans le nuage).
+Ces étapes permettent de connecter l'application que vous développez (localement) avec le projet Firebase (dans le nuage).
 
 ## Ajout des composants de firebase via les librairies
 
@@ -93,7 +93,7 @@ void main() async {
 - FAIRE UN COMMIT
 - FAIRE UN PUSH
 
-Ton application est configurée pour Firebase avec succès.
+Votre application est configurée pour Firebase avec succès.
 
 ## Test d'écriture dans firestore
 

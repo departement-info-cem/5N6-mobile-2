@@ -78,7 +78,7 @@ flutter pub run build_runner build
 
 :::warning Attention!
 Nous utiliserons plusieurs web service hébergés sur Render au courant de la session.
-Notez que les webservices hébergés sur Render se ferment après un certain délais où il n'y a pas eu de requêtes.
+Notez que les webservices hébergés sur Render se ferment après un certain délai où il n'y a pas eu de requêtes.
 Une requête envoyée au serveur va le "réveiller", mais ça peut prendre quelques minutes.
 Donc si vous faites les exercices chez vous ou que vous êtes un des premiers dans un cours à travailler sur des exercices qui utilisent render, c'est normal que les premières requêtes échouent, le temps que le serveur se "réchauffe".
 :::
@@ -87,7 +87,7 @@ Donc si vous faites les exercices chez vous ou que vous êtes un des premiers da
 
 Vous trouverez à l'url [https://fourn6-mobile-prof.onrender.com/exos/long/double/4](https://fourn6-mobile-prof.onrender.com/exos/long/double/4) un web service qui double la valeur du nombre qu'on lui passe.
 
-Tu dois démontrer un appel avec succès à ce web service dans une application Flutter en envoyant la valeur d'un nombre et en affichant son double dans l'interface.
+Vous devez démontrer un appel avec succès à ce web service dans une application Flutter en envoyant la valeur d'un nombre et en affichant son double dans l'interface.
 
 ### Exercice api_github
 

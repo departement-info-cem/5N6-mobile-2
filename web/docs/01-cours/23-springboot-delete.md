@@ -74,7 +74,7 @@ Vous devez essayer de maximiser votre capacité à travailler en parallèle pour
   - le nom de la méthode controller avec l'URL et la méthode
   - etc.
 - Contrôleur : je peux implanter un point d'entrée, valider son comportement avec POSTMAN, est-ce qu'il se déclenche, commenter l'appel à la méthode de service mais vérifier le reste
-- BD : je peux implanter le code mais je n'ai rien pour le déclencher .... FAUX, tu peux utiliser un test unitaire pour rapidement créer ton repo et voir si ton code fonctionne.
+- BD : je peux implanter le code mais je n'ai rien pour le déclencher .... FAUX, vous pouvez utiliser un test unitaire pour rapidement créer votre repo et voir si votre code fonctionne.
 - Service : je peux tester la logique de ma fonction avec un mock de la BD
 
 Pour chaque tâche, faites un code review à 2 pour valider quand c'est complété. Si le prof est dispo n'hésitez pas.
