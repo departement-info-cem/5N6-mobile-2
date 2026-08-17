@@ -70,16 +70,25 @@ Pendant la séance, vous devez compléter et valider vos exercices, poser des qu
     }, 
     {
         id: "calendar-po",
-        label: "Pierre-Olivier",
+        label: "Calendrier Pierre-Olivier",
         icon: "📅",
         component: <MainDocsCalendar professorName="Pierre-Olivier" />,
     },
     {
         id: "calendar-jo",
-        label: "Joris",
+        label: "Calendrier Joris",
         icon: "📅",
         component: <MainDocsCalendar professorName="Joris" />,
     },
+    {
+        id: "schedule-po",
+        label: "Horaire Pierre-Olivier",
+        icon: "🧑‍🏫",
+        component: <WeeklySchedule
+            title="Horaire Pierre-Olivier"
+            data={require('./horaire-po.json')}
+        />,
+    }
     ]}
     defaultTabId="grid"
 />

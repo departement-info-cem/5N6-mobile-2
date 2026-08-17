@@ -1,0 +1,109 @@
+{
+    "startHour": "08:00",
+    "endHour": "18:00",
+    "slotMinutes": 60,
+    "name": "Paul Meilleur",
+    "categories": {
+        "4W6": {
+            "backgroundColor": "#dbeafe",
+            "textColor": "#1e3a8a",
+            "darkBackgroundColor": "#1e3a8a",
+            "darkTextColor": "#dbeafe"
+        },
+        "5N6": {
+            "backgroundColor": "#fef3c7",
+            "textColor": "#78350f",
+            "darkBackgroundColor": "#7c5e00",
+            "darkTextColor": "#fff4cc"
+        },
+        "reunion-departement": {
+            "backgroundColor": "#dcfce7",
+            "textColor": "#14532d",
+            "darkBackgroundColor": "#14532d",
+            "darkTextColor": "#dcfce7"
+        },
+        "centre-daide": {
+            "backgroundColor": "#ede9fe",
+            "textColor": "#5b21b6",
+            "darkBackgroundColor": "#5b21b6",
+            "darkTextColor": "#ede9fe"
+        }
+    },
+    "days": [
+        "lundi",
+        "mardi",
+        "mercredi",
+        "jeudi",
+        "vendredi"
+    ],
+    "events": [
+        {
+            "id": "4W6-1010-t",
+            "day": "mardi",
+            "start": "08:00",
+            "end": "11:00",
+            "title": "Programmation Web Orientée Services",
+            "courseCode": "420-4W6-EM",
+            "courseGroup": "1010",
+            "room": "D0624",
+            "category": "4W6"
+        },
+        {
+            "id": "centre-daide-1",
+            "day": "mardi",
+            "start": "13:00",
+            "end": "15:00",
+            "title": "Centre d'aide",
+            "category": "centre-daide"
+        },
+        {
+            "id": "reunion-departement",
+            "day": "mercredi",
+            "start": "12:00",
+            "end": "14:00",
+            "title": "Réunion de département",
+            "category": "reunion-departement"
+        },
+        {
+            "id": "5N6-1010-t",
+            "day": "mercredi",
+            "start": "14:00",
+            "end": "17:00",
+            "title": "Applications Mobiles Avancées",
+            "courseCode": "420-5N6-EM",
+            "courseGroup": "1010",
+            "room": "D0704",
+            "category": "5N6"
+        },
+        {
+            "id": "5N6-1010-l",
+            "day": "jeudi",
+            "start": "08:00",
+            "end": "11:00",
+            "title": "Applications Mobiles Avancées",
+            "courseCode": "420-5N6-EM",
+            "courseGroup": "1010",
+            "room": "D0704",
+            "category": "5N6"
+        },
+        {
+            "id": "centre-daide-2",
+            "day": "jeudi",
+            "start": "13:00",
+            "end": "15:00",
+            "title": "Centre d'aide",
+            "category": "centre-daide"
+        },
+        {
+            "id": "4W6-1010-l",
+            "day": "vendredi",
+            "start": "12:00",
+            "end": "15:00",
+            "title": "Programmation Web Orientée Services",
+            "courseCode": "420-4W6-EM",
+            "courseGroup": "1010",
+            "room": "D0602",
+            "category": "4W6"
+        }
+    ]
+}
