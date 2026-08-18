@@ -131,16 +131,18 @@ const sidebars = {
     },
     {
       type: "doc",
-      id: "cours/image-client",
+      label: "3.2 - Image Picker 🤏",
+      id: "cours/image-picker",
       customProps: {
         avancementLabel: "TP2",
-        avancement: 0.66,
+        avancement: 0.6,
         calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["6.2"] }],
-          Joris: [{ 1020: jddates["6.2"] }],
+          "Pierre-Olivier": [{ 1010: podates["5.2"] }],
+          Joris: [{ 1020: jddates["5.2"] }],
         },
       },
     },
+
     {
       type: "doc",
       label: "4.1 - Intégration 🔨",
@@ -174,7 +176,7 @@ const sidebars = {
       id: "cours/organisation",
       customProps: {
         avancementLabel: "TP3 - Créé",
-        avancement: 0.1,
+        avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["5.1"] }],
           Joris: [{ 1020: jddates["5.1"] }],
@@ -183,8 +185,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.2 - Image Picker 🤏",
-      id: "cours/image-picker",
+      label: "5.2 - Image client",
+      id: "cours/image-client",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.1,
@@ -194,26 +196,39 @@ const sidebars = {
         },
       },
     },
+
     {
       type: "doc",
       label: "6.1 - Image Cookie 🍪",
       id: "cours/image-cookie",
       customProps: {
-        avancementLabel: "TP2",
-        avancement: 0.3,
+        avancementLabel: "TP3",
+        avancement: 0.2,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["6.1"] }],
           Joris: [{ 1020: jddates["6.1"] }],
         },
       },
     },
-
+    {
+      type: "doc",
+      label: "6.2 - Intégration",
+      id: "cours/integration",
+      customProps: {
+        avancementLabel: "TP3",
+        avancement: 0.3,
+        calendrier: {
+          "Pierre-Olivier": [{ 1010: podates["6.2"] }],
+          Joris: [{ 1020: jddates["6.2"] }],
+        },
+      },
+    },
     {
       type: "doc",
       label: "7.1 - Formatif ✍️",
       id: "cours/formatif-intra",
       customProps: {
-        avancementLabel: "TP2",
+        avancementLabel: "TP3",
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["7.1"] }],
@@ -233,25 +248,25 @@ const sidebars = {
         },
       },
     },
-    // {
-    //   type: "doc",
-    //   label: "8.1 - Multilingue 🌐",
-    //   id: "cours/multilingue",
-    //   customProps: {
-    //     avancementLabel: "TP2",
-    //     avancement: 0.6,
-    //     calendrier: {
-    //       "Pierre-Olivier": [{ 1010: podates["8.1"] }],
-    //       Joris: [{ 1020: jddates["8.1"] }],
-    //     },
-    //   },
-    // },
+    {
+      type: "doc",
+      label: "8.1 - Déploiement",
+      id: "cours/deploiement",
+      customProps: {
+        avancementLabel: "TP3",
+        avancement: 0.6,
+        calendrier: {
+          "Pierre-Olivier": [{ 1010: podates["8.1"] }],
+          Joris: [{ 1020: jddates["8.1"] }],
+        },
+      },
+    },
     {
       type: "doc",
       label: "8.2 - Déploiement 🤖",
       id: "cours/deploiement",
       customProps: {
-        avancementLabel: "TP2",
+        avancementLabel: "TP3",
         avancement: 0.7,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["8.2"] }],
@@ -264,7 +279,7 @@ const sidebars = {
       label: "9.1 - Gestion de l'état 💱",
       id: "cours/gestion-etat",
       customProps: {
-        avancementLabel: "TP2",
+        avancementLabel: "TP3",
         avancement: 0.9,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["9.1"] }],
@@ -278,7 +293,7 @@ const sidebars = {
       className: "remise-tp3",
       id: "cours/notification",
       customProps: {
-        avancementLabel: "TP3 - Complété",
+        avancementLabel: "TP3",
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["9.2"] }],
@@ -291,7 +306,7 @@ const sidebars = {
       label: "10.1 - Intégration 🔨",
       id: "cours/integration",
       customProps: {
-        avancementLabel: "TP2",
+        avancementLabel: "TP3 - Complété",
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["10.1"] }],
@@ -304,7 +319,7 @@ const sidebars = {
       label: "10.2 - Authentification Firebase 👮",
       id: "cours/firebase-authentification",
       customProps: {
-        avancementLabel: "TP3 - Créé",
+        avancementLabel: "TP4 - Créé",
         avancement: 0.0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["10.2"] }],
@@ -317,7 +332,7 @@ const sidebars = {
       label: "11.1 - Firebase Firestore 🏪",
       id: "cours/firebase-datastore",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["11.1"] }],
@@ -330,7 +345,7 @@ const sidebars = {
       label: "11.2 - Control d'accès Firebase 💂",
       id: "cours/firebase-access-control",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.2,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["11.2"] }],
@@ -343,7 +358,7 @@ const sidebars = {
       label: "12.1 - Control d'accès Firebase 💂",
       id: "cours/firebase-access-control",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.3,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["12.1"] }],
@@ -356,7 +371,7 @@ const sidebars = {
       label: "12.2 - Stockage Firebase 💾",
       id: "cours/firebase-storage",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.4,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["12.2"] }],
@@ -369,7 +384,7 @@ const sidebars = {
       label: "13.1 - Stream Firebase 🚣",
       id: "cours/firebase-stream",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.5,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["13.1"] }],
@@ -382,7 +397,7 @@ const sidebars = {
       label: "13.2 - Règles d'accès Firebase 📐",
       id: "cours/firebase-rules",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["13.2"] }],
@@ -395,7 +410,7 @@ const sidebars = {
       label: "14.1 - Hero 🦸",
       id: "cours/hero",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 0.8,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["14.1"] }],
@@ -409,7 +424,7 @@ const sidebars = {
       className: "remise-tp4",
       id: "cours/integration",
       customProps: {
-        avancementLabel: "TP3",
+        avancementLabel: "TP4",
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["14.2"] }],
