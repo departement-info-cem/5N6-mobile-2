@@ -27,3 +27,7 @@
 
 - Ctrl + Shift + P : Chercher dans les actions disponibles. Ex pour le cours : Créer un projet, etc.
 - Ctrl + . : Liste les suggestions pour modifier du code
+
+## Extension Widget Tree Navigator
+
+Pierre-Olivier a développé une extension pour faciliter la navigation dans un arbre de widgets Flutter. L'extension s'appelle [Widget Tree Navigator](https://marketplace.visualstudio.com/items?itemName=PierreOlivierBrillant.widget-tree-navigator). Je recommende de lire la notice sur la page de l'extension, dans le Visual Studio Code Marketplace, mais rapidement, c'est possible d'ouvrir la fenêtre de navigation spéciale en étant dans un éditeur de code avec du code Flutter, et de faire le raccourci clavier `Ctrl+Shift+X`.
