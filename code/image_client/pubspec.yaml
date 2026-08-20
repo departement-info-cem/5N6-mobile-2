@@ -18,4 +18,4 @@ flutter:
   # TODO #1a : Toutes les images utilisées comme asset doivent être déclarées ici
   assets:
     - assets/images/anse-aux-gascons.jpeg
-  # - assets fonctionnerait aussi  
+  # - assets simplement fonctionnerait aussi  

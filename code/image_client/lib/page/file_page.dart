@@ -17,7 +17,7 @@ class _FilePageState extends State<FilePage> {
   Future<void> _pickImage() async {
     // TODO #2b : Essayez de changer ImageSource.gallery pour ImageSource.camera .
     // Qu'est-ce que c'est que cet espèce de bonhome / maison?!
-    final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     if (image == null) return;
 
     setState(() {
@@ -28,7 +28,7 @@ class _FilePageState extends State<FilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('File Page')),
+      appBar: AppBar(title: const Text('Page File')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
