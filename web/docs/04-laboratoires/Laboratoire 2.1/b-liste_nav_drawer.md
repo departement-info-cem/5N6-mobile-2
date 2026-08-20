@@ -4,7 +4,9 @@
 
 Pratiquer la navigation en transmettant des données personnalisées et intégrer un menu latéral de façon autonome.
 
-## Étape 1 : Liste et navigation
+## À faire 🛠️
+
+### Étape 1 : Liste et navigation
 
 Faites un premier écran nommé **Liste** qui contient une liste de 5 objets de type `Truc` contenant un **nom** (`String`) et un **id** (`int`).
 
@@ -16,7 +18,7 @@ Si vous voulez utiliser Router pour cet exercice, il faut trouver un moyen de pa
 Vous devrez faire un peu de recherche pour trouver une façon propre d'y arriver.
 :::
 
-## Étape 2 : Tiroir de navigation
+### Étape 2 : Tiroir de navigation
 
 Créez un troisième écran nommé **Connexion** qui affiche "Une page de connexion quelconque".
 

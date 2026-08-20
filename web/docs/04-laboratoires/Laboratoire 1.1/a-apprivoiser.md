@@ -7,9 +7,11 @@ Nous vous recommandons de limiter votre usage de LLM pour cet exercice, à moins
 2. Souvent plus à jour sur le site du framework que sur les LLM, où l'information tend à dater si la recherche web n'est pas activée
 :::
 
+## À faire 🛠️
+
 Trouvez les informations suivantes sur le langage Dart et le framework Flutter et notez-les quelque part :
 
-## Conventions de nommage
+### Conventions de nommage
 
 - Nom des fichiers
 - Nom des classes
@@ -17,18 +19,18 @@ Trouvez les informations suivantes sur le langage Dart et le framework Flutter e
 - Nom des variables
 - Identificateur pour indiquer si une variable est publique ou privée
 
-## Gestion des dépendances
+### Gestion des dépendances
 
 - Gestionnaire de packages utilisé en Dart, et site web où l'on peut chercher les packages
 - Nom du fichier qui stocke les dépendances à installer
 - Commande à exécuter pour installer un nouveau package
 - Commande à exécuter pour télécharger les packages qui sont décrits dans le fichier trouvé à la question précédente
 
-## Paradigme et concepts clés
+### Paradigme et concepts clés
 
 Prenez le temps de lire ce que votre LLM favori vous répond à la question suggérée [ici](../../03-recettes/nouveau-framework.md#paradigme-et-concepts-clés).
 
-## Outillage (CLI et Débogage)
+### Outillage (CLI et Débogage)
 
 - Le ou les environnements de développement suggérés par les développeurs de Flutter 
 - Commande pour démarrer un projet Flutter sur un émulateur Android en ligne de commande

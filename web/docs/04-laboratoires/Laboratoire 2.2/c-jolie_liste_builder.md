@@ -4,7 +4,7 @@
 
 Optimiser l'affichage d'une longue liste en remplaçant une génération statique par un constructeur dynamique (`ListView.builder`).
 
-## jolie_liste_builder
+## À faire 🛠️
 
 1. **Le point de départ** : Reprenez la logique de calcul (les 75 premiers nombres de Fibonacci) et la mise en forme visuelle (le style des cartes) développées dans l'exercice précédent (2.2B).
 2. **La refactorisation** : Au lieu d'utiliser la fonction .map() pour générer tous vos widgets d'un coup, remplacez votre implémentation par le widget ListView.builder.

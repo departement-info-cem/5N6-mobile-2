@@ -4,7 +4,7 @@
 
 Manipuler l'état d'une liste (dans un StatefulWidget), réorganiser ses éléments dynamiquement et vérifier une condition de victoire.
 
-## ordre_alpha
+## À faire 🛠️
 
 1. **La liste initiale** : Créez et affichez une liste de 5 prénoms mélangés de façon aléatoire.
 2. **Les contrôles** : Pour chaque prénom affiché, ajoutez un bouton pour le faire monter et un bouton pour le faire descendre dans la liste.

@@ -7,7 +7,8 @@ Pratiquer l'imbrication complexe de widgets (`Row` et `Column`), la gestion des 
 <Row>
 
 <Column size="8">
-## Mise en page
+
+## À faire 🛠️
 
 Créez une application dont l'interface doit respecter les contraintes structurelles suivantes :
 

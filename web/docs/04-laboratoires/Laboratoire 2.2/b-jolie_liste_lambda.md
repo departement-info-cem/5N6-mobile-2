@@ -4,13 +4,11 @@
 
 Utiliser la fonction .map() et les expressions lambda pour transformer dynamiquement une liste de données brutes en une liste de widgets stylisés.
 
-
-
 <Row>
 
 <Column size="9">
 
-## jolie_liste_lambda
+## À faire 🛠️
 
 1. **Les données (Logique)** : Calculez et stockez les 75 premiers nombres de la suite de Fibonacci dans une liste en Dart.
 2. **La transformation (Interface)** : Utilisez la fonction map sur votre liste de nombres pour générer un widget d'affichage pour chaque élément de la suite.

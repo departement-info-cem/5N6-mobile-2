@@ -8,7 +8,9 @@ Maîtriser :
 - la répartition proportionnelle de l'espace à l'écran
 - la configuration globale de l'application.
 
-## Étape 1 : La mise en page du drapeau
+## À faire 🛠️
+
+### Étape 1 : La mise en page du drapeau
 
 Créez une interface qui reproduit fidèlement le drapeau de l'Italie
 
@@ -20,7 +22,7 @@ Votre mise en page doit respecter les règles suivantes :
 
 ![Application mobile affichant le drapeau de l'Italie. L'écran au format paysage est divisé en trois bandes horizontales de largeur parfaitement égale : verte à gauche, blanche au centre, et rouge à droite. Les couleurs s'étendent de tout en haut jusqu'à tout en bas de l'écran, sans aucune marge.](./_a-drapeau_italien.png)
 
-## Étape 2 : Configuration de l'application (Bonus)
+### Étape 2 : Configuration de l'application (Bonus)
 
 :::tip Bonus 1 : Cacher le ruban de débogage
 Par défaut, Flutter affiche une petite bannière rouge "DEBUG" dans le coin supérieur droit. Trouvez comment la masquer.

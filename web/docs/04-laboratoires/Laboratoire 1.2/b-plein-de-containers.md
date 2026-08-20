@@ -8,9 +8,12 @@ Pratiquer :
 - la manipulation de l'espacement (Padding)
 - l'optimisation de code (refactorisation).
 
+## À faire 🛠️
+
 <Row>
 <Column size="6">
-## Étape 1 : L'interface de base
+
+### Étape 1 : L'interface de base
 
 Créez un écran qui affiche une liste défilante verticalement (utilisez un `ListView`). Cette liste doit contenir **10** `Container` empilés les uns sous les autres.
 
@@ -40,7 +43,7 @@ Colors.green[300] // Plus foncé
 ```
 :::
 
-## Étape 2 : L'optimisation (Bonus)
+### Étape 2 : L'optimisation (Bonus)
 
 :::tip Bonus 1 : Limiter la duplication (Principe [DRY](http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas))
 Si vous avez réalisé l'Étape 1 de façon "naïve", vous avez probablement copié-collé le même bloc de code 10 fois pour créer vos 10 conteneurs. Modifiez votre code pour extraire la création d'un conteneur dans une méthode ou un Widget réutilisable.

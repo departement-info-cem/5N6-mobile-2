@@ -7,7 +7,7 @@
 - Produire une première application fonctionnelle
 - Comprendre les éléments essentiels vus aujourd'hui : widgets, état et gestion des clics
 
-## Quoi faire
+## À faire 🛠️
 
 Suivez la recette de [Tape le 🐇](../../03-recettes/tape-le-lapin.md) étape par étape pour construire votre propre Tape le 🐇. 
 

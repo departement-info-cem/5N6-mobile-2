@@ -4,7 +4,7 @@
 
 Pratiquer la navigation de base entre différents écrans et apprendre à transmettre des données (paramètres) d'un widget à un autre. 
 
-## simple_nav
+## À faire 🛠️
 
 Faites un premier écran qui contient un champ texte et un bouton. Quand on appuie sur le bouton, on navigue vers un deuxième écran en lui passant la valeur du champ texte.
 

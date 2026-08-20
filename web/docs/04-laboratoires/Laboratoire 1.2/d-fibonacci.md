@@ -6,11 +6,10 @@
 
 Approfondir votre compréhension de l'imbrication des widgets `Row` et `Column`, et maîtriser la répartition proportionnelle de l'espace grâce à la propriété `flex` du widget `Expanded`.
 
-
-
 <Row size="8">
 <Column>
-## Fibonacci
+
+## À faire 🛠️
 
 Reproduisez la mise en page illustrée dans l'image de référence, qui s'inspire de la célèbre suite mathématique de Fibonacci.
 
