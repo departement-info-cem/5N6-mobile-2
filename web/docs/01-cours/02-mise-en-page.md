@@ -11,7 +11,7 @@ Lisez la documentation de Flutter en ligne sur la mise en page pendant **2h**, d
 
 Étudiez les exemples suivants : 
 
-- **[mise_en_page](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-mise_en_page.zip)**, regarde les TODO
+- **[mise_en_page](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-mise_en_page.zip)**, regarde les [TODO](../03-recettes/lancer-projet-fourni.md)
 - **[double_scroll](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-double_scroll.zip)**
 
 Voyez ici comment [Lancer un projet fourni 🤐](../03-recettes/lancer-projet-fourni.md), et consulter les TODO.

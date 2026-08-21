@@ -131,8 +131,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "3.2 - Image Picker 🤏",
-      id: "cours/image-picker",
+      label: "3.2 - Image Client 🖼️",
+      id: "cours/image-client",
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.6,

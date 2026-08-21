@@ -7,8 +7,6 @@ hide_table_of_contents: true
 
 :::tip Avant la séance
 
-Lisez la documentation officielle à propos de la [classe MediaQuery](https://api.flutter.dev/flutter/widgets/MediaQuery-class.html). La petite vidéo est intéressante pour avoir un aperçu des fonctionnalités.
-
 Il existe 3 principaux emplacements pour une image qu'on souhaite afficher :
 
 1. **Assets** : Directement dans le projet de l'application. 
@@ -22,47 +20,22 @@ Il existe 3 principaux emplacements pour une image qu'on souhaite afficher :
    - Lorsqu'on veut afficher une photo qui n'est pas sur l'appareil de l'utilisateur.
    - Ex : afficher la photo de profil de l'utilisateur qu'il a préalablement téléversée.
 
-
-
 Regardez le code de démo [image_client](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-image_client.zip). Vous devez cherchez les [TODO](../03-recettes/lancer-projet-fourni.md).
-
-Pour l'affichage des images, on recommande cette librairie [cached_network_image](https://pub.dev/packages/cached_network_image)
 
 :::
 
 :::info Séance
 
-On regardera les avantages et inconvénients d'utiliser des images avec une taille fixe ou dynamique.
+Nous regarderons les avantages et inconvénients d'utiliser des images avec une taille fixe ou dynamique.
 
-On discutera des avantages de redimensionner des images.
+Nous discuterons des avantages de redimensionner des images côté client et côté serveur.
 
-On discutera du "caching" des images.
+Nous discuterons du "caching" des images, et de la différence entre la stratégie de caching utilisée par Image.network (mémoire) versus celle utilisée par [CachedNetworkImage](https://pub.dev/packages/cached_network_image/) (disque).
 
-:::
+Complétez les exercices suivants :
 
-:::note Exercices
+- [🔭 3.2A – grosse_image](../04-laboratoires/Laboratoire%203.2/a-grosse_image.md)
+- [🤏 3.2B – redimensionnement](../04-laboratoires/Laboratoire%203.2/b-redimensionnement.md)
 
-### Exercice grosse_image
-
-Utiliser l'URL [https://fourn6-mobile-prof.onrender.com/exos/image](https://fourn6-mobile-prof.onrender.com/exos/image) pour afficher au moins 20 images dans un ListView
-
-Ajouter un paramètre à l'URL pour s'assurer que chaque image ne provient pas du cache, ça devrait rendre le tout désagréable à l'utilisation puisque l'image fait 10.5 mb
-
-### Exercice redimensionnement
-
-Faire 3 pages où vous n'aurez qu'à afficher l'image [https://fourn6-mobile-prof.onrender.com/exos/image](https://fourn6-mobile-prof.onrender.com/exos/image) avec la taille la plus grande possible.
-
-- La première page affichera l'image en basse résolution.
-- La deuxième page affichera l'image en moyenne résolution.
-- La dernière page affichera l'image en résolution maximale
-
-### Exercice differentes_tailles
-
-Faire 2 pages.
-
-- La première affichera l'image [https://fourn6-mobile-prof.onrender.com/exos/image](https://fourn6-mobile-prof.onrender.com/exos/image) le 1/3 de la largeur de l'écran
-- La deuxième page affichera une image sur la moitié de la hauteur et la moitié de la largeur.
-
-Pour vous aider, regarder la propriété BoxFit.
 
 :::
