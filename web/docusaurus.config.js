@@ -54,7 +54,12 @@ const config = {
 
   plugins: [
     '@docusaurus/plugin-ideal-image',
-    require.resolve("./plugins/docs-metadata")
+    [
+      require.resolve("./plugins/docs-metadata"),
+      {
+        docsDir: "docs/01-cours",
+      },
+    ],
   ],
 
   themeConfig:
