@@ -227,8 +227,8 @@ Pour les boutons, nous allons afficher une grille de 2x2 boutons, qui vont tous 
 ```dart
 Column(
   children: [
-    const Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
-    const Row(
+    Text('Tape le 🐇', style: TextStyle(fontSize: 40)),
+    Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(
