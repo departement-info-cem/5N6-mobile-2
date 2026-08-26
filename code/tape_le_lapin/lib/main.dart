@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tape_le_lapin/lapin.dart';
+import 'package:tape_le_lapin/pages/lapin.dart';
 
 void main() {
   runApp(const MyApp());
