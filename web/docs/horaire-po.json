@@ -27,6 +27,12 @@
             "textColor": "#5b21b6",
             "darkBackgroundColor": "#5b21b6",
             "darkTextColor": "#ede9fe"
+        },
+        "dispo": {
+            "backgroundColor": "#ffedd5",
+            "textColor": "#9a3412",
+            "darkBackgroundColor": "#9a3412",
+            "darkTextColor": "#ffedd5"
         }
     },
     "days": [
@@ -45,16 +51,17 @@
             "title": "Programmation Web Orientée Services",
             "courseCode": "420-4W6-EM",
             "courseGroup": "1010",
-            "room": "D0624",
+            "room": "D-0624",
             "category": "4W6"
         },
         {
             "id": "centre-daide-1",
             "day": "mardi",
-            "start": "13:00",
-            "end": "15:00",
+            "start": "12:00",
+            "end": "12:45",
             "title": "Centre d'aide",
-            "category": "centre-daide"
+            "category": "centre-daide",
+            "room": "D-0008"
         },
         {
             "id": "reunion-departement",
@@ -72,7 +79,7 @@
             "title": "Applications Mobiles Avancées",
             "courseCode": "420-5N6-EM",
             "courseGroup": "1010",
-            "room": "D0704",
+            "room": "D-0704",
             "category": "5N6"
         },
         {
@@ -83,16 +90,26 @@
             "title": "Applications Mobiles Avancées",
             "courseCode": "420-5N6-EM",
             "courseGroup": "1010",
-            "room": "D0704",
+            "room": "D-0704",
             "category": "5N6"
         },
         {
-            "id": "centre-daide-2",
+            "id": "dispo-1",
             "day": "jeudi",
-            "start": "13:00",
-            "end": "15:00",
+            "start": "12:00",
+            "end": "13:45",
+            "title": "Disponibilité pour les étudiants",
+            "category": "dispo",
+            "room": "E-211"
+        },
+        {
+            "id": "centre-daide-2",
+            "day": "vendredi",
+            "start": "10:00",
+            "end": "11:00",
             "title": "Centre d'aide",
-            "category": "centre-daide"
+            "category": "centre-daide",
+            "room": "D-0008"
         },
         {
             "id": "4W6-1010-l",
@@ -102,7 +119,7 @@
             "title": "Programmation Web Orientée Services",
             "courseCode": "420-4W6-EM",
             "courseGroup": "1010",
-            "room": "D0602",
+            "room": "D-0602",
             "category": "4W6"
         }
     ]
