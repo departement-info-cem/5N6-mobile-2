@@ -45,8 +45,8 @@ class DetailPage extends StatelessWidget {
           // Quelle est la différence, sur l'écran, entre ce que fait ce bouton vs l'autre?
           Navigator.of(context).pop();
         } else {
-          // TODO A6 : Pas besoin de dépiler manuellement avec le Router.
-          // C'est déjà ce qui se fait par défaut.
+          // TODO A6 : dépiler avec un Router.
+          context.pop();
         }
       },
       child: const Text('Dépiler la pile'),
