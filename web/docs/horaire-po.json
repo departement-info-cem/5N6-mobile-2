@@ -2,7 +2,7 @@
     "startHour": "08:00",
     "endHour": "18:00",
     "slotMinutes": 60,
-    "name": "Paul Meilleur",
+    "name": "Pierre-Olivier Brillant",
     "categories": {
         "4W6": {
             "backgroundColor": "#dbeafe",
@@ -61,7 +61,7 @@
             "end": "12:45",
             "title": "Centre d'aide",
             "category": "centre-daide",
-            "room": "D-0008"
+            "room": "E-211"
         },
         {
             "id": "reunion-departement",
