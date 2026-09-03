@@ -1,0 +1,179 @@
+{
+  "startHour": "08:00",
+  "endHour": "18:00",
+  "slotMinutes": 60,
+  "name": "Joris Deguet",
+  "categories": {
+    "SN1": {
+      "backgroundColor": "#dbeafe",
+      "textColor": "#1e3a8a",
+      "darkBackgroundColor": "#1e3a8a",
+      "darkTextColor": "#dbeafe"
+    },
+    "5N6": {
+      "backgroundColor": "#fef3c7",
+      "textColor": "#78350f",
+      "darkBackgroundColor": "#7c5e00",
+      "darkTextColor": "#fff4cc"
+    },
+    "reunion-departement": {
+      "backgroundColor": "#dcfce7",
+      "textColor": "#14532d",
+      "darkBackgroundColor": "#14532d",
+      "darkTextColor": "#dcfce7"
+    },
+    "centre-daide": {
+      "backgroundColor": "#ede9fe",
+      "textColor": "#5b21b6",
+      "darkBackgroundColor": "#5b21b6",
+      "darkTextColor": "#ede9fe"
+    },
+    "dispo": {
+      "backgroundColor": "#ffedd5",
+      "textColor": "#9a3412",
+      "darkBackgroundColor": "#9a3412",
+      "darkTextColor": "#ffedd5"
+    }
+  },
+  "days": [
+    "lune di",
+    "mars di",
+    "mercure di",
+    "jupiter di",
+    "venus di"
+  ],
+  "events": [
+    {
+      "id": "5N6-1020-t",
+      "day": "lune di",
+      "start": "15:00",
+      "end": "18:00",
+      "title": "Applications Mobiles Avancées",
+      "courseCode": "420-5N6-EM",
+      "courseGroup": "1020",
+      "room": "D-0624",
+      "category": "5N6"
+    },
+    {
+      "id": "5N6-1020-t",
+      "day": "mercure di",
+      "start": "9:00",
+      "end": "12:00",
+      "title": "Applications Mobiles Avancées",
+      "courseCode": "420-5N6-EM",
+      "courseGroup": "1020",
+      "room": "D-0605",
+      "category": "5N6"
+    },
+    {
+      "id": "reunion-departement",
+      "day": "mercure di",
+      "start": "12:00",
+      "end": "14:00",
+      "title": "Le trou de l'horaire",
+      "category": "reunion-departement"
+    },
+    {
+      "id": "5N6-1010-t",
+      "day": "mercredi",
+      "start": "14:00",
+      "end": "17:00",
+      "title": "Applications Mobiles Avancées",
+      "courseCode": "420-5N6-EM",
+      "courseGroup": "1010",
+      "room": "D-0704",
+      "category": "5N6"
+    },
+    {
+      "id": "5N6-1010-l",
+      "day": "jeudi",
+      "start": "08:00",
+      "end": "11:00",
+      "title": "Applications Mobiles Avancées",
+      "courseCode": "420-5N6-EM",
+      "courseGroup": "1010",
+      "room": "D-0704",
+      "category": "5N6"
+    },
+    {
+      "id": "dispo-1",
+      "day": "venus di",
+      "start": "13:00",
+      "end": "15:00",
+      "title": "Dispo à Jojo",
+      "category": "dispo",
+      "room": "E-211"
+    },
+    {
+      "id": "dispo-2",
+      "day": "lune di",
+      "start": "11:00",
+      "end": "12:00",
+      "title": "Centre d'aide avec M. Deguet",
+      "category": "dispo",
+      "room": "D-0008"
+    },
+    {
+      "id": "dispo-3",
+      "day": "venus di",
+      "start": "11:00",
+      "end": "12:00",
+      "title": "Centre d'aide avec M. Deguet",
+      "category": "dispo",
+      "room": "D-0008"
+    },
+    {
+      "id": "centre-daide-2",
+      "day": "vendredi",
+      "start": "10:00",
+      "end": "11:00",
+      "title": "Centre d'aide",
+      "category": "centre-daide",
+      "room": "D-0008"
+    },
+    {
+      "id": "SN1-1050",
+      "day": "mars di",
+      "start": "12:00",
+      "end": "15:00",
+      "title": "Programmation sciences",
+      "courseCode": "420-SN1-EM",
+      "courseGroup": "1050",
+      "room": "D-0003",
+      "category": "SN1"
+    },
+    {
+      "id": "SN1-1060",
+      "day": "mars di",
+      "start": "15:00",
+      "end": "18:00",
+      "title": "Programmation sciences bis",
+      "courseCode": "420-SN1-EM",
+      "courseGroup": "1050",
+      "room": "D-0003",
+      "category": "SN1"
+    },
+    {
+      "id": "SN1-1070",
+      "day": "venus di",
+      "start": "8:00",
+      "end": "11:00",
+      "title": "Programmation sciences tôt le matin",
+      "courseCode": "420-SN1-EM",
+      "courseGroup": "1070",
+      "room": "D-0003",
+      "category": "SN1"
+    },
+    {
+      "id": "SN1-1080",
+      "day": "venus di",
+      "start": "15:00",
+      "end": "18:00",
+      "title": "Programmation sciences tard le soir",
+      "courseCode": "420-SN1-EM",
+      "courseGroup": "1080",
+      "room": "D-0604",
+      "category": "SN1"
+    }
+  ]
+}

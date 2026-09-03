@@ -88,7 +88,16 @@ Pendant la séance, vous devez compléter et valider vos exercices, poser des qu
             title="Horaire Pierre-Olivier"
             data={require('./horaire-po.json')}
         />,
-    }
+    },
+    {
+            id: "schedule-jo",
+            label: "Horaire Joris",
+            icon: "🧑‍🏫",
+            component: <WeeklySchedule
+                title="Horaire Joris"
+                data={require('./horaire-joris.json')}
+            />,
+        }
     ]}
     defaultTabId="grid"
 />
