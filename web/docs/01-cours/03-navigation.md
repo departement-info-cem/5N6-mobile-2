@@ -32,9 +32,9 @@ Regardez le code du projet [navigation](https://github.com/departement-info-cem/
 :::info Séance
 
 - On discutera du concept de pile de navigation et des opérations `push` et `pop`.
-- On regardera les avantages et inconvénients des route nommées ou pas dans un contexte mobile ou web.
+- On regardera les avantages et inconvénients des routes nommées ou pas dans un contexte mobile ou web.
 - On discutera des avantages et des inconvénients de passer des objets complexes ou uniquement des identifiants entre les écrans de notre application.
-- On regardera le comportement du Scaffold quand on ajouter un drawer.
+- On regardera le comportement du Scaffold quand on ajoute un drawer.
 
 Complétez les exercices suivants :
 
