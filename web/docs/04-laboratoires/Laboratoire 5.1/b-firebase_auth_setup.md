@@ -1,8 +1,10 @@
-# 🔐 5.2A – firebase_auth_setup
+# 5.2A – firebase_auth_setup
 
 ## Objectif 🎯
 
 Configurer Firebase Authentication dans votre application Flutter avec support de Google Sign-In et authentification par courriel + mot de passe.
+
+ATTENTION Google SignIn n'est pas supporté sur Windows.
 
 ## À faire 🛠️
 
@@ -173,4 +175,9 @@ final uid = FirebaseAuth.instance.currentUser?.uid;
 ```
 
 Utilisez ce `uid` pour identifier le propriétaire des données dans Firestore.
+
+### Aller plus loin
+
+Un atelier de programmation des gens qui l'ont fait:
+https://firebase.google.com/codelabs/firebase-auth-in-flutter-apps#0
 

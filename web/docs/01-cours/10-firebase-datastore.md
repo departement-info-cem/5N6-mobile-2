@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 :::tip Avant la séance
 
-**Prérequis:** Complétez d'abord les laboratoires **[⚙️ 5.2A – firebase_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_setup.md)** et **[🔐 5.2B – firebase_auth_setup](../04-laboratoires/Laboratoire%205.2/b-firebase_auth_setup.md)**.
+**Prérequis:** Complétez d'abord les laboratoires **[⚙️ A – firebase_setup](../04-laboratoires/Laboratoire%205.1/a-firebase_setup.md)** et **[🔐 B – firebase_auth_setup](../04-laboratoires/Laboratoire%205.1/b-firebase_auth_setup.md)**.
 
 Le Firestore utilise une approche de modélisation des données différente de SQL (NoSQL, orienté documents).
 
@@ -19,7 +19,7 @@ Regardez ces vidéos d'introduction (en anglais) :
 
 <Video url="https://youtu.be/tdmwt82ssqQ" />
 
-Commencez le laboratoire **[📦 5.2C – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/c-firebase_datastore_setup.md)** en particulier les étapes 1-3.
+Commencez le laboratoire **[📦 5.2A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en particulier les étapes 1-3.
 
 :::
 
@@ -51,7 +51,7 @@ Nous explorerons les **collections**, **documents**, **subcollections** et la **
 
 ### Exercice 2️⃣: intro_datastore
 
-À partir de votre projet de test, complétez le laboratoire **[📦 5.2C – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/c-firebase_datastore_setup.md)** en entier.
+À partir de votre projet de test, complétez le laboratoire **[📦 5.1A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en entier.
 
 Créez une collection de jeux dans Firestore (minimum 2 champs par jeu).
 
