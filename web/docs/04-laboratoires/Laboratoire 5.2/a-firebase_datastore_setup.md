@@ -10,6 +10,40 @@ Apprendre à structurer et gérer des données avec Firestore (la base de donné
 
 Avoir complété la configuration Firebase de base avec firebase_core et google_sign_in.
 
+
+### Étape 14 - Tester l'accès à Firestore (optionnel)
+
+Pour vérifier que tout fonctionne correctement:
+
+- Allez à la console Firebase
+- Créez une base de données Firestore en mode test
+- Dans votre `main.dart`, remplacez la fonction `_incrementCounter()` avec:
+
+```dart
+void _incrementCounter() {
+  final db = FirebaseFirestore.instance;
+  final user = <String, dynamic>{
+    "first": "Ada",
+    "last": "Lovelace",
+    "born": 1815
+  };
+  db.collection("users").add(user).then((DocumentReference doc) =>
+    print('DocumentSnapshot added with ID: ${doc.id}')
+  );
+  setState(() {
+    _counter++;
+  });
+}
+```
+
+- Lancez l'application
+- Appuyez sur le bouton **+**
+- Allez à la console Firebase dans le volet **Firestore**
+- Vous devriez voir les données apparaître!
+
+**COMMIT et PUSH**.
+
+
 ### Étape 1 - Installation de cloud_firestore
 
 ```bash

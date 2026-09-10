@@ -63,33 +63,37 @@ firebase login
 dart pub global activate flutterfire_cli
 ```
 
-### Étape 9 - Configurer le projet avec FlutterFire
+### Étape 9 - Ajouter les composants Firebase
 
 Depuis le dossier de votre projet Flutter:
 
 ```bash
 flutter pub add firebase_core
-flutterfire configure
-```
-
-Vous serez invité à choisir le projet Firebase correspondant à votre projet.
-
-Regardez les fichiers modifiés dans votre IDE.
-
-**COMMIT et PUSH**.
-
-### Étape 10 - Ajouter les composants Firebase
-
-Depuis le dossier du projet Flutter, tapez les commandes suivantes:
-
-```bash
 flutter pub add cloud_firestore
 flutter pub add firebase_auth
 flutter pub add google_sign_in
 flutter pub add firebase_storage
 flutter pub add firebase_messaging
+```
+
+Cela ajoute les librairies clientes de Firebase dans votre projet Flutter. 
+
+Cette étape modifie votre fichier pubspec, il faut donc faire un pub get dans votre projet dans VSCode.
+
+**COMMIT et PUSH**.
+
+### Étape 10 - Configurer le projet avec FlutterFire
+
+Depuis le dossier du projet Flutter, tapez les commandes suivantes:
+
+```bash
 flutterfire configure
 ```
+
+Vous serez invité à choisir le projet Firebase correspondant à votre projet. C'est l'étape où le projet de code est 
+lié au projet Firebase. Les différentes informations pour accéder au cloud sont alors ajoutées.
+
+Regardez les fichiers modifiés dans votre IDE (dans votre commit).
 
 **COMMIT et PUSH**.
 
@@ -114,7 +118,7 @@ Si vous voyez une erreur concernant `minSdk`, ouvrez le fichier `android/app/bui
 
 ### Étape 13 - Lancer l'application
 
-Lancez votre application depuis votre IDE:
+Lancez votre application depuis votre IDE (ça va être long, il y a des librairies à télécharger...):
 
 ```bash
 flutter run
@@ -124,34 +128,3 @@ flutter run
 
 Votre application est maintenant configurée pour utiliser Firebase! Vous pouvez procéder avec les étapes d'authentification et de base de données dans les laboratoires suivants.
 
-### Étape 14 - Tester l'accès à Firestore (optionnel)
-
-Pour vérifier que tout fonctionne correctement:
-
-- Allez à la console Firebase
-- Créez une base de données Firestore en mode test
-- Dans votre `main.dart`, remplacez la fonction `_incrementCounter()` avec:
-
-```dart
-void _incrementCounter() {
-  final db = FirebaseFirestore.instance;
-  final user = <String, dynamic>{
-    "first": "Ada",
-    "last": "Lovelace",
-    "born": 1815
-  };
-  db.collection("users").add(user).then((DocumentReference doc) =>
-    print('DocumentSnapshot added with ID: ${doc.id}')
-  );
-  setState(() {
-    _counter++;
-  });
-}
-```
-
-- Lancez l'application
-- Appuyez sur le bouton **+**
-- Allez à la console Firebase dans le volet **Firestore**
-- Vous devriez voir les données apparaître!
-
-**COMMIT et PUSH**.
