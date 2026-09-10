@@ -17,7 +17,7 @@ Nous discuterons de comment structurer du code efficacement.
 
 Complétez les exercices suivants :
 
-- [🗃️ 5.1A – organisation](../04-laboratoires/Laboratoire%205.1/a-organisation.md)
-- [💇 5.1B – refactorisation](../04-laboratoires/Laboratoire%205.1/b-refactorisation.md)
+- [🗃️ 5.1A – organisation](../04-laboratoires/Laboratoire%206.2/a-organisation.md)
+- [💇 5.1B – refactorisation](../04-laboratoires/Laboratoire%206.2/b-refactorisation.md)
 
 :::

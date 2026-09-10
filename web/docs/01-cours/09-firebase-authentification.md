@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 :::tip Avant la séance
 
-**Prérequis:** Complétez d'abord le laboratoire **[⚙️ 5.2A – firebase_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_setup.md)** pour configurer les bases de Firebase.
+Explorez d'abord le laboratoire **[⚙️ 5.2A – firebase_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_setup.md)** pour configurer les bases de Firebase.
 
 Ensuite, lisez la documentation de Firebase sur l'authentification **[ici](https://firebase.google.com/docs/auth/flutter/start)** en **20-30 minutes maximum**. L'important est de combiner lecture et expérimentation.
 

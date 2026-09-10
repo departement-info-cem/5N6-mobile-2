@@ -24,7 +24,7 @@ Finalement comme Flutter et Firebase sont 2 plateformes gérées par Google, ell
 
 ### Étape 1 - Créer un projet Firebase
 
-Pour la mise en place de Firebase, vous devez suivre les étapes décrites **[ici (Configuration de Firebase)](notice-firebase)**.
+Pour la mise en place de Firebase, vous devez suivre les étapes décrites **[ici (Configuration de Firebase)](../04-laboratoires/Laboratoire%205.2/a-firebase_setup.md)**.
 
 ### Étape 2 - Configurer le serveur pour l'envoie de notifications
 
