@@ -39,7 +39,7 @@ let podates = {
   "2.2": "2026-09-03",
   "3.1": "2026-09-09",
   "3.2": "2026-09-10",
-  "4.1": "2026-09-16",
+  "4.1": "2026-09-14",
   "4.2": "2026-09-17",
   "5.1": "2026-09-23",
   "5.2": "2026-09-24",
@@ -137,8 +137,8 @@ const sidebars = {
         avancementLabel: "TP2",
         avancement: 0.6,
         calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["5.2"] }],
-          Joris: [{ 1020: jddates["5.2"] }],
+          "Pierre-Olivier": [{ 1010: podates["3.2"] }],
+          Joris: [{ 1020: jddates["3.2"] }],
         },
       },
     },
@@ -149,7 +149,7 @@ const sidebars = {
       id: "cours/integration",
       customProps: {
         avancementLabel: "TP2",
-        avancement: 0.80,
+        avancement: 0.8,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["4.1"] }],
           Joris: [{ 1020: jddates["4.1"] }],
@@ -172,8 +172,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.1 - Organisation du code 🧹",
-      id: "cours/organisation",
+      label: "5.1 - Authentification Firebase 👮",
+      id: "cours/firebase-authentification",
       customProps: {
         avancementLabel: "TP3 - Créé",
         avancement: 0.0,
@@ -185,22 +185,21 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.2 - Image client",
-      id: "cours/image-client",
+      label: "5.2 - Firebase Firestore 🏪",
+      id: "cours/firebase-datastore",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["5.2"] }],
-          Joris: [{ 1020: jddates["5.2"] }],
+          "Joris": [{ 1020: jddates["5.2"] }],
         },
       },
     },
-
     {
       type: "doc",
-      label: "6.1 - Image Cookie 🍪",
-      id: "cours/image-cookie",
+      label: "6.1 - DIO, REST, HTTP",
+      id: "cours/dio",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.2,
@@ -212,8 +211,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.2 - Intégration",
-      id: "cours/integration",
+      label: "6.2 - Organisation du code 🧹 / Intégration",
+      id: "cours/organisation",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.3,
