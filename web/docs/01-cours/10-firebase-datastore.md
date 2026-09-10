@@ -9,15 +9,11 @@ hide_table_of_contents: true
 
 **Prérequis:** Complétez d'abord les laboratoires **[⚙️ A – firebase_setup](../04-laboratoires/Laboratoire%205.1/a-firebase_setup.md)** et **[🔐 B – firebase_auth_setup](../04-laboratoires/Laboratoire%205.1/b-firebase_auth_setup.md)**.
 
-Le Firestore utilise une approche de modélisation des données différente de SQL (NoSQL, orienté documents).
+Le Firestore utilise une approche de modélisation orientée documents / collections. 
+
+Cette approche est assez différente de SQL ou encore Entity Framework.
 
 Consultez la documentation Firestore sur le modèle de données **[ici](https://firebase.google.com/docs/firestore/data-model)** en **15-20 minutes**.
-
-Regardez ces vidéos d'introduction (en anglais) :
-
-<Video url="https://youtu.be/sumhBN2BJt8" />
-
-<Video url="https://youtu.be/tdmwt82ssqQ" />
 
 Commencez le laboratoire **[📦 5.2A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en particulier les étapes 1-3.
 

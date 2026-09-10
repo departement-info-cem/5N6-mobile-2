@@ -11,40 +11,9 @@ Apprendre à structurer et gérer des données avec Firestore (la base de donné
 Avoir complété la configuration Firebase de base avec firebase_core et google_sign_in.
 
 
-### Étape 14 - Tester l'accès à Firestore (optionnel)
-
-Pour vérifier que tout fonctionne correctement:
-
-- Allez à la console Firebase
-- Créez une base de données Firestore en mode test
-- Dans votre `main.dart`, remplacez la fonction `_incrementCounter()` avec:
-
-```dart
-void _incrementCounter() {
-  final db = FirebaseFirestore.instance;
-  final user = <String, dynamic>{
-    "first": "Ada",
-    "last": "Lovelace",
-    "born": 1815
-  };
-  db.collection("users").add(user).then((DocumentReference doc) =>
-    print('DocumentSnapshot added with ID: ${doc.id}')
-  );
-  setState(() {
-    _counter++;
-  });
-}
-```
-
-- Lancez l'application
-- Appuyez sur le bouton **+**
-- Allez à la console Firebase dans le volet **Firestore**
-- Vous devriez voir les données apparaître!
-
-**COMMIT et PUSH**.
-
-
 ### Étape 1 - Installation de cloud_firestore
+
+Valider que la librairie cliente est installée.
 
 ```bash
 flutter pub add cloud_firestore
@@ -60,10 +29,46 @@ Faites un **COMMIT PUSH**.
 - Dans le panneau à gauche, cliquez sur **Firestore Database**
 - Cliquez sur **Créer une base de données**
 - Sélectionnez le **mode test** (permet de lire/écrire sans règles de sécurité)
-- Choisissez votre région (par défaut c'est fine)
+- Continuez les étapes suivantes
 - Cliquez sur **Créer**
 
-### Étape 3 - Comprendre la structure Firestore
+### Étape 3 - Tester l'accès à Firestore 
+
+Pour vérifier que tout fonctionne correctement:
+
+- Quelque part dans votre application, ajoutez un bouton
+- Avec le code suivant
+- Quand on cliquera dessus cela devrait créer une entrée
+
+```dart
+MaterialButton(
+  onPressed: () {
+    final db = FirebaseFirestore.instance;
+    final user = <String, dynamic>{
+      "first": "Ada",
+      "last": "Lovelace",
+      "born": 1815,
+    };
+    db
+            .collection("users")
+            .add(user)
+            .then(
+    (DocumentReference doc) =>
+    print('DocumentSnapshot added with ID: ${doc.id}'),
+    );
+  },
+  child: const Text("Test ajout firestore"),
+),
+```
+
+- Lancez l'application
+- Appuyez sur le bouton créé
+- Allez à la console Firebase dans le volet **Firestore**
+- Vous devriez voir les données apparaître!
+
+**COMMIT et PUSH**.
+
+### Étape 4 - Comprendre la structure Firestore
 
 Firestore est **orienté documents**, pas relationnel comme SQL:
 
@@ -84,7 +89,7 @@ users/
   └── user2 (document)
 ```
 
-### Étape 4 - Créer une collection manuellement
+### Étape 5 - Créer une collection manuellement
 
 Dans la console Firestore:
 - Cliquez sur **+ Créer une collection**
@@ -99,7 +104,7 @@ Dans la console Firestore:
 
 Ajoutez quelques documents à votre collection pour tester.
 
-### Étape 5 - Accéder aux données en Flutter
+### Étape 6 - Accéder aux données en Flutter
 
 Dans un StatefulWidget, créez une méthode pour récupérer les données:
 
