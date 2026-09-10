@@ -262,8 +262,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.2 - Déploiement 🤖",
-      id: "cours/deploiement",
+      label: "8.2 - Service et validations",
+      id: "cours/validation",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.7,
@@ -315,8 +315,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Authentification Firebase 👮",
-      id: "cours/firebase-authentification",
+      label: "10.2 - Interfacer avec une IA",
+      id: "cours/firebase-ia",
       customProps: {
         avancementLabel: "TP4 - Créé",
         avancement: 0.0,
@@ -328,8 +328,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.1 - Firebase Firestore 🏪",
-      id: "cours/firebase-datastore",
+      label: "11.1 - Travail TP 🏪",
+      id: "cours/integration",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.1,
@@ -341,8 +341,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.2 - Control d'accès Firebase 💂",
-      id: "cours/firebase-access-control",
+      label: "11.2 - Multiplateformes et firebase",
+      id: "cours/firebase-multi",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.2,
@@ -406,8 +406,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "14.1 - Hero 🦸",
-      id: "cours/hero",
+      label: "14.1 - Intégration",
+      id: "cours/integration",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.8,
@@ -419,7 +419,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "14.2 - Intégration 🔨",
+      label: "14.2 - Intégration",
       className: "remise-tp4",
       id: "cours/integration",
       customProps: {
