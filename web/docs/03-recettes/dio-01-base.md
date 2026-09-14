@@ -25,31 +25,17 @@ Pour une application Android, vérifiez aussi que `android/app/src/main/AndroidM
 
 Le projet [01-acces_simple](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/http/01-acces_simple) appelle un service qui double un nombre.
 
-```dart
-import 'package:dio/dio.dart';
-
-final dio = Dio();
-final response = await dio.get(
-  'https://fourn6-mobile-prof.onrender.com/exos/long/double/99',
-);
-
-final int resultat = response.data;
-```
+<GHCode
+  repo="5N6-Mobile-2"
+  filePath="code/http/01-acces_simple/lib/main.dart"
+  startLine="30"
+  endLine="45"
+/>
 
 `await` attend la réponse sans bloquer l'interface graphique. La réponse HTTP est un objet `Response`; son champ `data` contient le JSON déjà décodé par DIO.
 
 ## Gérer les erreurs
 
-Une requête peut échouer parce que le réseau est indisponible, que le serveur répond avec une erreur ou que l'URL est invalide. Interceptez précisément les erreurs DIO :
-
-```dart
-try {
-  final response = await dio.get(url);
-  final int resultat = response.data;
-} on DioException catch (erreur) {
-  debugPrint('Erreur HTTP : ${erreur.message}');
-}
-```
+Une requête peut échouer parce que le réseau est indisponible, que le serveur répond avec une erreur ou que l'URL est invalide. Le projet intercepte cette erreur et informe l'utilisateur avec un `SnackBar`.
 
 Utilisez les outils de développement de votre IDE et les journaux de débogage pour examiner l'URL, le code HTTP et le contenu de la réponse.
-
