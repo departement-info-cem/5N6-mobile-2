@@ -5,102 +5,45 @@ hide_table_of_contents: true
 
 # HTTP, accès réseau client et JSON
 
-<Row>
+:::tip Avant la séance
 
-<Column>
+Vous allez voir comment ajouter DIO à un projet Flutter avec les recettes suivantes :
 
-:::tip Avant la séance : théorie (2h)
+- [DIO 1 - Requête GET de base](../03-recettes/dio-01-base.md)
+- [DIO 2 - Appel depuis l'interface](../03-recettes/dio-02-objet.md)
+- [DIO 3 - Objet et liste JSON](../03-recettes/dio-03-liste.md)
+- [DIO 4 - POST et cookies](../03-recettes/dio-04-cookie-post.md)
 
-ATTENTION: Tous les liens vers le site 4n6.azure... ne marchent plus, remplacer par https://fourn6-mobile-prof.onrender.com/
-
-Vous devez regarder les videos suivantes:
-
-<Video url="https://youtu.be/ZPbeMhcKITE" />
-
-Répertoire **01-acces_simple** dans le code source
-
-<Video url="https://youtu.be/23q3vKf7lpA" />
-
-Répertoire **02-json_list** dans le code source
-
-<Video url="https://youtu.be/cukpZ2ORbsI" />
-
-Répertoire **03-post_json_erreur** dans le code source
-
-<Video url="https://youtu.be/DRhf5rFLvgI" />
-
-Répertoire **04-cookie_devtools** dans le code source
-
-Pour avoir un exemple de sérialisation des dates en JSON vous pouvez regarder les **TODO** dans l'exemple suivant:
-
-Répertoire **05-date_json**
-
-**[code](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-http.zip)**
-
+Les projets de démonstration sont disponibles dans [code/http](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/http).
 :::
 
-</Column>
+:::info Séance
 
-<Column>
+Nous verrons comment 
+- envoyer des requêtes HTTP aux services web avec **DIO**, 
+- convertir les réponses JSON en objets Dart 
+- afficher les résultats dans Flutter.
 
-:::info Séance 1
+Complétez les exercices suivants :
 
-On expliquera comment envoyer une requête HTTP aux web services des exercices et réceptionner le résultat.
-
-On verra comment mettre en place des points d'arrêt et autres outils pour déboguer des appels réseau qui ne marchent pas encore.
-
-Vous travaillerez sur les exercices.
-
+- [🌐 6.1A – http_simple](../04-laboratoires/Laboratoire%206.1/a-http_simple.md)
+- [🧩 6.1B – http_objet](../04-laboratoires/Laboratoire%206.1/b-http_objet.md)
+- [📋 6.1C – http_listes](../04-laboratoires/Laboratoire%206.1/c-http_listes.md)
+- [📤 6.1D – http_post](../04-laboratoires/Laboratoire%206.1/d-http_post.md)
+- [🐙 6.1E – api_github](../04-laboratoires/Laboratoire%206.1/e-api_github.md)
+- [🪪 6.1F – choix de DTO](../04-laboratoires/Laboratoire%206.1/f-dto.md)
 :::
 
-:::info Séance 2
+:::warning Services hébergés sur Render
 
-On expliquera à quoi servent les différentes classes de transfert et comment fonctionne la génération de code pour JSON.
-
-On fera une démo sur la personnalisation de la sérialisation d'une propriété qui nous sera utile pour sérialiser les dates.
-
-Vous finirez vos exercices si nécessaire et vous avancerez les appels HTTP et classes de transfert pour votre TP.
-
+Les services `fourn6-mobile-prof.onrender.com` peuvent s'arrêter après une période d'inactivité. La première requête les réveille et peut échouer ou prendre quelques minutes. Réessayez après un court délai avant de modifier votre code.
 :::
-:::danger Commande pour générer les méthodes de sérialisation
+
+:::info Génération de sérialisation JSON
+
+Si vous utilisez `json_serializable`, générez les méthodes `fromJson` et `toJson` depuis le dossier du projet :
 
 ```bash
-flutter pub run build_runner build
+dart run build_runner build
 ```
-
 :::
-
-</Column>
-
-</Row>
-
-::::note Exercices
-
-:::warning Attention!
-Nous utiliserons plusieurs web service hébergés sur Render au courant de la session.
-Notez que les webservices hébergés sur Render se ferment après un certain délai où il n'y a pas eu de requêtes.
-Une requête envoyée au serveur va le "réveiller", mais ça peut prendre quelques minutes.
-Donc si vous faites les exercices chez vous ou que vous êtes un des premiers dans un cours à travailler sur des exercices qui utilisent render, c'est normal que les premières requêtes échouent, le temps que le serveur se "réchauffe".
-:::
-
-### Exercice http_simple
-
-Vous trouverez à l'url [https://fourn6-mobile-prof.onrender.com/exos/long/double/4](https://fourn6-mobile-prof.onrender.com/exos/long/double/4) un web service qui double la valeur du nombre qu'on lui passe.
-
-Vous devez démontrer un appel avec succès à ce web service dans une application Flutter en envoyant la valeur d'un nombre et en affichant son double dans l'interface.
-
-### Exercice api_github
-
-Créez un projet appelé **api_github**.
-
-Votre projet doit avoir un écran avec un champ texte, un bouton et une liste. On rentre le nom d'utilisateur dans le champ texte, on appuie sur le bouton pour envoyer la demande à l'API et au retour de la liste, elle doit s'afficher dans l'interface graphique.
-
-Dans la liste on doit voir dans un ListTile le nom (name) du repo et s'il est privé ou non.
-
-L'URL pour les données est la suivante (exemple pour l'utilisateur departement-info-cem)
-
-```text
-https://api.github.com/users/departement-info-cem/repos
-```
-
-::::

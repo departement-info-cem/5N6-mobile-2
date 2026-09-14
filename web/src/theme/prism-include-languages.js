@@ -1,4 +1,12 @@
 import siteConfig from '@generated/docusaurus.config';
+
+const languageLoaders = {
+  csharp: () => require('prismjs/components/prism-csharp.js'),
+  java: () => require('prismjs/components/prism-java.js'),
+  dart: () => require('prismjs/components/prism-dart.js'),
+  powershell: () => require('prismjs/components/prism-powershell.js'),
+};
+
 export default function prismIncludeLanguages(PrismObject) {
   const {
     themeConfig: {prism},
@@ -12,8 +20,11 @@ export default function prismIncludeLanguages(PrismObject) {
   // long as you don't re-assign it
   globalThis.Prism = PrismObject;
   additionalLanguages.forEach((lang) => {
-    // eslint-disable-next-line global-require, import/no-dynamic-require
-    require(`prismjs/components/prism-${lang}`);
+    const loadLanguage = languageLoaders[lang];
+    if (loadLanguage === undefined) {
+      throw new Error(`Langage Prism non configuré : ${lang}`);
+    }
+    loadLanguage();
   });
   delete globalThis.Prism;
 }
