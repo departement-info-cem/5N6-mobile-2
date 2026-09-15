@@ -198,7 +198,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "6.1 - DIO, REST, HTTP",
+      label: "6.1 - HTTP 👆",
       id: "cours/dio",
       customProps: {
         avancementLabel: "TP3",

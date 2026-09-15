@@ -1,13 +1,17 @@
 ---
-description: Appels HTTP
+description: Appels à des WebAPI avec avec DIO
 hide_table_of_contents: true
 ---
 
-# HTTP, accès réseau client et JSON
+# Appels HTTP 👆
 
 :::tip Avant la séance
 
-Vous allez voir comment ajouter DIO à un projet Flutter avec les recettes suivantes :
+Ce n'est pas le premier cours où vous allez faire des requêtes HTTP. Si vous avez bien compris les notions de vos cours de [4W6 - Programmation Web Orientée Services](https://info.cegepmontpetit.ca/4W6-WebServices/) et [4M6 - Applications Mobiles](https://info.cegepmontpetit.ca/4M6-Mobile/), vous risquez de vous y retrouver asser bien dans le cours d'aujourd'hui.
+
+Si en web service et applications mobiles la librairie à utiliser pour faire des requêtes HTTP était axios et Retrofit, en Flutter c'est [dio](https://pub.dev/packages/dio) que nous allons privilégier.
+
+Consultez, et si possible, exécutez le code des recettes suivantes :
 
 - [DIO 1 - Requête GET de base](../03-recettes/dio-01-base.md)
 - [DIO 2 - Appel depuis l'interface](../03-recettes/dio-02-objet.md)
