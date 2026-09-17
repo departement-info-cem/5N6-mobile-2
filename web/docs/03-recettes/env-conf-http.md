@@ -38,6 +38,10 @@ Le package [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv) va nous p
 
 Suivez les instructions sur la page du package pour compléter son installation. Un exemple est fourni pour utiliser la librairie.
 
+:::danger Attention!
+S'il n'y a aucune clé valeur dans votre fichier `.env`, le lancement de l'application va échouer.
+:::
+
 ### 2.3 Bonus : `.env.example` 🏞️🏞️
 
 Si jamais vous voulez être gentil avec votre futur vous, vous pouvez créer un fichier `.env.example` qui est une copie de `.env`, mais sans les valeurs. Ainsi c'est plus rapide de savoir quelles tokens vous devez garder. 
@@ -106,13 +110,13 @@ Quand nous allons vouloir obtenir une de ces valeurs dans notre code dart, il fa
 final url = '${AppConfig.apiUrl}/countries/v5?q=peru&pretty=1';
 ```
 
-## HTTP
+## 4. HTTP
 
 Bon finalement! Nous nous lançons!
 
 [DIO](https://pub.dev/packages/dio) est une bibliothèque Dart pour envoyer des requêtes HTTP. Vous créez un client `dio` et appelez directement ses méthodes `get`, `post`, etc.
 
-## 3. Dépendance 🚬
+### 4.1 Dépendance 🚬
 
 Depuis le dossier de votre projet Flutter, ajoutez `dio` :
 
@@ -120,18 +124,50 @@ Depuis le dossier de votre projet Flutter, ajoutez `dio` :
 flutter pub add dio
 ```
 
-## Envoyer une requête GET
+### 4.2 Ma première requête 🧑‍🍼
 
-Le projet [01-acces_simple](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/http/01-acces_simple) appelle un service qui double un nombre.
+La première requête que nous allons voir n'est pas très propre 🫟. C'est surtout pour avoir rapidement un premier exemple fonctionnel. Nous allons ensuite nettoyer tout ça 🧹.
 
-<GHCode
-  repo="5N6-Mobile-2"
-  filePath="code/http/01-acces_simple/lib/main.dart"
-  startLine="30"
-  endLine="45"
-/>
+Dans votre interface graphique, créez un bouton qui appelle cette fonction :
 
-`await` attend la réponse sans bloquer l'interface graphique. La réponse HTTP est un objet `Response`; son champ `data` contient le JSON déjà décodé par DIO.
+```dart
+class _HomePageState extends State<HomePage> {
+  Future<void> monPetitAppel() async {
+    final Dio dio = Dio();
+    final Response<dynamic> response = await dio.get('https://google.ca');
+    print(response.data);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () async {
+            // Jusqu'ici, la fonction n'a pas été appelée
+            Future<void> monPetitAppelDuFutur = monPetitAppel();
+
+            // Ok on exécute la fonction, l'appel HTTP est lancé!
+            // On attend (await) d'obtenir une réponse avant de passer à la ligne suivante.
+            await monPetitAppelDuFutur;
+
+            // La façon plus propre de le faire serait simplement :
+            // await monPetitAppel()
+          },
+          child: Text("OK GO!"),
+        ),
+      ),
+    );
+  }
+}
+```
+
+:::note
+Notez les mots clés `Future`, `async` et `await`. Ils sont utilisés lorque nous voulons créer et appeler des fonctions asynchrone (des fonctions dont on ne sais pas d'ici combien de temps la réponse va nous revenir).
+
+`Future` est un peu l'équivalent de `Task` en C#, que vous avez probablement déjà vu dans vos cours de Web. Ça indique que ce qui est dans la fonction sera effectué éventuellement, par exemple lorsqu'un `await` sera utilisé avant l'appel de la fonction.
+:::
+
 
 ## Gérer les erreurs
 
