@@ -4,7 +4,7 @@
 
 Configurer Firebase Authentication dans votre application Flutter avec support de Google Sign-In et authentification par courriel + mot de passe.
 
-ATTENTION Google SignIn n'est pas supporté sur Windows.
+ATTENTION Google SignIn n'est pas supporté sur une application Flutter qui s'exécut esur Windows Desktop.
 
 ## À faire 🛠️
 
