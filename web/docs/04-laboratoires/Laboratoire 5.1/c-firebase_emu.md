@@ -38,11 +38,7 @@ Si la commande d'avant n'a pas complété ou pour changer les ports, vous devrez
 firebase init emulators
 ```
 
-Il vous proposera de sélectionner les émulateurs à prendre, sélectionnez:
-- Authentication Emulator
-- Functions Emulator (utile pour les notifications)
-- Firestore Emulator (notre base de données)
-- Storage Emulator (pour les images)
+Il vous proposera de sélectionner les émulateurs à prendre, sélectionnez: Authentication Emulator. Nous activerons les prochains lorsque nous en aurons besoin.
 
 Choisissez les ports par défaut pour les services.
 
