@@ -7,6 +7,8 @@ hide_table_of_contents: true
 
 :::tip Avant la séance
 
+Afin de vous introduire au concept de serverless, consultez cette [recette](../03-recettes/../03-recettes/serverless.md).
+
 Explorez d'abord le laboratoire **[⚙️ 5.1A – firebase_setup](../04-laboratoires/Laboratoire%205.1/a-firebase_setup.md)** pour configurer les bases de Firebase.
 
 Ensuite, lisez la documentation de Firebase sur l'authentification **[ici](https://firebase.google.com/docs/auth/flutter/start)** en **20-30 minutes maximum**. L'important est de combiner lecture et expérimentation.
