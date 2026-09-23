@@ -30,7 +30,19 @@ Faites un **COMMIT PUSH**.
 - Cliquez sur **Créer** si nécessaire
 - Allez à l'onglet **Sign-in methods** et activez **Google** (confirmez votre courriel si demandé)
 
-### Étape 3 - Code de détection du status de login
+### Étape 3 - re-télécharger le google-services.json
+
+Le fichier google-services.json a été modifié, il faut donc récupérer le nouveau.
+
+Depuis la console firebase (navigateur), sélectionnez votre projet.
+
+Dans le menu latéral de gauche, cliquez sur l'icône d'engrenage ⚙️ avec Paramètres puis sélectionner "Général".
+
+En déroulant vers le bas, vous devriez voir un panneau correspondant à l'application Android avec un lien vers `google-services.json`.
+
+Téléchargez ce fichier, copier son contenu et utilisez le pour remplacer le contenu du fichier `google-services.json` qui se trouve dans le sous-dossier android dans votre projet.
+
+### Étape 4 - Code de détection du status de login
 
 Dans la classe d'état de votre widget principal:
 - la classe qui `extends State<Xxxxxxxxxxx> {`
@@ -60,7 +72,7 @@ Relancez l'application. Vous devriez voir "User is currently signed out!" dans l
 
 Faites un **COMMIT PUSH**.
 
-### Étape 4 - Ajouter google_sign_in (si pas déjà présent dans le projet voir le pubspec)
+### Étape 5 - Ajouter google_sign_in (si pas déjà présent dans le projet voir le pubspec)
 
 - Allez à https://pub.dev/packages/google_sign_in
 - Copiez la dépendance et ajoutez-la au pubspec.yaml, ou utilisez:
@@ -70,7 +82,7 @@ flutter pub add google_sign_in
 flutterfire configure
 ```
 
-### Étape 5 - Implémenter Google Sign-In
+### Étape 6 - Implémenter Google Sign-In
 
 Ajoutez cette fonction dans votre écran de connexion:
 
@@ -100,7 +112,7 @@ Ajoutez un bouton pour appeler cette fonction. Testez le sign-in Google.
 
 Faites un **COMMIT PUSH**.
 
-### Étape 6 - Configuration pour (Android Google SignIn)
+### Étape 7 - Configuration pour (Android Google SignIn)
 
 Vous recevrez probablement une erreur: `com.google.android.gms.common.api.ApiException: 10`
 
@@ -121,7 +133,7 @@ Après connexion on devrait voir : `User is signed in! <email>` dans la console.
 
 Faites un **COMMIT PUSH**.
 
-### Étape 7 - Ajouter le Sign-Out
+### Étape 8 - Ajouter le Sign-Out
 
 Ajoutez un bouton pour se déconnecter:
 
@@ -142,7 +154,7 @@ Si vous supportez plusieurs plateformes, testez l'application sur chacune des pl
 
 Faites un **COMMIT PUSH**.
 
-### Étape 8 - Accéder à l'utilisateur connecté
+### Étape 9 - Accéder à l'utilisateur connecté
 
 Vous pouvez accéder directement à l'utilisateur avec:
 
