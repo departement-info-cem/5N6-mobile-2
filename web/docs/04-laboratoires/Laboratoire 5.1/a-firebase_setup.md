@@ -88,12 +88,7 @@ Flutterfire est maintenant installé, mais il n'est pas disponible dans le termi
 Depuis le dossier de votre projet Flutter:
 
 ```bash
-flutter pub add firebase_core
-flutter pub add cloud_firestore
-flutter pub add firebase_auth
-flutter pub add google_sign_in
-flutter pub add firebase_storage
-flutter pub add firebase_messaging
+flutter pub add firebase_core cloud_firestore firebase_auth google_sign_in firebase_storage firebase_messaging
 ```
 
 Cela ajoute les librairies clientes de Firebase dans votre projet Flutter. 

@@ -44,8 +44,11 @@ Téléchargez ce fichier, copier son contenu et utilisez le pour remplacer le co
 
 ### Étape 4 - Code de détection du status de login
 
-Dans la classe d'état de votre widget principal:
-- la classe qui `extends State<Xxxxxxxxxxx> {`
+Dans la classe d'état de votre widget principal (probablement nommée `HomePage` si vous ne l'avez pas renommée) :
+
+- Votre curseur sur le nom de la classe
+- Activez le menu des actions de code avec `Ctrl+.`
+- Sélectionnez l'option `Convert to StatefullWidget`
 - avant la fonction build `Widget build(BuildContext context) {`
 
 ajoutez le code suivant dans la fonction `initState()`:
