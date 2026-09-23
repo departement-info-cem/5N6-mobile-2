@@ -73,6 +73,16 @@ firebase login
 dart pub global activate flutterfire_cli
 ```
 
+Flutterfire est maintenant installé, mais il n'est pas disponible dans le terminal.
+
+1. Dans le menu Windows, chercher "Modifier les variables d'environnement pour votre compte"
+2. Dans la section Variables utilisateur pour [votre nom d'utilisateur], chercher `Path` dans la liste, et double cliquer sur l'entrée.
+3. Cliquer sur Nouveau
+4. Entrer `%USERPROFILE%\AppData\Local\Pub\Cache\bin`
+5. Ok, Ok
+6. Redémarrer TOUS les terminaux qui pourrait être ouverts. Il faut aussi redémarrer Visual Studio Code au complet.
+
+
 ### Étape 9 - Ajouter les composants Firebase
 
 Depuis le dossier de votre projet Flutter:
