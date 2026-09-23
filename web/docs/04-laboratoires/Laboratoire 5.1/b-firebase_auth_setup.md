@@ -85,7 +85,24 @@ flutter pub add google_sign_in
 flutterfire configure
 ```
 
-### Étape 6 - Implémenter Google Sign-In
+### Étape 6 - Configuration pour (Android Google SignIn)
+
+Vous recevrez probablement une erreur: `com.google.android.gms.common.api.ApiException: 10`
+
+- Ouvrez un terminal dans le dossier de votre projet Flutter
+- Entrez dans le dossier android
+- Tapez `./gradlew signinReport` (ou `gradle signinReport` parfois)
+- Copiez la valeur du **SHA1** que vous trouverez dans la sortie du terminal
+
+Retournez à la console Firebase:
+- Sélectionnez l'application **Android** du projet
+- Cliquez sur l'engrenage ⚙️
+- Cliquez sur **Ajouter une empreinte**
+- Collez la valeur SHA1 et validez
+
+Réouvrez le projet Flutter et testez à nouveau. Ça devrait fonctionner!
+
+### Étape 7 - Implémenter Google Sign-In
 
 Ajoutez cette fonction dans votre écran de connexion:
 
@@ -113,28 +130,11 @@ Ajoutez cette fonction dans votre écran de connexion:
 
 Ajoutez un bouton pour appeler cette fonction. Testez le sign-in Google.
 
-Faites un **COMMIT PUSH**.
+Redémarrez l'application. Essayez de vous connecter avec votre compte Google. On devrait voir : `User is signed in! <email>` dans la console.
 
-### Étape 7 - Configuration pour (Android Google SignIn)
+Si tout fonctionne, faites un **COMMIT puis PUSH**.
 
-Vous recevrez probablement une erreur: `com.google.android.gms.common.api.ApiException: 10`
 
-- Ouvrez un terminal dans le dossier de votre projet Flutter
-- Entrez dans le dossier android
-- Tapez `./gradlew signinReport` (ou `gradle signinReport` parfois)
-- Copiez la valeur du **SHA1** que vous trouverez dans la sortie du terminal
-
-Retournez à la console Firebase:
-- Sélectionnez l'application **Android** du projet
-- Cliquez sur l'engrenage ⚙️
-- Cliquez sur **Ajouter une empreinte**
-- Collez la valeur SHA1 et validez
-
-Réouvrez le projet Flutter et testez à nouveau. Ça devrait fonctionner!
-
-Après connexion on devrait voir : `User is signed in! <email>` dans la console.
-
-Faites un **COMMIT PUSH**.
 
 ### Étape 8 - Ajouter le Sign-Out
 
