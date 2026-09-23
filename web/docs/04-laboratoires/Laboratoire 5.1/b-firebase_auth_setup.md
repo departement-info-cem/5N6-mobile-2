@@ -1,4 +1,4 @@
-# 5.2A – firebase_auth_setup
+# 5.2B – firebase_auth_setup
 
 ## Objectif 🎯
 
