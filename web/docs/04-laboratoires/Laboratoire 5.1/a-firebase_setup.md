@@ -10,7 +10,11 @@ Configurer une application Flutter pour fonctionner avec Firebase (authentificat
 
 Sur l'image il manque Android 34 pour certaines librairies.
 
-Exécutez la commande suivante depuis un terminal `sdkmanager "platforms;android-34" "build-tools;34.0.0"`
+Exécutez la commande suivante depuis un terminal 
+
+```bash
+sdkmanager "platforms;android-34" "build-tools;34.0.0"
+```
 
 ### Étape 1 - Créer un compte Firebase
 
