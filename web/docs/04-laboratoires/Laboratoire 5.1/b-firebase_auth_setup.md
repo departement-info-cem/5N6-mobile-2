@@ -70,30 +70,7 @@ flutter pub add google_sign_in
 flutterfire configure
 ```
 
-### Étape 5 - Configuration de la clé Google
-
-Dans la console Firebase du projet :
-- Cliquez sur **Paramètres** (engrenage) en haut
-- Cliquez sur **Paramètres du projet**
-- Allez à l'onglet **Intégrations Google Cloud** et cliquez sur **Accéder**
-- Dans le Google Cloud Console, allez à **APIs et services** > **Identifiants**
-- Sous "ID clients OAuth 2.0", trouvez l'entrée **Web client (auto created by Google Service)** (PAS Android)
-- Copiez l'**ID Client**
-
-Dans votre `main.dart`, assurez-vous que votre fonction `main()` ressemble à ceci:
-
-```dart
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  GoogleSignIn.instance.initialize();
-  runApp(MyApp());
-}
-```
-
-### Étape 6 - Implémenter Google Sign-In
+### Étape 5 - Implémenter Google Sign-In
 
 Ajoutez cette fonction dans votre écran de connexion:
 
@@ -123,7 +100,7 @@ Ajoutez un bouton pour appeler cette fonction. Testez le sign-in Google.
 
 Faites un **COMMIT PUSH**.
 
-### Étape 7 - Configuration pour (Android Google SignIn)
+### Étape 6 - Configuration pour (Android Google SignIn)
 
 Vous recevrez probablement une erreur: `com.google.android.gms.common.api.ApiException: 10`
 
@@ -144,7 +121,7 @@ Après connexion on devrait voir : `User is signed in! <email>` dans la console.
 
 Faites un **COMMIT PUSH**.
 
-### Étape 8 - Ajouter le Sign-Out
+### Étape 7 - Ajouter le Sign-Out
 
 Ajoutez un bouton pour se déconnecter:
 
@@ -165,7 +142,7 @@ Si vous supportez plusieurs plateformes, testez l'application sur chacune des pl
 
 Faites un **COMMIT PUSH**.
 
-### Étape 9 - Accéder à l'utilisateur connecté
+### Étape 8 - Accéder à l'utilisateur connecté
 
 Vous pouvez accéder directement à l'utilisateur avec:
 
