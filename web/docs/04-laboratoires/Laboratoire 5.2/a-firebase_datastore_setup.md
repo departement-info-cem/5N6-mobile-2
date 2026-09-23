@@ -1,4 +1,4 @@
-# 📦 5.2B – firebase_datastore_setup
+# 📦 5.2A – firebase_datastore_setup
 
 ## Objectif 🎯
 
