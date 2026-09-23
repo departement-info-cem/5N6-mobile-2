@@ -1,4 +1,4 @@
-# ⚙️ 5.2A – firebase_setup
+# ⚙️ 5.1A – firebase_setup
 
 ## Objectif 🎯
 
