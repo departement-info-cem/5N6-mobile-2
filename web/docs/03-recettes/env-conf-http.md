@@ -54,69 +54,14 @@ REST_COUNTRIES_API_KEY=
 C'est assez standard de devoir utiliser un token pour accéder à un service externe. Par contre, ce qui n'est pas standard, c'est de stocker le token sur le client (votre application). La bonne pratique serait de passer par un serveur (ex : .NET Core, SpringBoot, etc.) pour faire les requêtes, pour éviter que n'importe qui puisse récupérer le token et faire des requêtes en votre nom 🥸. La documentation de [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv#security) en fait d'ailleurs mention.
 :::
 
-## 3. Configuration 🧑‍🔧
 
-Maintenant que nous avons terminés de configurer l'environnement,nous sommes prêts à faire nos requêtes HTTP, non? Minute papillon 🦋!
-
-Ça peut arriver que certaines informations soient réutilisées dans différents fichiers. Par exemple, l'URL vers un service externe. Supposons que l'URL du service externe change, c'est assez agaçant de devoir chercher chaque endroit dans le projet qui fait référence à cette URL pour les changer.
-
-Autre cas intéressant : si vous développez un client (ex : React, Flutter) en même temps qu'un serveur REST (ex : .NET Core), comme sera le cas pendant le projet final, vous voudrez souvent vous connecter au serveur de développement local (ex : localhost) au serveur déployé sur internet (ex : monprojet.com). Encore là, c'est important de pouvoir modifier l'URL du serveur à un seul endroit.
-
-La structure de fichiers que nous allons ajouter ressemble à celle-ci : 
-
-```
-lib/
-└── config/
-    └── app_config.dart
-
-config/
-└── dev.json
-```
-
-### 3.1 `config/dev.json` 👶
-
-C'est ici que nous allons stocker les données. Ajoutez l'URL vers le point de terminaison de l'API.
-
-```json
-{
-  "API_URL": "https://api.restcountries.com",
-  "ENVIRONMENT": "dev"
-}
-```
-
-Pour notre cas, nous avons tout ce dont nous avons besoin, mais nous pourrions ajouter d'autres fichiers json au même endroit pour ajouter d'autres configurations. Ex : `prod.json` qui contiendrait la même structure que `dev.json`, mais avec d'autres valeurs.
-
-### 3.2 `lib/config/config.dart` 🎯
-
-Notre code dart ne peut pas directement lire le contenu du fichier json. C'est pourquoi `config.dart` fait l'intermédiaire entre les deux.
-
-```dart
-class AppConfig {
-  static const countryApiUrl = String.fromEnvironment(
-    'API_URL',
-    defaultValue: 'https://api.restcountries.com',
-  );
-
-  static const environment = String.fromEnvironment(
-    'ENVIRONMENT',
-    defaultValue: 'dev',
-  );
-}
-```
-
-Quand nous allons vouloir obtenir une de ces valeurs dans notre code dart, il faudra simplement faire comme suit, par exemple : 
-
-```dart
-final url = '${AppConfig.countryApiUrl}/countries/v5?q=peru&pretty=1';
-```
-
-## 4. Base HTTP
+## 3. Base HTTP
 
 Bon finalement! Nous nous lançons!
 
 [DIO](https://pub.dev/packages/dio) est une bibliothèque Dart pour envoyer des requêtes HTTP. Vous créez un client `dio` et appelez directement ses méthodes `get`, `post`, etc.
 
-### 4.1 Dépendance 🚬
+### 3.1 Dépendance 🚬
 
 Depuis le dossier de votre projet Flutter, ajoutez `dio` :
 
@@ -124,7 +69,7 @@ Depuis le dossier de votre projet Flutter, ajoutez `dio` :
 flutter pub add dio
 ```
 
-### 4.2 Architecture 📐
+### 3.2 Architecture 📐
 
 Puisque vous commencez à savoir ce qu'est une requête HTTP, nous allons surtout nous concentrer sur l'architecture de notre application. Notre objectif sera d'avoir une première version viable, que nous allons ensuite retravailler.
 
@@ -144,7 +89,7 @@ lib/
 
 Voici le contenu des nouveaux fichiers. **Prenez le temps de les lire, surtout les commentaires plutôt que de simplement copier-coller**.
 
-### 4.3 `lib/network/api_client.dart` 🛜
+### 3.3 `lib/network/api_client.dart` 🛜
 
 ```dart
 class CountryApiClient {
@@ -173,7 +118,7 @@ class CountryApiClient {
 }
 ```
 
-### 4.4 `lib/services/country_service.dart` 🐕‍🦺
+### 3.4 `lib/services/country_service.dart` 🐕‍🦺
 
 Le service utilise `CountryApiClient` pour effectuer ses appels de service.
 
@@ -194,7 +139,7 @@ class CountryService {
 }
 ```
 
-### 4.5 `lib/pages/country_search_page.dart`
+### 3.5 `lib/pages/country_search_page.dart`
 
 Prenons cette interface graphique : 
 
@@ -283,7 +228,7 @@ void _getCountryDetailsThen() {
 
 Il n'y a pas toujours une façon de faire qui est meilleure que l'autre. Tout dépend du contexte et de ce qu'on veut faire avec le résultat.
 
-### 5. HTTP, mais mieux!
+### 4. HTTP, mais mieux!
 
 Maintenant que nous avons un minimum viable, nous allons rendre notre code pour qu'il soit plus résilient.
 

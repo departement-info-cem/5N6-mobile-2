@@ -1,0 +1,36 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DEV",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=ENV=android_dev"
+            ]
+        },
+        {
+            "name": "PROD",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=ENV=prod"
+            ]
+        },
+        {
+            "name": "configuration_demo (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "configuration_demo (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

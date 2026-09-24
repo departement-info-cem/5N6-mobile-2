@@ -21,7 +21,9 @@ Quelques règles :
 - Cochez seulement **android**.
 - Une nouvelle fenêtre va s'ouvrir. Vous pouvez resélectionner le profil **Mobile** au besoin.
 - La création des fichiers et dossiers de départ peut prendre quelques secondes.
-- Lancez le projet pour vous assurer que tout fonctionne.
+- Lancez le projet pour vous assurer que tout fonctionne. Pour y arriver, vous avez 2 options. Nous allons privilégier la première pour le reste de la session :
+1. Dans Visual Studio Code, allez dans l'onglet ![Ctrl+Maj+D](./_tape-le-lapin/debug.png), et sélectionnez **créer un fichier launch.json**. Vous pourrez à tout moment lancer votre projet avec la touche `F5` ou en retournant dans ![Ctrl+Maj+D](./_tape-le-lapin/debug.png).
+2. Dans un terminal qui est positionné à la racine de votre projet, lancer la commande flutter run. Attention, votre émulateur ou appareil Android doit être démarré et connecté pour que Flutter le choisisse comme périphérique sur lequel lancer le projet. 
 - Commit + push
 
 :::tip
