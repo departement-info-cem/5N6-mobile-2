@@ -26,6 +26,22 @@ const config = {
     locales: ["fr"],
   },
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com',
+      rel: 'preconnect',
+    },
+    {
+      href: 'https://fonts.gstatic.com',
+      rel: 'preconnect',
+      crossorigin: 'anonymous',
+    },
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap',
+      rel: 'stylesheet',
+    },
+  ],
+
   markdown: {
     mermaid: true,
     hooks: {
@@ -58,6 +74,12 @@ const config = {
       require.resolve("./plugins/docs-metadata"),
       {
         docsDir: "docs/01-cours",
+      },
+    ],
+    [
+      require.resolve("./plugins/quiz"),
+      {
+        // Par défaut, utilise le serveur de courtage public gratuit de PeerJS.
       },
     ],
   ],
