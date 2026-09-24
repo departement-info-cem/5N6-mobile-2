@@ -118,3 +118,7 @@ Les variables sont maintenant disponibles via `ConfigFactory.create()`.
 final AppConfig config = ConfigFactory.create();
 con
 ```
+
+### Le mot de la fin
+
+Un projet de référence de ce qui a été démontré dans cette recette est disponible [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-configuration_demo.zip).
