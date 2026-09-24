@@ -116,7 +116,6 @@ Les variables sont maintenant disponibles via `ConfigFactory.create()`.
 
 ```dart
 final AppConfig config = ConfigFactory.create();
-con
 ```
 
 ### Le mot de la fin
