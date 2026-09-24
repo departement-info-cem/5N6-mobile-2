@@ -18,7 +18,7 @@ Suivez le laboratoire **[🔐 5.1B – firebase_auth_setup](../04-laboratoires/L
 **Attention:** Les étapes de configuration Android doivent être répétées sur chaque nouveau poste de travail.
 
 Nous ne voulons pas écrire directement sur les vrais serveurs de Firebase quand on est en développement. Nous allons donc utiliser la
-suite d'émulateurs de firebase. Pour cela suivre le laboratoire **[🔐 5.1C – firebase_emulateurs](../04-laboratoires/Laboratoire%205.1/c-firebase_emu.md)**
+suite d'émulateurs de firebase. Pour cela suivre le laboratoire **[🔐 5.1C – firebase_emulateurs](../03-recettes/emulateurs_firebase.md)**
 
 Optionnel : Explorez l'authentification par mot de passe dans la **[documentation officielle](https://firebase.google.com/docs/auth/flutter/password-auth)**.
 

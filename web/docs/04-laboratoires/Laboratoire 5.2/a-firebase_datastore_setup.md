@@ -17,22 +17,13 @@ Valider que la librairie cliente est installée.
 
 ```bash
 flutter pub add cloud_firestore
-flutterfire configure
 ```
 
-Faites un **COMMIT PUSH**.
+Configurez l'émulateur pour Firestore. La recette pour les émulateurs est disponible [ici](../../03-recettes/emulateurs_firebase.md).
 
-### Étape 2 - Création d'une base de données Firestore
+Faites un **COMMIT + PUSH**.
 
-- Allez dans la console Firebase
-- Sélectionnez votre projet
-- Dans le panneau à gauche, cliquez sur **Firestore Database**
-- Cliquez sur **Créer une base de données**
-- Sélectionnez le **mode test** (permet de lire/écrire sans règles de sécurité)
-- Continuez les étapes suivantes
-- Cliquez sur **Créer**
-
-### Étape 3 - Tester l'accès à Firestore 
+### Étape 2 - Tester l'accès à Firestore 
 
 Pour vérifier que tout fonctionne correctement:
 
@@ -68,7 +59,7 @@ MaterialButton(
 
 **COMMIT et PUSH**.
 
-### Étape 4 - Comprendre la structure Firestore
+### Étape 3 - Comprendre la structure Firestore
 
 Firestore est **orienté documents**, pas relationnel comme SQL:
 
@@ -89,7 +80,7 @@ users/
   └── user2 (document)
 ```
 
-### Étape 5 - Créer une collection manuellement
+### Étape 4 - Créer une collection manuellement
 
 Dans la console Firestore:
 - Cliquez sur **+ Créer une collection**
@@ -104,7 +95,7 @@ Dans la console Firestore:
 
 Ajoutez quelques documents à votre collection pour tester.
 
-### Étape 6 - Accéder aux données en Flutter
+### Étape 5 - Accéder aux données en Flutter
 
 Dans un StatefulWidget, créez une méthode pour récupérer les données:
 
@@ -245,6 +236,18 @@ final snapshot = await query.get();
 ```
 
 Testez différentes requêtes pour comprendre le fonctionnement.
+
+### Étape 10 - Création d'une base de données Firestore
+
+Nous avons utilisé un émulateur, mais pour utiliser la vrai base de données Firebase :
+
+- Allez dans la console Firebase
+- Sélectionnez votre projet
+- Dans le panneau à gauche, cliquez sur **Firestore Database**
+- Cliquez sur **Créer une base de données**
+- Sélectionnez le **mode test** (permet de lire/écrire sans règles de sécurité)
+- Continuez les étapes suivantes
+- Cliquez sur **Créer**
 
 ### Points clés à retenir
 
