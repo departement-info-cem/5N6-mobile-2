@@ -49,7 +49,7 @@ Complétez les laboratoires dans l'ordre:
 
 1. **[⚙️ A – firebase_setup](../04-laboratoires/Laboratoire%205.1/a-firebase_setup.md)** - Configuration de base
 2. **[🔐 B – firebase_auth_setup](../04-laboratoires/Laboratoire%205.1/b-firebase_auth_setup.md)** - Authentification Google et par courriel
-3. **[🔐 C – firebase_emulators](../04-laboratoires/Laboratoire%205.1/c-firebase_emu.md)** - Authentification Google et par courriel
+3. **[🔐 C – firebase_emulators](../03-recettes/emulateurs_firebase.md)** - Utilisation de l'émulateur
 
 Sinon, travaillez sur votre TP en intégrant l'authentification Firebase.
 
