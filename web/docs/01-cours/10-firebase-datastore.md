@@ -41,7 +41,7 @@ Nous verrons comment utiliser l'émulateur pour éviter de se faire facturer.
 
 ### Exercice intro_datastore
 
-À partir de votre projet de test, complétez le laboratoire **[📦 5.1A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en entier.
+À partir de votre projet de test, complétez le laboratoire **[📦 5.2A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en entier.
 
 Créez une collection de jeux dans Firestore (minimum 2 champs par jeu).
 
@@ -55,7 +55,7 @@ Créez deux pages:
 
 Pour votre application, il va falloir mettre en place un modèle de données.
 
-L'idée est de commencer à réfléchir ici à ce modèle.
+Commencez à réfléchir ici à ce modèle en suivant le laboratoire **[📦 5.2B – firebase_datastore_modelisation](../04-laboratoires/Laboratoire%205.2/b-firebase_datastore_modelisation.md)**.
 
 Pour exemple voici le modèle de l'application MontpetitAmi
 
