@@ -36,34 +36,6 @@ Nous allons utiliser ceux qui ont un ✅. À noter qu'il n'existe pas d'émulate
 
 Par contre l'émulateur `"ui": { "enabled": true, "port": 4000 }` devrait toujours être présent. Ce sera l'interface web qui nous permettra de consulter ce qu'il y a dans nos services.
 
-## Les émulateurs 🤖
-
-### Auth Emulator 🪪
-
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"auth": { "port": 9099 },` pour activer l'émulateur.
-
-C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
-
-### Firestore Emulator 🏪
-
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"firestore": { "port": 8080 },` pour activer l'émulateur.
-
-C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
-
-### Storage Emulator 📁
-
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"storage": { "port": 9199 },` pour activer l'émulateur.
-
-🚧 SECTION EN CONSTRUCTION 🚧
-
-### Function Emulator 🍆
-
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"functions": { "port": 5001 },,` pour activer l'émulateur.
-
-🚧 SECTION EN CONSTRUCTION 🚧
-
-Par contre nous pouvons tout de suite vous dire que ce n'est pas aussi simple que pour les les autres émulateurs.
-
 ## HTTP~~S~~ 🔓
 
 Les émulateurs fonctionnent via HTTP. Or, Android n'accepte plus par défaut ce protocol puisqu'il n'est pas sécuritaire. Nous allons le réactiver **seulement** lorsque nous sommes en développement.
@@ -85,6 +57,8 @@ Le terminal liste l'ensemble des liens disponibles pour accéder à vos émulate
 ## Utiliser les émulateurs sur votre projet
 
 On dit à Flutter si on souhaite utiliser les émulateurs lors de l'éxécution de la fonction d'entrée `main`.
+
+Les détails pour chaques émulateurs sont plus [bas](#les-émulateurs-) dans cette page.
 
 ```dart
 void main() async {
@@ -110,3 +84,41 @@ Future<void> main() async {
   runApp(const MainApp());
 }
 ```
+
+## Les émulateurs 🤖
+
+### Auth Emulator 🪪
+
+Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"auth": { "port": 9099 },` pour activer l'émulateur.
+
+```dart
+await FirebaseAuth.instance.useAuthEmulator(config.emulatorUrl, 9099);
+```
+
+C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
+
+### Firestore Emulator 🏪
+
+Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"firestore": { "port": 8080 },` pour activer l'émulateur.
+
+Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
+
+```dart
+FirebaseFirestore.instance.useFirestoreEmulator(config.emulatorUrl, 8080);`
+```
+
+C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
+
+### Storage Emulator 📁
+
+Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"storage": { "port": 9199 },` pour activer l'émulateur.
+
+🚧 SECTION EN CONSTRUCTION 🚧
+
+### Function Emulator 🍆
+
+Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"functions": { "port": 5001 },,` pour activer l'émulateur.
+
+🚧 SECTION EN CONSTRUCTION 🚧
+
+Par contre nous pouvons tout de suite vous dire que ce n'est pas aussi simple que pour les les autres émulateurs.
