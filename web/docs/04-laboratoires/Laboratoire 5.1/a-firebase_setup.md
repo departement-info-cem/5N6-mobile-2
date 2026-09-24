@@ -82,6 +82,11 @@ Flutterfire est maintenant installé, mais il n'est pas disponible dans le termi
 5. Ok, Ok
 6. Redémarrer TOUS les terminaux qui pourrait être ouverts. Il faut aussi redémarrer Visual Studio Code au complet.
 
+:::tip
+Si `flutterfire configure` ne trouve pas votre projet, suivez les instructions de [Firebase kaputt 🧯](../../03-recettes/firebase-kaputt.md).
+
+Il devrait fonctionner au prochain cours 🙏🙏🙏.
+:::
 
 ### Étape 9 - Ajouter les composants Firebase
 

@@ -49,8 +49,12 @@ Notez bien que nous avons fait la modification dans le dossier `android/app/src/
 Pour démarrer l'ensemble des émulateurs configurés, lancer la commande :
 
 ```bash
-firebase emulators:start
+firebase emulators:start --project id-de-votre-projet
 ```
+
+:::tip
+L'id de votre projet peut être trouvé sur la console Firebase : `https://console.firebase.google.com/u/0/project/id-de-votre-projet/overview`
+:::
 
 Le terminal liste l'ensemble des liens disponibles pour accéder à vos émulateurs.
 
@@ -79,7 +83,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final AppConfig config = ConfigFactory.create();
   if (config.isDev) {
-    await FirebaseAuth.instance.useAuthEmulator(config.emulatorUrl, 9099);
+    await FirebaseAuth.instance.useAuthEmulator(config.emulatorIp, 9099);
   }
   runApp(const MainApp());
 }
@@ -92,7 +96,7 @@ Future<void> main() async {
 Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"auth": { "port": 9099 },` pour activer l'émulateur.
 
 ```dart
-await FirebaseAuth.instance.useAuthEmulator(config.emulatorUrl, 9099);
+await FirebaseAuth.instance.useAuthEmulator(config.emulatorIp, 9099);
 ```
 
 C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
@@ -104,7 +108,7 @@ Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json
 Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
 
 ```dart
-FirebaseFirestore.instance.useFirestoreEmulator(config.emulatorUrl, 8080);`
+FirebaseFirestore.instance.useFirestoreEmulator(config.emulatorIp, 8080);`
 ```
 
 C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
