@@ -149,6 +149,10 @@ const config = {
                 label: `Prof`,
                 href: `https://github.com/departement-info-cem/5N6-mobile-2-prof`,
               },
+              {
+                label: "Proposer une correction",
+                to: "/contribuer",
+              },
             ],
           },
         ],
