@@ -12,7 +12,7 @@ Si par mégarde, ça vous arrive, il faut immédiatement faire une [**rotation**
 
 ### 2.1 `.env` 🏞️
 
-Nous allons ajouter le token dans un fichier `.env` qui n'est qu'une liste de clé=valeur.
+Nous allons ajouter le token dans un fichier `.env` à la racine du projet, qui n'est qu'une liste de clé=valeur.
 
 ```env
 REST_COUNTRIES_API_KEY=VOTRE_CLÉ_ICI!!!
@@ -38,12 +38,12 @@ S'il n'y a aucune clé valeur dans votre fichier `.env`, le lancement de l'appli
 
 ### 2.3 Bonus : `.env.example` 🏞️🏞️
 
-Si jamais vous voulez être gentil avec votre futur vous, vous pouvez créer un fichier `.env.example` qui est une copie de `.env`, mais sans les valeurs. Ainsi c'est plus rapide de savoir quelles tokens vous devez garder. 
+Pour aider les membres de votre équipe, ou votre futur vous, à se rappeler quelles secrets sont requis par le projet, vous pouvez créer un fichier `.env.example` qui est une copie de `.env`, mais sans les valeurs. Ainsi c'est plus rapide de savoir quelles tokens vous devez garder. 
 
 ```env
 REST_COUNTRIES_API_KEY=
 ```
 
 :::tip
-C'est assez standard de devoir utiliser un token pour accéder à un service externe. Par contre, ce qui n'est pas standard, c'est de stocker le token sur le client (votre application). La bonne pratique serait de passer par un serveur (ex : .NET Core, SpringBoot, etc.) pour faire les requêtes, pour éviter que n'importe qui puisse récupérer le token et faire des requêtes en votre nom 🥸. La documentation de [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv#security) en fait d'ailleurs mention.
+C'est assez standard de devoir utiliser un token pour accéder à un service externe. Par contre, ce qui n'est pas standard, c'est de stocker le token sur le client (votre projet flutter). La bonne pratique serait de passer par un serveur (ex : .NET Core, SpringBoot, etc.) pour faire les requêtes, pour éviter que n'importe qui puisse récupérer le token et faire des requêtes en votre nom 🥸. La documentation de [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv#security) en fait d'ailleurs mention.
 :::
