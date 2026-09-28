@@ -1,32 +1,35 @@
 ---
-description: Effectuer une requête HTTP GET avec DIO
+description: Effectuer des requêtes HTTP avec DIO
 ---
 
-# Environnement, Configuration, et HTTP
-
-## 1. Créer le projet 🆕
-
-Dans Visual Studio Code, lancez la palette de commande, et sélectionner `Flutter : Create New Project`. Dans le template à choisir, sélectionnez `Empty Application`.
-
-## 2. Environnement 🪙
-
-
-
-## 3. Base HTTP
-
-Bon finalement! Nous nous lançons!
+# Appels HTTP avec DIO 🙏
 
 [DIO](https://pub.dev/packages/dio) est une bibliothèque Dart pour envoyer des requêtes HTTP. Vous créez un client `dio` et appelez directement ses méthodes `get`, `post`, etc.
 
-### 3.1 Dépendance 🚬
+:::tip Avant de commancer
+Il est recommandé de mettre en place les [secrets](./secret.md) et la [configuration](./configuration.md) avant de se lancer dans cette recette.
+:::
 
-Depuis le dossier de votre projet Flutter, ajoutez `dio` :
+### 1. Dépendances 🚬🚬🚬
+
+Depuis le dossier de votre projet Flutter, ajouter `dio` :
 
 ```bash
 flutter pub add dio
 ```
 
-### 3.2 Architecture 📐
+Ces dépendances seront utiles pour nous aider à passer de résultat requête HTTP à objet Dart.
+
+```bash
+flutter pub add json_annotation
+flutter pub add --dev build_runner json_serializable
+```
+
+:::tip
+Le drapeau `--dev` indique que la dépendance doit être installée uniquement en développement, soit quand un développeur travaille sur l'application. Ces packages ne seront pas inclus dans le paquetage final.
+:::
+
+### 2. Architecture 📐
 
 Puisque vous commencez à savoir ce qu'est une requête HTTP, nous allons surtout nous concentrer sur l'architecture de notre application. Notre objectif sera d'avoir une première version viable, que nous allons ensuite retravailler.
 
@@ -34,14 +37,14 @@ Voici ce que nous vous proposons pour commencer :
 
 ```text
 lib/
-├── config/
-│   └── app_config.dart           // Le même config créé à l'étape #3 
 │── network/
-│   └── api_client.dart           // On centralise le client qui effectue les requêtes. 
-│── pages/                 
-│   └── country_search_page.dart  // Page qui va afficher le résultat des appels.
-└── services/                     // Services qui effectuent les requêtes HTTP
-    └── country_service.dart          
+│   └── api_client.dart                    // On centralise le client qui effectue les requêtes. 
+│   └── dto/                               // Classes de transfert
+│       └── country_details_response.dart
+│── pages/
+│   └── country_search_page.dart           // Page qui va afficher le résultat des appels.
+└── services/                              // Regrouper les requêtes HTTP
+    └── country_service.dart
 ```
 
 Voici le contenu des nouveaux fichiers. **Prenez le temps de les lire, surtout les commentaires plutôt que de simplement copier-coller**.
@@ -64,7 +67,6 @@ class CountryApiClient {
         onRequest: (options, handler) {
           options.headers['Authorization'] =
               'Bearer ${dotenv.env['REST_COUNTRIES_API_KEY']}'; // On utilise notre fameux fichier d'environnement
-
           handler.next(
             options,
           ); // Permet à un autre intercepteur d'éventuellement modifier la requête sortante.
@@ -156,11 +158,11 @@ Le fait que getCountryDetails (du service) soit asynchrone force la fonction qui
 
 #### `_getCountryDetailsAwait`
 
-Ici on le propage : _getCountryDetails retourne un type Futur{'<'}> et est async.
+Ici on le propage : la fonction retourne un type `Futur{'<'}>` et est `async`.
 
 ```dart
 Future<void> _getCountryDetailsAwait() async {
-  //
+  // Ressemble à la syntaxe utilisée en C# et en Javascript
   final Response<dynamic> response = await _countryService.getCountryDetails(
     _countryTextController.text,
   );
@@ -170,29 +172,29 @@ Future<void> _getCountryDetailsAwait() async {
 
 #### `_getCountryDetailsThen`
 
-Ici nous avons exactement le même comportement que pour _getCountryDetailsAwait, mais on prend la 2ieme façon de gérer l'appel
-L'asynchronisme est géré directement dans la fonction
-Remarquez que Future{'<'}>, async et await ont disparus
+Ici nous avons exactement le même comportement que pour _getCountryDetailsAwait, mais on prend la 2ieme façon de gérer l'appel. L'asynchronisme est géré directement dans la fonction.
+Remarquez que `Future{'<'}>`, `async` et `await` ont disparus puisque la fonction anonyme pour gérer le retour sera appelée quand l'appel se terminera. 
 
 ```dart 
 void _getCountryDetailsThen() {
-  _countryService.getCountryDetails(_countryTextController.text).then((value,) { // Première ligne exécutée
-    print(value.data); // Troisième ligne exécutée, lorsque l'appel HTTP est terminé
+  // Première ligne exécutée ci dessous
+  _countryService.getCountryDetails(_countryTextController.text).then((
+    value,
+  ) {
+    // Troisième ligne exécutée, lorsque l'appel HTTP est terminé
+    print(value.data);
   });
-  print('allo'); // Deuxième ligne exécutée
+  // Deuxième ligne exécutée
+  print('allo');
 }
 ```
 
 Il n'y a pas toujours une façon de faire qui est meilleure que l'autre. Tout dépend du contexte et de ce qu'on veut faire avec le résultat.
 
-### 4. HTTP, mais mieux!
+:::tip
+Notez que la syntaxe avec `then` existe aussi en [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then).
+:::
 
-Maintenant que nous avons un minimum viable, nous allons rendre notre code pour qu'il soit plus résilient.
+## Mot de la fin
 
-
-
-## Gérer les erreurs
-
-Une requête peut échouer parce que le réseau est indisponible, que le serveur répond avec une erreur ou que l'URL est invalide. Le projet intercepte cette erreur et informe l'utilisateur avec un `SnackBar`.
-
-Utilisez les outils de développement de votre IDE et les journaux de débogage pour examiner l'URL, le code HTTP et le contenu de la réponse.
+Mot de la 

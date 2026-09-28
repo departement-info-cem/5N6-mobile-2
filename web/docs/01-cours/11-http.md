@@ -11,22 +11,19 @@ Ce n'est pas le premier cours où vous allez faire des requêtes HTTP. Si vous a
 
 Si en web service et applications mobiles la librairie à utiliser pour faire des requêtes HTTP était axios et Retrofit, en Flutter c'est [dio](https://pub.dev/packages/dio) que nous allons privilégier.
 
-Consultez, et si possible, exécutez le code des recettes suivantes :
+Puisque nous considérons que vous commencez à être habitués aux requêtes HTTP, nous allons essayer d'aller un peu plus loins pour que ce qui l'entoure soit plus propre.
 
-- [DIO 1 - Requête GET de base](../03-recettes/dio-01-base.md)
-- [DIO 2 - Appel depuis l'interface](../03-recettes/dio-02-objet.md)
-- [DIO 3 - Objet et liste JSON](../03-recettes/dio-03-liste.md)
-- [DIO 4 - POST et cookies](../03-recettes/dio-04-cookie-post.md)
+Consultez, et exécutez le code des recettes suivantes :
 
-Les projets de démonstration sont disponibles dans [code/http](https://github.com/departement-info-cem/5N6-mobile-2/tree/main/code/http).
+- [Configurations 🧑‍🔧](../03-recettes/configuration.md)
+- [Secrets 🤫](../03-recettes/secret.md)
+- [Bruno 🐕](../03-recettes/bruno.md)
+- [Appels HTTP avec DIO 🙏](../03-recettes/http.md)
 :::
 
 :::info Séance
 
-Nous verrons comment 
-- envoyer des requêtes HTTP aux services web avec **DIO**, 
-- convertir les réponses JSON en objets Dart 
-- afficher les résultats dans Flutter.
+Nous verrons la différence entre les secrets vs la configuration.
 
 Complétez les exercices suivants :
 

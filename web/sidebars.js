@@ -199,7 +199,7 @@ const sidebars = {
     {
       type: "doc",
       label: "6.1 - HTTP 👆",
-      id: "cours/dio",
+      id: "cours/http",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.2,

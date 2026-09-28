@@ -10,7 +10,7 @@ Pour notre exemple, nous allons utiliser le service [REST Countries](https://res
 Si par mégarde, ça vous arrive, il faut immédiatement faire une [**rotation**](https://www.cydenti.com/fr/glossary/secret-rotation/). Si ça arrive dans votre vie professionnelle, avertissez votre superviseur dans les plus brefs délais.
 :::
 
-### 2.1 `.env` 🏞️
+## 1. `.env` 🏞️
 
 Nous allons ajouter le token dans un fichier `.env` à la racine du projet, qui n'est qu'une liste de clé=valeur.
 
@@ -26,7 +26,7 @@ Pour éviter que `.env` ne se retrouve dans votre repo git, ajoutons le à votre
 .env
 ```
 
-### 2.2 `flutter_dotenv` 🐦🏞️
+## 2. `flutter_dotenv` 🐦🏞️
 
 Le package [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv) va nous permettre d'utiliser les valeurs qui sont dans `.env` dans notre code.
 
@@ -36,7 +36,7 @@ Suivez les instructions sur la page du package pour compléter son installation.
 S'il n'y a aucune clé valeur dans votre fichier `.env`, le lancement de l'application va échouer.
 :::
 
-### 2.3 Bonus : `.env.example` 🏞️🏞️
+## 3. Bonus : `.env.example` 🏞️🏞️
 
 Pour aider les membres de votre équipe, ou votre futur vous, à se rappeler quelles secrets sont requis par le projet, vous pouvez créer un fichier `.env.example` qui est une copie de `.env`, mais sans les valeurs. Ainsi c'est plus rapide de savoir quelles tokens vous devez garder. 
 
@@ -47,3 +47,7 @@ REST_COUNTRIES_API_KEY=
 :::tip
 C'est assez standard de devoir utiliser un token pour accéder à un service externe. Par contre, ce qui n'est pas standard, c'est de stocker le token sur le client (votre projet flutter). La bonne pratique serait de passer par un serveur (ex : .NET Core, SpringBoot, etc.) pour faire les requêtes, pour éviter que n'importe qui puisse récupérer le token et faire des requêtes en votre nom 🥸. La documentation de [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv#security) en fait d'ailleurs mention.
 :::
+
+### Le mot de la fin
+
+Un projet de référence de ce qui a été démontré dans cette recette est disponible [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-dio_demo.zip).
