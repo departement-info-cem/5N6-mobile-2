@@ -180,45 +180,53 @@ class _CountrySearchPageState extends State<CountrySearchPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              controller: _countryTextController,
-              decoration: InputDecoration(
-                // Si vous voulez tester, le nom des pays doivent être en anglais. "uni" est un bon terme de recherche.
-                hintText: 'Ex : peru', 
-              ),
-            ),
+            _queryTextField(),
             SizedBox(height: 24),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                  onPressed: _getCountryDetailsAwait,
-                  child: Text("Appel avec await"),
-                ),
-                ElevatedButton(
-                  onPressed: _getCountryDetailsThen,
-                  child: Text("Appel avec then"),
-                ),
-              ],
-            ),
+            _searchButtons(),
             SizedBox(height: 16),
-            Expanded(
-              child: ListView.builder(
-                itemCount: _countries.length,
-                itemBuilder: (BuildContext context, int index) => Row(
-                  children: [
-                    Text(
-                      _countries[index].emoji,
-                      style: TextStyle(fontSize: 32),
-                    ),
-                    SizedBox(width: 24),
-                    Flexible(child: Text(_countries[index].description)),
-                  ],
-                ),
-              ),
-            ),
+            _countryListView(),
           ],
         ),
+      ),
+    );
+  }
+
+  Expanded _countryListView() {
+    return Expanded(
+      child: ListView.builder(
+        itemCount: _countries.length,
+        itemBuilder: (BuildContext context, int index) => Row(
+          children: [
+            Text(_countries[index].emoji, style: TextStyle(fontSize: 32)),
+            SizedBox(width: 24),
+            Flexible(child: Text(_countries[index].description)),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Row _searchButtons() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        ElevatedButton(
+          onPressed: _getCountryDetailsAwait,
+          child: Text("Appel avec await"),
+        ),
+        ElevatedButton(
+          onPressed: _getCountryDetailsThen,
+          child: Text("Appel avec then"),
+        ),
+      ],
+    );
+  }
+
+  TextField _queryTextField() {
+    return TextField(
+      controller: _countryTextController,
+      decoration: InputDecoration(
+        // Si vous voulez tester, le nom des pays doivent être en anglais. "uni" est un bon terme de recherche.                hintText: 'Ex : peru',
       ),
     );
   }
