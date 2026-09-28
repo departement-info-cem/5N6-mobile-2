@@ -50,4 +50,4 @@ C'est assez standard de devoir utiliser un token pour accéder à un service ext
 
 ### Le mot de la fin
 
-Un projet de référence de ce qui a été démontré dans cette recette est disponible [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-dio_demo.zip).
+Un projet de référence de ce qui a été démontré dans cette recette est disponible [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-secret.zip).

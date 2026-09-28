@@ -18,9 +18,9 @@ class CountryService {
     );
     dynamic jsonRawContent = response.data!;
     // Regardez le résultat de cette requête dans Bruno pour mieux comprendre ce qui est fait ici
-    return jsonRawContent.data.objects
-        .map((json) => CountryDetailsResponse.fromJson(json))
+    List<dynamic> objects = jsonRawContent["data"]["objects"];
+    return objects
+        .map((dynamic json) => CountryDetailsResponse.fromJson(json["flag"]))
         .toList();
-    ;
   }
 }

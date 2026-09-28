@@ -10,10 +10,10 @@ part 'country_details_response.g.dart';
 
 @JsonSerializable()
 class CountryDetailsResponse {
-  final String name;
-  final String flag;
+  final String description;
+  final String emoji;
 
-  CountryDetailsResponse({required this.name, required this.flag});
+  CountryDetailsResponse({required this.description, required this.emoji});
 
   // Drôle de code! Permet de passer de json à CountryDetailsResponse.
   // Ça utilise une fonction généré dans country_details_response.g.dart

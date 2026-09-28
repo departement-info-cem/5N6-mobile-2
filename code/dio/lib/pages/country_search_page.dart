@@ -28,7 +28,11 @@ class _CountrySearchPageState extends State<CountrySearchPage> {
         _countries = response;
       });
     } on DioException catch (e) {
-      print(e);
+      print(e.error);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.response!.data["errors"][0]["message"])),
+      );
     }
   }
 
@@ -46,8 +50,12 @@ class _CountrySearchPageState extends State<CountrySearchPage> {
             });
           },
           // Ce qu'on fait quand une erreur est survenue
-          onError: (err) {
-            print(err);
+          onError: (e) {
+            print(e);
+            if (!mounted) return;
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(e.response!.data["errors"][0]["message"])),
+            );
           },
         );
     // Deuxième ligne exécutée
@@ -69,8 +77,7 @@ class _CountrySearchPageState extends State<CountrySearchPage> {
             TextField(
               controller: _countryTextController,
               decoration: InputDecoration(
-                hintText:
-                    'Ex : peru', // Si vous voulez tester, le nom des pays doivent être en anglais.
+                // Si vous voulez tester, le nom des pays doivent être en anglais. "uni" est un bon terme de recherche.                hintText: 'Ex : peru',
               ),
             ),
             SizedBox(height: 24),
@@ -81,18 +88,26 @@ class _CountrySearchPageState extends State<CountrySearchPage> {
                   onPressed: _getCountryDetailsAwait,
                   child: Text("Appel avec await"),
                 ),
-
                 ElevatedButton(
                   onPressed: _getCountryDetailsThen,
                   child: Text("Appel avec then"),
                 ),
               ],
             ),
+            SizedBox(height: 16),
             Expanded(
               child: ListView.builder(
                 itemCount: _countries.length,
-                itemBuilder: (BuildContext context, int index) =>
-                    Row(children: [Text(_countries[index].name)]),
+                itemBuilder: (BuildContext context, int index) => Row(
+                  children: [
+                    Text(
+                      _countries[index].emoji,
+                      style: TextStyle(fontSize: 32),
+                    ),
+                    SizedBox(width: 24),
+                    Flexible(child: Text(_countries[index].description)),
+                  ],
+                ),
               ),
             ),
           ],
