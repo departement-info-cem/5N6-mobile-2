@@ -13,5 +13,3 @@ Convertir une réponse JSON complexe en objet Dart typé et afficher ses propri�
 5. Affichez clairement les valeurs retournées à l'écran après l'appel.
 6. Gérez les états chargement et erreur.
 
-Utilisez les recettes [DIO 2 - Appel depuis l'interface](../../03-recettes/dio-02-objet.md) et [DIO 3 - Objet et liste JSON](../../03-recettes/dio-03-liste.md).
-

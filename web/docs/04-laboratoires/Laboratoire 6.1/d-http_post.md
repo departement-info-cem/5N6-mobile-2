@@ -22,5 +22,3 @@ Envoyer un objet JSON avec une requête POST, puis afficher l'objet reçu en ré
 5. Le service retourne le même format. Convertissez cette réponse en objet Dart et affichez ses propriétés dans l'interface.
 6. Interceptez `DioException`; lorsqu'une réponse est disponible, affichez son code HTTP et son contenu pour faciliter le débogage.
 
-Consultez la recette [DIO 4 - POST et cookies](../../03-recettes/dio-04-cookie-post.md).
-

@@ -13,5 +13,3 @@ Effectuer une requête GET avec DIO et afficher le résultat dans une applicatio
 5. Affichez le double retourné dans l'interface, par exemple dans un `Text` ou un `SnackBar`.
 6. Affichez aussi un indicateur de chargement durant l'appel et un message compréhensible lorsqu'une erreur réseau survient.
 
-Consultez la recette [DIO 1 - Requête GET de base](../../03-recettes/dio-01-base.md) avant de commencer.
-

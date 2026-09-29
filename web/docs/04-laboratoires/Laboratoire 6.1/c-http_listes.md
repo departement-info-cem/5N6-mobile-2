@@ -14,5 +14,3 @@ Créez un projet Flutter nommé `http_listes`. Son écran doit être séparé ve
 4. Pour chaque objet, affichez ses deux propriétés simples et le nombre d'éléments de sa liste.
 5. Utilisez un `ListView.builder` pour les deux affichages et prévoyez un état de chargement ou d'erreur pour chaque appel.
 
-Consultez la recette [DIO 3 - Objet et liste JSON](../../03-recettes/dio-03-liste.md).
-

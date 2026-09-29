@@ -14,5 +14,5 @@ Interroger une API publique, afficher une liste d'objets et ouvrir une URL exter
 6. Ajoutez un bouton accessible qui ouvre `html_url` dans le navigateur.
 7. Gérez les états chargement, liste vide et erreur.
 
-Utilisez `url_launcher` pour ouvrir l'URL, puis consultez les recettes [DIO 2 - Appel depuis l'interface](../../03-recettes/dio-02-objet.md) et [DIO 3 - Objet et liste JSON](../../03-recettes/dio-03-liste.md).
+Utilisez `url_launcher` pour ouvrir l'URL.
 
