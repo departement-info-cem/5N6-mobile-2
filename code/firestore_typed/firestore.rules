@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function estEtudiantValide() {
+      return request.resource.data.keys().hasOnly([
+            'nom',
+            'matricule',
+            'dateCreation',
+          ])
+          && request.resource.data.nom is string
+          && request.resource.data.nom.size() >= 2
+          && request.resource.data.matricule is string
+          && request.resource.data.matricule.matches('^[0-9]{7}$')
+          && request.resource.data.dateCreation == request.time;
+    }
+
+    match /etudiants/{etudiantId} {
+      allow read: if true;
+      allow create, update: if estEtudiantValide();
+    }
+  }
+}

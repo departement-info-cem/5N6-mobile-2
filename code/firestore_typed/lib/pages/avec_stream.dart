@@ -1,11 +1,8 @@
-import 'dart:math';
-
-import 'package:firestore_typed/model/pipo.dart';
+import 'package:firestore_typed/model/etudiant.dart';
 import 'package:firestore_typed/nav/tiroir_nav.dart';
 import 'package:firestore_typed/pages/utils.dart';
 import 'package:firestore_typed/service.dart';
 import 'package:flutter/material.dart';
-
 
 // Les différences, il faut wrap le widget final avec un StreamBuilder
 // Par contre pas besoin de initState
@@ -17,49 +14,40 @@ class MaisonStreamPage extends StatefulWidget {
 }
 
 class _MaisonPageState extends State<MaisonStreamPage> {
-
-  Stream<List<Pipo>> monStream = piposCommeUnStream();
+  final Stream<List<Etudiant>> monStream = observerEtudiants();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange[500],
-        title: const Text("Firestore Mama Stream!!"),
+        title: const Text('Étudiants Firestore (flux)'),
       ),
-      drawer: LeTiroir(),
-      // TODO cette fois ci on utilise un StreamBuilder. Il va se mettre à jour tout seul
-      // qund le stream produit une nouvelle valeur (nouvelle liste suite à ajout / suppression / modif)
-      body: StreamBuilder<List<Pipo>>(
+      drawer: const LeTiroir(),
+      body: StreamBuilder<List<Etudiant>>(
         stream: monStream,
-        builder: (BuildContext context, AsyncSnapshot<List<Pipo>> snapshot) {
+        builder:
+            (BuildContext context, AsyncSnapshot<List<Etudiant>> snapshot) {
           if (snapshot.hasError) {
-            print(snapshot.error.toString());
-            return const Text('Reloading');
+            return Text('Erreur de chargement : ${snapshot.error}');
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Text("Loading");
           }
           return ListView(
-            children: snapshot.data!
-                .map( convertisseurDePipo )
-                .toList(),
+            children: snapshot.data!.map(convertirEtudiant).toList(),
           );
         },
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          Pipo pipo = Pipo();
-          pipo.pipi = "Depuis le stream";
-          pipo.popo = DateTime.now();
-          pipo.popi = Random().nextInt(100);
-          await ajoutPipo(pipo);
+          await ajouterEtudiant(
+            const Etudiant(nom: 'Grace Hopper', matricule: '2345678'),
+          );
         },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        tooltip: 'Ajouter un étudiant valide',
+        child: const Icon(Icons.person_add),
+      ),
     );
   }
-
 }

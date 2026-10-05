@@ -1,50 +1,39 @@
-// l'idée est de regrouper tous les accès aux données au même endroit
-// validation avant d'écrire
-// tri, post-traitement etc après lecture
-
-// Doc de référence : https://firebase.google.com/docs/firestore/quickstart?hl=fr
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firestore_typed/model/pipo.dart';
+import 'package:firestore_typed/model/etudiant.dart';
 
-final collectionRef = FirebaseFirestore
-    .instance
-    .collection("pipo")
-    .withConverter(
-  fromFirestore: Pipo.fromFirestore,
-  toFirestore: (Pipo pipo, options) => pipo.toFirestore(),
-);
+class NomCourtException implements Exception {}
 
+class MatriculeSeptException implements Exception {}
 
-Future<void> ajoutPipo(Pipo pipo) async {
-  await collectionRef.add(pipo);
-  return;
-}
+CollectionReference<Etudiant> etudiantsRef() =>
+    FirebaseFirestore.instance.collection('etudiants').withConverter(
+          fromFirestore: Etudiant.fromFirestore,
+          toFirestore: (Etudiant etudiant, options) => etudiant.toFirestore(),
+        );
 
-Future<List<Pipo>> piposSous50() async {
-  QuerySnapshot<Pipo> requete = await collectionRef
-      .where("popi", isLessThanOrEqualTo: 50)
-      .get();
-  return _convertirRequeteEnListe(requete);
-}
-
-Future<List<Pipo>> piposCommeUneListe() async {
-  QuerySnapshot<Pipo> requete = await collectionRef.get();
-  return _convertirRequeteEnListe(requete);
-}
-
-Stream<List<Pipo>> piposCommeUnStream() {
-  Stream<List<Pipo>> flot = collectionRef.snapshots().map(
-          (QuerySnapshot<Pipo> snappy) => _convertirRequeteEnListe(snappy));
-  return flot;
-}
-
-// methode privée pour convertir de snapshot en bon vieux objets
-List<Pipo> _convertirRequeteEnListe(QuerySnapshot<Pipo> requete) {
-  List<Pipo> resultat = [];
-  for (QueryDocumentSnapshot<Pipo> element in requete.docs) {
-    resultat.add(element.data());
+Future<void> ajouterEtudiant(Etudiant etudiant) async {
+  // d'abord on valide les données
+  if (etudiant.nom.length < 2) {
+    throw NomCourtException();
   }
-  return resultat;
+  if (!RegExp(r'^[0-9]{7}$').hasMatch(etudiant.matricule)) {
+    throw MatriculeSeptException();
+  }
+  // si tout est beau on écrit dans la BD / firestore etc
+  await etudiantsRef().add(etudiant);
+}
+
+Future<List<Etudiant>> obtenirEtudiants() async {
+  final requete = await etudiantsRef().get();
+  return _convertirRequeteEnListe(requete);
+}
+
+Stream<List<Etudiant>> observerEtudiants() {
+  return etudiantsRef().snapshots().map(_convertirRequeteEnListe);
+}
+
+List<Etudiant> _convertirRequeteEnListe(
+  QuerySnapshot<Etudiant> requete,
+) {
+  return requete.docs.map((document) => document.data()).toList();
 }

@@ -1,9 +1,15 @@
+import 'package:firestore_typed/pages/ajout_etudiant.dart';
 import 'package:firestore_typed/pages/avec_stream.dart';
 import 'package:firestore_typed/pages/maison.dart';
 import 'package:flutter/material.dart';
 
 class LeTiroir extends StatefulWidget {
-  const LeTiroir({super.key});
+  const LeTiroir({
+    super.key,
+    this.onEtudiantAjoute,
+  });
+
+  final VoidCallback? onEtudiantAjoute;
 
   @override
   State<LeTiroir> createState() => LeTiroirState();
@@ -34,9 +40,23 @@ class LeTiroirState extends State<LeTiroir> {
             // Then close the drawer
           },
         ),
-
-        // TODO le tiroir de navigation ne peut pointer que vers des
-        // ecran sans paramtre.
+        ListTile(
+          dense: true,
+          leading: const Icon(Icons.person_add),
+          title: const Text('Ajouter un étudiant'),
+          onTap: () async {
+            final navigator = Navigator.of(context);
+            navigator.pop();
+            final ajoutEffectue = await navigator.push<bool>(
+              MaterialPageRoute(
+                builder: (context) => const AjoutEtudiantPage(),
+              ),
+            );
+            if (ajoutEffectue == true) {
+              widget.onEtudiantAjoute?.call();
+            }
+          },
+        ),
         ListTile(
           dense: true,
           leading: const Icon(Icons.ac_unit),

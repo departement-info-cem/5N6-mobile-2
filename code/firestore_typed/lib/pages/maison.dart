@@ -1,7 +1,6 @@
-import 'dart:math';
-
-import 'package:firestore_typed/model/pipo.dart';
+import 'package:firestore_typed/model/etudiant.dart';
 import 'package:firestore_typed/nav/tiroir_nav.dart';
+import 'package:firestore_typed/pages/ajout_etudiant.dart';
 import 'package:firestore_typed/pages/utils.dart';
 import 'package:firestore_typed/service.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +13,7 @@ class MaisonPage extends StatefulWidget {
 }
 
 class _MaisonPageState extends State<MaisonPage> {
-
-  List<Pipo> liste = [];
+  List<Etudiant> liste = [];
 
   @override
   void initState() {
@@ -24,34 +22,28 @@ class _MaisonPageState extends State<MaisonPage> {
   }
 
   void chargerListe() async {
-    this.liste = await piposCommeUneListe();
+    liste = await obtenirEtudiants();
     setState(() {});
   }
 
-  void chargerListeSous50() async {
-    this.liste = await piposSous50();
-    setState(() {});
+  Future<void> ouvrirAjoutEtudiant() async {
+    final ajoutEffectue = await Navigator.of(context).push<bool>(
+      MaterialPageRoute(builder: (context) => const AjoutEtudiantPage()),
+    );
+    if (ajoutEffectue == true) {
+      chargerListe();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange[500],
-        title: const Text("Firestore Mama!!"),
+        title: const Text('Étudiants Firestore'),
         actions: <Widget>[
-          TextButton(
-            child: Text(
-              "<50",
-              style: TextStyle(color: Colors.white),
-            ),
-            onPressed: () {
-              chargerListeSous50();
-            },
-          ),
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.refresh,
               color: Colors.white,
             ),
@@ -61,24 +53,15 @@ class _MaisonPageState extends State<MaisonPage> {
           )
         ],
       ),
-      drawer: LeTiroir(),
+      drawer: LeTiroir(onEtudiantAjoute: chargerListe),
       body: ListView(
-        children: this.liste.map(
-            convertisseurDePipo
-        ).toList() ,
+        children: liste.map(convertirEtudiant).toList(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          Pipo pipo = Pipo();
-          pipo.pipi = "coucou";
-          pipo.popo = DateTime.now();
-          pipo.popi = Random().nextInt(100);
-          await ajoutPipo(pipo);
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        onPressed: ouvrirAjoutEtudiant,
+        tooltip: 'Ajouter un étudiant',
+        child: const Icon(Icons.person_add),
       ),
     );
   }
-
 }
