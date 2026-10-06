@@ -11,6 +11,8 @@ hide_table_of_contents: true
 
 :::tip Avant la séance :
 
+Consultez la section [Storage Emulator](../03-recettes/emulateurs_firebase#storage-emulator-) de la recette sur les émulateurs. 
+
 ### Version "payante" (nécessite une carte de crédit)
 
 Si vous désirez utiliser Firebase Storage, assurer vous de bien **fixer un maximum de facturation** sur votre carte de crédit.

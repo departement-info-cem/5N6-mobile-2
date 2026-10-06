@@ -242,14 +242,27 @@ const sidebars = {
       className: "examen",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["7.2"] }],
+          "Pierre-Olivier": [{ 1010: podates["8.1"] }],
           Joris: [{ 1020: jddates["7.2"] }],
         },
       },
     },
     {
       type: "doc",
-      label: "8.1 - Déploiement",
+      label: "8.1 - Stockage Firebase 💾",
+      id: "cours/firebase-storage",
+      customProps: {
+        avancementLabel: "TP3",
+        avancement: 0.5,
+        calendrier: {
+          "Pierre-Olivier": [{ 1010: podates["7.2"] }],
+          Joris: [{ 1020: jddates["8.1"] }],
+        },
+      },
+    },
+    {
+      type: "doc",
+      label: "8.2 - Déploiement",
       id: "cours/deploiement",
       customProps: {
         avancementLabel: "TP3",
@@ -262,7 +275,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.2 - Service et validations",
+      label: "9.1 - Service et validations",
       id: "cours/validation",
       customProps: {
         avancementLabel: "TP3",
@@ -275,7 +288,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.1 - Gestion de l'état 💱",
+      label: "9.2 - Gestion de l'état 💱",
       id: "cours/gestion-etat",
       customProps: {
         avancementLabel: "TP3",
@@ -288,7 +301,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.2 - Notifications 🚨",
+      label: "10.1 - Notifications 🚨",
       className: "remise-tp3",
       id: "cours/notification",
       customProps: {
@@ -302,7 +315,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.1 - Intégration 🔨",
+      label: "10.2 - Intégration 🔨",
       id: "cours/integration",
       customProps: {
         avancementLabel: "TP3 - Complété",
@@ -367,19 +380,6 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.2 - Stockage Firebase 💾",
-      id: "cours/firebase-storage",
-      customProps: {
-        avancementLabel: "TP4",
-        avancement: 0.4,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["12.2"] }],
-          Joris: [{ 1020: jddates["12.2"] }],
-        },
-      },
-    },
-    {
-      type: "doc",
       label: "13.1 - Stream Firebase 🚣",
       id: "cours/firebase-stream",
       customProps: {
@@ -394,7 +394,7 @@ const sidebars = {
     {
       type: "doc",
       label: "13.2 - Règles d'accès Firebase 📐",
-      id: "cours/firebase-rules",
+      id: "cours/firebase-ia",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.6,

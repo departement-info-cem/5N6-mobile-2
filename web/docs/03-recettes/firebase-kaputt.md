@@ -12,6 +12,9 @@ lib/
 .firebaserc
 ```
 
+## Dépendance
+
+Avant d'aller plus loin, assurez vous d'avoir installé au moins [`firebase_core`](https://pub.dev/packages/firebase_core), et les packages de firebase qui vous intéresse. Ex : [`cloud_firestore`](https://pub.dev/packages/cloud_firestore), [`firebase_auth`](https://pub.dev/packages/firebase_auth), etc.
 ## `firebase_options.dart`
 
 Normalement cette configuration est générée par Firebase, lorsqu'on connecte notre projet Flutter au projet Firebase. On peut reproduire la structure qui sera utilisée par le fichier généré avec des informations bidons :
@@ -49,11 +52,14 @@ Le nom doit absolument matcher `projectId` dans `firebase_options.dart`
 
 ## fonction `main`
 
-Si ce n'est pas déjà fait, ajoutez cette ligne dans votre fonction `main` : 
+Si ce n'est pas déjà fait, ajoutez ces lignes au début de votre fonction `main` : 
 
 ```dart
+WidgetsFlutterBinding.ensureInitialized();
 await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 ```
+
+Vous devrez rendre la fonction main asynchrone, si ce n'est pas déjà fait.
 
 ## Retour à la normale 😮‍💨
 

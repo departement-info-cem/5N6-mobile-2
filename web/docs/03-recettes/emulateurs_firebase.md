@@ -117,7 +117,33 @@ C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
 
 Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"storage": { "port": 9199 },` pour activer l'émulateur.
 
-🚧 SECTION EN CONSTRUCTION 🚧
+
+Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
+
+```dart
+await FirebaseStorage.instance.useStorageEmulator('10.0.2.2', 9199);
+```
+
+Il faut aussi créer un fichier `storage.rules` à la racine de votre projet qui contient ce contenu : 
+
+```text
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+
+Nous reviendrons sur les détails du contenu de ce fichier dans un éventuel cours.
+
+:::tip
+Contrairement à auth et firestore, cette fonctionnalité est payante. Pour ne pas avoir à payer, vous devrez donc utiliser l'émulateur local.
+
+Pour faire la mise en place en ayant payé, vous pouvez exécuter la commande 
+:::
 
 ### Function Emulator 🍆
 
