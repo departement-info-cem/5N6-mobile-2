@@ -33,8 +33,9 @@ class _HomePageState extends State<HomePage> {
             "id_utilisateur",
           ) // Remplacer par l'id de l'utilisateur connecté
           .child(
-            "photos_profil",
+            "photos_profile",
           ) // On pourrait avoir plusieurs "dossiers" par type d'image à stocker.
+          .child(_selectedImage!.name) // Nom du fichier stocké
           .putFile(io.File(_selectedImage!.path));
     } else {
       const snackBar = SnackBar(

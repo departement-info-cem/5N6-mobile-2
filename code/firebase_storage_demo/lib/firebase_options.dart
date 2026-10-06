@@ -13,7 +13,8 @@ class DefaultFirebaseOptions {
       apiKey: 'demo-api-key',
       appId: '1:1234567890:$platform:0000000000000000',
       messagingSenderId: '1234567890',
-      projectId: 'firebase-storage-demo',
+      projectId: 'demo-firebase-storage-demo',
+      storageBucket: 'demo-firebase-storage-demo.appspot.com',
     );
   }
 }

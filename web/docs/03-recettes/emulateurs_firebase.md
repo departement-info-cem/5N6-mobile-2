@@ -142,7 +142,19 @@ Nous reviendrons sur les détails du contenu de ce fichier dans un éventuel cou
 :::tip
 Contrairement à auth et firestore, cette fonctionnalité est payante. Pour ne pas avoir à payer, vous devrez donc utiliser l'émulateur local.
 
-Pour faire la mise en place en ayant payé, vous pouvez exécuter la commande 
+Pour faire la mise en place en ayant payé, vous pouvez exécuter la commande `flutterfire configure`
+
+Pour faire la mise en place en utilisant uniquement l'émulateur, ajouter cette ligne dans `firebase_options.dart` :
+
+```dart
+return FirebaseOptions(
+  apiKey: 'demo-api-key',
+  appId: '1:1234567890:$platform:0000000000000000',
+  messagingSenderId: '1234567890',
+  projectId: 'demo-firebase-storage-demo',
+  storageBucket: 'demo-firebase-storage-demo.appspot.com', // Cette ligne ici, adapté au nom de votre projet.
+);
+```
 :::
 
 ### Function Emulator 🍆

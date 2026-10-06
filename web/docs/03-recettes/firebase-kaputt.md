@@ -33,6 +33,7 @@ class DefaultFirebaseOptions {
       appId: '1:1234567890:$platform:0000000000000000',
       messagingSenderId: '1234567890',
       projectId: 'demo-notes', // Idéalement, utilisez le nom que votre projet aura. Doit commencer par une lettre, ne pas avoir de majuscules, et idéalement contenir votre nom complet
+      storageBucket: 'demo-notes',
     );
   }
 }
