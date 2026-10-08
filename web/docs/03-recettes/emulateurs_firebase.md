@@ -139,6 +139,18 @@ service firebase.storage {
 
 Nous reviendrons sur les détails du contenu de ce fichier dans un éventuel cours.
 
+Pour que l'émulateur sache où chercher les règles, il faut le spécifier dans `firebase.json` :
+
+```json
+{
+    // Reste de la spécification
+    
+    "storage": {
+        "rules": "storage.rules"
+    }
+}
+```
+
 :::tip
 Contrairement à auth et firestore, cette fonctionnalité est payante. Pour ne pas avoir à payer, vous devrez donc utiliser l'émulateur local.
 
