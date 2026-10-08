@@ -1,5 +1,5 @@
 ---
-description: Envoyer et recevoir des notifications push
+description: Notifications push
 hide_table_of_contents: true
 ---
 

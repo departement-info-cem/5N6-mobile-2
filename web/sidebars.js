@@ -249,24 +249,11 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.1 - Stockage Firebase 💾",
+      label: "8.1 - Stockage Firebase 💾 - Stocker des fichiers",
       id: "cours/firebase-storage",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.5,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["7.2"] }],
-          Joris: [{ 1020: jddates["8.1"] }],
-        },
-      },
-    },
-    {
-      type: "doc",
-      label: "8.2 - Déploiement",
-      id: "cours/deploiement",
-      customProps: {
-        avancementLabel: "TP3",
-        avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["8.1"] }],
           Joris: [{ 1020: jddates["8.1"] }],
@@ -275,11 +262,11 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.1 - Service et validations",
-      id: "cours/validation",
+      label: "8.2 - Déploiement 🤖 - Play Store",
+      id: "cours/deploiement",
       customProps: {
         avancementLabel: "TP3",
-        avancement: 0.7,
+        avancement: 0.6,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["8.2"] }],
           Joris: [{ 1020: jddates["8.2"] }],
@@ -288,11 +275,11 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.2 - Gestion de l'état 💱",
-      id: "cours/gestion-etat",
+      label: "9.1 - Règles de validation sur les champs texte",
+      id: "cours/validation",
       customProps: {
         avancementLabel: "TP3",
-        avancement: 0.9,
+        avancement: 0.7,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["9.1"] }],
           Joris: [{ 1020: jddates["9.1"] }],
@@ -301,12 +288,11 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.1 - Notifications 🚨",
-      className: "remise-tp3",
-      id: "cours/notification",
+      label: "9.2 - Gestion de l'état 💱 et Hero 🦸",
+      id: "cours/gestion-etat",
       customProps: {
         avancementLabel: "TP3",
-        avancement: 1,
+        avancement: 0.9,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["9.2"] }],
           Joris: [{ 1020: jddates["9.2"] }],
@@ -315,10 +301,11 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Intégration 🔨",
-      id: "cours/integration",
+      label: "10.1 - Cloud Functions",
+      className: "remise-tp3",
+      id: "cours/cloud-functions",
       customProps: {
-        avancementLabel: "TP3 - Complété",
+        avancementLabel: "TP3",
         avancement: 1,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["10.1"] }],
@@ -328,11 +315,11 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "10.2 - Interfacer avec une IA",
-      id: "cours/firebase-ia",
+      label: "10.2 - Notifications push",
+      id: "cours/notification",
       customProps: {
         avancementLabel: "TP4 - Créé",
-        avancement: 0.0,
+        avancement: 0,
         calendrier: {
           "Pierre-Olivier": [{ 1010: podates["10.2"] }],
           Joris: [{ 1020: jddates["10.2"] }],
@@ -341,8 +328,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.1 - Travail TP 🏪",
-      id: "cours/integration",
+      label: "11.1 - Notification 2 : le retour - Travail sur le TP",
+      id: "cours/notification-2",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.1,
@@ -354,7 +341,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "11.2 - Multiplateformes et firebase",
+      label: "11.2 - Multiplateforme Firebase (Web)",
       id: "cours/firebase-multi",
       customProps: {
         avancementLabel: "TP4",
@@ -367,7 +354,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.1 - Control d'accès Firebase 💂",
+      label: "12.1 - Règles d'accès Firebase 📐",
       id: "cours/firebase-access-control",
       customProps: {
         avancementLabel: "TP4",
@@ -380,7 +367,20 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "13.1 - Stream Firebase 🚣",
+      label: "12.2 - S'interfacer avec des IA",
+      id: "cours/firebase-ia",
+      customProps: {
+        avancementLabel: "TP4",
+        avancement: 0.4,
+        calendrier: {
+          "Pierre-Olivier": [{ 1010: podates["12.2"] }],
+          Joris: [{ 1020: jddates["12.2"] }],
+        },
+      },
+    },
+    {
+      type: "doc",
+      label: "13.1 - Mode hors ligne",
       id: "cours/firebase-stream",
       customProps: {
         avancementLabel: "TP4",
@@ -393,8 +393,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "13.2 - Règles d'accès Firebase 📐",
-      id: "cours/firebase-ia",
+      label: "13.2 - Intégration 🔨",
+      id: "cours/integration",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.6,
@@ -406,8 +406,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "14.1 - Intégration",
-      id: "cours/integration",
+      label: "14.1 - Travail - Récits utilisateurs",
+      id: "cours/recits-utilisateurs",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.8,
@@ -419,9 +419,9 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "14.2 - Intégration",
+      label: "14.2 - Remise TP4 + Intégration 🔨 - Travail sur le TP",
       className: "remise-tp4",
-      id: "cours/integration",
+      id: "tp/tp4",
       customProps: {
         avancementLabel: "TP4",
         avancement: 1,
@@ -444,7 +444,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "15.2 - Examen Final (20%) ✍️",
+      label: "15.2 - Examen final (20 %) ✍️",
       id: "cours/examen",
       className: "examen",
       customProps: {

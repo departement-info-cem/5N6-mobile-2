@@ -35,3 +35,8 @@ Regardez les exemples de code sur la [gestion d'état](https://github.com/depart
 Pas d'exercices, travaillez sur votre TP.
 
 :::
+
+## Transitions Hero
+
+Complétez cette séance avec la page [Hero](31-hero.md), qui présente les
+transitions animées entre écrans.
