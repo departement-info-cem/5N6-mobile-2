@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 Téléchargez et ouvrez l'exemple [firestore_typed](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-firestore_typed.zip).
 
-Repérez les responsabilités des fichiers suivants :
+Repérez les fichiers suivants :
 
 - `lib/model/etudiant.dart` : le modèle typé et sa conversion vers Firestore;
 - `lib/service.dart` : le seul endroit qui interroge ou écrit dans Firestore;
@@ -32,7 +32,9 @@ Nous utiliserons un étudiant composé d'un nom et d'un matricule :
 - le nom doit contenir au moins deux caractères;
 - le matricule est une chaîne de **exactement sept chiffres**.
 
-Nous appliquerons ces mêmes contraintes dans le service Flutter et dans les règles Firestore. Ces deux validations sont complémentaires.
+Nous appliquerons ces mêmes contraintes avec 2 types de validation complémentaires:
+- dans le service Flutter
+- dans les règles Firestore. 
 
 :::
 
@@ -42,7 +44,17 @@ Nous appliquerons ces mêmes contraintes dans le service Flutter et dans les rè
 
 ## Un seul point d'accès aux données
 
-Un écran ne devrait pas construire une requête Firestore ou manipuler un `Map<String, dynamic>`. Dans la démo, les écrans manipulent plutôt un `Etudiant` et appellent les fonctions du service.
+Un écran ne devrait pas construire une requête Firestore :
+- si on travaille fort à mettre des règles de validation dans le service
+- on ne souhaite pas qu'un appelle direct contourne ces règles.
+
+
+On veut éviter de manipuler un `Map<String, dynamic>`, dans la démo, on utilise plutôt un `Etudiant`:
+- cela permet de s'assurer qu'on ne peut pas faire une typo dans le nom d'un champ
+- `json["non_de_famille"]` compile toujours même si on a une erreur
+- `etudiant.non_de_famille` va échouer à la compilation
+- on détecte les erreurs à la compilation
+- surtout on évite d'écrire dans la BD des champs cassés
 
 <GHCode
   repo="5N6-Mobile-2"
@@ -53,7 +65,9 @@ Le `withConverter` de `service.dart` relie la collection Firestore au modèle. L
 
 `dateCreation` est généré par le serveur avec `FieldValue.serverTimestamp()`;
 une application ne doit pas faire confiance à l'heure de l'appareil pour cette
-information.
+information:
+- un pirate peut changer l'heure de son téléphone
+- mais pas l'heure du serveur Firebase
 
 Le service est aussi l'endroit naturel pour regrouper les écritures, les requêtes, les tris et les traitements après lecture. Ainsi, une règle métier ne doit pas être répétée dans chaque page.
 
@@ -83,12 +97,74 @@ Les règles Firestore sont exécutées par Firebase pour chaque écriture. Elles
 
 Dans cet exemple pédagogique, la lecture est ouverte pour se concentrer sur la validation. Dans une application réelle, ajoutez aussi les contrôles d'authentification et d'autorisation nécessaires. Ne comptez jamais sur les règles pour remplacer les messages de validation de l'interface, ni sur l'interface pour remplacer les règles Firestore.
 
-## Démonstration
+## Déployer les règles Firestore
+
+Le fichier `firestore.rules` devrait contenir les règles:
+- ça permet de les mettre dans le repo de code source
+- d'en assurer le suivi des versions.
+
+Cependant il faut alors déployer les règles dans la console firebase à chaque changement.
+
+À la racine de `firestore_typed`, créez `firebase.json` s'il n'existe pas
+encore. Ne remplacez pas une configuration existante : ajoutez plutôt la
+section `firestore` appropriée.
+
+```json title="firebase.json"
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}
+```
+
+### à faire uniquement si le projet n'est pas déjà configuré
+
+Dans un terminal ouvert à la racine du projet, connectez-vous à Firebase au
+besoin, puis lancez l'initialisation :
+
+```sh
+firebase login
+firebase init
+```
+
+Sélectionnez **Firestore**, choisissez le projet Firebase de la démonstration
+et conservez `firestore.rules` comme fichier de règles. Cette initialisation
+associe le dossier local à votre projet Firebase et complète la configuration
+au besoin.
+
+Avant tout déploiement, vérifiez le projet actif :
+
+```sh
+firebase use
+```
+
+La commande doit afficher le bon projet. 
+
+### Déploiement des règles
+
+Vous pouvez ensuite publier seulement la configuration Firestore :
+
+```sh
+firebase deploy --only firestore
+```
+
+Firebase applique alors le contenu local de `firestore.rules` au projet
+affiché. Vous pouvez ensuite valider le déploiement en regardant les règles dans votre console firebase web.
+
+## Démonstration A TESTER TODO
 
 1. Lancez la démo et ouvrez l'écran **Ajouter un étudiant**. Entrez `Ada Lovelace` et `1234567`, puis enregistrez. L'étudiant est écrit dans la collection `etudiants`.
 2. Essayez ensuite `A` ou `12A4567`. Le service refuse l'écriture et l'écran affiche l'erreur associée au champ incorrect.
-3. Dans la console Firebase, ouvrez **Firestore Database**, puis l'onglet **Règles** et le simulateur de règles. Testez une opération `create` sur `etudiants/un-id` avec un document valide, puis avec `nom: "A"` ou `matricule: "12A4567"`.
-4. Publiez les règles avant de tester avec Firestore. Une écriture invalide envoyée par un autre client est alors refusée par Firebase, même si ce client ne contient pas la validation Dart.
+3. Dans `firestore_typed`, associez le fichier local de règles au bon projet,
+   vérifiez `firebase use`, puis exécutez `firebase deploy --only firestore`.
+4. Dans la console Firebase, ouvrez **Firestore Database**, puis l'onglet
+   **Règles**. Vérifiez que les règles publiées correspondent à
+   `firestore.rules`.
+5. Utilisez le simulateur de règles pour tester une opération `create` sur
+   `etudiants/un-id` avec un document valide, puis avec `nom: "A"` ou
+   `matricule: "12A4567"`. Une écriture invalide envoyée par un autre client
+   est alors refusée par Firebase, même si ce client ne contient pas la
+   validation Dart.
 
 :::note À retenir
 
