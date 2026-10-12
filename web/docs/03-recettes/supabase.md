@@ -2,65 +2,109 @@
 
 ## Supabase, création du projet
 
-Une fois que votre compte est créé, et que vous êtes connecté. 
+Naviguez sur [la page de connexion de Supabase](https://supabase.com/dashboard/sign-in). Nous vous recommendons de vous connecter avec votre compte GitHub. 
 
+<NonVoyant>Les libellés de l'interface de Supabase sont en anglais. Les noms entre guillemets dans les étapes ci-dessous correspondent exactement au texte lu par votre lecteur d'écran.</NonVoyant>
 
-![Capture d'écran du formulaire web « Create a new organization » sur la plateforme Supabase. Deux éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour indiquer les étapes à suivre : Le champ de saisie de texte « Name », dans lequel la valeur « SuperProjet » est inscrite. Le bouton vert de validation « Create organization », situé dans le coin inférieur droit de la boîte de dialogue. Les autres champs visibles sur le formulaire, qui ne sont pas mis en évidence, incluent un menu déroulant « Type of organization » réglé sur « Personal » et un menu déroulant « Plan » défini sur « Free - $0/month ». Le fil d'Ariane en haut de la page indique le parcours de l'utilisateur : « Create an organization > Create a new project > Extend your database ».](_supabase/create2.png)
-  
-![Capture d'écran du formulaire web « Create a new project ». Trois éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour indiquer les étapes à suivre : Le menu déroulant « Organization », dans lequel l'option « SuperProjet » est sélectionnée. Le champ de saisie « Database Password », contenant un mot de passe masqué par des points et souligné d'une ligne verte indiquant que le mot de passe est fort. Le bouton vert de validation « Create new project », situé dans le coin inférieur droit de la fenêtre. Les autres champs visibles sur le formulaire, qui ne sont pas mis en évidence, incluent un champ de texte « Project name » contenant la valeur « jmnadeau's Project » et un menu déroulant « Region » défini sur « East US (North Virginia) ». Le fil d'Ariane en haut de la page indique le parcours de l'utilisateur : « Organization: SuperProjet > Create a new project > Extend your database ».](_supabase/create3.png)
+### Créer l'organisation
 
-![Capture d'écran du tableau de bord d'un projet sur la plateforme Supabase, affichant les paramètres de connexion. Deux éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour indiquer les informations importantes à récupérer : Dans la section « Project API Keys », le champ contenant la clé d'API publique, identifiée par les étiquettes « anon » et « public ». Ce champ contient une longue chaîne de caractères et un bouton « Copy » pour la copier.   Dans la section « Project Configuration », le champ « URL » contenant l'adresse web de l'API du projet (qui se termine par .supabase.co), comprenant également un bouton « Copy ».   Les autres éléments visibles sur la page, qui ne sont pas mis en évidence, incluent des champs masqués pour la clé secrète « service_role » et le « JWT Secret », tous deux dotés d'un bouton « Reveal » pour afficher leur contenu. On y trouve également un menu de navigation latéral à gauche, une bannière annonçant de futures modifications des clés d'API, ainsi que des messages d'aide sous les rubriques « While you wait » et « Not working? ». Le menu de navigation supérieur indique que l'utilisateur consulte le projet « jmnadeau's Project » au sein de l'organisation « SuperProjet » avec un forfait « Free ».](_supabase/create4.png)
+Sur la page « Create a new organization » :
 
-![Capture d'écran du tableau de bord d'un projet sur la plateforme Supabase, affichant les informations de connexion à l'API. Trois éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour guider l'utilisateur :   Dans la section « Project API », le champ « Project URL » qui contient l'adresse web de l'API (se terminant par .supabase.co) et un bouton « Copy » pour la copier.   Juste en dessous, le champ « API Key », identifié par les étiquettes « anon » et « public », qui contient la longue chaîne de caractères de la clé publique de l'API et est également muni d'un bouton « Copy ».   L'onglet textuel « Dart », situé juste en dessous des clés d'API et à côté de l'onglet « Javascript », qui sert à sélectionner le langage de programmation pour l'exemple de code d'initialisation affiché au bas de la page.   Les autres éléments visibles sur la page, qui ne sont pas mis en évidence, comprennent un bloc d'exemple de code Javascript, un menu de navigation latéral à gauche, et une section intitulée « Connecting to your new project » contenant des liens vers la documentation et les paramètres de l'API. Dans la partie supérieure, on trouve des boutons pour explorer d'autres fonctionnalités (Explore Auth, Explore Storage, Explore Functions, Explore Realtime) ainsi qu'un menu indiquant que le projet actuel est « jmnadeau's Project » au sein de l'organisation « SuperProjet ».](_supabase/create5.png)
+1. Dans le champ **Name**, inscrivez le nom de votre organisation (par exemple `SuperProjet`).
+2. Laissez **Type of organization** à « Personal » et **Plan** à « Free - $0/month ».
+3. Cliquez sur le bouton **Create organization**.
+4. Vous aboutissez sur la page de création de projet.
 
-![Capture d'écran de la section « Project API » de la plateforme Supabase. Un élément principal est spécifiquement mis en évidence par un grand encadré rouge pour attirer l'attention :   Le bloc de code source situé sous l'onglet « Dart », qui fournit un exemple d'initialisation du client Supabase. Ce code définit d'abord les constantes supabaseUrl (avec l'URL du projet) et supabaseKey, puis appelle la méthode Supabase.initialize avec ces paramètres dans la fonction asynchrone main() avant de lancer l'application via runApp(MyApp());.   Les autres éléments visibles sur la page, situés au-dessus du code et non mis en évidence, comprennent les champs contenant les informations de connexion : le champ « Project URL » affichant l'adresse de l'API, et le champ « API Key » (identifié par les étiquettes « anon » et « public ») affichant la clé publique. Ces deux champs sont accompagnés d'un bouton « Copy ». Enfin, juste au-dessus du bloc de code, on aperçoit les onglets de sélection du langage « Javascript » et « Dart », l'onglet « Dart » étant actuellement sélectionné.](_supabase/create6.png)
+### Créer le projet
+
+Sur la page « Create a new project » :
+
+1. Dans la liste **Organization**, vérifiez que l'organisation créée à l'étape précédente est sélectionnée.
+2. Vous pouvez **Connect to GitHub**, mais ce n'est pas nécessaire pour l'usage que nous allons en faire dans ce projet.
+3. Dans le champ **Project name**, donnez un nom à votre projet.
+4. Dans le champ **Database Password**, inscrivez un mot de passe fort et conservez-le en lieu sûr. <NonVoyant>La robustesse du mot de passe est indiquée seulement par une ligne de couleur sous le champ. Le lien « Generate a password », situé près du champ, produit un mot de passe fort automatiquement.</NonVoyant>
+5. Laissez la **Region** proposée (par exemple « Americas »).
+6. Les options de sécurité à cocher n'importent pas pour notre cas.
+7. Cliquez sur le bouton **Create new project**. La création du projet peut prendre quelques minutes.
+
+### Récupérer l'URL et la clé du projet
+
+1. Dans la zone du haut, cliquez sur le bouton vert **Connect**. <NonVoyant>Le raccourci avec les touches `o` puis `c` fonctionne aussi.</NonVoyant> Un panneau devrait souvrir à droite de l'écran.
+2. Sélectionnez l'option **Framework - Use a client library** si ce n'est pas déjà fait.
+3. Dans le menu à dérouler pour choisir le framework, sélectionnez **Flutter**.
+4. Suivez les instructions, donc l'installation du package `supabase_flutter` et pour le fichier `lib/main.dart`.
+
+:::tip
+Les valeurs fournies ne devraient pas se retrouver directement dans `main`. Pour un projet propre, extrayez la valeur de `url` dans une [configuration](./configuration.md), et celle de `anonKey` dans des [secrets](./secret.md). 
+:::
+
 
 ## Supabase, configurer les droits d'accès
 
-#### Ajouter les droits pour les buckets 
+Il faut créer deux politiques d'accès (*policies*) : une pour les buckets et une pour les objets (les fichiers) qu'ils contiennent.
 
-![Capture d'écran du tableau de bord du projet « StorageTest » sur la plateforme Supabase. Un élément est spécifiquement mis en évidence par un rectangle rouge pour indiquer l'action à effectuer :   L'onglet « Storage » dans le menu de navigation latéral situé sur le côté gauche de l'écran.   Les autres éléments visibles sur la page, qui ne sont pas mis en évidence, comprennent le reste du menu de navigation avec des options telles que « Table Editor », « Database » et « Authentication ». Dans la zone principale à droite, un encart d'information décrit la fonctionnalité de stockage en expliquant qu'elle permet de créer des espaces (buckets) pour stocker et distribuer du contenu numérique, accompagné d'un bouton « About storage ». Le menu supérieur indique que l'utilisateur se trouve dans le projet « StorageTest » au sein de l'organisation « 5N6 ».](_supabase/storage1.png)
-  
-![Capture d'écran de la section « Storage » sur le tableau de bord de la plateforme Supabase. Un élément est spécifiquement mis en évidence par un rectangle rouge pour indiquer l'action à effectuer :   Le lien « Policies », situé dans le panneau de navigation secondaire à gauche, sous la rubrique « CONFIGURATION ».   Les autres éléments visibles dans ce panneau, qui ne sont pas mis en évidence, incluent un bouton « New bucket », un champ de recherche « Search buckets... », et une section « ALL BUCKETS » listant trois espaces de stockage : « 5N6Test » (accompagné d'une étiquette « Public »), « test » et « avatars ». Juste en dessous de l'élément encadré se trouve l'option « Settings ». Le menu de navigation supérieur indique que l'utilisateur se trouve dans le projet « StorageTest » au sein de l'organisation « 5N6 ».](_supabase/storage2.png)
-  
-![Capture d'écran d'une section de l'interface de gestion dédiée aux politiques de sécurité du stockage. Deux éléments situés dans la barre d'en-tête de cette section sont spécifiquement mis en évidence par d'épais rectangles rouges pour indiquer l'endroit où l'utilisateur doit porter son attention ou cliquer :   Dans la partie gauche de l'en-tête, le titre de la section affichant le texte « Policies under storage.buckets », qui est précédé d'une petite icône représentant une boîte.   À l'extrême droite de cette même ligne d'en-tête, le bouton « New policy » permettant de procéder à la création d'une nouvelle politique d'accès.   Sous cet en-tête, d'autres éléments non mis en évidence sont visibles : une ligne affichant une politique d'accès déjà existante intitulée « Everything for all » (accompagnée de la mention « ALL ») avec un bouton de menu à trois points sur sa droite, ainsi qu'une ligne de texte au bas du cadre résumant « 1 policy that target your buckets »e](_supabase/storage3.png)
-  
-![Capture d'écran d'une boîte de dialogue intitulée « Adding new policy to storage.buckets ». Un élément principal est spécifiquement mis en évidence par un épais rectangle rouge pour indiquer l'option à sélectionner : Le bloc d'option situé dans la partie inférieure, intitulé « For full customization » (Pour une personnalisation complète), qui est accompagné du sous-titre « Create a policy from scratch » (Créer une politique à partir de zéro) et d'une icône en forme de bloc-notes avec un crayon. Les autres éléments visibles dans cette fenêtre, qui ne sont pas mis en évidence, incluent un texte d'introduction indiquant « Write rules with PostgreSQL's policies to fit your unique business needs. » (Écrivez des règles avec les politiques de PostgreSQL pour répondre à vos besoins commerciaux uniques). Juste en dessous de ce texte se trouve un autre bloc d'option non encadré, intitulé « Get started quickly » (Commencer rapidement) avec le sous-titre « Create a policy from a template » (Créer une politique à partir d'un modèle). Enfin, dans le coin supérieur droit de la boîte de dialogue, on trouve un bouton « Docs » pour consulter la documentation, à côté d'une icône en forme de croix (X) permettant de fermer la fenêtre.](_supabase/storage4.png)
-  
-![Capture d'écran d'un formulaire de configuration intitulé « Adding new policy to storage.buckets » sur la plateforme Supabase. Cinq éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour guider l'utilisateur dans le paramétrage de cette politique d'accès :   Le champ de saisie « Policy name » (Nom de la politique), dans lequel la valeur « Everything for all » a été inscrite.   Dans la section « Allowed operation » (Opération autorisée), le bouton « ALL » est sélectionné, se démarquant des autres options proposées (SELECT, INSERT, UPDATE, DELETE).   Le menu déroulant « Target roles » (Rôles cibles), qui affiche la mention « Defaults to all (public) roles if none selected ».   Le champ d'éditeur de texte sous « USING expression », où l'expression conditionnelle SQL « true » (écrite en bleu) est insérée à la ligne 1.   Le bouton vert d'action « Review », situé dans le coin inférieur droit de la fenêtre de dialogue, permettant de réviser les choix avant de finaliser.   Les autres champs et options visibles sur le formulaire, qui ne sont pas mis en évidence, comprennent un éditeur de texte vide pour la section « WITH CHECK expression » et un bouton « View templates » situé juste à côté du bouton de révision. Dans le coin supérieur droit, on trouve également un bouton « Docs » et une croix (X) pour fermer la fenêtre.](_supabase/storage5.png)
-  
-![Capture d'écran d'une boîte de dialogue intitulée « Reviewing policy to be created on storage.buckets » présentant le code SQL généré avant sa confirmation finale sur la plateforme Supabase. Un élément principal est spécifiquement mis en évidence par un épais rectangle rouge pour indiquer l'action à effectuer :   Le bouton vert de validation « Save policy », situé dans le coin inférieur droit de la fenêtre, permettant de finaliser et d'enregistrer la politique de sécurité.   Les autres éléments visibles dans la fenêtre, qui ne sont pas encadrés, comprennent principalement un bloc de code affichant l'instruction SQL exacte qui sera exécutée : CREATE POLICY "Everything for all" ON "storage"."buckets" AS PERMISSIVE FOR ALL TO public USING (true). Au-dessus de ce code, un texte descriptif indique « Add policy for the ALL operation under the policy "Everything for all" ». Enfin, un bouton « Back to edit » se trouve juste à gauche du bouton de sauvegarde pour permettre de modifier les choix précédents, tandis que des boutons « Docs » (pour consulter la documentation) et de fermeture (X) sont placés dans le coin supérieur droit de la boîte de dialogue.](_supabase/storage6.png)
+### Ajouter les droits pour les buckets
 
-#### Ajouter les droits pour les objets (images) dans les buckets
+1. Dans le menu de navigation principal à gauche, cliquez sur **Storage**. <NonVoyant>Ce menu peut n'afficher que des icônes; chaque lien porte tout de même un nom accessible, comme « Storage ».</NonVoyant>
+2. Dans le panneau secondaire de Storage, Files devrait être déjà sélectionn. Sélectionnez la rubrique **Policies** la rubrique.
+3. Repérez la section **Policies under storage.buckets**, puis cliquez sur le bouton **New policy** de cette section.
+4. Dans la boîte de dialogue « Adding new policy to storage.buckets », choisissez l'option **For full customization** (« Create a policy from scratch »).
+5. Remplissez le formulaire :
+   - **Policy name** : `Everything for all`;
+   - **Allowed operation** : sélectionnez **ALL**;
+   - **Target roles** : ne sélectionnez rien (tous les rôles publics sont visés par défaut);
+   - **USING expression** : inscrivez `true`. <NonVoyant>Ce champ est un éditeur de code : placez-y le focus, puis tapez true.</NonVoyant>
+    - **USING CHECK expression** : laissez vide.
+6. Cliquez sur **Review**.
+7. Vérifiez le code SQL affiché, qui doit correspondre à celui-ci, puis cliquez sur **Save policy**.
 
-![Capture d'écran d'une section de l'interface de gestion affichant les politiques de sécurité des objets de stockage. Deux éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour guider l'utilisateur :   Dans le panneau de navigation latéral à gauche, sous la rubrique « CONFIGURATION », le lien textuel « Policies ».   Dans la zone principale de la page, à l'extrême droite de l'en-tête de la section intitulée « Other policies under storage.objects », le bouton « New policy » permettant de créer une nouvelle politique d'accès.   Les autres éléments visibles sur la page, qui ne sont pas mis en évidence, incluent le lien « Settings » situé juste en dessous de « Policies » dans le menu de gauche. Au-dessus de la section principale, un texte explicatif indique : « You may also write policies for the tables under the storage schema directly for greater control ». À l'intérieur de la section contenant le bouton encadré, on trouve une politique existante nommée « Everything for all » (précédée de la mention « ALL ») avec un bouton de menu à trois points sur sa droite, ainsi qu'une ligne d'information au bas du cadre indiquant « 1 policy that are not tied to any buckets ».](_supabase/objects1.png)
-  
-![Capture d'écran d'une boîte de dialogue intitulée « Adding new policy to storage.objects ». Un élément principal est spécifiquement mis en évidence par un épais rectangle rouge pour indiquer l'option à sélectionner :   Le bloc d'option situé dans la partie inférieure, intitulé « For full customization » (Pour une personnalisation complète), qui est accompagné du sous-titre « Create a policy from scratch » (Créer une politique à partir de zéro) et d'une icône représentant un bloc-notes avec un crayon.   Les autres éléments visibles dans cette fenêtre, qui ne sont pas mis en évidence, incluent un texte d'introduction indiquant « Write rules with PostgreSQL's policies to fit your unique business needs. » (Écrivez des règles avec les politiques de PostgreSQL pour répondre à vos besoins commerciaux uniques). Juste en dessous de ce texte se trouve un autre bloc d'option non encadré, intitulé « Get started quickly » (Commencer rapidement) avec le sous-titre « Create a policy from a template » (Créer une politique à partir d'un modèle). Enfin, dans le coin supérieur droit de la boîte de dialogue, on trouve un bouton « Docs » pour consulter la documentation, à côté d'une icône en forme de croix (X) permettant de fermer la fenêtre. ](_supabase/objects2.png)
-  
-![Capture d'écran d'un formulaire de configuration intitulé « Adding new policy to storage.objects » sur la plateforme Supabase. Trois éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour guider l'utilisateur dans le paramétrage de cette politique d'accès :   Le champ de saisie « Policy name » (Nom de la politique), dans lequel la valeur « Everything for all » a été inscrite.   Dans la section « Allowed operation » (Opération autorisée), le bouton « ALL » est sélectionné, se démarquant des autres options proposées (SELECT, INSERT, UPDATE, DELETE).   Le champ d'éditeur de texte sous « USING expression », où l'expression conditionnelle SQL « true » (écrite en bleu) est insérée à la ligne 1.   Les autres champs et options visibles sur le formulaire, qui ne sont pas mis en évidence, comprennent un menu déroulant « Target roles » affichant la mention « Defaults to all (public) roles if none selected », ainsi qu'un éditeur de texte vide pour la section « WITH CHECK expression ». Dans le coin inférieur droit, on trouve un bouton « View templates » et un bouton vert d'action « Review » pour réviser les choix. Dans le coin supérieur droit se situent un bouton « Docs » et une icône en forme de croix (X) pour fermer la fenêtre de dialogue.](_supabase/objects3.png)
+```sql
+CREATE POLICY "Everything for all" ON "storage"."buckets"
+AS PERMISSIVE FOR ALL
+TO public
+USING (true)
+```
+
+### Ajouter les droits pour les objets (images) dans les buckets
+
+1. Toujours dans **Storage** > **Policies**, repérez la section **Other policies under storage.objects**, puis cliquez sur le bouton **New policy** de cette section.
+2. Dans la boîte de dialogue « Adding new policy to storage.objects », choisissez l'option **For full customization** (« Create a policy from scratch »).
+3. Remplissez le formulaire de la même façon que pour les buckets :
+   - **Policy name** : `Everything for all`;
+   - **Allowed operation** : sélectionnez **ALL**;
+   - **Target roles** : ne sélectionnez rien (tous les rôles publics sont visés par défaut);
+   - **USING expression** : inscrivez `true`. <NonVoyant>Ce champ est un éditeur de code : placez-y le focus, puis tapez true.</NonVoyant>
+    - **USING CHECK expression** : laissez vide.
+4. Cliquez sur **Review**, puis sur **Save policy**.
+5. Vérifiez le code SQL affiché, qui doit correspondre à celui-ci, puis cliquez sur **Save policy**.
+
+```sql
+CREATE POLICY "Everything for all" ON "storage"."objects"
+AS PERMISSIVE FOR ALL
+TO public
+USING (true)
+```
+:::warning
+Ces politiques donnent tous les droits à tout le monde. Elles conviennent pour un exercice, mais pas pour une application en production.
+:::
 
 ## Supabase, créer un bucket public
 
-Vous pouvez créer votre bucket de 2 façons
+### Créer le bucket par l'interface
 
-- avec du code
-- avec l'interface de Supabase
+1. Sélectionnez l'onglet **Buckets**.
+2. Cliquez sur le bouton **New bucket**.
+3. Dans la boîte de dialogue « Create storage bucket » :
+   - sous **Name of bucket**, inscrivez le nom du bucket (par exemple `supabucket`). Ce nom ne peut plus être modifié par la suite et n'accepte que des lettres minuscules, des chiffres, des points et des tirets;
+   - activez l'interrupteur **Public bucket**, pour que tout le monde puisse lire les fichiers sans autorisation. <NonVoyant>L'interrupteur est activé lorsque votre lecteur d'écran l'annonce comme coché.</NonVoyant>
+   - Pour un usage ouvert au public, les options **Restrict file size** et **Restrict MIME types** devraient être cochées. Quelqu'un pourrait décider de mettre des **énormes** fichiers de n'importe quels types **louches** dans votre système. Par contre ça supposerait qu'il y aurait une gestion des cas problématiques fait par votre système, en amont. 
+4. Cliquez sur **Create**.
 
-#### Créer le bucket par le code
+:::danger
+Comme c'est indiqué, un bucket public est accessible en lecture sans autorisation, mais les autres opérations (téléversement, suppression) restent soumises aux politiques d'accès créées plus haut.
+:::
 
-```dart
-final supabase = Supabase.instance.client;
-
-await supabase
-        .storage
-        .createBucket('le-nom-de-mon-bucket', BucketOptions(public: true));
-```
-
-#### Créer le bucket par l'interface
-
-![Capture d'écran de la section « Storage » de l'interface de gestion, au sein d'un projet identifié comme « SuperProjet ». Un élément est spécifiquement mis en évidence par un épais rectangle rouge pour indiquer le bouton sur lequel l'utilisateur doit cliquer :   Le bouton « New bucket », doté d'une petite icône d'édition, situé en haut du panneau de navigation secondaire sur le côté gauche.   Les autres éléments visibles dans ce panneau, qui ne sont pas mis en évidence, incluent un champ de recherche contenant le texte de substitution « Search buckets... » et l'en-tête de section « ALL BUCKETS » juste en dessous. À l'extrême gauche de l'écran, on aperçoit une barre de navigation principale avec le logo vert de la plateforme et plusieurs icônes (accueil, table, terminal), et dans l'en-tête supérieur droit, la mention du forfait « Free » associé au projet.](_supabase/bucket1.png)
-  
-![Capture d'écran d'une boîte de dialogue intitulée « Create storage bucket ». Trois éléments sont spécifiquement mis en évidence par d'épais rectangles rouges pour guider l'utilisateur dans le paramétrage :   Le champ de saisie sous « Name of bucket », dans lequel le nom « supabucket » a été inscrit.   L'interrupteur à bascule « Public bucket », qui est activé (en vert) pour indiquer que n'importe qui pourra lire les objets sans autorisation.   Le bouton vert de validation « Save », situé dans le coin inférieur droit de la fenêtre, permettant d'enregistrer et de finaliser la création.   Les autres éléments visibles sur le formulaire, qui ne sont pas mis en évidence, incluent des instructions précisant que le nom du « bucket » ne peut pas être modifié une fois créé et qu'il n'accepte que des lettres minuscules, des chiffres, des points et des tirets. On y trouve également un encart d'avertissement de couleur orange rappelant que les espaces publics ne sont pas protégés en lecture, mais que des politiques de sécurité (RLS) restent nécessaires pour les autres opérations comme le téléversement et la suppression. Enfin, une section repliée intitulée « Additional configuration » et un bouton « Cancel » sont présents dans le bas de la fenêtre de dialogue.](_supabase/bucket2.png)
+Tout est prêt pour que des images puissent être envoyées de votre projet à Supabase.
 
 ## Ajouter une image
 
