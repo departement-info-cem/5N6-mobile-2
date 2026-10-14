@@ -1,16 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firestore_typed/firebase_options.dart';
 import 'package:firestore_typed/pages/maison.dart';
 import 'package:flutter/material.dart';
 
-// TODO autre page où on accède à la liste realtime
-
-
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  FirebaseFirestore.instance.useFirestoreEmulator('10.0.2.2', 8080);
   runApp(const MyApp());
 }
 
