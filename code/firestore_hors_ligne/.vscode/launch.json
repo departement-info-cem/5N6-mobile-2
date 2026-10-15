@@ -21,13 +21,13 @@
             ]
         },
         {
-            "name": "demo_firestore (profile mode)",
+            "name": "firestore_hors_ligne (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "demo_firestore (release mode)",
+            "name": "firestore_hors_ligne (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

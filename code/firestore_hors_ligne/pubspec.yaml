@@ -1,4 +1,4 @@
-name: demo_firestore
+name: firestore_hors_ligne
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0+1

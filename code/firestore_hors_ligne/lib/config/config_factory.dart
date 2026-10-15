@@ -1,6 +1,6 @@
-import 'package:demo_firestore/config/android_dev_config.dart';
-import 'package:demo_firestore/config/app_config.dart';
-import 'package:demo_firestore/config/prod_config.dart';
+import 'package:firestore_hors_ligne/config/android_dev_config.dart';
+import 'package:firestore_hors_ligne/config/app_config.dart';
+import 'package:firestore_hors_ligne/config/prod_config.dart';
 
 class ConfigFactory {
   static AppConfig create() {

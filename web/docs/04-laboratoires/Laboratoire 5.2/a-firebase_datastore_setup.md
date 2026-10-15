@@ -258,7 +258,7 @@ Nous avons utilisé un émulateur, mais pour utiliser la vrai base de données F
 
 ### Projet récapitulatif
 
-Le projet qui intègre les éléments de ce laboratoire se retrouve [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-demo_firestore.zip).
+Le projet qui intègre les éléments de ce laboratoire se retrouve [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-firestore_hors_ligne.zip).
 
 ### Points clés à retenir
 

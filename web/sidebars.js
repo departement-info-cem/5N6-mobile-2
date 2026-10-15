@@ -381,7 +381,7 @@ const sidebars = {
     {
       type: "doc",
       label: "13.1 - Mode hors ligne",
-      id: "cours/firebase-stream",
+      id: "cours/firebase-hors-ligne",
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.5,

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_firestore/config/app_config.dart';
-import 'package:demo_firestore/config/config_factory.dart';
-import 'package:demo_firestore/firebase_options.dart';
+import 'package:firestore_hors_ligne/config/app_config.dart';
+import 'package:firestore_hors_ligne/config/config_factory.dart';
+import 'package:firestore_hors_ligne/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:demo_firestore/config/app_config.dart';
+import 'package:firestore_hors_ligne/config/app_config.dart';
 
 class ProdConfig implements AppConfig {
   @override
