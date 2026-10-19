@@ -354,7 +354,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.1 - Règles d'accès Firebase 📐",
+      label: "12.1 - Cybersec et règles d'accès Firebase",
       id: "cours/firebase-access-control",
       customProps: {
         avancementLabel: "TP4",
