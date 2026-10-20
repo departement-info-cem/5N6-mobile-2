@@ -26,7 +26,7 @@ Les développeurs de l’application ont oublié de faire le ménage dans les im
 Essayez de retrouver cette image.
 
 :::tip Indice
-N'hésitez pas à vous référer à [cette section](../../03-recettes/deploiement-android#apk) des notes de cours. Remarquez quel dossier fait quoi dans une archive de `.apk` extraite.
+N'hésitez pas à vous référer à [cette section](../../03-recettes/deploiement-android.md#apk) des notes de cours. Remarquez quel dossier fait quoi dans une archive de `.apk` extraite.
 :::
 
 N'oubliez pas de soumettre le flag ici.
