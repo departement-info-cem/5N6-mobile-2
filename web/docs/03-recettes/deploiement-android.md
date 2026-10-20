@@ -10,7 +10,7 @@ Pour distribuer une application Android, on rencontre principalement deux format
 
 Pour comprendre leur différence, il faut d'abord connaître quelques concepts.
 
-Pour suivre cette recette, nous vous recommendons de télécharger [tape_le_lapin]((https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-tape_le_lapin.zip), et d'ouvrir le projet.
+Pour suivre cette recette, nous vous recommendons de télécharger [tape_le_lapin](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-tape_le_lapin.zip), et d'ouvrir le projet.
 
 ## ABI (Application Binary Interface)
 
@@ -50,7 +50,7 @@ Vous devriez voir, entre autre, ces fichiers :
 ```text
 app-release/
 ├── AndroidManifest.xml  // Même manifest qui se retrouve dans `/android/src/*/AndroidManifest.xml
-├── assets/              // Fichiers bruts lus pendant l’exécution, surtout les assets Flutter
+├── assets/              // Fichiers bruts lus pendant l’exécution, surtout les assets Flutter (ex : images)
 ├── classes.dex          // Code Kotlin et Java compilé pour Android. C'est techniquement possible de le décompiler pour voir le code source qui est derrière!!!
 ├── kotlin               // Métadonnées du langage Kotlin
 ├── lib/                 // Code natif : le moteur Flutter et votre Dart compilé
