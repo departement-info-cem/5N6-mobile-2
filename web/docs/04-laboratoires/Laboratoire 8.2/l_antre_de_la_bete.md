@@ -19,7 +19,7 @@ Il faut commencer par télécharger les outils de décompilation. La plupart ne 
   - Pour utiliser la version avec interface graphique, allez dans l'archive extraite, le répertoire `bin`, et exécuter `jadx-gui.bat`.
   - Pour utiliser la version cli, dans un terminal, allez dans l'archive extraite, le répertoire `bin`, et exécutez `jadx.bat`, suivi du chemin vers le fichier qui vous intéresse. Le manuel est toujours votre meilleur ami avec un CLI. .Vous pouvez l'afficher avec `jadx --help`, ou avec [cette section](https://github.com/skylot/jadx#usage) du repo.
 
-### Drôle de monstre
+### Drôle de monstre 👹
 
 Les développeurs de l’application ont oublié de faire le ménage dans les images utilisées par celle-ci. Il semblerait que l’une d’elles soit assez sensible pour que personne ne doive la voir, sous aucun prétexte.
 
@@ -32,3 +32,7 @@ N'hésitez pas à vous référer à [cette section](../../03-recettes/deploiemen
 N'oubliez pas de soumettre le flag ici.
 
 <NonVoyant>Demandez à votre enseignant de vous lire le texte sur l'image, ou passez la dans un LLM en lui demandant de vous donner le texte qui est sur l'image. La réponse devrait commencer par "CEM".</NonVoyant>
+
+### Serveur compromis 👀
+
+Nous avons oublié de retirer l'URL qui pointe vers notre serveur dans les variables d'environnement. Le problème : le serveur web n'est pas du tout sécurisé et donne accès à des données critiques.
