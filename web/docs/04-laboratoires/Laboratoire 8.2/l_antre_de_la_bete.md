@@ -29,10 +29,12 @@ Essayez de retrouver cette image.
 N'hésitez pas à vous référer à [cette section](../../03-recettes/deploiement-android.md#apk) des notes de cours. Remarquez quel dossier fait quoi dans une archive de `.apk` extraite.
 :::
 
-N'oubliez pas de soumettre le flag ici.
+N'oubliez pas de soumettre le flag [ici](https://ctf.info.cegepmontpetit.ca/challenges#antre_de_la_bete%20-%20monstre_bizzare%20%F0%9F%91%B9-79).
 
 <NonVoyant>Demandez à votre enseignant de vous lire le texte sur l'image, ou passez la dans un LLM en lui demandant de vous donner le texte qui est sur l'image. La réponse devrait commencer par "CEM".</NonVoyant>
 
 ### Serveur compromis 👀
 
 Nous avons oublié de retirer l'URL qui pointe vers notre serveur dans les variables d'environnement. Le problème : le serveur web n'est pas du tout sécurisé et donne accès à des données critiques.
+
+N'oubliez pas de soumettre le flag [ici](https://ctf.info.cegepmontpetit.ca/challenges#antre_de_la_bete%20-%20serveur_compromis%20%F0%9F%91%80-80).
