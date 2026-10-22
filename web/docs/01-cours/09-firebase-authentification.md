@@ -3,7 +3,7 @@ description: Connexion et création de compte
 hide_table_of_contents: true
 ---
 
-# Firebase : comptes et authentification 🔐
+# 5.1 - Firebase : comptes et authentification 🔐
 
 :::tip Avant la séance
 

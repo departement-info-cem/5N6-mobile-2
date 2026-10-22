@@ -186,7 +186,7 @@ const sidebars = {
     {
       type: "doc",
       label: "5.2 - Firebase Firestore 🏪",
-      id: "cours/firebase-datastore",
+      id: "cours/firebase-firestore",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.1,

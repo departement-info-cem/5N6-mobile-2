@@ -15,7 +15,7 @@ Cette approche est assez différente de SQL ou encore Entity Framework.
 
 Consultez la documentation Firestore sur le modèle de données **[ici](https://firebase.google.com/docs/firestore/data-model)** en **15-20 minutes**.
 
-Commencez le laboratoire **[📦 5.2A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en particulier les étapes 1-3.
+Commencez le laboratoire **[📦 5.2A – firebase_firestore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_firestore_setup.md)** en particulier les étapes 1-3.
 
 Regardez ([firestore_typed](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-firestore_typed.zip)**)
 
@@ -39,9 +39,9 @@ Nous verrons comment utiliser l'émulateur pour éviter de se faire facturer.
 
 :::note Exercices
 
-### Exercice intro_datastore
+### Exercice intro_firestore
 
-À partir de votre projet de test, complétez le laboratoire **[📦 5.2A – firebase_datastore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_datastore_setup.md)** en entier.
+À partir de votre projet de test, complétez le laboratoire **[📦 5.2A – firebase_firestore_setup](../04-laboratoires/Laboratoire%205.2/a-firebase_firestore_setup.md)** en entier.
 
 Créez une collection de jeux dans Firestore (minimum 2 champs par jeu).
 
@@ -55,7 +55,7 @@ Créez deux pages:
 
 Pour votre application, il va falloir mettre en place un modèle de données.
 
-Commencez à réfléchir ici à ce modèle en suivant le laboratoire **[📦 5.2B – firebase_datastore_modelisation](../04-laboratoires/Laboratoire%205.2/b-firebase_datastore_modelisation.md)**.
+Commencez à réfléchir ici à ce modèle en suivant le laboratoire **[📦 5.2B – firebase_firestore_modelisation](../04-laboratoires/Laboratoire%205.2/b-firebase_firestore_modelisation.md)**.
 
 Pour exemple voici le modèle de l'application MontpetitAmi
 
