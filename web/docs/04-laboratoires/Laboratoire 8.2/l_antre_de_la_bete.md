@@ -9,15 +9,7 @@
 
 ## À faire 🛠️
 
-### Outils 🔨
-
-Il faut commencer par télécharger les outils de décompilation. La plupart ne sont pas préinstallés sur les postes du CÉGEP.
-
-- [JADX](https://github.com/skylot/jadx) : Décompiler les fichiers `.dex` en code Java lisible, examiner les ressources
-  - Aller sur la [page des Releases](https://github.com/skylot/jadx/releases), télécharger la dernière version qui apparait comme `jadx-x.x.x.zip`.
-  - Extraire le zip
-  - Pour utiliser la version avec interface graphique, allez dans l'archive extraite, le répertoire `bin`, et exécuter `jadx-gui.bat`.
-  - Pour utiliser la version cli, dans un terminal, allez dans l'archive extraite, le répertoire `bin`, et exécutez `jadx.bat`, suivi du chemin vers le fichier qui vous intéresse. Le manuel est toujours votre meilleur ami avec un CLI. .Vous pouvez l'afficher avec `jadx --help`, ou avec [cette section](https://github.com/skylot/jadx#usage) du repo.
+Téléchargez [cet apk](https://info.cegepmontpetit.ca/ctf/antre_de_la_bete.apk).
 
 ### Drôle de monstre 👹
 
