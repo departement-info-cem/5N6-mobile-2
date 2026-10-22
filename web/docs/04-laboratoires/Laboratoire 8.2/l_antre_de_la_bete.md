@@ -35,4 +35,4 @@ N'oubliez pas de soumettre le flag ici.
 
 ### Serveur compromis 👀
 
-Nous avons oublié de retirer l'URL qui pointe vers notre serveur dans les variables d'environnement. Le problème : le serveur web n'est pas du tout sécurisé et donne accès à des données critiques.
+Nous avons oublié de retirer l'URL qui pointe vers notre serveur dans les [secrets](../../03-recettes/secret.md). Le problème : le serveur web n'est pas du tout sécurisé et donne accès à des données critiques.
