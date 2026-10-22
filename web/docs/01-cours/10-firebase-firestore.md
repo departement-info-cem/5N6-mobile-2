@@ -3,7 +3,7 @@ description: Stocker des données
 hide_table_of_contents: true
 ---
 
-# Firebase : stockage des données 📦
+# 5.2 - Firebase : stockage des données 📦
 
 :::tip Avant la séance
 

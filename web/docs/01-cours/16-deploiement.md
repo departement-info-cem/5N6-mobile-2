@@ -3,7 +3,7 @@ description: Déployer sur le Playstore
 hide_table_of_contents: true
 ---
 
-# Déploiement
+# 8.2 - Déploiement 🤖
 
 :::tip Avant la séance :
 

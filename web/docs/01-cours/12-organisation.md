@@ -3,7 +3,7 @@ description: Extraire des widgets
 hide_table_of_contents: true
 ---
 
-# Organisation du code
+# 6.2 - Organisation du code
 
 :::tip Avant la séance :
 

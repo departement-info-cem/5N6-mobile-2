@@ -172,7 +172,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.1 - Authentification Firebase 👮",
+      label: "5.1 - Firebase : Authentification 👮",
       id: "cours/firebase-authentification",
       customProps: {
         avancementLabel: "TP3 - Créé",
@@ -185,7 +185,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "5.2 - Firebase Firestore 🏪",
+      label: "5.2 - Firebase : stockage des données 📦",
       id: "cours/firebase-firestore",
       customProps: {
         avancementLabel: "TP3",
@@ -224,7 +224,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.1 - Formatif ✍️",
+      label: "7.1 - Examen intra formatif ✍️",
       id: "cours/formatif-intra",
       customProps: {
         avancementLabel: "TP3",
@@ -237,7 +237,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "7.2 - Examen Intra (20%) ✍️",
+      label: "7.2 - Examen intra (20%) ✍️",
       id: "cours/examen",
       className: "examen",
       customProps: {
@@ -249,7 +249,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.1 - Stockage Firebase 💾 - Stocker des fichiers",
+      label: "8.1 - Firebase : Stockage de fichiers 💾",
       id: "cours/firebase-storage",
       customProps: {
         avancementLabel: "TP3",
@@ -262,7 +262,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "8.2 - Déploiement 🤖 - Play Store",
+      label: "8.2 - Déploiement 🤖",
       id: "cours/deploiement",
       customProps: {
         avancementLabel: "TP3",

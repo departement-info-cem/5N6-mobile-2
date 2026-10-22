@@ -3,7 +3,7 @@ description: Centraliser les accès Firestore et valider les données
 hide_table_of_contents: true
 ---
 
-# Service et validations
+# 9.1 - Service et validations
 
 <Row>
 

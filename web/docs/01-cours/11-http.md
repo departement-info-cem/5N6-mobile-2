@@ -3,7 +3,7 @@ description: Appels à des WebAPI avec avec DIO
 hide_table_of_contents: true
 ---
 
-# Appels HTTP 👆
+# 6.1 - HTTP 👆
 
 :::tip Avant la séance
 

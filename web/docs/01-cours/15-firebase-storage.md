@@ -3,7 +3,7 @@ description: Stocker des fichiers
 hide_table_of_contents: true
 ---
 
-# Firebase/Supabase: Gestion des images
+# 8.1 - Firebase : Stockage de fichiers 💾
 
 :::tip Avant la séance :
 

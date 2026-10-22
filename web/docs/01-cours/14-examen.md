@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# Examen
+# 7.2 - Examen intra (20%) ✍️
 
 <Row>
 

@@ -2,7 +2,7 @@
 hide_table_of_contents: true
 ---
 
-# Formatif Intra
+# 7.1 - Examen intra formatif ✍️
 
 ## Automne 2026
 
