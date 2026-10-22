@@ -7,9 +7,12 @@ hide_table_of_contents: true
 
 :::tip Avant la séance :
 
+Consultez la documentation sur le [la gestion sématique de version](https://semver.org/lang/fr/).
+
 Consultez les recette suivantes :
 
-- [Déploiement Android 🤖](../03-recettes/deploiement-android.md) 
+- [Déploiement Android 🤖](../03-recettes/deploiement-android.md)
+- [Déploiement Web 🕸️](../03-recettes/deploiement-web.md)
 :::
 
 :::info Séance : Déploiement
