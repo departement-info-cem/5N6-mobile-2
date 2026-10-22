@@ -46,13 +46,13 @@ let podates = {
   "6.1": "2026-09-30",
   "6.2": "2026-10-01",
   "7.1": "2026-10-07",
-  "7.2": "2026-10-08",
-  "8.1": "2026-10-21",
+  "7.2": "2026-10-21",
+  "8.1": "2026-10-08",
   "8.2": "2026-10-22",
   "9.1": "2026-10-28",
-  "9.2": "2026-11-04",
-  "10.1": "2026-11-05",
-  "10.2": "2026-11-11",
+  "9.2": "2026-10-29",
+  "10.1": "2026-11-04",
+  "10.2": "2026-11-05",
   "11.1": "2026-11-12",
   "11.2": "2026-11-18",
   "12.1": "2026-11-19",
@@ -242,7 +242,7 @@ const sidebars = {
       className: "examen",
       customProps: {
         calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["8.1"] }],
+          "Pierre-Olivier": [{ 1010: podates["7.2"] }],
           Joris: [{ 1020: jddates["7.2"] }],
         },
       },
@@ -288,8 +288,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "9.2 - Gestion de l'état 💱 et Hero 🦸",
-      id: "cours/gestion-etat",
+      label: "9.2 - Gestion de l'état 💱 + Cycle de vie 🚲 + Hero 🦸",
+      id: "cours/gestion-etat-cycle-vie-hero",
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.9,
