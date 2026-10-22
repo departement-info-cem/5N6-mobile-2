@@ -95,6 +95,8 @@ Future<void> main() async {
 
 Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"auth": { "port": 9099 },` pour activer l'émulateur.
 
+Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
+
 ```dart
 await FirebaseAuth.instance.useAuthEmulator(config.emulatorIp, 9099);
 ```
@@ -103,7 +105,7 @@ C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
 
 ### Firestore Emulator 🏪
 
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"firestore": { "port": 8080 },` pour activer l'émulateur.
+Assurez vous que cette ligne soit présente dans `emulators` dans `firebase.json` : `"firestore": { "port": 8080 },` pour activer l'émulateur.
 
 Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
 
@@ -115,7 +117,7 @@ C'est tout! Vous pouvez lancer les émulateurs et ça devrait fonctionner.
 
 ### Storage Emulator 📁
 
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"storage": { "port": 9199 },` pour activer l'émulateur.
+Assurez vous que cette ligne soit présente dans `emulators` dans `firebase.json` : `"storage": { "port": 9199 },` pour activer l'émulateur.
 
 
 Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
@@ -171,8 +173,20 @@ return FirebaseOptions(
 
 ### Function Emulator 🍆
 
-Assurez vous que cette ligne soit présente sous `emulators` dans `firebase.json` : `"functions": { "port": 5001 },,` pour activer l'émulateur.
+C'est mieux d'avoir complété l'[ajoute de Cloud Function à votre projet](./cloud-functions.md#ajouter-cloud-functions-à-votre-projet) avant de poursuivre ici.
 
-🚧 SECTION EN CONSTRUCTION 🚧
+Exécutez la commande `firebase init emulator` et sélectionnez l'option **Functions Emulator**.
 
-Par contre nous pouvons tout de suite vous dire que ce n'est pas aussi simple que pour les les autres émulateurs.
+Si pour une raison ou une autre ça ne fonctionne pas, ajoutez cette ligne en dessous de `emulators` dans `firebase.json` :
+
+```json
+"functions": { 
+  "port": 5001 
+}
+```
+
+Pour utiliser l'émulateur incluez cette ligne dans votre `main` : 
+
+```dart
+
+```
