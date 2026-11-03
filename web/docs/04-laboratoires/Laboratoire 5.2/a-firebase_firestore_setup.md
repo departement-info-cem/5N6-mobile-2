@@ -23,7 +23,7 @@ flutterfire configure
 Configurez l'émulateur pour Firestore. La recette pour les émulateurs est disponible [ici](../../03-recettes/emulateurs_firebase.md).
 
 :::tip
-Si `flutterfire configure` ne trouve pas votre projet, suivez les instructions de [Firebase kaputt 🧯](../../03-recettes/firebase-kaputt.md).
+Si `flutterfire configure` ne trouve pas votre projet, suivez les instructions de [Firebase kaputt 🧯](../../03-recettes/emulateurs_firebase.md#firebase-kaputt-).
 
 Il devrait fonctionner au prochain cours 🙏🙏🙏.
 :::

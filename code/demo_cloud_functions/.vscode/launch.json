@@ -5,9 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "demo_cloud_functions",
+            "name": "DEV",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--dart-define=ENV=android_dev"
+            ]
+        },
+        {
+            "name": "PROD",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=ENV=prod"
+            ]
         },
         {
             "name": "demo_cloud_functions (profile mode)",

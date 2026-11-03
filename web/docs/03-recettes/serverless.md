@@ -28,7 +28,7 @@ Des services comme Firebase Auth, Okta, auth0 et entra, pour vous offrent de fai
 
 Votre application cliente n'a donc qu'à envoyer les informations requises, et être capable d'obtenir une réponse, et envoyer le token d'authentification que le service vous renvoie. Tout le reste est géré.
 
-Plusieurs services aggrègent même différents services d'authentification. Par exemple, avec Firebase Aauth, c'est possible de d'offrir à vos utilisateurs de se connecter à partir de :
+Plusieurs services agrègent même différents services d'authentification. Par exemple, avec Firebase Auth, c'est possible d'offrir à vos utilisateurs de se connecter à partir de :
 
 - Courriel + Mot de passe
 - Google SignIn
@@ -43,11 +43,11 @@ Plusieurs services aggrègent même différents services d'authentification. Par
 
 On vous a souvent expliqué que ce n'est normalement pas une bonne idée pour un client de communiquer directement avec une base de données, pour des raisons de sécurité. C'est généralement encore vrai, mais dans certains cas, on arrive à exposer la base de données au client en incluant une couche de sécurité autour.
 
-Avec Firebase Storage, vous allez intéragir directement avec la base de données. C'est un nouveau concept de base de données qui s'appelle "Orienté document", mais nous y renviendons en temps et lieu.
+Avec Cloud Firestore, vous allez interagir directement avec la base de données. C'est un concept de base de données qui s'appelle « orientée document », mais nous y reviendrons en temps et lieu.
 
 ## Fonctions
 
-Les Cloud functions sont, commee son nom l'indique, des fonctions, qui sont exécutées directement. Elles sont beaucoup plus simple que les framework avec lesquels vous avez intéragis, comme .NET Core ou SpringBoot. Ici il n'est pas question de contrôleurs, de services, de Middleware, ou autre.
+Les Cloud Functions sont, comme leur nom l'indique, des fonctions qui sont exécutées sur les serveurs du fournisseur. Elles sont beaucoup plus simples que les frameworks avec lesquels vous avez interagi, comme .NET Core ou SpringBoot. Ici il n'est pas question de contrôleurs, de services, de Middleware, ou autre.
 
 C'est simplement des fonctions qui peuvent être appelées depuis le client, qui peuvent ensuite interagir avec la base de données, et bien plus.
 
