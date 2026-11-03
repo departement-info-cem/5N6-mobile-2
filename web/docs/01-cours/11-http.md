@@ -18,7 +18,7 @@ Consultez, et exécutez le code des recettes suivantes :
 - [Configurations 🧑‍🔧](../03-recettes/configuration.md)
 - [Secrets 🤫](../03-recettes/secret.md)
 - [Bruno 🐕](../03-recettes/bruno.md)
-- [Appels HTTP avec DIO 🙏](../03-recettes/http.md)
+- [Appels HTTP avec DIO 🙏](../03-recettes/appels-http.md)
 :::
 
 :::info Séance
