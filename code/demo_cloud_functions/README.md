@@ -1,6 +1,9 @@
 # demo_cloud_functions
 
-Projet de référence de la [recette Cloud Functions](https://info.cegepmontpetit.ca/5N6-mobile-2/recettes/cloud-functions). Il contient deux fonctions appelables, `helloWorld` et `direBonjour`, et une page Flutter qui les appelle à travers l'émulateur.
+Projet de référence de la [recette Cloud Functions](https://info.cegepmontpetit.ca/5N6-mobile-2/recettes/cloud-functions). L'écran d'accueil donne accès à une démo par bouton :
+
+- **Hello World** : appelle `helloWorld`, puis `direBonjour` avec un paramètre;
+- **Requête authentifiée** : connecte un compte de test dans l'émulateur Auth, puis appelle `monProfil`, qui refuse les utilisateurs non connectés.
 
 Le projet n'est lié à aucun vrai projet Firebase : `lib/firebase_options.dart` est une fausse configuration, et l'identifiant `demo-cloud-functions` (dans `.firebaserc`) commence par `demo-`. L'émulateur démarre donc sans `firebase login`.
 
@@ -28,3 +31,17 @@ firebase emulators:start
 4. Démarrer l'application avec la configuration **DEV** (onglet *Exécuter et déboguer* de Visual Studio Code, puis raccourci `F5`).
 
 Les journaux des fonctions sont visibles dans l'onglet **Logs** de l'interface web des émulateurs : http://localhost:4000.
+
+## Appeler une fonction en ligne de commande
+
+Une fois l'émulateur démarré, dans PowerShell :
+
+```powershell
+Invoke-RestMethod -Method Post -ContentType "application/json" -Body '{"data": {"nom": "Alice"}}' -Uri http://127.0.0.1:5001/demo-cloud-functions/us-central1/direBonjour
+```
+
+Ou avec `curl` (macOS, Linux ou Git Bash) :
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"data": {"nom": "Alice"}}' http://127.0.0.1:5001/demo-cloud-functions/us-central1/direBonjour
+```

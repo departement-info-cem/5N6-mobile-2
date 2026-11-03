@@ -3,6 +3,7 @@ import 'package:demo_cloud_functions/config/app_config.dart';
 import 'package:demo_cloud_functions/config/config_factory.dart';
 import 'package:demo_cloud_functions/firebase_options.dart';
 import 'package:demo_cloud_functions/pages/home_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ Future<void> main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   final AppConfig config = ConfigFactory.create();
   if (config.isDev) {
+    await FirebaseAuth.instance.useAuthEmulator(config.emulatorIp, 9099);
     FirebaseFunctions.instance.useFunctionsEmulator(config.emulatorIp, 5001);
   }
   runApp(const MainApp());

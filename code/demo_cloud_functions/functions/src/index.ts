@@ -18,3 +18,13 @@ export const direBonjour = onCall<{nom?: string}>((request) => {
   logger.info(`Bonjour demandé pour ${nom}`);
   return {message: `Bonjour ${nom}!`, heureServeur: new Date().toISOString()};
 });
+
+export const monProfil = onCall((request) => {
+  // Le SDK Firebase envoie le jeton de l'utilisateur connecté avec la requête,
+  // et Firebase le vérifie avant d'exécuter la fonction
+  if (!request.auth) {
+    throw new HttpsError("unauthenticated", "Vous devez être connecté.");
+  }
+  logger.info(`Profil demandé par ${request.auth.uid}`);
+  return {uid: request.auth.uid, courriel: request.auth.token.email ?? null};
+});

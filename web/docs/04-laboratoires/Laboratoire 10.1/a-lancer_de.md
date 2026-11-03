@@ -6,7 +6,7 @@
 
 ## Prérequis
 
-Avoir lu la [recette Cloud Functions](../../03-recettes/cloud-functions.md), en particulier la section [Ma première fonction](../../03-recettes/cloud-functions.md#ma-première-fonction-).
+Avoir lu la [recette Cloud Functions](../../03-recettes/cloud-functions.md), en particulier les sections [Ma première fonction](../../03-recettes/cloud-functions.md#ma-première-fonction-), [Passer des paramètres](../../03-recettes/cloud-functions.md#passer-des-paramètres-) et [Gérer les erreurs](../../03-recettes/cloud-functions.md#gérer-les-erreurs-).
 
 ## À faire 🛠️
 

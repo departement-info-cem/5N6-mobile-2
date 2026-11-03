@@ -141,6 +141,10 @@ Quelques observations :
 - Ce que la fonction retourne est envoyé au client en JSON : une chaîne, un nombre, un booléen, une liste ou un objet.
 - `logger` écrit dans les journaux du serveur, et non sur le téléphone.
 
+:::tip ESLint
+Le projet `functions` utilise ESLint avec les règles de Google : guillemets doubles, lignes de 80 caractères maximum, indentation de 2 espaces. L'émulateur ne vérifie pas ces règles, mais le déploiement, oui : il exécute `npm run lint` avant d'envoyer vos fonctions. Prenez la bonne habitude dès maintenant, et lancez `npm run lint` à partir du répertoire `functions` au besoin.
+:::
+
 ### Vérifier qu'elle est chargée 👀
 
 Si `npm run build:watch` et l'émulateur sont démarrés, le terminal de l'émulateur devrait afficher une ligne qui ressemble à ceci :
@@ -150,6 +154,34 @@ Si `npm run build:watch` et l'émulateur sont démarrés, le terminal de l'émul
 ```
 
 Modifiez le texte retourné par la fonction et enregistrez : `build:watch` recompile le fichier, et l'émulateur recharge la fonction tout seul. Pas besoin de le redémarrer.
+
+### L'appeler en ligne de commande 💻
+
+Une fonction appelable est une requête HTTP `POST` comme une autre. On peut donc la tester sans écrire une ligne de Flutter, avec l'adresse affichée par l'émulateur.
+
+Dans PowerShell :
+
+```powershell
+Invoke-RestMethod -Method Post -ContentType "application/json" -Body '{"data": null}' -Uri http://127.0.0.1:5001/id-de-votre-projet/us-central1/helloWorld
+```
+
+Avec `curl` (macOS, Linux ou Git Bash) :
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"data": null}' http://127.0.0.1:5001/id-de-votre-projet/us-central1/helloWorld
+```
+
+La réponse ressemble à ceci :
+
+```json
+{"result": "Bonjour de Firebase!"}
+```
+
+- Le corps de la requête doit être un objet JSON avec une propriété `data`, qui contient les paramètres envoyés à la fonction (`null` s'il n'y en a pas). Sinon, la fonction refuse la requête.
+- La valeur retournée par la fonction se trouve dans la propriété `result`. En cas d'erreur, la réponse contient plutôt une propriété `error`.
+- Vous pouvez aussi envoyer cette requête avec [Bruno](./bruno.md).
+
+C'est exactement ce que fait le SDK Firebase pour vous lorsque vous appelez la fonction depuis Flutter.
 
 ### L'appeler depuis Flutter 📱
 
@@ -162,9 +194,43 @@ print(resultat.data); // Bonjour de Firebase!
 
 Le type entre `< >` est le type de la valeur retournée par la fonction. Après l'appel, ouvrez l'onglet **Logs** de l'interface web des émulateurs (`http://localhost:4000`) : le message `Hello logs!` y apparaît.
 
-### Passer des paramètres 📨
+## Passer des paramètres 📨
 
-Dans `functions/src/index.ts`, ajoutez `HttpsError` à l'import de `onCall`, puis ajoutez cette deuxième fonction :
+### Côté serveur
+
+Dans `functions/src/index.ts`, ajoutez cette deuxième fonction :
+
+```ts
+export const direBonjour = onCall<{nom?: string}>((request) => {
+  const nom = request.data.nom ?? "inconnu";
+  logger.info(`Bonjour demandé pour ${nom}`);
+  return {message: `Bonjour ${nom}!`, heureServeur: new Date().toISOString()};
+});
+```
+
+- Les paramètres envoyés par le client sont dans `request.data`. Le type entre `< >` décrit ce qu'on s'attend à recevoir, mais **rien ne garantit que le client le respecte** : il faut toujours valider. Nous le ferons à la section suivante.
+- Pour retourner plusieurs valeurs, on retourne un objet.
+- `heureServeur` est l'heure de l'ordinateur qui a exécuté la fonction : une preuve que le code ne s'est pas exécuté sur le téléphone.
+
+En ligne de commande, les paramètres vont dans la propriété `data` du corps de la requête : `{"data": {"nom": "Alice"}}`.
+
+### Côté Flutter
+
+Les paramètres sont passés à `call`, sous forme de `Map`. Puisque la fonction retourne un objet, le type de la réponse est aussi une `Map` :
+
+```dart
+final resultat = await FirebaseFunctions.instance
+    .httpsCallable('direBonjour')
+    .call<Map<String, dynamic>>({'nom': 'Alice'});
+print(resultat.data['message']); // Bonjour Alice!
+print(resultat.data['heureServeur']);
+```
+
+## Gérer les erreurs 🚨
+
+### Côté serveur
+
+Que se passe-t-il si le client n'envoie pas de nom, ou un nom vide? Il faut refuser la requête, et expliquer pourquoi au client. Dans `functions/src/index.ts`, ajoutez `HttpsError` à l'import de `onCall`, puis modifiez `direBonjour` :
 
 ```ts
 import {onCall, HttpsError} from "firebase-functions/https";
@@ -181,15 +247,15 @@ export const direBonjour = onCall<{nom?: string}>((request) => {
 });
 ```
 
-- Les paramètres envoyés par le client sont dans `request.data`. Le type entre `< >` décrit ce qu'on s'attend à recevoir, mais **rien ne garantit que le client le respecte** : il faut toujours valider.
-- `HttpsError` permet de renvoyer au client un [code d'erreur](https://firebase.google.com/docs/functions/callable?hl=fr#handle_errors) (ex. : `invalid-argument`, `not-found`, `permission-denied`) et un message.
-- `heureServeur` est l'heure de l'ordinateur qui a exécuté la fonction : une preuve que le code ne s'est pas exécuté sur le téléphone.
+`HttpsError` permet de renvoyer au client un [code d'erreur](https://firebase.google.com/docs/functions/callable?hl=fr#handle_errors) (ex. : `invalid-argument`, `not-found`, `permission-denied`) et un message.
 
 :::caution
 Seules les erreurs lancées avec `HttpsError` sont transmises au client avec leur code et leur message. Toute autre exception arrive dans Flutter avec le code `internal`, sans détail.
 :::
 
-### Gérer la réponse et les erreurs dans Flutter 🚨
+### Côté Flutter
+
+Une erreur de la fonction arrive dans Flutter sous la forme d'une `FirebaseFunctionsException`, avec le code et le message choisis dans `HttpsError` :
 
 ```dart
 try {
@@ -208,16 +274,56 @@ try {
 
 Essayez d'appeler `direBonjour` avec un nom vide, puis en arrêtant l'émulateur, et observez le code d'erreur reçu.
 
-:::tip ESLint
-Le projet `functions` utilise ESLint avec les règles de Google : guillemets doubles, lignes de 80 caractères maximum, indentation de 2 espaces. L'émulateur ne vérifie pas ces règles, mais le déploiement, oui : il exécute `npm run lint` avant d'envoyer vos fonctions. Prenez la bonne habitude dès maintenant, et lancez `npm run lint` à partir du répertoire `functions` au besoin.
+## Requête authentifiée 🔐
+
+Une fonction a souvent besoin de savoir **qui** l'appelle : pour lire les données de l'utilisateur, ou pour refuser les visiteurs anonymes.
+
+### Mise en place
+
+Il faut d'abord que votre application utilise [Firebase Auth](https://pub.dev/packages/firebase_auth), avec l'[émulateur Auth](./emulateurs_firebase.md#auth-emulator-). Dans `main`, activez-le avant l'émulateur de Cloud Functions :
+
+```dart
+if (config.isDev) {
+  await FirebaseAuth.instance.useAuthEmulator(config.emulatorIp, 9099);
+  FirebaseFunctions.instance.useFunctionsEmulator(config.emulatorIp, 5001);
+}
+```
+
+### Côté serveur
+
+Ajoutez cette fonction dans `functions/src/index.ts` :
+
+```ts
+export const monProfil = onCall((request) => {
+  if (!request.auth) {
+    throw new HttpsError("unauthenticated", "Vous devez être connecté.");
+  }
+  logger.info(`Profil demandé par ${request.auth.uid}`);
+  return {uid: request.auth.uid, courriel: request.auth.token.email ?? null};
+});
+```
+
+- Lorsqu'un utilisateur est connecté, le SDK Firebase envoie son jeton avec chaque appel. Firebase vérifie ce jeton **avant** d'exécuter la fonction, puis remplit `request.auth`.
+- Si personne n'est connecté, `request.auth` est `undefined`. C'est à vous de refuser l'appel, avec le code `unauthenticated`.
+- `request.auth.token` contient les informations du jeton, dont le courriel (`email`) de l'utilisateur.
+
+:::caution
+N'acceptez jamais l'identifiant de l'utilisateur en paramètre (ex. : `request.data.uid`) : n'importe quel client peut y mettre l'identifiant de quelqu'un d'autre. Seul `request.auth.uid` est fiable, puisque Firebase l'a vérifié.
 :::
 
-### Défi 🎲
+### Côté Flutter
 
-Écrivez une fonction `lancerDe` qui retourne un nombre aléatoire de 1 à 6, et affichez le résultat dans votre application. Pourquoi est-ce plus intéressant de tirer ce nombre dans une Cloud Function que dans l'application, si ce dé sert à un jeu en ligne?
+Il n'y a rien à ajouter : l'appel est le même que pour n'importe quelle fonction.
 
-Le laboratoire **[🎲 10.1A – lancer_de](../04-laboratoires/Laboratoire%2010.1/a-lancer_de.md)** vous guide pas à pas, et pousse le défi un peu plus loin.
+```dart
+final resultat = await FirebaseFunctions.instance
+    .httpsCallable('monProfil')
+    .call<Map<String, dynamic>>();
+print(resultat.data['uid']);
+```
 
-### Le mot de la fin
+Appelez `monProfil` sans être connecté, puis connecté, et observez la différence.
 
-Un projet de référence de ce qui a été démontré dans cette section est disponible [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-demo_cloud_functions.zip).
+## Le mot de la fin
+
+Un projet de référence de ce qui a été démontré dans cette recette est disponible [ici](https://github.com/departement-info-cem/5N6-mobile-2/releases/latest/download/code-demo_cloud_functions.zip).

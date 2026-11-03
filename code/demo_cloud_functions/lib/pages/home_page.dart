@@ -1,96 +1,60 @@
-import 'package:cloud_functions/cloud_functions.dart';
+import 'package:demo_cloud_functions/pages/auth_page.dart';
+import 'package:demo_cloud_functions/pages/hello_world_page.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Demo {
+  final String titre;
+  final IconData icone;
+  final Widget page;
 
-  @override
-  State<HomePage> createState() => _HomePageState();
+  const Demo({required this.titre, required this.icone, required this.page});
 }
 
-class _HomePageState extends State<HomePage> {
-  final TextEditingController _nomController = TextEditingController();
-  String _message = 'Appuyez sur un bouton pour appeler une fonction.';
-  bool _enCours = false;
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-  @override
-  void dispose() {
-    _nomController.dispose();
-    super.dispose();
-  }
-
-  Future<void> _appelerHelloWorld() async {
-    await _appeler(() async {
-      final resultat = await FirebaseFunctions.instance
-          .httpsCallable('helloWorld')
-          .call<String>();
-      return resultat.data;
-    });
-  }
-
-  Future<void> _appelerDireBonjour() async {
-    await _appeler(() async {
-      final resultat = await FirebaseFunctions.instance
-          .httpsCallable('direBonjour')
-          .call<Map<String, dynamic>>({'nom': _nomController.text});
-      return '${resultat.data['message']}\n'
-          'Heure du serveur : ${resultat.data['heureServeur']}';
-    });
-  }
-
-  // Gère l'indicateur de chargement et les erreurs communes aux deux appels
-  Future<void> _appeler(Future<String> Function() appel) async {
-    setState(() => _enCours = true);
-    try {
-      final message = await appel();
-      setState(() => _message = message);
-    } on FirebaseFunctionsException catch (e) {
-      if (e.code == 'unavailable') {
-        setState(
-          () => _message =
-              'Le serveur de fonction n\'est pas disponible. Avez-vous allumé votre émulateur?',
-        );
-      } else {
-        setState(() => _message = 'Erreur (${e.code}) : ${e.message}');
-      }
-    } finally {
-      setState(() => _enCours = false);
-    }
-  }
+  // Pour ajouter une démo, ajoutez-la à cette liste
+  static const List<Demo> demos = [
+    Demo(
+      titre: 'Hello World',
+      icone: Icons.waving_hand,
+      page: HelloWorldPage(),
+    ),
+    Demo(titre: 'Requête authentifiée', icone: Icons.lock, page: AuthPage()),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Démo Cloud Functions')),
-      body: Padding(
+      appBar: AppBar(title: const Text('Démos Cloud Functions')),
+      body: GridView.count(
+        crossAxisCount: 2,
         padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            ElevatedButton(
-              onPressed: _enCours ? null : _appelerHelloWorld,
-              child: const Text('Appeler helloWorld'),
-            ),
-            const SizedBox(height: 32),
-            TextField(
-              controller: _nomController,
-              decoration: const InputDecoration(
-                labelText: 'Nom',
-                helperText: 'Laissez vide pour obtenir une erreur',
+        mainAxisSpacing: 16,
+        crossAxisSpacing: 16,
+        children: demos
+            .map(
+              (demo) => ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => demo.page),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(demo.icone, size: 48),
+                    const SizedBox(height: 8),
+                    Text(demo.titre, textAlign: TextAlign.center),
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            ElevatedButton(
-              onPressed: _enCours ? null : _appelerDireBonjour,
-              child: const Text('Appeler direBonjour'),
-            ),
-            const SizedBox(height: 32),
-            if (_enCours)
-              const Center(child: CircularProgressIndicator())
-            else
-              Text(_message, textAlign: TextAlign.center),
-          ],
-        ),
+            )
+            .toList(),
       ),
     );
   }
