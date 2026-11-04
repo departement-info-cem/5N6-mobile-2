@@ -11,6 +11,8 @@ hide_table_of_contents: true
 
 :::tip Avant la séance :
 
+Consultez la recette sur les [Notifications 🚨](../03-recettes/notifications.md).
+
 Regardez la doc de [firebase](https://firebase.google.com/).
 
 Dans les séances suivantes, nous allons utiliser plusieurs produits de firebase:

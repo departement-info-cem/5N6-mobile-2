@@ -1,5 +1,6 @@
 import 'package:demo_cloud_functions/pages/auth_page.dart';
 import 'package:demo_cloud_functions/pages/hello_world_page.dart';
+import 'package:demo_cloud_functions/pages/notifications_page.dart';
 import 'package:flutter/material.dart';
 
 class Demo {
@@ -21,6 +22,11 @@ class HomePage extends StatelessWidget {
       page: HelloWorldPage(),
     ),
     Demo(titre: 'Requête authentifiée', icone: Icons.lock, page: AuthPage()),
+    Demo(
+      titre: 'Notifications',
+      icone: Icons.notifications,
+      page: NotificationsPage(),
+    ),
   ];
 
   @override

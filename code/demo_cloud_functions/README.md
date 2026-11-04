@@ -3,9 +3,10 @@
 Projet de référence de la [recette Cloud Functions](https://info.cegepmontpetit.ca/5N6-mobile-2/recettes/cloud-functions). L'écran d'accueil donne accès à une démo par bouton :
 
 - **Hello World** : appelle `helloWorld`, puis `direBonjour` avec un paramètre;
-- **Requête authentifiée** : connecte un compte de test dans l'émulateur Auth, puis appelle `monProfil`, qui refuse les utilisateurs non connectés.
+- **Requête authentifiée** : connecte un compte de test dans l'émulateur Auth, puis appelle `monProfil`, qui refuse les utilisateurs non connectés;
+- **Notifications** : s'enregistre auprès de Firebase Cloud Messaging, puis appelle `envoyerNotification` pour se faire envoyer une notification. Cette démo a besoin d'un vrai projet Firebase : voir la [recette Notifications](https://info.cegepmontpetit.ca/5N6-mobile-2/recettes/notifications).
 
-Le projet n'est lié à aucun vrai projet Firebase : `lib/firebase_options.dart` est une fausse configuration, et l'identifiant `demo-cloud-functions` (dans `.firebaserc`) commence par `demo-`. L'émulateur démarre donc sans `firebase login`.
+Le projet n'est lié à aucun vrai projet Firebase : `lib/firebase_options.dart` est une fausse configuration, et l'identifiant `demo-cloud-functions` (dans `.firebaserc`) commence par `demo-`. L'émulateur démarre donc sans `firebase login`. Seule la démo **Notifications** ne fonctionne pas avec cette fausse configuration, parce que Cloud Messaging n'a pas d'émulateur.
 
 ## À faire, dans cet ordre
 
