@@ -170,7 +170,7 @@ FirebaseMessaging.onMessageOpenedApp.listen((message) {
 
 ### Tester en arrière-plan
 
-Quand l'application est en arrière-plan, vous ne pouvez pas appuyer sur son bouton. Appelez plutôt la fonction [en ligne de commande](./cloud-functions.md#lappeler-en-ligne-de-commande-) :
+Quand l'application est en arrière-plan, vous ne pouvez pas appuyer sur son bouton. Appelez plutôt la fonction en ligne de commande : une fonction appelable est une requête HTTP `POST`, dont les paramètres vont dans la propriété `data` du corps de la requête.
 
 1. Dans la console de débogage de Visual Studio Code, copiez le FID affiché après `FID :`.
 2. Sur l'émulateur Android, appuyez sur le bouton **Accueil** pour mettre l'application en arrière-plan.

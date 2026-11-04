@@ -155,34 +155,6 @@ Si `npm run build:watch` et l'émulateur sont démarrés, le terminal de l'émul
 
 Modifiez le texte retourné par la fonction et enregistrez : `build:watch` recompile le fichier, et l'émulateur recharge la fonction tout seul. Pas besoin de le redémarrer.
 
-### L'appeler en ligne de commande 💻
-
-Une fonction appelable est une requête HTTP `POST` comme une autre. On peut donc la tester sans écrire une ligne de Flutter, avec l'adresse affichée par l'émulateur.
-
-Dans PowerShell :
-
-```powershell
-Invoke-RestMethod -Method Post -ContentType "application/json" -Body '{"data": null}' -Uri http://127.0.0.1:5001/id-de-votre-projet/us-central1/helloWorld
-```
-
-Avec `curl` (macOS, Linux ou Git Bash) :
-
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"data": null}' http://127.0.0.1:5001/id-de-votre-projet/us-central1/helloWorld
-```
-
-La réponse ressemble à ceci :
-
-```json
-{"result": "Bonjour de Firebase!"}
-```
-
-- Le corps de la requête doit être un objet JSON avec une propriété `data`, qui contient les paramètres envoyés à la fonction (`null` s'il n'y en a pas). Sinon, la fonction refuse la requête.
-- La valeur retournée par la fonction se trouve dans la propriété `result`. En cas d'erreur, la réponse contient plutôt une propriété `error`.
-- Vous pouvez aussi envoyer cette requête avec [Bruno](./bruno.md).
-
-C'est exactement ce que fait le SDK Firebase pour vous lorsque vous appelez la fonction depuis Flutter.
-
 ### L'appeler depuis Flutter 📱
 
 ```dart
