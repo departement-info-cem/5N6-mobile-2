@@ -1,15 +1,15 @@
 # Déploiement web 🕸️
 
-Si vous aviez oublié, Flutter est multiplateforme. Ce qui signifie que vous pouvez exécuter votre projet sur Android, mais aussi sur : web, iOS, Windows, MacOS, Windows.
+Flutter est multiplateforme, ce qui signifie que vous pouvez exécuter votre projet sur Android ou sur : web, iOS, Windows, MacOS, Windows.
 
-Nous allons voir comment déployer votre projet sur le web.
+On va déployer votre projet sur le web.
 
 :::caution Avant de commencer
-Si vous avez utilisés des packages qui ne sont pas montrés dans le cours, c'est important de vérifier s'ils sont compatibles avec la plateforme web. C'est assez fréquent que certains soient uniquement disponibles sur mobile.
+Si vous avez utilisés des packages qui ne sont pas montrés dans le cours, vérifier s'ils sont compatibles avec la plateforme web. C'est assez fréquent que certains soient uniquement disponibles sur mobile.
 :::
 
 :::info
-Assurez vous d'avoir consulté [Déploiement Android 🤖](./deploiement-android.md) avant cette recette, puisqu'elle assume que certaines notions 
+Assurez vous d'avoir consulté [Déploiement Android 🤖](./deploiement-android.md) avant cette recette, puisqu'on réutilise certaines notions. 
 :::
 
 ## 1. Activer web
