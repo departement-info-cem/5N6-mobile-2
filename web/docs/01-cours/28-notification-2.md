@@ -8,7 +8,6 @@ hide_table_of_contents: true
 :::info 
 
 Dans cette séance, vous pourrez:
-- avancer votre TP3 qui est à remettre très bientôt;
 - progresser sur l'implantation des notifications dans votre application si elle les utilisent.
 
 :::
