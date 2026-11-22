@@ -367,7 +367,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      label: "12.2 - S'interfacer avec des IA",
+      label: "12.2 - S'interfacer avec des IA 🤖",
       id: "cours/firebase-ia",
       customProps: {
         avancementLabel: "TP4",
