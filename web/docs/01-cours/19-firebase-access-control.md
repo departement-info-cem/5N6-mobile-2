@@ -31,11 +31,11 @@ Les règles Firebase s'exécutent côté infrastructure,
 avant que Firestore ou Cloud Storage accepte
 l'opération. C'est donc là qu'on protège les données.
 
-Ensuite nous avons:
-- **authentification** répond à « c'est qui? ». Après la connexion,
+Ensuite, nous avons :
+- l'**authentification** répond à « c'est qui? ». Après la connexion,
 Firebase fournit un identifiant stable dans `request.auth.uid`. 
-- **autorisation** « t'as le droit? ». Qui a accès à quoi?
-- le uid fait le lien.
+- l'**autorisation** répond à « t'as le droit? ». Qui a accès à quoi?
+- l'UID fait le lien.
 
 Dans Firestore, conservez par exemple l'UID dans un champ `proprietaireId`.
 Pour Cloud Storage, préférez un chemin qui l'exprime clairement, par exemple
@@ -44,15 +44,15 @@ Pour Cloud Storage, préférez un chemin qui l'exprime clairement, par exemple
 
 ## Règles locales et Firebase CLI : firebase.json, firestore.rules et storage.rules
 
-Les règles d'accès sont ultra importantes pour la sécurité de ton appliation.
+Les règles d'accès sont ultra importantes pour la sécurité de votre application.
 
-Elles doivent être versionnées avec le projet:
+Elles doivent être versionnées avec le projet :
 - firebase.json : la config générale de Firebase, indique dans quels fichiers sont les règles
 - firestore.rules : le nom par défaut pour les règles Firestore
 - storage.rules : le nom par défaut pour les règles Cloud Storage
 - si on souhaite rapidement changer entre 2 versions de règles:
-  - on créer un `firestore.rules` et un `firestore-fix.rules`
-  - on change dans le config firebase.json pour valider un fix
+  - on crée un `firestore.rules` et un `firestore-fix.rules`
+  - on change dans la config firebase.json pour valider un fix
 
 ```json title="firebase.json"
 {
@@ -115,12 +115,12 @@ service cloud.firestore {
 }
 ```
 
-Dans une écriture Firestore:
+Dans une écriture Firestore :
 - `request.resource.data` représente le document proposé, 
 - tandis que `resource.data` représente le document existant. 
 
 La règle de mise à jour ci-dessus empêche donc une personne propriétaire de transférer
- la propriété du document. 
+la propriété du document. 
 
 ## Règles Cloud Storage
 
@@ -158,14 +158,14 @@ peut donc annuler la protection attendue dans un chemin enfant.
 
 Les fichiers de règles Firebase couvrent deux aspects :
 - **contrôle d'accès** : empêcher des méchants de corrompre, voler, supprimer.
-- **validation** : empêcher des utilisateurs honnêtes salir la BD, casser la logique.
+- **validation** : empêcher des utilisateurs honnêtes de salir la BD, casser la logique.
 
-Les deux vont se combiner dans les règles. Par exemple, on veut:
+Les deux vont se combiner dans les règles. Par exemple, on veut :
 - ajouter un match dans une appli de rencontre
 - dans la collection `rencontres`, l'auteur doit être la personne authentifiée
 - le message doit contenir au moins 10 caractères et pas plus de 200 caractères
 - après un trim
-- s'assurer que la personne qui matche a un bien un id qui fonctionne.
+- s'assurer que la personne qui matche a bien un ID qui fonctionne.
 
 ```js title="firestore.rules"
 rules_version = '2';
@@ -173,7 +173,7 @@ rules_version = '2';
 service cloud.firestore {
   match /rencontres/{rencontreId} {
     allow create: if
-            // 1. CONTROLE ACCES L'utilisateur doit être authentifié et être l'auteur
+            // 1. CONTRÔLE D'ACCÈS L'utilisateur doit être authentifié et être l'auteur
             request.auth != null &&
             request.resource.data.authorId == request.auth.uid &&
 
@@ -194,23 +194,23 @@ service cloud.firestore {
 
 - Ne pas faire de règles du tout
 - Ne pas tester les règles en dév (en tentant des écritures supposées interdites)
-- Rajouter une règle sans tester. Ajouter une règle n'ajoute pas de sécurité mais un nouvel ACCES donc une faille potentielle
+- Rajouter une règle sans tester. Ajouter une règle n'ajoute pas de sécurité mais un nouvel ACCÈS donc une faille potentielle
 - Aller vite. Chaque règle doit correspondre à un besoin, on doit être sûrs. Ça se peut qu'on fasse une règle en une journée. 
 
 ## Exercice / Audit par un modèle d'IA
 
-Tu peux faire l'exercice suivant avec nu pligin VSCode ou un CLI au choix:
-- Choisis un modèle récent, le plus récent possible des disponibles
-- Mets le en mode planification
-- Dans ton projet applicatif
+Vous pouvez faire l'exercice suivant avec un plugin VS Code ou un CLI au choix :
+- Choisissez le modèle le plus récent disponible
+- Mettez-le en mode planification
+- Dans votre projet applicatif
 
 ```
 Look for cybersec vulnerabilities in this repo / folder. 
 I am interested in Access Control vulnerabilities but also others (JS injection, DB injection, man in the middle etc.). 
-Also for eachvulnerability, if you can outline an exploit to I can validate my fixes.
+Also for each vulnerability, if you can, outline an exploit so I can validate my fixes.
 ```
 
-L'exercice est volontairement vague car les modèle d'IA évoluent très vite.
+L'exercice est volontairement vague car les modèles d'IA évoluent très vite.
 Votre but est d'exploiter au maximum les capacités pour:
 - identifier les problèmes
 - mettre en place un test démontrant la faille
