@@ -42,7 +42,7 @@ Pour Cloud Storage, préférez un chemin qui l'exprime clairement, par exemple
 `utilisateurs/<uid>/images/photo.jpg`.
 
 
-## Règles locales et Firebase CLI : firebase,json, firestore.rules et storage.rules
+## Règles locales et Firebase CLI : firebase.json, firestore.rules et storage.rules
 
 Les règles d'accès sont ultra importantes pour la sécurité de ton appliation.
 
