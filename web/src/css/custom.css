@@ -91,8 +91,8 @@
   --ifm-code-font-size: 95%;
   --ifm-menu-link-padding-horizontal: 1.5em;
   /* Arial est la police de remplacement prévue par le guide. */
-  --ifm-font-family-base: 'Montserrat', Arial, sans-serif;
-  --ifm-heading-font-family: 'Montserrat', Arial, sans-serif;
+  --ifm-font-family-base: 'Montserrat Variable', 'Montserrat', Arial, sans-serif;
+  --ifm-heading-font-family: 'Montserrat Variable', 'Montserrat', Arial, sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --examen-bg: var(--ifm-color-danger-contrast-background);
   --examen-font-color: var(--ifm-color-danger-contrast-foreground);

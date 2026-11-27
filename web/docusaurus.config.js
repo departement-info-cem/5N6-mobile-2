@@ -26,21 +26,9 @@ const config = {
     locales: ["fr"],
   },
 
-  stylesheets: [
-    {
-      href: 'https://fonts.googleapis.com',
-      rel: 'preconnect',
-    },
-    {
-      href: 'https://fonts.gstatic.com',
-      rel: 'preconnect',
-      crossorigin: 'anonymous',
-    },
-    {
-      href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap',
-      rel: 'stylesheet',
-    },
-  ],
+  // Aucune feuille de style externe : en environnement examen, les postes étudiants n'ont pas Internet et le
+  // navigateur attendait ~21 s (fonts.googleapis.com) avant d'afficher chaque page. Montserrat est servie par
+  // le site lui-même (@fontsource-variable/montserrat, dans customCss).
 
   markdown: {
     mermaid: true,
@@ -62,7 +50,11 @@ const config = {
           editUrl: `https://github.com/departement-info-cem/${siteConfig.nomUrl}/tree/main/web`,
         },
         theme: {
-          customCss: [require.resolve("./src/css/custom.css")],
+          customCss: [
+            require.resolve("@fontsource-variable/montserrat/wght.css"),
+            require.resolve("@fontsource-variable/montserrat/wght-italic.css"),
+            require.resolve("./src/css/custom.css"),
+          ],
         },
       }),
     ],
