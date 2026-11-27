@@ -4,6 +4,8 @@ slug: /
 hide_table_of_contents: true
 ---
 
+import AbonnementAgenda from "@site/src/components/AbonnementAgenda";
+
 # Accueil
 
 <Row>
@@ -72,32 +74,32 @@ Pendant la séance, vous devez compléter et valider vos exercices, poser des qu
         id: "calendar-po",
         label: "Calendrier Pierre-Olivier",
         icon: "📅",
-        component: <MainDocsCalendar professorName="Pierre-Olivier" />,
+        component: <MainDocsCalendar professorName="Pierre-Olivier Brillant" />,
     },
     {
         id: "calendar-jo",
         label: "Calendrier Joris",
         icon: "📅",
-        component: <MainDocsCalendar professorName="Joris" />,
+        component: <MainDocsCalendar professorName="Joris Deguet" />,
     },
     {
         id: "schedule-po",
         label: "Horaire Pierre-Olivier",
         icon: "🧑‍🏫",
-        component: <WeeklySchedule
-            title="Horaire Pierre-Olivier"
-            data={require('./horaire-po.json')}
-        />,
+        component: <WeeklySchedule title="Horaire Pierre-Olivier" prof="po.brillant" />,
     },
     {
             id: "schedule-jo",
             label: "Horaire Joris",
             icon: "🧑‍🏫",
-            component: <WeeklySchedule
-                title="Horaire Joris"
-                data={require('./horaire-joris.json')}
-            />,
+            component: <WeeklySchedule title="Horaire Joris" prof="joris.deguet" />,
         }
     ]}
     defaultTabId="grid"
 />
+
+{/* Dates, horaires et agendas viennent du site du département (numeroCours dans config.js) : rien à recopier ici. */}
+
+### S'abonner au calendrier du cours
+
+<AbonnementAgenda />

@@ -1,69 +1,8 @@
 // @ts-check
-let jddates = {
-  "1.1": "2026-08-24",
-  "1.2": "2026-08-26",
-  "2.1": "2026-08-31",
-  "2.2": "2026-09-02",
-  "3.1": "2026-09-09",
-  "3.2": "2026-09-14",
-  "4.1": "2026-09-16",
-  "4.2": "2026-09-21",
-  "5.1": "2026-09-23",
-  "5.2": "2026-09-28",
-  "6.1": "2026-09-30",
-  "6.2": "2026-10-06",
-  "7.1": "2026-10-07",
-  "7.2": "2026-10-19",
-  "8.1": "2026-10-21",
-  "8.2": "2026-10-26",
-  "9.1": "2026-10-28",
-  "9.2": "2026-11-02",
-  "10.1": "2026-11-04",
-  "10.2": "2026-11-09",
-  "11.1": "2026-11-16",
-  "11.2": "2026-11-18",
-  "12.1": "2026-11-23",
-  "12.2": "2026-11-25",
-  "13.1": "2026-11-30",
-  "13.2": "2026-12-02",
-  "14.1": "2026-12-07",
-  "14.2": "2026-12-09",
-  "15.1": "2026-12-14",
-  "15.2": "2026-12-23",
-};
-
-let podates = {
-  "1.1": "2026-08-26",
-  "1.2": "2026-08-27",
-  "2.1": "2026-09-02",
-  "2.2": "2026-09-03",
-  "3.1": "2026-09-09",
-  "3.2": "2026-09-10",
-  "4.1": "2026-09-16",
-  "4.2": "2026-09-17",
-  "5.1": "2026-09-23",
-  "5.2": "2026-09-24",
-  "6.1": "2026-09-30",
-  "6.2": "2026-10-01",
-  "7.1": "2026-10-07",
-  "7.2": "2026-10-21",
-  "8.1": "2026-10-08",
-  "8.2": "2026-10-22",
-  "9.1": "2026-10-29",
-  "9.2": "2026-11-04",
-  "10.1": "2026-11-05",
-  "10.2": "2026-11-12",
-  "11.1": "2026-11-18",
-  "11.2": "2026-11-19",
-  "12.1": "2026-11-25",
-  "12.2": "2026-11-26",
-  "13.1": "2026-12-02",
-  "13.2": "2026-12-03",
-  "14.1": "2026-12-09",
-  "14.2": "2026-12-10",
-  "15.1": "2026-12-14",
-  "15.2": "2026-12-23",
-};
+// Les dates des séances viennent du site du département (fiches des profs, calendrier scolaire, cours annulés ou
+// déplacés) : config.js donne le numéro du cours, et chaque séance son rang, « seance: 13 » pour la 13e rencontre
+// de chaque groupe. Un groupe qui ne suit pas l'ordre commun a son propre numéro : seance: { defaut: 14, "1010": 15 }.
+// Voir le wiki du gabarit (MainDocsCalendar).
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
@@ -74,10 +13,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1 - Créé",
         avancement: 0,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["1.1"] }],
-          Joris: [{ 1020: jddates["1.1"] }],
-        },
+        seance: 1,
       },
     },
     {
@@ -87,10 +23,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1",
         avancement: 0.5,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["1.2"] }],
-          Joris: [{ 1020: jddates["1.2"] }],
-        },
+        seance: 2,
       },
     },
     {
@@ -99,10 +32,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP1 - Complété",
         avancement: 1,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["2.1"] }],
-          Joris: [{ 1020: jddates["2.1"] }],
-        },
+        seance: 3,
       },
     },
     {
@@ -111,10 +41,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2 - Créé",
         avancement: 0.05,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["2.2"] }],
-          Joris: [{ 1020: jddates["2.2"] }],
-        },
+        seance: 4,
       },
     },
     {
@@ -123,10 +50,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.33,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["3.1"] }],
-          Joris: [{ 1020: jddates["3.1"] }],
-        },
+        seance: 5,
       },
     },
     {
@@ -136,10 +60,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.6,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["3.2"] }],
-          Joris: [{ 1020: jddates["3.2"] }],
-        },
+        seance: 6,
       },
     },
 
@@ -150,10 +71,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2",
         avancement: 0.8,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["4.1"] }],
-          Joris: [{ 1020: jddates["4.1"] }],
-        },
+        seance: 7,
       },
     },
     {
@@ -164,10 +82,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP2 - Complété",
         avancement: 1,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["4.2"] }],
-          Joris: [{ 1020: jddates["4.2"] }],
-        },
+        seance: 8,
       },
     },
     {
@@ -177,10 +92,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3 - Créé",
         avancement: 0.0,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["5.1"] }],
-          Joris: [{ 1020: jddates["5.1"] }],
-        },
+        seance: 9,
       },
     },
     {
@@ -190,10 +102,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.1,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["5.2"] }],
-          "Joris": [{ 1020: jddates["5.2"] }],
-        },
+        seance: 10,
       },
     },
     {
@@ -203,10 +112,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.2,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["6.1"] }],
-          Joris: [{ 1020: jddates["6.1"] }],
-        },
+        seance: 11,
       },
     },
     {
@@ -216,10 +122,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.3,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["6.2"] }],
-          Joris: [{ 1020: jddates["6.2"] }],
-        },
+        seance: 12,
       },
     },
     {
@@ -229,10 +132,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.4,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["7.1"] }],
-          Joris: [{ 1020: jddates["7.1"] }],
-        },
+        seance: 13,
       },
     },
     {
@@ -241,10 +141,7 @@ const sidebars = {
       id: "cours/examen",
       className: "examen",
       customProps: {
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["7.2"] }],
-          Joris: [{ 1020: jddates["7.2"] }],
-        },
+        seance: { defaut: 14, "1010": 15 },
       },
     },
     {
@@ -254,10 +151,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.5,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["8.1"] }],
-          Joris: [{ 1020: jddates["8.1"] }],
-        },
+        seance: { defaut: 15, "1010": 14 },
       },
     },
     {
@@ -267,10 +161,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.6,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["8.2"] }],
-          Joris: [{ 1020: jddates["8.2"] }],
-        },
+        seance: 16,
       },
     },
     {
@@ -280,10 +171,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.7,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["9.1"] }],
-          Joris: [{ 1020: jddates["9.1"] }],
-        },
+        seance: 17,
       },
     },
     {
@@ -293,10 +181,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 0.9,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["9.2"] }],
-          Joris: [{ 1020: jddates["9.2"] }],
-        },
+        seance: 18,
       },
     },
     {
@@ -307,10 +192,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP3",
         avancement: 1,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["10.1"] }],
-          Joris: [{ 1020: jddates["10.1"] }],
-        },
+        seance: 19,
       },
     },
     {
@@ -320,10 +202,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4 - Créé",
         avancement: 0,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["10.2"] }],
-          Joris: [{ 1020: jddates["10.2"] }],
-        },
+        seance: 20,
       },
     },
     {
@@ -333,10 +212,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.1,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["11.1"] }],
-          Joris: [{ 1020: jddates["11.1"] }],
-        },
+        seance: 21,
       },
     },
     {
@@ -346,10 +222,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.2,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["11.2"] }],
-          Joris: [{ 1020: jddates["11.2"] }],
-        },
+        seance: 22,
       },
     },
     {
@@ -359,10 +232,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.3,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["12.1"] }],
-          Joris: [{ 1020: jddates["12.1"] }],
-        },
+        seance: 23,
       },
     },
     {
@@ -372,10 +242,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.4,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["12.2"] }],
-          Joris: [{ 1020: jddates["12.2"] }],
-        },
+        seance: 24,
       },
     },
     {
@@ -385,10 +252,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.5,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["13.1"] }],
-          Joris: [{ 1020: jddates["13.1"] }],
-        },
+        seance: 25,
       },
     },
     {
@@ -398,10 +262,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.6,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["13.2"] }],
-          Joris: [{ 1020: jddates["13.2"] }],
-        },
+        seance: 26,
       },
     },
     {
@@ -411,10 +272,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 0.8,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["14.1"] }],
-          Joris: [{ 1020: jddates["14.1"] }],
-        },
+        seance: 27,
       },
     },
     {
@@ -425,10 +283,7 @@ const sidebars = {
       customProps: {
         avancementLabel: "TP4",
         avancement: 1,
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["14.2"] }],
-          Joris: [{ 1020: jddates["14.2"] }],
-        },
+        seance: 28,
       },
     },
     {
@@ -436,10 +291,7 @@ const sidebars = {
       label: "15.1 - Formatif ✍️",
       id: "cours/formatif-final",
       customProps: {
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["15.1"] }],
-          Joris: [{ 1020: jddates["15.1"] }],
-        },
+        seance: 29,
       },
     },
     {
@@ -448,10 +300,7 @@ const sidebars = {
       id: "cours/examen",
       className: "examen",
       customProps: {
-        calendrier: {
-          "Pierre-Olivier": [{ 1010: podates["15.2"] }],
-          Joris: [{ 1020: jddates["15.2"] }],
-        },
+        seance: 30,
       },
     },
   ],
